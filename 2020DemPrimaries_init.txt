@@ -42,6 +42,18 @@ campaignTrail_temp.election_json = [
     }
 ]
 
+// Custom Text Variables
+
+// Code 1 Text
+e.SelectText = "Please select the election you will run in:"
+e.CandidText = "Please select your candidate:"
+e.VpText = "Please select your campaign manager:"
+// Ending Popups
+e.ElectionPopup = "Election night has arrived. Settle in and wait for the returns, however                 long it may take. Best of luck!"
+e.WinPopup = "Congratulations! You won the nomination."
+e.LosePopup = "Sorry. You have lost the election this time. Click OK to view the                     rest of the returns, or skip straight to the final results. We hope                     you have a nice concession speech prepared."
+
+
 campaignTrail_temp.candidate_json = [
     {
         "model": "campaign_trail.candidate",
@@ -163,7 +175,7 @@ campaignTrail_temp.candidate_json = [
         "pk": 305,
         "fields": {
             "first_name": "Jen",
-            "last_name": "O’Malley Dillon",
+            "last_name": "OâMalley Dillon",
             "election": 21,
             "party": "Democratic",
             "state": "Pennsylvania",
@@ -172,11 +184,11 @@ campaignTrail_temp.candidate_json = [
             "color_hex": "#214191",
             "secondary_color_hex": "#90C0FF",
             "is_active": 0,
-            "image_url": "https://www.jetsimon.com/public/static/images/susan-rice-2020.jpg",
+            "image_url": "https://i.imgur.com/hX4Wv9l.png",
             "electoral_victory_message": "'",
             "electoral_loss_message": "'",
             "no_electoral_majority_message": "'",
-            "description_as_running_mate": "<p>Biden’s campaign manager</p>",
+            "description_as_running_mate": "<p>Bidenâs campaign manager</p>",
             "candidate_score": 0,
             "running_mate": true
         }
@@ -195,11 +207,11 @@ campaignTrail_temp.candidate_json = [
             "color_hex": "#238b24",
             "secondary_color_hex": "#90C0FF",
             "is_active": 0,
-            "image_url": "https://www.jetsimon.com/public/static/images/karen-bass-2020.jpg",
+            "image_url": "https://i.imgur.com/YtRe56z.png",
             "electoral_victory_message": "'",
             "electoral_loss_message": "'",
             "no_electoral_majority_message": "'",
-            "description_as_running_mate": "<p>Sanders’ campaign manager</p>",
+            "description_as_running_mate": "<p>Sandersâ campaign manager</p>",
             "candidate_score": 0,
             "running_mate": true
         }
@@ -218,11 +230,11 @@ campaignTrail_temp.candidate_json = [
             "color_hex": "#b51c27",
             "secondary_color_hex": "#90C0FF",
             "is_active": 0,
-            "image_url": "https://www.jetsimon.com/public/static/images/gretchen-whitmer-2020.jpg",
+            "image_url": "https://i.imgur.com/3GxcRgu.png",
             "electoral_victory_message": "'",
             "electoral_loss_message": "'",
             "no_electoral_majority_message": "'",
-            "description_as_running_mate": "<p>Warren’s campaign manager</p>",
+            "description_as_running_mate": "<p>Warrenâs campaign manager</p>",
             "candidate_score": 0,
             "running_mate": true
         }
@@ -241,11 +253,11 @@ campaignTrail_temp.candidate_json = [
             "color_hex": "#9270de",
             "secondary_color_hex": "#90C0FF",
             "is_active": 0,
-            "image_url": "https://www.jetsimon.com/public/static/images/elizabeth-warren-2020.jpg",
+            "image_url": "https://i.imgur.com/cdWaACm.png",
             "electoral_victory_message": "'",
             "electoral_loss_message": "'",
             "no_electoral_majority_message": "'",
-            "description_as_running_mate": "<p>Bloomberg’s campaign manager</p>",
+            "description_as_running_mate": "<p>Bloombergâs campaign manager</p>",
             "candidate_score": 0,
             "running_mate": true
         }
@@ -264,15 +276,61 @@ campaignTrail_temp.candidate_json = [
             "color_hex": "#febe01",
             "secondary_color_hex": "#FFA0A0",
             "is_active": 0,
-            "image_url": "https://www.jetsimon.com/public/static/images/mike-pence-2020.jpg",
+            "image_url": "https://i.imgur.com/DnsrKqh.png",
             "electoral_victory_message": "'",
             "electoral_loss_message": "'",
             "no_electoral_majority_message": "'",
-            "description_as_running_mate": "<p>Buttigieg’s campaign manager</p>",
+            "description_as_running_mate": "<p>Buttigiegâs campaign manager</p>",
             "candidate_score": 0,
             "running_mate": true
         }
-    }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 310,
+        "fields": {
+            "first_name": "Amy",
+            "last_name": "Klobuchar",
+            "election": 21,
+            "party": "Independent",
+            "state": "Vermont",
+            "priority": 2,
+            "description": "<p>Abominable Snowwoman</p>",
+            "color_hex": "#238b24",
+            "secondary_color_hex": "#FFA0A0",
+            "is_active": 1,
+            "image_url": "https://i.imgur.com/UlvKH2K.png",
+            "electoral_victory_message": "<h3>Congratulations! You have won the 2020 election.</h3><p>For the second time in a row, many analysts saw a victory for you as practically impossible. But whatever they say, it is clear that your Make America Great Again agenda has been vindicated. Where do you take things from here?</p>",
+            "electoral_loss_message": "<h3>Sorry! You have lost the 2020 election.</h3><p>After an election in which many of your supporters claimed democracy itself was at stake, what happens now? Many analysts believe the party will need to go in a completely different direction next time. As for yourself, will you take these results sitting down, or will you prepare yourself for an epic political comeback in 2024?</p>",
+            "no_electoral_majority_message": "<h3>Congratulations! You have won the 2020 election.</h3><p>In spite of the 269-269 tie in the electoral college, Republicans control a majority of state delegations in the House of Representatives. A lot of liberals are absolutely distraught and outraged that the election came down to such a technicality, but hey, those are the rules!</p>",
+            "description_as_running_mate": "",
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 311,
+        "fields": {
+            "first_name": "Tom",
+            "last_name": "Steyer/Others",
+            "election": 21,
+            "party": "Democratic",
+            "state": "Massachusetts",
+            "priority": 3,
+            "description": "<p>Weirdo Tom</p>",
+            "color_hex": "#b51c27",
+            "secondary_color_hex": "#FFFFC0",
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/goMBXT6.png",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "'",
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
 ]
 
 campaignTrail_temp.running_mate_json = [
