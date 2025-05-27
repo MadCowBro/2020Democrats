@@ -447,4 +447,16 @@ document.body.background = "https://coolbackgrounds.io/images/backgrounds/white/
 
 document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#00a7df!important;}</style>";
 
+RecReading = true
+
+campaignTrail_temp.modBoxTheme = {
+     "header_color": "#0d2140",
+     "header_text_color": "#ffffff",
+     "description_text_color": "#000000",
+     "description_background_color": "#ffffff",
+     "main_color": "#00a7df",
+     "secondary_color": "#da2040",
+     "ui_text_color": "#FFFFFF"
+}
+
 //#endcode
