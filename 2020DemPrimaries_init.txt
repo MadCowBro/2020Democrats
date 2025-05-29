@@ -526,3 +526,24 @@ campaignTrail_temp.modBoxTheme = {
 }
 
 //#endcode
+
+function addDynamicCSS() {
+		#overall_result_container {
+			overflow: auto;
+		}
+		#state_result_container {
+			overflow: auto;
+		}
+
+	
+    `;
+
+    var styleElem = document.createElement('style');
+    styleElem.type = 'text/css';
+    
+    styleElem.appendChild(document.createTextNode(css));
+    
+    document.head.appendChild(styleElem);
+}
+
+addDynamicCSS();
