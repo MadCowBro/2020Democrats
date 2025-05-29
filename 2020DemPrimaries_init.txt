@@ -528,6 +528,7 @@ campaignTrail_temp.modBoxTheme = {
 //#endcode
 
 function addDynamicCSS() {
+    var css = `
 		#overall_result_container {
 			overflow: auto;
 		}
