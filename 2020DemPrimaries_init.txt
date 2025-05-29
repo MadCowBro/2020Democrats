@@ -16,7 +16,7 @@ campaignTrail_temp.global_parameter_json = [
             "issue_stance_6_max": 0.71,
             "global_variance": 0.01,
             "state_variance": 0.005,
-            "question_count": 25,
+            "question_count": 38,
             "default_map_color_hex": "#C9C9C9",
             "no_state_map_color_hex": "#999999"
         }
@@ -29,9 +29,9 @@ campaignTrail_temp.election_json = [
         "pk": 21,
         "fields": {
             "year": 2020,
-            "summary": "<p>The Democrats were blindsided by Hillary Clinton’s upset loss in 2016. After one of the most chaotic and divisive presidencies in American history, they vow not to lose again.</p><p>Over 20 candidates are vying for the nomination, breaking the record set by the Republican field four years ago. These five are viewed as having the best chance to win:</p><ul><li>Joe Biden, former vice president of the United States</li><li>Bernie Sanders, US Senator from Vermont and runner-up in the 2016 Democratic presidential primaries</li><li>Elizabeth Warren, US Senator from Massachusetts</li><li>Michael Bloomberg, former Mayor of New York City</li><li>And Pete Buttigieg, Mayor of South Bend, IN</li></ul><p>The number one question voters are asking these five: <b>Who can beat Trump?</b></p>",
+            "summary": "<div style='overflow-y:scroll;height:200px;'><p>The Democrats were blindsided by Hillary Clinton’s upset loss in 2016. After one of the most chaotic and divisive presidencies in American history, they vow not to lose again.</p><p>Over 20 candidates are vying for the nomination, breaking the record set by the Republican field four years ago. These five are viewed as having the best chance to win:</p><ul><li>Joe Biden, former vice president of the United States</li><li>Bernie Sanders, US Senator from Vermont and runner-up in the 2016 Democratic presidential primaries</li><li>Elizabeth Warren, US Senator from Massachusetts</li><li>Michael Bloomberg, former Mayor of New York City</li><li>And Pete Buttigieg, Mayor of South Bend, IN</li></ul><p>The number one question voters are asking these five: <b>Who can beat Trump?</b></p>",
             "image_url": "https://i.imgur.com/cwGDXJH.png",
-            "winning_electoral_vote_number": 270,
+            "winning_electoral_vote_number": 1990,
             "advisor_url": "https://i.imgur.com/qoBuKgY.png",
             "recommended_reading": "<ul>\n<li><a href=https://www.chicagotribune.com/opinion/editorials/ct-edit-chicago-tribune-biden-endorsement-20200925-lnyxsb5qvrftnjjmj3rnzj33jy-story.html>Our Case For Joe Biden</a></li>\n<li><a href=https://nationalinterest.org/feature/case-trump-166808>The Case For Trump</a></li>\n<li><a href=https://www.npr.org/2020/11/18/935730100/how-biden-won-ramping-up-the-base-and-expanding-margins-in-the-suburbs>How Biden Won: Ramping Up The Base And Expanding Margins In The Suburbs</a></li>\n<li><a href=https://www.prospectmagazine.co.uk/politics/donald-trump-joe-biden-us-election-almost-win-votes-concede>Why Did Trump Almost Win?</a></li>\n<li><a href=https://www.hoover.org/research/no-evidence-voter-fraud-guide-statistical-claims-about-2020-election>No Evidence For Voter Fraud: A Guide To Statistical Claims About The 2020 Election</a></li>\n</ul>",
             "has_visits": 1,
@@ -312,14 +312,14 @@ campaignTrail_temp.candidate_json = [
         "model": "campaign_trail.candidate",
         "pk": 311,
         "fields": {
-            "first_name": "Tom",
-            "last_name": "Steyer/Others",
+            "first_name": "Tulsi",
+            "last_name": "Gabbard/Others",
             "election": 21,
             "party": "Democratic",
-            "state": "Massachusetts",
+            "state": "Hawaii",
             "priority": 3,
-            "description": "<p>Weirdo Tom and Other Haters and Losers</p>",
-            "color_hex": "#d1681e",
+            "description": "<p>Wacky Tulsi and Other Haters and Losers</p>",
+            "color_hex": "#fd6ab3",
             "secondary_color_hex": "#FFFFC0",
             "is_active": 0,
             "image_url": "https://i.imgur.com/goMBXT6.png",
@@ -365,7 +365,7 @@ campaignTrail_temp.candidate_json = [
             "state": "Various",
             "priority": 10,
             "description": "'",
-            "color_hex": "#d1681e",
+            "color_hex": "#fd6ab3",
             "secondary_color_hex": "#FFA0A0",
             "is_active": 0,
             "image_url": "https://i.imgur.com/DnsrKqh.png",
@@ -526,3 +526,25 @@ campaignTrail_temp.modBoxTheme = {
 }
 
 //#endcode
+
+function addDynamicCSS() {
+    var css = `
+		#overall_result_container {
+			overflow: auto;
+		}
+		#state_result_container {
+			overflow: auto;
+		}
+
+	
+    `;
+
+    var styleElem = document.createElement('style');
+    styleElem.type = 'text/css';
+    
+    styleElem.appendChild(document.createTextNode(css));
+    
+    document.head.appendChild(styleElem);
+}
+
+addDynamicCSS();
