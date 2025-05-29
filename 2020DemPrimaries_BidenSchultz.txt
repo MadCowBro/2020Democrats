@@ -34633,6 +34633,22 @@ campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/Tby0qkg.png";
 campaignTrail_temp.candidate_last_name = "Biden";
 campaignTrail_temp.running_mate_last_name = "Campaign";
 
+const targetNode = document.getElementById("game_window");
+const config = { attributes: true, childList: true, subtree: true };
+
+function onGameWindowChanged(mutationList, observer) {
+    updateQuestionBanner();
+}
+
+function updateQuestions(mutationList, observer) {
+    if (answerObject.fields.condition != null) {
+        answer.disabled = !(eval(answerObject.fields.condition));
+    }
+}
+
+const observer = new MutationObserver(onGameWindowChanged);
+	observer.observe(targetNode, config);
+
 e.VPisCandidate = 0;
 	function updateQuestionBanner() {
 		let questionBanner = document.getElementById("campaign_sign");
