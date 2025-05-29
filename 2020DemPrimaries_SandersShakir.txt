@@ -34628,9 +34628,9 @@ campaignTrail_temp.answer_feedback_json = [
     }
 ]
 
-campaignTrail_temp.candidate_image_url = "https://i.imgur.com/pwyCgbk.png";
-campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/Tby0qkg.png";
-campaignTrail_temp.candidate_last_name = "Biden";
+campaignTrail_temp.candidate_image_url = "https://i.imgur.com/GuSfd0e.png";
+campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/YtRe56z.png";
+campaignTrail_temp.candidate_last_name = "Sanders";
 campaignTrail_temp.running_mate_last_name = "Campaign";
 
 const targetNode = document.getElementById("game_window");
@@ -34656,7 +34656,7 @@ e.VPisCandidate = 0;
 		let img = document.createElement('img');
     if(e.VPisCandidate == 0)
     {
-			img.src = 'https://i.imgur.com/isWYBsB.png';
+			img.src = 'https://i.imgur.com/NdiMF8b.png';
     } 
 		questionBanner.replaceWith(img);
 	}
