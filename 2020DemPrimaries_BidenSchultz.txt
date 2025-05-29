@@ -34633,11 +34633,15 @@ campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/Tby0qkg.png";
 campaignTrail_temp.candidate_last_name = "Biden";
 campaignTrail_temp.running_mate_last_name = "Campaign";
 
+e.VPisCandidate = 0;
 	function updateQuestionBanner() {
 		let questionBanner = document.getElementById("campaign_sign");
 		if(!questionBanner || questionBanner.nodeName != "DIV") return;
 		let img = document.createElement('img');
+    if(e.VPisCandidate == 0)
+    {
 			img.src = 'https://i.imgur.com/isWYBsB.png';
+    } 
 		questionBanner.replaceWith(img);
 	}
 
