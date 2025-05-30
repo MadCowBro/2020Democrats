@@ -496,7 +496,7 @@ jet_data = {
 
 quotes = ["'If you have a problem figuring out whether you’re for me or Trump then you ain’t black.'- Joe Biden", "'I am once again asking for your financial support.' - Bernie Sanders", "'My name is Elizabeth and I'm running for president, because that's what girls do.' - Elizabeth Warren", "'People say, ‘Do you really want a general election between two New York billionaires?’ To which I say, ‘Who’s the other one?’' - Michael Bloomberg", "'It is no coincidence that the century of total war coincided with the century of central banking.' - Ron Paul", "'Feet are gross.' - Pete Buttigieg"]
 customquote = quotes[Math.floor((Math.random() * quotes.length))]
-corrr = '\n              <h2>WHO CAN BEAT TRUMP?</<font id='wittyquote' size='4' color='FFFFFF'><em>` + customquote + `</em></font>';
+corrr = `\n              <h2>WHO CAN BEAT TRUMP?</<font id='wittyquote' size='4' color='FFFFFF'><em>` + customquote + `</em></font>`
 
 
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#0d2140";
