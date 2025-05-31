@@ -576,5 +576,3 @@ function changeOpponentSelectionDescription() {
   } catch {}
 }
 window.setInterval(changeOpponentSelectionDescription,200)
-
-}
