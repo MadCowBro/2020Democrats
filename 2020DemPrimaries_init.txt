@@ -550,3 +550,31 @@ function addDynamicCSS() {
 }
 
 addDynamicCSS();
+
+function modifyForm() {
+  try {
+    const form = document.querySelector('form[name="game_type_selection"]');
+    const select = form.querySelector('select[name="game_type_id"]');
+  
+    // change option value
+    const option = select.querySelector('option[value="1"]');
+    option.textContent = 'Default (Proportional)';
+
+    // Remove second option
+    select.querySelector('option[value="1"]').remove();
+  
+    // change h3 text
+    const h3 = form.querySelector('h3');
+    h3.textContent = 'How would you like the seats to be allocated?';
+  } catch {}
+}
+window.setInterval(modifyForm,200)
+function changeOpponentSelectionDescription() {
+  try {
+    const opponentSelectionDescription = document.getElementById("opponent_selection_description_window");
+    opponentSelectionDescription.innerHTML = `<p><strong>Allocate each state's delegates proportionally.</strong></p><p>Under this method, all candidates split the delegates in a state, in proportion to their popular vote %. There is still an advantage to winning a state -- the winner of the state will always receive a plurality of delegates. For instance, in a state with 4 delegates, if Candidate A wins 51% of the vote, they will be awarded 3 delegates.</p><p>Compared to a winner-take-all method, this method aligns the delegates more closely with the popular vote. It also makes it easier to smaller candidates to increase their delegates totals, since much of their support may be spread across the country, rather than localized within one state. In the Democratic Party primaries, they have all been proportional since modern primaries began to take shape - whereas the Republican Party maintains some winner-take-all races.</p>`;
+  } catch {}
+}
+window.setInterval(changeOpponentSelectionDescription,200)
+
+}
