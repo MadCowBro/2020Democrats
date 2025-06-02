@@ -485,7 +485,7 @@ jet_data = {
     "containerColor": "#FFFFFF",
     "innerWindowColor": "#00a7df",
     "bannerImageUrl": "https://i.imgur.com/DlshB3R.png",
-    "backgroundImageUrl": "https://coolbackgrounds.io/images/backgrounds/white/pure-white-background-85a2a7fd.jpg",
+    "backgroundImageUrl": "https://i.imgur.com/jHLCKQv.png",
     "endingTextColor": "#000000",
     "customQuote": "",
     "gameTitle": "WHO CAN BEAT TRUMP?"
@@ -511,7 +511,7 @@ $(".container")[0].style.backgroundColor = "#FFFFFF";
 
 document.getElementById("header").src = "https://i.imgur.com/DlshB3R.png";
 
-document.body.background = "https://coolbackgrounds.io/images/backgrounds/white/pure-white-background-85a2a7fd.jpg";
+document.body.background = "https://i.imgur.com/jHLCKQv.png";
 
 document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#00a7df!important;}</style>";
 
