@@ -34628,6 +34628,54 @@ campaignTrail_temp.answer_feedback_json = [
     }
 ]
 
+e.primary=true // toggles primary mode on
+e.primary_code = [
+  {
+    "breakQ": 19, // the question on which the primaries for these states will occur (note that questions start at 0 in the code, so when you see on screen "Question 1", it actually means Question 0)
+    "states": [195] // IA
+  },
+  {
+    "breakQ": 21,
+    "states": [209, 208] // NH, NV
+  },
+  {
+    "breakQ": 22,
+    "states": [220] // SC
+  },
+  {
+    "breakQ": 24,
+    "states": [181, 7000, 184, 185, 186, 199, 201, 203, 213, 216, 222, 223, 224, 225, 226] // AL, AS, AR, CA, CO, ME, MA, MN, NC, OK, TN, TX, UT, VT, VA
+  },
+  {
+    "breakQ": 26,
+    "states": [7005, 192, 202, 204, 205, 214, 227, 7002] // Democrats Abroad, ID, MI, MS, MO, ND, WA, MP
+  },
+  {
+    "breakQ": 28,
+    "states": [183, 189, 193] // AZ, FL, IL
+  },
+  {
+    "breakQ": 31,
+    "states": [230, 182, 231, 215] // WI, AK, WY, OH
+  },
+  {
+    "breakQ": 32,
+    "states": [196, 207, 217, 191] // KS, NE, OR, HI
+  },
+  {
+    "breakQ": 34,
+    "states": [228, 194, 200, 206, 211, 218, 219, 221] // DC, IN, MD, MT, NM, PA, RI, SD
+  },
+  {
+    "breakQ": 36,
+    "states": [7001, 7004, 190, 229, 197, 212] // GU, VI, GA, WV, KY, NY
+  },
+  {
+    "breakQ": 37,
+    "states": [188, 210, 198, 7003, 187] // DE, NJ, LA, PR, CT
+  }
+]
+
 campaignTrail_temp.candidate_image_url = "https://i.imgur.com/Y1X5bvv.png";
 campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/DnsrKqh.png";
 campaignTrail_temp.candidate_last_name = "Buttigieg";
