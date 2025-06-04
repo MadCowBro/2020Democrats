@@ -1,10 +1,10 @@
 campaignTrail_temp.questions_json = [
     {
         "model": "campaign_trail.question",
-        "pk": 397,
+        "pk": 10000,
         "fields": {
             "priority": 0,
-            "description": "The year is 2010, mid-November. Republicans just retook control of the House of Representatives. You have some time to think about your future, and whether or not your high approvals will hold if you stay on. Will you stay on as Secretary of State for the remainder of Obama's term?",
+            "description": "It is November of 2019. You're quite late to the party, Mr. Bloomberg, however as they say in the trade, “better late than never”. So, would you like to confirm whether you're running for President in 2020?",
             "likelihood": 1
         }
     },
@@ -391,6 +391,14 @@ campaignTrail_temp.questions_json = [
 campaignTrail_temp.answers_json = [
     {
         "model": "campaign_trail.answer",
+        "pk": 10001,
+        "fields": {
+            "question": 10000,
+            "description": "I know I'm late to the party, but I have officially registered to run for the Office of President of the United States. Donald Trump represents an existential threat to our values, and in this time, we must all come together; Democrats, Independents, and even Republicans alike."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
         "pk": 3310,
         "fields": {
             "question": 343,
@@ -755,22 +763,6 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 390,
             "description": "It's important to remind voters that I am my own candidate with somewhat different policies and goals. Of course, we will continue to campaign with Bill, but let's have him not discuss his administration as much."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 3501,
-        "fields": {
-            "question": 397,
-            "description": "I have the utmost respect for President Obama, but I think it's in my best personal interest to move on from serving, at least for a couple of years. I'll spend the time in between leaving the administration and my run focusing on the Clinton Foundation so I can stay in the public image if I choose to run in 2016. "
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 3502,
-        "fields": {
-            "question": 397,
-            "description": "I will promise Obama and the public my commitment to stay on until at least the end of this term. It's important to tie myself to Obama, and fight to finish the job he started - and frankly, the last thing we need is even more shuffling around of power in Washington. "
         }
     },
     {
@@ -32396,6 +32388,15 @@ campaignTrail_temp.answer_score_state_json = [
 campaignTrail_temp.answer_feedback_json = [
     {
         "model": "campaign_trail.answer_feedback",
+        "pk": 10002,
+        "fields": {
+            "answer": 10001,
+            "candidate": 303,
+            "answer_feedback": "A rather boring opening statement considering how late into the campaign season we are. Nonetheless, you start at a somewhat reasonable 3% of the polls. Not bad considering candidates like Warren and Biden have been gathering support for months in advance over you."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
         "pk": 710,
         "fields": {
             "answer": 3312,
@@ -33571,24 +33572,6 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 3392,
             "candidate": 302,
             "answer_feedback": "This is a good, left-wing answer that will motivate your base."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 200413,
-        "fields": {
-            "answer": 3501,
-            "candidate": 300,
-            "answer_feedback": "Obama clearly feels animosity because of this move. Nevertheless, he nominates John Kerry of Massachusetts, whose seat is then won by Charlie Baker very narrowly. Obama pulls off a close win in 2012 through Colorado, Iowa and Virginia, though."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 200414,
-        "fields": {
-            "answer": 3502,
-            "candidate": 300,
-            "answer_feedback": "Obama is admittedly grateful for this move, and your retainment as Secretary of State is incredibly valuable when the 'Arab Spring' breaks out."
         }
     },
     {
