@@ -10,10 +10,10 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": 370,
+        "pk": 20000,
         "fields": {
             "priority": 1,
-            "description": "You're one of the most popular public figures in the country, with an approval rating of 66%. Many are expecting it, and many more are ready to back you through thick and thin. When are you going to announce your run, already!?",
+            "description": "Shortly after your entrance in the race, you get hit with criticism from the progressive wing of the party. After their close loss in 2016, 2020 was supposed to be their year. They fear your career establishment and moderate stances will sink the Democrats’ chance of defeating Trump. Would you like to pivot in a different direction for this campaign?",
             "likelihood": 1
         }
     },
@@ -399,6 +399,30 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
+        "pk": 20001,
+        "fields": {
+            "question": 20000,
+            "description": "Of course, I won’t give everyone my exact campaign strategy out loud, but I’ll say this: most Democrats are not as liberal, or progressive, whatever term you use, as Bernie Sanders. Most Democrats are not long-haired college Instagram kids either. I’ll aim to target Democrats left behind by Bernie’s so-called revolution—African-Americans, labor unions, the average Joe and yes, the establishment. They’re much more willing to go for me than him."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 20002,
+        "fields": {
+            "question": 20000,
+            "description": "We’ll have to embrace populism if we want to even have a hope of winning. Remember how much Trump’s populism spurred Midwestern Republicans in 2016? It’s certainly unorthodox, but we have to. We can’t have another Hillary disaster on our hands. I’ll just use the parts that the public can stomach more, like Wall Street regulation, healthcare and additional environmental regulations."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 20003,
+        "fields": {
+            "question": 20000,
+            "description": "I stand with everybody: the humble blue-collar worker, the young college student, the upperclassman, the hardworking mother, your desk job office worker, the formerly oppressed, all of them. If we can’t build a big tent, Trump will, and we can’t let that happen."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
         "pk": 3310,
         "fields": {
             "question": 343,
@@ -627,30 +651,6 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 367,
             "description": "Everyday Americans need a champion, and I want to be that champion. We will generally ignore him to begin, but use some of his more populist rhetoric to swing some of his voters."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 3409,
-        "fields": {
-            "question": 370,
-            "description": "We will announce early - very early, around mid-2012. It's important to consolidate and motivate the Democratic base going into the 2014 midterm elections. There's just too much at stake to be sitting on the sidelines."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 3410,
-        "fields": {
-            "question": 370,
-            "description": "We will announce after 2013, shortly after we know the President has been re-elected. We will tie our campaign to his legacy."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 3411,
-        "fields": {
-            "question": 370,
-            "description": "We will announce in 2015, giving me some time to work on the Clinton Foundation and some time to rest after serving as Secretary of State."
         }
     },
     {
@@ -10071,66 +10071,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 1233,
-        "fields": {
-            "answer": 3314,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1234,
-        "fields": {
-            "answer": 3314,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.25
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1235,
-        "fields": {
-            "answer": 3315,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1236,
-        "fields": {
-            "answer": 3315,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.25
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1237,
-        "fields": {
-            "answer": 3318,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1238,
-        "fields": {
-            "answer": 3318,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.25
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 1244,
         "fields": {
             "answer": 3329,
@@ -10141,232 +10081,12 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 1245,
-        "fields": {
-            "answer": 3330,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.004
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1246,
-        "fields": {
-            "answer": 3330,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.15
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1247,
-        "fields": {
-            "answer": 3334,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1248,
-        "fields": {
-            "answer": 3334,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.25
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1249,
-        "fields": {
-            "answer": 3335,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1250,
-        "fields": {
-            "answer": 3335,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.25
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1251,
-        "fields": {
-            "answer": 3337,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1252,
-        "fields": {
-            "answer": 3337,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.25
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1253,
-        "fields": {
-            "answer": 3338,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1254,
-        "fields": {
-            "answer": 3338,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.25
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1255,
-        "fields": {
-            "answer": 3339,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1256,
-        "fields": {
-            "answer": 3339,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.25
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 1259,
         "fields": {
             "answer": 3342,
             "candidate": 300,
             "affected_candidate": 300,
             "global_multiplier": -0.02005
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1261,
-        "fields": {
-            "answer": 3344,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1262,
-        "fields": {
-            "answer": 3344,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.25
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1263,
-        "fields": {
-            "answer": 3347,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1264,
-        "fields": {
-            "answer": 3347,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.25
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1265,
-        "fields": {
-            "answer": 3348,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.004
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1266,
-        "fields": {
-            "answer": 3348,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.15
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1271,
-        "fields": {
-            "answer": 3355,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1272,
-        "fields": {
-            "answer": 3355,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.25
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1273,
-        "fields": {
-            "answer": 3356,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1274,
-        "fields": {
-            "answer": 3356,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.25
         }
     },
     {
@@ -10407,126 +10127,6 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 300,
             "affected_candidate": 302,
             "global_multiplier": -0.0143
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1283,
-        "fields": {
-            "answer": 3366,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1284,
-        "fields": {
-            "answer": 3366,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.25
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1285,
-        "fields": {
-            "answer": 3367,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1286,
-        "fields": {
-            "answer": 3367,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.25
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1295,
-        "fields": {
-            "answer": 3378,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.004
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1296,
-        "fields": {
-            "answer": 3378,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.15
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1297,
-        "fields": {
-            "answer": 3379,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.004
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1298,
-        "fields": {
-            "answer": 3379,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.15
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1305,
-        "fields": {
-            "answer": 3390,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1306,
-        "fields": {
-            "answer": 3390,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.25
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1307,
-        "fields": {
-            "answer": 3391,
-            "candidate": 302,
-            "affected_candidate": 301,
-            "global_multiplier": 0.004
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1308,
-        "fields": {
-            "answer": 3391,
-            "candidate": 302,
-            "affected_candidate": 302,
-            "global_multiplier": -0.15
         }
     },
     {
@@ -32397,6 +31997,33 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
+        "pk": 20004,
+        "fields": {
+            "answer": 20001,
+            "candidate": 300,
+            "answer_feedback": "This is the average Democratic voter base, and they will no doubt be fired up by the fact that you’re running for them. You’re also seen as more “electable” than Bernie. However, you will have to eventually embrace some of Bernie and Trump’s populist credentials that soured Midwestern turnout against Hillary in 2016."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 20005,
+        "fields": {
+            "answer": 20002,
+            "candidate": 300,
+            "answer_feedback": "This is the best strategy. By using populism in a Sanders vein, you’re able to win back voters that bolted from Obama to Trump in 2016. Privately, Bernie himself now views you as much less of a threat than Clinton was, which will be crucial for party unity in the general."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 20006,
+        "fields": {
+            "answer": 20003,
+            "candidate": 300,
+            "answer_feedback": "The big tent is an age-old strategy and can always work well. However, you need more policy specifics. In this environment, interest-group appeals aren’t enough anymore. Ideology is king."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
         "pk": 710,
         "fields": {
             "answer": 3312,
@@ -33104,33 +32731,6 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 3400,
             "candidate": 300,
             "answer_feedback": "Alright. Way to get that crowd fired up."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 876,
-        "fields": {
-            "answer": 3409,
-            "candidate": 300,
-            "answer_feedback": "The media needles you for jumping the gun here - it wasn't even known if Obama would win re-election. You should be very, very grateful that Biden chose not to run, however. This could've gone a lot worse."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 877,
-        "fields": {
-            "answer": 3410,
-            "candidate": 300,
-            "answer_feedback": "You announce your campaign in early 2013... right as hearings on Benghazi by House Republicans ramp up. Democrats, specifically those tied to Obama love your strong will during the hearings, but they diminish your approvals with those outside of the base more and more."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 878,
-        "fields": {
-            "answer": 3411,
-            "candidate": 300,
-            "answer_feedback": "Announcing after the midterm is a pretty standard option, but thankfully you announce before any potential candidates can announce. It also becomes increasingly clear that Biden isn't running. "
         }
     },
     {
