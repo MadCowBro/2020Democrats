@@ -19,10 +19,10 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": 367,
+        "pk": 30000,
         "fields": {
             "priority": 1,
-            "description": "Well, it's official - self-described \"democratic socialist\" Bernie Sanders of Vermont announced today that he will be seeking the Democratic Nomination. He's expected to serve as nothing more than a protest vote for the left-wing flank of the party. How will your campaign react to this?",
+            "description": "Current opinion polling shows you leading Sanders by a wide margin. However, this margin thins with every new poll conducted. How will you try to consolidate your status as the front-runner?",
             "likelihood": 1
         }
     },
@@ -423,6 +423,30 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
+        "pk": 30001,
+        "fields": {
+            "question": 30000,
+            "description": "I’ll campaign heavily in the Rust Belt. Apart from the farmers of the Rockies and Plains, this is the most heavily pro-Sanders group out there. I’m cool with labor, right?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 30002,
+        "fields": {
+            "question": 30000,
+            "description": "We don’t need to complicate this much. We need speeches all over the country, and we need to get some friends like Clinton, Obama and even Colin Powell to be with me on the campaign trail. We are above the mudslinging."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 30003,
+        "fields": {
+            "question": 30000,
+            "description": "Let’s hit on Trump heavily. He’s a punching bag no Democrat likes. We’ll also focus on Sanders’ general unelectability and how he would massively turn off a lot of the more moderate Democrats with his rhetoric. It could lead to losses in the House, or God forbid, Trump’s re-election."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
         "pk": 3310,
         "fields": {
             "question": 343,
@@ -627,30 +651,6 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 363,
             "description": "Let's talk gerrymandering. What we saw in 2010 with REDMAP was a disgrace to our democracy. Regardless of partisan control of Congress, I will push for a bipartisan, national gerrymandering ban."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 3397,
-        "fields": {
-            "question": 367,
-            "description": "It's important that we remind voters exactly why I am the frontrunner. We should publish some internal polling that shows us ahead of any potential threat by a wide margin."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 3398,
-        "fields": {
-            "question": 367,
-            "description": "If we want change - real change, we need someone who has the political expertise to get stuff done, regardless of who is controlling Congress. Sanders talks a tall order, but can he actually deliver, let alone win?"
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 3399,
-        "fields": {
-            "question": 367,
-            "description": "Everyday Americans need a champion, and I want to be that champion. We will generally ignore him to begin, but use some of his more populist rhetoric to swing some of his voters."
         }
     },
     {
@@ -32024,6 +32024,33 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
+        "pk": 30004,
+        "fields": {
+            "answer": 30001,
+            "candidate": 300,
+            "answer_feedback": "Hillary did still win the two biggest states in that area in the 2016 primary, but you’re right, this is where most Sanders supporters are. Good luck in this crucial region."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 30005,
+        "fields": {
+            "answer": 30002,
+            "candidate": 300,
+            "answer_feedback": "This may be for the best, especially considering how heated the attacks have been lately. You might rise above the rest of the pack by staying above this petty debauchery."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 30006,
+        "fields": {
+            "answer": 30003,
+            "candidate": 300,
+            "answer_feedback": "Many Democrats want to defeat Trump no matter what, and it’s indeed true that you’re more likely to win than Sanders. However, considering Sanders’ energy and grassroots support, it might be best not to hit too hard."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
         "pk": 710,
         "fields": {
             "answer": 3312,
@@ -32695,33 +32722,6 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 3390,
             "candidate": 300,
             "answer_feedback": "You're certainly getting attention in the news for this stance, but it is not a mainstream position in your party. Perhaps this will establish you as an independent thinker..."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 872,
-        "fields": {
-            "answer": 3397,
-            "candidate": 300,
-            "answer_feedback": "A pretty strong but indirect response. In any case, how much trouble can Sanders really cause? It'd be very, very hard to nab the nomination away from you."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 873,
-        "fields": {
-            "answer": 3398,
-            "candidate": 300,
-            "answer_feedback": "This is probably your best argument. You can't come out against too many of his policies, but painting him as a general radical may look the best."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 874,
-        "fields": {
-            "answer": 3399,
-            "candidate": 300,
-            "answer_feedback": "Interesting strategy. It's unlikely it may work as well as you wish, but going on the offense like this may be the best way to burn his campaign out."
         }
     },
     {
