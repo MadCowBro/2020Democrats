@@ -545,6 +545,7 @@ e.creditsPage = () => {
       <p>mr. mackinac - writer, theme designer</p>
       <p>Msavage1719 - writer</p>
       <p>Nellie_Taylor_Ross - writer</p>
+      <p>Ryle_0823 - writer</p>
       <p>skia - writer, theme designer</p>
       <h3>Special Thanks</h3>
       <p>DecstarG- Credits page and music player</p>
