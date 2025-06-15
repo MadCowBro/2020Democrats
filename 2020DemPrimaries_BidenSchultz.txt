@@ -30635,27 +30635,23 @@ const nominees = {
     biden: {
       name: 'Joe Biden',
       imgURL: 'https://i.imgur.com/dsxrDSZ.png',
-      isActive: true,
       bioText: '<h5>Former Vice President of the United States</h5><center><img src="https://i.imgur.com/dsxrDSZ.png" style="width: 75px; height: 75px; display: block; margin: 0px; cursor: pointer; border: 3px solid white; border-radius: 1px; object-fit: cover;"></center><p>You shouldn’t be running. It should be Beau. Alas, here you are.</p>'
     },
     sanders: {
       name: 'Bernie Sanders',
       imgURL: 'https://i.imgur.com/6rplxbw.png',
-      isActive: true,
       bioText: '<h5>United States Senator from Vermont</h5><center><img src="https://i.imgur.com/6rplxbw.png" style="width: 75px; height: 75px; display: block; margin: 0px; cursor: pointer; border: 3px solid white; border-radius: 1px; object-fit: cover;"></center> <p>Your chief rival for the nomination. Gave Hillary a hard time in 2016. Look how that ended.</p>'
     },
     warren: {
       name: 'Elizabeth Warren',
       imgURL: 'https://i.imgur.com/3RZShdG.png',
-      isActive: true,
       bioText: '<h5>United States Senator from Massachusetts</h5><center><img src="https://i.imgur.com/3RZShdG.png" style="width: 75px; height: 75px; display: block; margin: 0px; cursor: pointer; border: 3px solid white; border-radius: 1px; object-fit: cover;"></center> <p>To your left, but not as far left as Sanders. Appeals to policy wonks. Her dividing the progressive vote is good for you.</p>'
     },
     buttigieg: {
       name: 'Pete Buttigieg',
       imgURL: https://i.imgur.com/n7E2ELv.png',
-      isActive: true,
       bioText: '<h5>Mayor of South Bend, Indiana</h5><center><img src="https://i.imgur.com/n7E2ELv.png" style="width: 75px; height: 75px; display: block; margin: 0px; cursor: pointer; border: 3px solid white; border-radius: 1px; object-fit: cover;"></center> <p>Who the hell is this guy? Why’s he eating into your early state support? It'd be wise to weaken him a bit.</p>'
-    },
+    }
 };
 
 function addOpButton() {
@@ -30681,14 +30677,6 @@ function addOpButton() {
 
   // Attach the click event listener
   newButton.addEventListener('click', openOpButton);
-
-    // Insert the new button next to the Headquarters button
-    const headquarterButton = document.getElementById('headquarter_button');
-    if (headquarterButton) {
-        headquarterButton.insertAdjacentElement('afterend', newButton);
-    } else {
-        refButton.insertAdjacentElement('afterend', newButton);
-    }
   
 }
 
@@ -30804,7 +30792,7 @@ bioViewer.style.overflowY = 'auto';
 bioViewer.style.scrollbarWidth = 'thin';
 bioViewer.style.overflowX = 'hidden';    
 bioViewer.style.color = 'white';
-bioViewer.innerHTML = "<h3>Welcome to the Democratic National Convention File! Please select a candidate to learn more about them.</h3><center><img src='https://itsastronomical.com/assets/1924/opp/chad.png' style='width: 85px; height: 85px; display: block; margin: 0px; cursor: pointer; border: 3px solid white; border-radius: 1px; object-fit: cover;'></center><p>Mr. McAdoo desires the nomination quite badly, and is only willing to accept a few possible compromises candidates. The odds of each of them securing victory will be shown here.</p>"; // You can change this as needed, obviously
+bioViewer.innerHTML = "<h3>Track your opponents here.</h3><center><img src='https://itsastronomical.com/assets/1924/opp/chad.png' style='width: 85px; height: 85px; display: block; margin: 0px; cursor: pointer; border: 3px solid white; border-radius: 1px; object-fit: cover;'></center><p>You might find helpful strategies needed to defeat these candidates.</p>"; // You can change this as needed, obviously
 demPanel.appendChild(bioViewer);
 
 // Add nominee portrait box
