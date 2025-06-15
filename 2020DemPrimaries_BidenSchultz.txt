@@ -30631,6 +30631,67 @@ e.VPisCandidate = 0;
 		questionBanner.replaceWith(img);
 	}
 
+const nominees = {
+    biden: {
+      name: 'Joe Biden',
+      imgURL: 'https://i.imgur.com/dsxrDSZ.png',
+      isActive: true,
+      bioText: '<h5>Former Vice President of the United States</h5><center><img src="https://i.imgur.com/dsxrDSZ.png" style="width: 75px; height: 75px; display: block; margin: 0px; cursor: pointer; border: 3px solid white; border-radius: 1px; object-fit: cover;"></center><p>You shouldn’t be running. It should be Beau. Alas, here you are.</p>'
+    },
+    sanders: {
+      name: 'Bernie Sanders',
+      imgURL: 'https://i.imgur.com/6rplxbw.png',
+      isActive: true,
+      bioText: '<h5>United States Senator from Vermont</h5><center><img src="https://i.imgur.com/6rplxbw.png" style="width: 75px; height: 75px; display: block; margin: 0px; cursor: pointer; border: 3px solid white; border-radius: 1px; object-fit: cover;"></center> <p>Your chief rival for the nomination. Gave Hillary a hard time in 2016. Look how that ended.</p>'
+    },
+    warren: {
+      name: 'Elizabeth Warren',
+      imgURL: 'https://i.imgur.com/3RZShdG.png',
+      isActive: true,
+      bioText: '<h5>United States Senator from Massachusetts</h5><center><img src="https://i.imgur.com/3RZShdG.png" style="width: 75px; height: 75px; display: block; margin: 0px; cursor: pointer; border: 3px solid white; border-radius: 1px; object-fit: cover;"></center> <p>To your left, but not as far left as Sanders. Appeals to policy wonks. Her dividing the progressive vote is good for you.</p>'
+    },
+    buttigieg: {
+      name: 'Pete Buttigieg',
+      imgURL: https://i.imgur.com/n7E2ELv.png',
+      isActive: true,
+      bioText: '<h5>Mayor of South Bend, Indiana</h5><center><img src="https://i.imgur.com/n7E2ELv.png" style="width: 75px; height: 75px; display: block; margin: 0px; cursor: pointer; border: 3px solid white; border-radius: 1px; object-fit: cover;"></center> <p>Who the hell is this guy? Why’s he eating into your early state support? It'd be wise to weaken him a bit.</p>'
+    },
+};
+
+function addOpButton() {
+  // Check if the button already exists
+  if (document.getElementById('op_button')) {
+      return;
+  }
+
+  // Find the reference button by its ID
+  const refButton = document.getElementById('view_electoral_map');
+  if (!refButton) {
+      return;
+  }
+
+  // Create a new button element
+  const newButton = document.createElement('button');
+
+  newButton.id = 'op_button';
+
+  newButton.style.marginLeft = '1.5em';
+
+  newButton.innerHTML = 'The Field';
+
+  // Attach the click event listener
+  newButton.addEventListener('click', openOpButton);
+
+    // Insert the new button next to the Headquarters button
+    const headquarterButton = document.getElementById('headquarter_button');
+    if (headquarterButton) {
+        headquarterButton.insertAdjacentElement('afterend', newButton);
+    } else {
+        refButton.insertAdjacentElement('afterend', newButton);
+    }
+  
+}
+
 function openOpButton() {
     
   let questions = document.querySelector(".inner_window_question");
