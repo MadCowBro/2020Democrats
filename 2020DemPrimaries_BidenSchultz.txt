@@ -30649,7 +30649,7 @@ const nominees = {
     },
     buttigieg: {
       name: 'Pete Buttigieg',
-      imgURL: https://i.imgur.com/n7E2ELv.png',
+      imgURL: 'https://i.imgur.com/n7E2ELv.png',
       bioText: '<h5>Mayor of South Bend, Indiana</h5><center><img src="https://i.imgur.com/n7E2ELv.png" style="width: 75px; height: 75px; display: block; margin: 0px; cursor: pointer; border: 3px solid white; border-radius: 1px; object-fit: cover;"></center> <p>Who the hell is this guy? Why’s he eating into your early state support? It'd be wise to weaken him a bit.</p>'
     }
 };
