@@ -4,7 +4,7 @@ campaignTrail_temp.questions_json = [
         "pk": 10000,
         "fields": {
             "priority": 0,
-            "description": "Every time you read one of the bills that Trump’s pushing for on Capitol Hill, you seethe with rage. You’re 76 and have never been as charismatic or ubiquitous as Trump, but something in your gut is telling you to run. After all, who else in the Democratic Party can stop Trump? Will you do it, Joe?",
+            "description": "It is November of 2019. You're quite late to the party, Mr. Bloomberg, however as they say in the trade, “better late than never”. So, would you like to confirm whether you're running for President in 2020?",
             "likelihood": 1
         }
     },
@@ -349,7 +349,7 @@ campaignTrail_temp.answers_json = [
         "pk": 10001,
         "fields": {
             "question": 10000,
-            "description": "You bet I’m gonna. Trump has shown an atrociousness in the presidency not seen since Johnson - Andrew, not Lyndon - was around. He is racist, misogynistic, ableist and homophobic. I’m launching a challenge to the President immediately. I’m 76, I’m well aware, but we can do this. For the soul of America."
+            "description": "I know I'm late to the party, but I have officially registered to run for the Office of President of the United States. Donald Trump represents an existential threat to our values, and in this time, we must all come together; Democrats, Independents, and even Republicans alike."
         }
     },
     {
@@ -14361,7 +14361,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 10001,
             "candidate": 300,
-            "answer_feedback": "Trump is quick to call you out for remembering the 1860s like it was yesterday, and the progressive wing of the party, who thought they’d easily win 2020 after coming so close in 2016, are also fairly disappointed. However, moderate Democrats and those in that respectable Lincoln Project finally have a Democrat they can get behind."
+            "answer_feedback": "A rather boring opening statement considering how late into the campaign season we are. Nonetheless, you start at a somewhat reasonable 3% of the polls. Not bad considering candidates like Warren and Biden have been gathering support for months in advance over you."
         }
     },
     {
@@ -14550,57 +14550,57 @@ campaignTrail_temp.answer_feedback_json = [
 e.primary=true // toggles primary mode on
 e.primary_code = [
   {
-    "breakQ": 19, // the question on which the primaries for these states will occur (note that questions start at 0 in the code, so when you see on screen "Question 1", it actually means Question 0)
+    "breakQ": 9, // the question on which the primaries for these states will occur (note that questions start at 0 in the code, so when you see on screen "Question 1", it actually means Question 0)
     "states": [195] // IA
   },
   {
-    "breakQ": 21,
+    "breakQ": 11,
     "states": [209, 208] // NH, NV
   },
   {
-    "breakQ": 22,
+    "breakQ": 12,
     "states": [220] // SC
   },
   {
-    "breakQ": 24,
+    "breakQ": 14,
     "states": [181, 7000, 184, 185, 186, 199, 201, 203, 213, 216, 222, 223, 224, 225, 226] // AL, AS, AR, CA, CO, ME, MA, MN, NC, OK, TN, TX, UT, VT, VA
   },
   {
-    "breakQ": 26,
+    "breakQ": 16,
     "states": [7005, 192, 202, 204, 205, 214, 227, 7002] // Democrats Abroad, ID, MI, MS, MO, ND, WA, MP
   },
   {
-    "breakQ": 28,
+    "breakQ": 18,
     "states": [183, 189, 193] // AZ, FL, IL
   },
   {
-    "breakQ": 31,
+    "breakQ": 21,
     "states": [230, 182, 231, 215] // WI, AK, WY, OH
   },
   {
-    "breakQ": 32,
+    "breakQ": 22,
     "states": [196, 207, 217, 191] // KS, NE, OR, HI
   },
   {
-    "breakQ": 34,
+    "breakQ": 24,
     "states": [228, 194, 200, 206, 211, 218, 219, 221] // DC, IN, MD, MT, NM, PA, RI, SD
   },
   {
-    "breakQ": 36,
+    "breakQ": 26,
     "states": [7001, 7004, 190, 229, 197, 212] // GU, VI, GA, WV, KY, NY
   },
   {
-    "breakQ": 37,
+    "breakQ": 27,
     "states": [188, 210, 198, 7003, 187] // DE, NJ, LA, PR, CT
   }
 ]
 
-campaignTrail_temp.candidate_image_url = "https://i.imgur.com/pwyCgbk.png";
-campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/Tby0qkg.png";
-campaignTrail_temp.candidate_last_name = "Biden";
+campaignTrail_temp.candidate_image_url = "https://i.imgur.com/F7BFXpm.png";
+campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/cdWaACm.png";
+campaignTrail_temp.candidate_last_name = "Bloomberg";
 campaignTrail_temp.running_mate_last_name = "Campaign";
 
-document.getElementById("header").src = "https://i.imgur.com/dXryruj.png";
+document.getElementById("header").src = "https://i.imgur.com/pCh9fAN.png";
 
 const targetNode = document.getElementById("game_window");
 const config = { attributes: true, childList: true, subtree: true };
@@ -14625,7 +14625,7 @@ e.VPisCandidate = 0;
 		let img = document.createElement('img');
     if(e.VPisCandidate == 0)
     {
-			img.src = 'https://i.imgur.com/isWYBsB.png';
+			img.src = 'https://i.imgur.com/onCtoJS.png';
     } 
 		questionBanner.replaceWith(img);
 	}
