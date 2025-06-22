@@ -67,7 +67,7 @@ campaignTrail_temp.questions_json = [
         "pk": 80000,
         "fields": {
             "priority": 2,
-            "description": "With the early caucuses and primaries approaching within a few months, CNN has invited you, Sanders, Chafee, O’Malley, and Webb to a presidential debate. Will you accept the invitation, and if so, what will you focus on during the debate?",
+            "description": "With six months until the Iowa caucuses, it would be a good idea to campaign in other parts of the country for a little bit. Where will you campaign?",
             "likelihood": 1
         }
     },
@@ -510,6 +510,38 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 70000,
             "description": "I see the appeal, but we can’t be talking about this publicly. Donald Trump would call it weakness and the other Democrats would ask why I’m even running in the first place."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 80001,
+        "fields": {
+            "question": 80000,
+            "description": "New England, specifically New Hampshire. Bernie has the edge there right now, but with Warren siphoning his votes, we can make a run in this area. Maybe even take a lead."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 80002,
+        "fields": {
+            "question": 80000,
+            "description": "Let’s barnstorm the Midwest like hell, including Iowa. Populism is, for lack of a better word, popular there. It's also a base of support for Sanders, and Trump. We need to be involved in the Rust Belt."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 80003,
+        "fields": {
+            "question": 80000,
+            "description": "I say we hit the Mountain states, even stretching to Nevada. Bernie’s got huge margins there for the most part, but we can eat into his support and how many delegates he picks up in these areas."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 80004,
+        "fields": {
+            "question": 80000,
+            "description": "Nothing better than a whistle-stop tour of the South, including South Carolina. This is my firewall and we need to strengthen it every now and again."
         }
     }
 ]
@@ -14543,6 +14575,42 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 70003,
             "candidate": 300,
             "answer_feedback": "You privately tell aides, and family, that you’re considering serving a single term. Rumors leak of this, but the campaign squashes them quickly enough."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 80005,
+        "fields": {
+            "answer": 80001,
+            "candidate": 300,
+            "answer_feedback": "Taking New England will be tough no matter what. Both Sanders and Warren are highly competitive in this region. Even Buttigieg seems to be gaining ground in New Hampshire. It’s good you’re shoring this up now."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 80006,
+        "fields": {
+            "answer": 80002,
+            "candidate": 300,
+            "answer_feedback": "The Rust Belt is wary of Sanders’ social progressiveness, and looking at your moderate stances on many issues, they can certainly swing your way. Buttigieg is also eating into your support in Iowa. Gotta chip away at both of them."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 80007,
+        "fields": {
+            "answer": 80003,
+            "candidate": 300,
+            "answer_feedback": "It’s not an especially delegate-rich area, pundits are in fact puzzled as to why you’re placing so much focus here. Trump says you’re losing your mind. But this is a way to eat into Sanders’ margins, as you said."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 80008,
+        "fields": {
+            "answer": 80004,
+            "candidate": 300,
+            "answer_feedback": "You receive rousing receptions in Charleston, Atlanta, and Tallahassee. They love you, Joe! Let’s make sure they’ll be voting for you when it’s their turn."
         }
     }
 ]
