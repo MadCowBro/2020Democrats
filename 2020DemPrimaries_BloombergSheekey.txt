@@ -14687,7 +14687,7 @@ function openHeadquarter() {
         popOutMenu.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
         popOutMenu.style.border = '1px solid #ccc';
         popOutMenu.style.zIndex = '1000';
-        popOutMenu.style.backgroundImage = 'url("https://i.imgur.com/sjCE31d.png")';
+        popOutMenu.style.backgroundImage = 'url("https://i.imgur.com/eS7tZRW.png")';
         popOutMenu.style.backgroundSize = 'cover';
         popOutMenu.style.backgroundPosition = 'bottom';
         popOutMenu.style.alignItems = 'center';     
@@ -14717,7 +14717,7 @@ function openHeadquarter() {
             profiles.style.fontFamily = '"Georgia Bold", "Georgia", serif';
             profiles.style.color = '#0D2140';
             profiles.style.textShadow = '2px 2px 3px #000000';
-            profiles.style.fontSize = '24px';
+            profiles.style.fontSize = '14px';
         profiles.style.textAlign = 'left';
         profiles.style.position = 'relative';
         profiles.style.marginTop = '-4px'; 
