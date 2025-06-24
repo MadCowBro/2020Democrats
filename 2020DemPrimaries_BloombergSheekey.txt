@@ -14694,7 +14694,7 @@ function openHeadquarter() {
 
         // Create the menu title
         const menuTitle = document.createElement('h1');
-        menuTitle.innerText = 'Opposition Profiles';
+        menuTitle.innerText = 'Candidate Profiles';
         menuTitle.style.textAlign = 'center';
             menuTitle.style.fontFamily = '"Georgia Bold", "Georgia", serif';
             menuTitle.style.color = '#20529E';
@@ -14720,7 +14720,7 @@ function openHeadquarter() {
             profiles.style.fontSize = '14px';
         profiles.style.textAlign = 'center';
         profiles.style.position = 'relative';
-        profiles.style.marginTop = '1px'; 
+        profiles.style.marginTop = '4px'; 
         profiles.style.lineHeight = '0.7';
         // profiles.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
         profiles.style.padding = '2px';            
