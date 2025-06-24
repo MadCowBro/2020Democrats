@@ -14733,7 +14733,7 @@ function openHeadquarter() {
         const menuListA = document.createElement('ul');
         menuListA.style.listStyle = 'none';
         menuListA.style.padding = '1px';
-        menuListA.style.maxHeight = '140px'; 
+        menuListA.style.maxHeight = '218px'; 
         menuListA.style.overflowY = 'auto'; 
         menuListA.style.outline = '1px solid #CCCCCC';
         menuListA.style.border = '1px solid transparent';
