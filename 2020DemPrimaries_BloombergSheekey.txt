@@ -14360,7 +14360,7 @@ campaignTrail_temp.answer_feedback_json = [
         "pk": 10002,
         "fields": {
             "answer": 10001,
-            "candidate": 300,
+            "candidate": 303,
             "answer_feedback": "A rather boring opening statement considering how late into the campaign season we are. Nonetheless, you start at a somewhat reasonable 3% of the polls. Not bad considering candidates like Warren and Biden have been gathering support for months in advance over you."
         }
     },
@@ -14718,9 +14718,9 @@ function openHeadquarter() {
             profiles.style.color = '#20529E';
             profiles.style.textShadow = '2px 2px 3px #000000';
             profiles.style.fontSize = '14px';
-        profiles.style.textAlign = 'left';
+        profiles.style.textAlign = 'center';
         profiles.style.position = 'relative';
-        profiles.style.marginTop = '-4px'; 
+        profiles.style.marginTop = '1px'; 
         profiles.style.lineHeight = '0.7';
         // profiles.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
         profiles.style.padding = '2px';            
