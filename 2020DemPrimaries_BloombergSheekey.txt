@@ -14666,6 +14666,9 @@ const menuItemsA = [
     { photo: 'https://i.imgur.com/6rplxbw.png', text: '<b>Bernie Sanders</b><br><b>Senator from Vermont</b><br>The craziest one in the race. Trump will eat him alive if he gets past the primaries. Don’t let him win.', button: 'Defer', id: 'SANDERS_A'},
     { photo: 'https://i.imgur.com/3RZShdG.png', text: '<b>Elizabeth Warren</b><br><b>Senator from Massachusetts</b><br>Slightly saner than Sanders. It’s the only positive she has. Her gender will undoubted sink her versus Trump.', button: 'Defer', id: 'WARREN_A'},
     { photo: 'https://i.imgur.com/n7E2ELv.png', text: '<b>Pete Buttigieg</b><br><b>Mayor of Nowhere, Indiana</b><br>Voters were only looking at him as an alternative to Biden. That’s your role now. Time for him to run back to Indiana.', button: 'Defer', id: 'BUTTIGIEG_A'},
+    { photo: 'https://i.imgur.com/ucRGfc8.png', text: '<b>Amy Klobuchar</b><br><b>Senator from Minnesota</b><br>Her base is non-existent. Voters prefer Biden, Warren, hell, they prefer Buttigieg. Just another failed Minnesota Democrat.', button: 'Defer', id: 'KLOBUCHAR_A'},
+    { photo: 'https://i.imgur.com/ULqcfc1.png', text: '<b>All the Rest</b><br><b>Various Meaningless Positions</b><br>Wastes of spaces. These jokers can’t even separate themselves from the rest of the pack. If you have no shot in hell, why bother?', button: 'Defer', id: 'OTHERS_A'},
+    { photo: 'https://i.imgur.com/MSbqWeb.png', text: '<b>Michael Bloomberg</b><br><b>Former Mayor of NYC</b><br>Here you are, waiting in the wings. No one in this field has what it takes to defeat Donald Trump. You do.', button: 'Defer', id: 'BLOOMBERG_A'},
 ]
 
 function openHeadquarter() {      
@@ -14694,7 +14697,7 @@ function openHeadquarter() {
         menuTitle.innerText = 'Opposition Profiles';
         menuTitle.style.textAlign = 'center';
             menuTitle.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
-            menuTitle.style.color = '#B62C1A';
+            menuTitle.style.color = '#0D2140';
             menuTitle.style.textShadow = '2px 2px 3px #000000';
         menuTitle.style.top = '-04px';   
         menuTitle.style.position = 'relative';
@@ -14709,22 +14712,22 @@ function openHeadquarter() {
         // menuTitle.style.outline = '1px solid #0F0E0C';
         popOutMenu.appendChild(menuTitle);
         
-        const pests = document.createElement('h2');
-        pests.innerText = 'Compiled by Kevin Sheekey';
-            pests.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
-            pests.style.color = '#B62C1A';
-            pests.style.textShadow = '2px 2px 3px #000000';
-            pests.style.fontSize = '24px';
-        pests.style.textAlign = 'right';
-        pests.style.position = 'relative';
-        pests.style.marginTop = '-4px'; 
-        pests.style.lineHeight = '0.7';
-        // pests.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
-        pests.style.padding = '2px';            
-        pests.style.borderRadius = '1px';       
-        pests.style.display = 'block';    
-        // pests.style.outline = '1px solid #0F0E0C';
-        popOutMenu.appendChild(pests);
+        const profiles = document.createElement('h4');
+        profiles.innerText = 'Compiled by Kevin Sheekey';
+            profiles.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+            profiles.style.color = '#0D2140';
+            profiles.style.textShadow = '2px 2px 3px #000000';
+            profiles.style.fontSize = '24px';
+        profiles.style.textAlign = 'left';
+        profiles.style.position = 'relative';
+        profiles.style.marginTop = '-4px'; 
+        profiles.style.lineHeight = '0.7';
+        // profiles.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
+        profiles.style.padding = '2px';            
+        profiles.style.borderRadius = '1px';       
+        profiles.style.display = 'block';    
+        // profiles.style.outline = '1px solid #0F0E0C';
+        popOutMenu.appendChild(profiles);
 
         // Create the menu list
         const menuListA = document.createElement('ul');
@@ -14749,6 +14752,15 @@ function openHeadquarter() {
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/2VoIN3T.png")';
             }
             if(item.id == "BUTTIGIEG_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/XrgZccu.png")';
+            }
+            if(item.id == "KLOBUCHAR_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/XrgZccu.png")';
+            }
+            if(item.id == "OTHERS_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/XrgZccu.png")';
+            }
+            if(item.id == "BLOOMBERG_A"){
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/XrgZccu.png")';
             }
             
