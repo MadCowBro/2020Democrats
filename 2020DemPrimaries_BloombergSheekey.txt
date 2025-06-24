@@ -14698,11 +14698,11 @@ function openHeadquarter() {
         menuTitle.style.textAlign = 'center';
             menuTitle.style.fontFamily = '"Georgia Bold", "Georgia", serif';
             menuTitle.style.color = '#20529E';
-            menuTitle.style.textShadow = '2px 2px 3px #000000';
-        menuTitle.style.top = '-04px';   
+            menuTitle.style.textShadow = '4px 5px 4px #000000';
+        menuTitle.style.top = '-01px';   
         menuTitle.style.position = 'relative';
-        menuTitle.style.marginTop = '-04px'; 
-        menuTitle.style.marginBottom = '-04px'; 
+        menuTitle.style.marginTop = '-01px'; 
+        menuTitle.style.marginBottom = '-01px'; 
         menuTitle.style.lineHeight = '0.7';
         // menuTitle.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
         menuTitle.style.padding = '2px';            
@@ -14716,11 +14716,11 @@ function openHeadquarter() {
         profiles.innerText = 'Compiled by Kevin Sheekey';
             profiles.style.fontFamily = '"Georgia Bold", "Georgia", serif';
             profiles.style.color = '#20529E';
-            profiles.style.textShadow = '2px 2px 3px #000000';
+            profiles.style.textShadow = '4px 5px 4px #000000';
             profiles.style.fontSize = '14px';
         profiles.style.textAlign = 'center';
         profiles.style.position = 'relative';
-        profiles.style.marginTop = '4px'; 
+        profiles.style.marginTop = '7px'; 
         profiles.style.lineHeight = '0.7';
         // profiles.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
         profiles.style.padding = '2px';            
@@ -14743,7 +14743,7 @@ function openHeadquarter() {
             const menuItem = document.createElement('div');
 
             if(item.id == "BIDEN_A"){
-                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/N9cq4RW.png")';
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
             if(item.id == "SANDERS_A"){
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/KcgIOns.png")';
