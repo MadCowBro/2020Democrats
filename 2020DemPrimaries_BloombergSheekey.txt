@@ -14661,6 +14661,13 @@ function addHeadquarterButton() {
     refButton.insertAdjacentElement('afterend', newButton);
 }
 
+const menuItemsA = [ 
+    { photo: 'https://i.imgur.com/dsxrDSZ.png', text: '<b>Joe Biden</b><br><b>Former Vice President</b><br>There’s a reason Obama passed him up in 2016. He thinks he can beat Trump, but he doesn’t know him like you do. Besides, the guy’s washed.', button: 'Defer', id: 'BIDEN_A'},
+    { photo: 'https://i.imgur.com/6rplxbw.png', text: '<b>Bernie Sanders</b><br><b>Senator from Vermont</b><br>The craziest one in the race. Trump will eat him alive if he gets past the primaries. Don’t let him win.', button: 'Defer', id: 'SANDERS_A'},
+    { photo: 'https://i.imgur.com/3RZShdG.png', text: '<b>Elizabeth Warren</b><br><b>Senator from Massachusetts</b><br>Slightly saner than Sanders. It’s the only positive she has. Her gender will undoubted sink her versus Trump.', button: 'Defer', id: 'WARREN_A'},
+    { photo: 'https://i.imgur.com/n7E2ELv.png', text: '<b>Pete Buttigieg</b><br><b>Mayor of Nowhere, Indiana</b><br>Voters were only looking at him as an alternative to Biden. That’s your role now. Time for him to run back to Indiana.', button: 'Defer', id: 'BUTTIGIEG_A'},
+]
+
 function openHeadquarter() {      
     let questions = document.querySelector(".inner_window_question");
 
@@ -14732,26 +14739,17 @@ function openHeadquarter() {
         menuItemsA.forEach(item => {
             const menuItem = document.createElement('div');
 
-            if(item.id == "HOOVER_A"){
+            if(item.id == "BIDEN_A"){
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/N9cq4RW.png")';
             }
-            if(item.id == "MCNAMARA_A"){
+            if(item.id == "SANDERS_A"){
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/KcgIOns.png")';
             }
-            if(item.id == "BYRD_A"){
+            if(item.id == "WARREN_A"){
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/2VoIN3T.png")';
             }
-            if(item.id == "CONNALLY_A"){
+            if(item.id == "BUTTIGIEG_A"){
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/XrgZccu.png")';
-            }
-            if(item.id == "WALLACE_A"){
-                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/jRzdwPi.png")';
-            }
-            if(item.id == "MCCARTHY_A"){
-                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/ayrpOi6.png")';
-            }
-            if(item.id == "KENNEDY_A"){
-                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/M6AGfA3.png")';
             }
             
             menuItem.style.display = 'flex';
