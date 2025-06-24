@@ -14698,7 +14698,7 @@ function openHeadquarter() {
         menuTitle.style.textAlign = 'center';
             menuTitle.style.fontFamily = '"Georgia Bold", "Georgia", serif';
             menuTitle.style.color = '#20529E';
-            menuTitle.style.textShadow = '4px 5px 4px #000000';
+            menuTitle.style.textShadow = '4px 1px 4px #000000';
         menuTitle.style.top = '-01px';   
         menuTitle.style.position = 'relative';
         menuTitle.style.marginTop = '-01px'; 
@@ -14716,7 +14716,7 @@ function openHeadquarter() {
         profiles.innerText = 'Compiled by Kevin Sheekey';
             profiles.style.fontFamily = '"Georgia Bold", "Georgia", serif';
             profiles.style.color = '#20529E';
-            profiles.style.textShadow = '4px 5px 4px #000000';
+            profiles.style.textShadow = '4px 1px 4px #000000';
             profiles.style.fontSize = '14px';
         profiles.style.textAlign = 'center';
         profiles.style.position = 'relative';
@@ -14746,22 +14746,22 @@ function openHeadquarter() {
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
             if(item.id == "SANDERS_A"){
-                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/KcgIOns.png")';
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
             if(item.id == "WARREN_A"){
-                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/2VoIN3T.png")';
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
             if(item.id == "BUTTIGIEG_A"){
-                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/XrgZccu.png")';
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
             if(item.id == "KLOBUCHAR_A"){
-                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/XrgZccu.png")';
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
             if(item.id == "OTHERS_A"){
-                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/XrgZccu.png")';
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
             if(item.id == "BLOOMBERG_A"){
-                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/XrgZccu.png")';
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
             
             menuItem.style.display = 'flex';
