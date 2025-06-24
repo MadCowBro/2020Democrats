@@ -14696,7 +14696,7 @@ function openHeadquarter() {
         const menuTitle = document.createElement('h1');
         menuTitle.innerText = 'Opposition Profiles';
         menuTitle.style.textAlign = 'center';
-            menuTitle.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+            menuTitle.style.fontFamily = '"Georgia Bold", "Georgia", serif';
             menuTitle.style.color = '#0D2140';
             menuTitle.style.textShadow = '2px 2px 3px #000000';
         menuTitle.style.top = '-04px';   
@@ -14714,7 +14714,7 @@ function openHeadquarter() {
         
         const profiles = document.createElement('h4');
         profiles.innerText = 'Compiled by Kevin Sheekey';
-            profiles.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+            profiles.style.fontFamily = '"Georgia Bold", "Georgia", serif';
             profiles.style.color = '#0D2140';
             profiles.style.textShadow = '2px 2px 3px #000000';
             profiles.style.fontSize = '24px';
