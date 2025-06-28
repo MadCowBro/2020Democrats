@@ -14799,36 +14799,43 @@ e.VPisCandidate = 0;
       "https://i.imgur.com/lDpMj4p.png",
       "https://file.garden/Z-8vn6l_RynAMnyS/We%20The%20People.mp3"
     );
-    
+
     const song2 = new Song(
+      "A Sky Full of Stars",
+      "Coldplay",
+      "https://i.imgur.com/D6yDlRX.png",
+      "https://file.garden/Z-8vn6l_RynAMnyS/Coldplay%20-%20A%20Sky%20Full%20Of%20Stars%20(Official%20audio).mp3"
+    );
+    
+    const song3 = new Song(
       "Heroes",
       "David Bowie",
       "https://i.imgur.com/9GcvSz2.png",
       "https://file.garden/Z-8vn6l_RynAMnyS/David%20Bowie%20-%20Heroes%20(Official%20Video).mp3"
     );
   
-    const song3 = new Song(
+    const song4 = new Song(
       "Move on Up",
       "Curtis Mayfield",
       "https://i.imgur.com/o2vIq8C.png",
       "https://file.garden/Z-8vn6l_RynAMnyS/Curtis%20Mayfield%20-%20Move%20On%20Up.mp3"
     );
   
-    const song4 = new Song(
+    const song5 = new Song(
       "(Your Love Keeps Lifting Me) Higher and Higher",
       "Jackie Wilson",
       "https://i.imgur.com/YCYe0IL.png",
       "https://file.garden/Z-8vn6l_RynAMnyS/Jackie%20Wilson%20-%20(Your%20Love%20Keeps%20Lifting%20Me)%20Higher%20And%20Higher%20(Best%20Quality).mp3"
     );
   
-    const song5 = new Song(
+    const song6 = new Song(
       "The Wire",
       "HAIM",
       "https://i.imgur.com/AzBtclF.png",
       "https://file.garden/Z-8vn6l_RynAMnyS/HAIM%20-%20The%20Wire.mp3"
     );
   
-    const song6 = new Song(
+    const song7 = new Song(
       "We Take Care of Our Own",
       "Bruce Springsteen",
       "https://i.imgur.com/ehYoS6m.png",
@@ -14841,6 +14848,7 @@ e.VPisCandidate = 0;
     playlist.addSong(song4);
     playlist.addSong(song5);
     playlist.addSong(song6);
+    playlist.addSong(song7);
   
     const playerContainer = document.createElement("div");
     playerContainer.id = "player";
