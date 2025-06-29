@@ -76,7 +76,7 @@ campaignTrail_temp.questions_json = [
         "pk": 90000,
         "fields": {
             "priority": 2,
-            "description": "Trade is an issue that you and Bernie Sanders have starkly differing views upon, and those opposed to free trade have a sour taste in their mouth over your husband's support of NAFTA. Would you like to clarify where exactly you stand upon trade?",
+            "description": "One of the most pressing issues for Democratic voters this cycle is healthcare. Progressives are rallying around Medicare for All, which would have the federal government provide universal healthcare for all Americans. Moderates and conservatives are repelled by the plan’s cost and the effective elimination of private health insurance companies. Where do you stand on this?",
             "likelihood": 1
         }
     },
@@ -542,6 +542,38 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 80000,
             "description": "Nothing better than a whistle-stop tour of the South, including South Carolina. This is my firewall and we need to strengthen it every now and again."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90001,
+        "fields": {
+            "question": 90000,
+            "description": "We need to focus on protecting the Affordable Care Act. Trump’s already tried to repeal it once. If he gets the chance to try again, millions of Americans will lose their coverage. I won’t let that happen."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90002,
+        "fields": {
+            "question": 90000,
+            "description": "I’m not going to implement this as is, but there are aspects of this that I like. Healthcare should be a right, not a privilege."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90003,
+        "fields": {
+            "question": 90000,
+            "description": "You see, this is why Republicans think we’re radical. Not only would this be impossible to pass, it would tank the credibility of the party to try to force government-run healthcare on the American people. We need to focus on fixing our government rather than giving it more responsibilities."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90004,
+        "fields": {
+            "question": 90000,
+            "description": "I’m willing to consider it. I’m proud to have helped enact the Affordable Care Act—it was the right bill for the time—but this is a different party, a different country. We’re ready for something more."
         }
     }
 ]
@@ -14611,6 +14643,42 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 80004,
             "candidate": 300,
             "answer_feedback": "You receive rousing receptions in Charleston, Atlanta, and Tallahassee. They love you, Joe! Let’s make sure they’ll be voting for you when it’s their turn."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 90005,
+        "fields": {
+            "answer": 90001,
+            "candidate": 300,
+            "answer_feedback": "This is your expected position, considering your instrumental role in its passage ten years ago. Your base appreciates you fighting the good fight once again."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 90006,
+        "fields": {
+            "answer": 90002,
+            "candidate": 300,
+            "answer_feedback": "You’re noticeably light on specifics when asked what you like about M4A. Fox News takes the chance to poke at you, “Joe must be going senile.” You know what you said. Ignore the noise."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 90007,
+        "fields": {
+            "answer": 90003,
+            "candidate": 300,
+            "answer_feedback": "Moderate Joe strikes again. Your answer is unpopular to many in the Democratic base. Bernie uses your words as a rally cry and sees a nice boost in the polls as a result. Maybe the party’s passed you by, Joe."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 90008,
+        "fields": {
+            "answer": 90004,
+            "candidate": 300,
+            "answer_feedback": "Your pivot on healthcare is unconvincing to progressives and concerning to moderates. Meanwhile, Trump’s team cuts ads associating you with Bernie Sanders and Joseph Stalin."
         }
     }
 ]
