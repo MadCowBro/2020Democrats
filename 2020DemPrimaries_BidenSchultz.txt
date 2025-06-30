@@ -85,7 +85,7 @@ campaignTrail_temp.questions_json = [
         "pk": 100000,
         "fields": {
             "priority": 2,
-            "description": "After a debate in November, where you made a gaffe that can be explained by a live tweet comment, “Never before have I heard someone use 9/11 to justify millions of Wall Street donations”, you hit the campaign trail looking to move the focus off of that night. What topic would you like to hone in on at a campaign rally today?",
+            "description": "The field has narrowed since the last debate and the requirements to participate in the next one has gone up. Ten candidates have qualified, including your chief rivals Sanders, Buttigieg, and Elizabeth Warren. What will you focus on in this debate?",
             "likelihood": 1
         }
     },
@@ -574,6 +574,38 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 90000,
             "description": "I’m willing to consider it. I’m proud to have helped enact the Affordable Care Act—it was the right bill for the time—but this is a different party, a different country. We’re ready for something more."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 100001,
+        "fields": {
+            "question": 100000,
+            "description": "Let’s focus on healthcare. We can’t just rip away private insurance from people who are happy their plans. That’s what Bernie Sanders wants to do with Medicare for All."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 100002,
+        "fields": {
+            "question": 100000,
+            "description": "Foreign policy is the way to go. No one has more executive experience here than I do, which is sorely needed given Trump’s disastrous term."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 100003,
+        "fields": {
+            "question": 100000,
+            "description": "We must brush up on fiscal policy. I helped Obama bring the economy back after Republicans ruined it. I know how to grow the economy."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 100004,
+        "fields": {
+            "question": 100000,
+            "description": "It’s best to take a defensive posture here. I’m the frontrunner, so everyone’s going to be looking to attack me. Can’t let them drag us down."
         }
     }
 ]
@@ -14679,6 +14711,42 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 90004,
             "candidate": 300,
             "answer_feedback": "Your pivot on healthcare is unconvincing to progressives and concerning to moderates. Meanwhile, Trump’s team cuts ads associating you with Bernie Sanders and Joseph Stalin."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 100005,
+        "fields": {
+            "answer": 100001,
+            "candidate": 300,
+            "answer_feedback": "You stumbled badly in response to a question on Obamacare, implying it should be scaled back. Bernie Sanders takes advantage of the gaffe and comes out on top."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 100006,
+        "fields": {
+            "answer": 100002,
+            "candidate": 300,
+            "answer_feedback": "While you were clearly knowledgeable on the topics, you came across as dull. Warren is projected to get the biggest boost from the night."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 100007,
+        "fields": {
+            "answer": 100003,
+            "candidate": 300,
+            "answer_feedback": "Pundits praise Buttigieg’s performance in the debates, but you also had a good night. A surprisingly good night."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 100008,
+        "fields": {
+            "answer": 100004,
+            "candidate": 300,
+            "answer_feedback": "This was for the best. Your already-high polling numbers get another boost after the debate, but Amy Klobuchar gets one as well."
         }
     }
 ]
