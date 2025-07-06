@@ -15310,12 +15310,12 @@ function addHeadquarterButton() {
 }
 
 const menuItemsA = [ 
-    { photo: 'https://i.imgur.com/dsxrDSZ.png', text: '<b>Joe Biden</b><br><b>Former Vice President</b><br>You shouldn’t be running, it should be Beau. Alas, here you are. Ready to take on the greatest threat to our nation.', button: 'Defer', id: 'BIDEN_A'},
-    { photo: 'https://i.imgur.com/6rplxbw.png', text: '<b>Bernie Sanders</b><br><b>Senator from Vermont</b><br>Your chief rival for the nomination. Gave Hillary a hard time in 2016. Look how that ended.', button: 'Defer', id: 'SANDERS_A'},
-    { photo: 'https://i.imgur.com/3RZShdG.png', text: '<b>Elizabeth Warren</b><br><b>Senator from Massachusetts</b><br>To your left, but not as far left as Sanders. Appeals to policy wonks. Her dividing the progressive vote is good for you.', button: 'Defer', id: 'WARREN_A'},
-    { photo: 'https://i.imgur.com/n7E2ELv.png', text: '<b>Pete Buttigieg</b><br><b>Mayor of South Bend, Indiana</b><br>Who the hell is this guy? Why’s he eating into your early state support? It’d be wise to weaken him a bit.', button: 'Defer', id: 'BUTTIGIEG_A'},
-    { photo: 'https://i.imgur.com/ucRGfc8.png', text: '<b>Amy Klobuchar</b><br><b>Senator from Minnesota</b><br>She’s smart, but her path is narrow. Both you and Buttigieg are getting more attention in the moderate lane. She should endorse you soon enough.', button: 'Defer', id: 'KLOBUCHAR_A'},
-    { photo: 'https://i.imgur.com/ULqcfc1.png', text: '<b>All the Rest</b><br><b>Various Positions</b><br>No one else has a realistic shot at the nomination. Some will hang around for a while, others will drop right away. It’s better to focus on the main candidates, Joe.', button: 'Defer', id: 'OTHERS_A'},
+    { photo: 'https://i.imgur.com/UHdgmxV.png', text: '<b>Joe Biden</b><br><b>Former Vice President</b><br>You shouldn’t be running, it should be Beau. Alas, here you are. Ready to take on the greatest threat to our nation.', button: 'Defer', id: 'BIDEN_A'},
+    { photo: 'https://i.imgur.com/K1g90Pd.png', text: '<b>Bernie Sanders</b><br><b>Senator from Vermont</b><br>Your chief rival for the nomination. Gave Hillary a hard time in 2016. Look how that ended.', button: 'Defer', id: 'SANDERS_A'},
+    { photo: 'https://i.imgur.com/4TqqrPA.png', text: '<b>Elizabeth Warren</b><br><b>Senator from Massachusetts</b><br>To your left, but not as far left as Sanders. Appeals to policy wonks. Her dividing the progressive vote is good for you.', button: 'Defer', id: 'WARREN_A'},
+    { photo: 'https://i.imgur.com/EY2CSTd.png', text: '<b>Pete Buttigieg</b><br><b>Mayor of South Bend, Indiana</b><br>Who the hell is this guy? Why’s he eating into your early state support? It’d be wise to weaken him a bit.', button: 'Defer', id: 'BUTTIGIEG_A'},
+    { photo: 'https://i.imgur.com/7AY2JyC.png', text: '<b>Amy Klobuchar</b><br><b>Senator from Minnesota</b><br>She’s smart, but her path is narrow. Both you and Buttigieg are getting more attention in the moderate lane. She should endorse you soon enough.', button: 'Defer', id: 'KLOBUCHAR_A'},
+    { photo: 'https://i.imgur.com/HTDaLih.png', text: '<b>All the Rest</b><br><b>Various Positions</b><br>No one else has a realistic shot at the nomination. Some will hang around for a while, others will drop right away. It’s better to focus on the main candidates, Joe.', button: 'Defer', id: 'OTHERS_A'},
 ]
 
 function openHeadquarter() {      
