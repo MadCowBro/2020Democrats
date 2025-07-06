@@ -15106,13 +15106,13 @@ function addHeadquarterButton() {
 }
 
 const menuItemsA = [ 
-    { photo: 'https://i.imgur.com/dsxrDSZ.png', text: '<b>Joe Biden</b><br><b>Former Vice President</b><br>There’s a reason Obama passed him up in 2016. He thinks he can beat Trump, but he doesn’t know him like you do. Besides, the guy’s washed.', button: 'Defer', id: 'BIDEN_A'},
-    { photo: 'https://i.imgur.com/6rplxbw.png', text: '<b>Bernie Sanders</b><br><b>Senator from Vermont</b><br>The craziest one in the race. Trump will eat him alive if he gets past the primaries. Don’t let him win.', button: 'Defer', id: 'SANDERS_A'},
-    { photo: 'https://i.imgur.com/3RZShdG.png', text: '<b>Elizabeth Warren</b><br><b>Senator from Massachusetts</b><br>Slightly saner than Sanders. It’s the only positive she has. Her gender will undoubted sink her versus Trump.', button: 'Defer', id: 'WARREN_A'},
-    { photo: 'https://i.imgur.com/n7E2ELv.png', text: '<b>Pete Buttigieg</b><br><b>Mayor of Nowhere, Indiana</b><br>Voters were only looking at him as an alternative to Biden. That’s your role now. Time for him to run back to Indiana.', button: 'Defer', id: 'BUTTIGIEG_A'},
-    { photo: 'https://i.imgur.com/ucRGfc8.png', text: '<b>Amy Klobuchar</b><br><b>Senator from Minnesota</b><br>Her base is non-existent. Voters prefer Biden, Warren, hell, they prefer Buttigieg. Just another failed Minnesota Democrat.', button: 'Defer', id: 'KLOBUCHAR_A'},
-    { photo: 'https://i.imgur.com/ULqcfc1.png', text: '<b>All the Rest</b><br><b>Various Meaningless Positions</b><br>Wastes of spaces. These jokers can’t even separate themselves from the rest of the pack. If you have no shot in hell, why bother?', button: 'Defer', id: 'OTHERS_A'},
-    { photo: 'https://i.imgur.com/MSbqWeb.png', text: '<b>Michael Bloomberg</b><br><b>Former Mayor of NYC</b><br>Here you are, waiting in the wings. No one in this field has what it takes to defeat Donald Trump. You do.', button: 'Defer', id: 'BLOOMBERG_A'},
+    { photo: 'https://i.imgur.com/UHdgmxV.png', text: '<b>Joe Biden</b><br><b>Former Vice President</b><br>There’s a reason Obama passed him up in 2016. He thinks he can beat Trump, but he doesn’t know him like you do. Besides, the guy’s washed.', button: 'Defer', id: 'BIDEN_A'},
+    { photo: 'https://i.imgur.com/K1g90Pd.png', text: '<b>Bernie Sanders</b><br><b>Senator from Vermont</b><br>The craziest one in the race. Trump will eat him alive if he gets past the primaries. Don’t let him win.', button: 'Defer', id: 'SANDERS_A'},
+    { photo: 'https://i.imgur.com/4TqqrPA.png', text: '<b>Elizabeth Warren</b><br><b>Senator from Massachusetts</b><br>Slightly saner than Sanders. It’s the only positive she has. Her gender will undoubted sink her versus Trump.', button: 'Defer', id: 'WARREN_A'},
+    { photo: 'https://i.imgur.com/EY2CSTd.png', text: '<b>Pete Buttigieg</b><br><b>Mayor of Nowhere, Indiana</b><br>Voters were only looking at him as an alternative to Biden. That’s your role now. Time for him to run back to Indiana.', button: 'Defer', id: 'BUTTIGIEG_A'},
+    { photo: 'https://i.imgur.com/7AY2JyC.png', text: '<b>Amy Klobuchar</b><br><b>Senator from Minnesota</b><br>Her base is non-existent. Voters prefer Biden, Warren, hell, they prefer Buttigieg. Just another failed Minnesota Democrat.', button: 'Defer', id: 'KLOBUCHAR_A'},
+    { photo: 'https://i.imgur.com/HTDaLih.png', text: '<b>All the Rest</b><br><b>Various Meaningless Positions</b><br>Wastes of spaces. These jokers can’t even separate themselves from the rest of the pack. If you have no shot in hell, why bother?', button: 'Defer', id: 'OTHERS_A'},
+    { photo: 'https://i.imgur.com/LdVeYwI.png', text: '<b>Michael Bloomberg</b><br><b>Former Mayor of NYC</b><br>Here you are, waiting in the wings. No one in this field has what it takes to defeat Donald Trump. You do.', button: 'Defer', id: 'BLOOMBERG_A'},
 ]
 
 function openHeadquarter() {      
