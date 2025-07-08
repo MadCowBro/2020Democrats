@@ -40,7 +40,7 @@ campaignTrail_temp.questions_json = [
         "pk": 50000,
         "fields": {
             "priority": 2,
-            "description": "The first Democratic primary debate will be split up into two nights due to the sheer number of eligible candidates—20 in total. You’ll be debating on Night 2 against the likes Sanders and Pete Buttigieg, among others. What will be your strategy heading into the debate?",
+            "description": "In 1988, you were one of the youngest candidates. In 2020, you are among the oldest. With criticisms about your age intensifying, there’s been internal debate about whether you should pledge to only serve a single term. What’s your stance on this?",
             "likelihood": 1
         }
     },
@@ -49,7 +49,7 @@ campaignTrail_temp.questions_json = [
         "pk": 60000,
         "fields": {
             "priority": 3,
-            "description": "When the debate turns to the topic of race, Kamala Harris, the only black candidate on stage, turns to you and gives an impassioned speech criticizing your association with segregationist Senators and your opposition to busing. What is your response?",
+            "description": "One of the most pressing issues for Democratic voters this cycle is healthcare. Progressives are rallying around Medicare for All, which would have the federal government provide universal healthcare for all Americans. Moderates and conservatives are repelled by the plan’s cost and the effective elimination of private health insurance companies. Where do you stand on this?",
             "likelihood": 1
         }
     },
@@ -58,7 +58,7 @@ campaignTrail_temp.questions_json = [
         "pk": 70000,
         "fields": {
             "priority": 2,
-            "description": "In 1988, you were one of the youngest candidates. In 2020, you are among the oldest. With criticisms about your age intensifying, there’s been internal debate about whether you should pledge to only serve a single term. What’s your stance on this?",
+            "description": "The first Democratic primary debate will be split up into two nights due to the sheer number of eligible candidates—20 in total. You’ll be debating on Night 2 against the likes Sanders and Pete Buttigieg, among others. What will be your strategy heading into the debate?",
             "likelihood": 1
         }
     },
@@ -67,7 +67,7 @@ campaignTrail_temp.questions_json = [
         "pk": 80000,
         "fields": {
             "priority": 2,
-            "description": "With six months until the Iowa caucuses, it would be a good idea to campaign in other parts of the country for a little bit. Where will you campaign?",
+            "description": "When the debate turns to the topic of race, Kamala Harris, the only black candidate on stage, turns to you and gives an impassioned speech criticizing your association with segregationist Senators and your opposition to busing. What is your response?",
             "likelihood": 1
         }
     },
@@ -76,7 +76,7 @@ campaignTrail_temp.questions_json = [
         "pk": 90000,
         "fields": {
             "priority": 2,
-            "description": "One of the most pressing issues for Democratic voters this cycle is healthcare. Progressives are rallying around Medicare for All, which would have the federal government provide universal healthcare for all Americans. Moderates and conservatives are repelled by the plan’s cost and the effective elimination of private health insurance companies. Where do you stand on this?",
+            "description": "With six months until the Iowa caucuses, it would be a good idea to campaign in other parts of the country for a little bit. Where will you campaign?",
             "likelihood": 1
         }
     },
@@ -85,7 +85,7 @@ campaignTrail_temp.questions_json = [
         "pk": 100000,
         "fields": {
             "priority": 2,
-            "description": "The field has narrowed since the last debate and the requirements to participate in the next one has gone up. Ten candidates have qualified, including your chief rivals Sanders, Buttigieg, and Elizabeth Warren. What will you focus on in this debate?",
+            "description": "News has broken that President Trump threatened to withhold military aid from Ukraine until they agreed to investigate you and your family over alleged corruption. As a result, Speaker Nancy Pelosi has ordered an impeachment inquiry into the matter. Do you want to weigh in on this?",
             "likelihood": 1
         }
     },
@@ -94,7 +94,7 @@ campaignTrail_temp.questions_json = [
         "pk": 110000,
         "fields": {
             "priority": 2,
-            "description": "One of Senator Sanders' key planks is “Medicare For All”, a universal, single-payer healthcare system has healthcare on the minds of voters, for better or for worse. What will a Clinton administration's healthcare policy look like?",
+            "description": "The polls are showing Elizabeth Warren enjoying a surge, in certain cases even eclipsing Bernie Sanders as the top progressive candidate. Some of your advisers fear she could even surpass you if you don’t knock her back. What’s the strategy here?",
             "likelihood": 1
         }
     },
@@ -121,7 +121,7 @@ campaignTrail_temp.questions_json = [
         "pk": 140000,
         "fields": {
             "priority": 3,
-            "description": "A series of coordinated terrorist attacks have tragically occurred in Paris today, killing over 137 people and injuring hundreds. As a result of these attacks, the start of the next Democratic Debate, hosted by CBS, will feature initial questions on foreign policy. With this topic being one of your weak points, what exactly will you say?",
+            "description": "The field has narrowed since the last debate and the requirements to participate in the next one has gone up. Ten candidates have qualified, including your chief rivals Sanders, Buttigieg, and Elizabeth Warren. What will you focus on in this debate?",
             "likelihood": 1
         }
     },
@@ -130,7 +130,7 @@ campaignTrail_temp.questions_json = [
         "pk": 150000,
         "fields": {
             "priority": 3,
-            "description": "There's a certain glass ceiling that has the potential to be broken, if you can win the nomination. You could be the first woman nominated by a major party, and perhaps the first female President ever. To what extent will you discuss this, and emphasize women's issues?",
+            "description": "What started out as a record-setting slate of candidates has started tapering off as requirements to attend the debates rise and fundraising dries up for many minor candidates. As the established frontrunner, you have a better shot at getting them on your side than anyone else. How aggressively do you want to pursue these kinds of endorsements?",
             "likelihood": 1
         }
     },
@@ -437,6 +437,62 @@ campaignTrail_temp.answers_json = [
         "pk": 50001,
         "fields": {
             "question": 50000,
+            "description": "Listen Jack, I may be old, but I haven’t lost my damn mind. I have no doubt I can serve two terms. Forget you mentioned anything about this."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 50002,
+        "fields": {
+            "question": 50000,
+            "description": "Look, I feel good, but I understand folks’ desire to see a new generation of leaders. I am the only one who can beat Donald Trump—that’s why I’m running—but I would be honored to serve as a transitional president."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 50003,
+        "fields": {
+            "question": 50000,
+            "description": "I see the appeal, but we can’t be talking about this publicly. Donald Trump would call it weakness and the other Democrats would ask why I’m even running in the first place."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 60001,
+        "fields": {
+            "question": 60000,
+            "description": "We need to focus on protecting the Affordable Care Act. Trump’s already tried to repeal it once. If he gets the chance to try again, millions of Americans will lose their coverage. I won’t let that happen."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 60002,
+        "fields": {
+            "question": 60000,
+            "description": "I’m not going to implement this as is, but there are aspects of this that I like. Healthcare should be a right, not a privilege."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 60003,
+        "fields": {
+            "question": 60000,
+            "description": "You see, this is why Republicans think we’re radical. Not only would this be impossible to pass, it would tank the credibility of the party to try to force government-run healthcare on the American people. We need to focus on fixing our government rather than giving it more responsibilities."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 60004,
+        "fields": {
+            "question": 60000,
+            "description": "I’m willing to consider it. I’m proud to have helped enact the Affordable Care Act—it was the right bill for the time—but this is a different party, a different country. We’re ready for something more."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 50001,
+        "fields": {
+            "question": 50000,
             "description": "For most Americans, this race is about one thing and one thing only: beating Trump. We’ll spend the night focusing on electability, and stressing how I’m the candidate with the best shot at taking the White House in November."
         }
     },
@@ -490,30 +546,6 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 70001,
-        "fields": {
-            "question": 70000,
-            "description": "Listen Jack, I may be old, but I haven’t lost my damn mind. I have no doubt I can serve two terms. Forget you mentioned anything about this."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 70002,
-        "fields": {
-            "question": 70000,
-            "description": "Look, I feel good, but I understand folks’ desire to see a new generation of leaders. I am the only one who can beat Donald Trump—that’s why I’m running—but I would be honored to serve as a transitional president."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 70003,
-        "fields": {
-            "question": 70000,
-            "description": "I see the appeal, but we can’t be talking about this publicly. Donald Trump would call it weakness and the other Democrats would ask why I’m even running in the first place."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
         "pk": 80001,
         "fields": {
             "question": 80000,
@@ -542,38 +574,6 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 80000,
             "description": "Nothing better than a whistle-stop tour of the South, including South Carolina. This is my firewall and we need to strengthen it every now and again."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 90001,
-        "fields": {
-            "question": 90000,
-            "description": "We need to focus on protecting the Affordable Care Act. Trump’s already tried to repeal it once. If he gets the chance to try again, millions of Americans will lose their coverage. I won’t let that happen."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 90002,
-        "fields": {
-            "question": 90000,
-            "description": "I’m not going to implement this as is, but there are aspects of this that I like. Healthcare should be a right, not a privilege."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 90003,
-        "fields": {
-            "question": 90000,
-            "description": "You see, this is why Republicans think we’re radical. Not only would this be impossible to pass, it would tank the credibility of the party to try to force government-run healthcare on the American people. We need to focus on fixing our government rather than giving it more responsibilities."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 90004,
-        "fields": {
-            "question": 90000,
-            "description": "I’m willing to consider it. I’m proud to have helped enact the Affordable Care Act—it was the right bill for the time—but this is a different party, a different country. We’re ready for something more."
         }
     },
     {
