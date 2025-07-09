@@ -14584,129 +14584,128 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 50005,
+        "pk": 50004,
         "fields": {
             "answer": 50001,
-            "candidate": 300,
-            "answer_feedback": "You get shots in at Trump early and often, while staying light on policy specifics. But after a fellow candidate directs an attack at you, you’re forced to respond."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 50006,
-        "fields": {
-            "answer": 50002,
-            "candidate": 300,
-            "answer_feedback": "Your moment comes when you quickly rebut Sanders’ calls to form coalitions between nations to fight terrorism as “stupid and unrealistic”. The moment quickly gains traction, but is ultimately overshadowed by an attack directed at you."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 50007,
-        "fields": {
-            "answer": 50003,
-            "candidate": 300,
-            "answer_feedback": "This works well. The inability for each of them to get their rebuttals in is very visible on the stage. However, one of them does land a sharp and stunning critique of you."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 50008,
-        "fields": {
-            "answer": 50004,
-            "candidate": 300,
-            "answer_feedback": "The audience cheers when you bring up healthcare and education, but it’s otherwise a quiet night on your end, until a fellow candidate delivers a blistering attack that forces you to respond."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 60004,
-        "fields": {
-            "answer": 60001,
-            "candidate": 300,
-            "answer_feedback": "Christ, Joe. A states’ rights argument might’ve flown in the 70’s, but now? With this audience? Kamala retorts that federal intervention was the only way that many schools would ever integrate. She gets thunderous applause, while you stand up there, humiliated."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 60005,
-        "fields": {
-            "answer": 60002,
-            "candidate": 300,
-            "answer_feedback": "This is a direct contradiction of several previous statements, and Kamala notes that you’ve avoided directly apologizing for your comments. Still, you could’ve had a worse response."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 60006,
-        "fields": {
-            "answer": 60003,
-            "candidate": 300,
-            "answer_feedback": "Critics quickly find evidence of you praising segregationist Senators as late as 2009. You push back on it, but fail to regain the narrative before your allotted time is up. It wasn’t a great night for you."
-        }
-    },
-
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 70004,
-        "fields": {
-            "answer": 70001,
             "candidate": 300,
             "answer_feedback": "The pledge likely wouldn’t have done much good anyways. There’s a reason McCain advisers talked him out of doing that in 2008."
         }
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 70005,
+        "pk": 50005,
         "fields": {
-            "answer": 70002,
+            "answer": 50002,
             "candidate": 300,
             "answer_feedback": "Your comments are quickly construed to mean that you are only serving a single term. It’s not what you meant, but it leaves enough ambiguity that Democrats respect your position."
         }
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 70006,
+        "pk": 50006,
         "fields": {
-            "answer": 70003,
+            "answer": 50003,
             "candidate": 300,
             "answer_feedback": "You privately tell aides, and family, that you’re considering serving a single term. Rumors leak of this, but the campaign squashes them quickly enough."
         }
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 80005,
+        "pk": 60005,
+        "fields": {
+            "answer": 60001,
+            "candidate": 300,
+            "answer_feedback": "This is your expected position, considering your instrumental role in its passage ten years ago. Your base appreciates you fighting the good fight once again."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 60006,
+        "fields": {
+            "answer": 60002,
+            "candidate": 300,
+            "answer_feedback": "You’re noticeably light on specifics when asked what you like about M4A. Fox News takes the chance to poke at you, “Joe must be going senile.” You know what you said. Ignore the noise."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 60007,
+        "fields": {
+            "answer": 60003,
+            "candidate": 300,
+            "answer_feedback": "Moderate Joe strikes again. Your answer is unpopular to many in the Democratic base. Bernie uses your words as a rally cry and sees a nice boost in the polls as a result. Maybe the party’s passed you by, Joe."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 60008,
+        "fields": {
+            "answer": 60004,
+            "candidate": 300,
+            "answer_feedback": "Your pivot on healthcare is unconvincing to progressives and concerning to moderates. Meanwhile, Trump’s team cuts ads associating you with Bernie Sanders and Joseph Stalin."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 70005,
+        "fields": {
+            "answer": 70001,
+            "candidate": 300,
+            "answer_feedback": "You get shots in at Trump early and often, while staying light on policy specifics. But after a fellow candidate directs an attack at you, you’re forced to respond."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 70006,
+        "fields": {
+            "answer": 70002,
+            "candidate": 300,
+            "answer_feedback": "Your moment comes when you quickly rebut Sanders’ calls to form coalitions between nations to fight terrorism as “stupid and unrealistic”. The moment quickly gains traction, but is ultimately overshadowed by an attack directed at you."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 70007,
+        "fields": {
+            "answer": 70003,
+            "candidate": 300,
+            "answer_feedback": "This works well. The inability for each of them to get their rebuttals in is very visible on the stage. However, one of them does land a sharp and stunning critique of you."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 70008,
+        "fields": {
+            "answer": 70004,
+            "candidate": 300,
+            "answer_feedback": "The audience cheers when you bring up healthcare and education, but it’s otherwise a quiet night on your end, until a fellow candidate delivers a blistering attack that forces you to respond."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 80004,
         "fields": {
             "answer": 80001,
             "candidate": 300,
-            "answer_feedback": "Taking New England will be tough no matter what. Both Sanders and Warren are highly competitive in this region. Even Buttigieg seems to be gaining ground in New Hampshire. It’s good you’re shoring this up now."
+            "answer_feedback": "Christ, Joe. A states’ rights argument might’ve flown in the 70’s, but now? With this audience? Kamala retorts that federal intervention was the only way that many schools would ever integrate. She gets thunderous applause, while you stand up there, humiliated."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 80005,
+        "fields": {
+            "answer": 80002,
+            "candidate": 300,
+            "answer_feedback": "This is a direct contradiction of several previous statements, and Kamala notes that you’ve avoided directly apologizing for your comments. Still, you could’ve had a worse response."
         }
     },
     {
         "model": "campaign_trail.answer_feedback",
         "pk": 80006,
         "fields": {
-            "answer": 80002,
-            "candidate": 300,
-            "answer_feedback": "The Rust Belt is wary of Sanders’ social progressiveness, and looking at your moderate stances on many issues, they can certainly swing your way. Buttigieg is also eating into your support in Iowa. Gotta chip away at both of them."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 80007,
-        "fields": {
             "answer": 80003,
             "candidate": 300,
-            "answer_feedback": "It’s not an especially delegate-rich area, pundits are in fact puzzled as to why you’re placing so much focus here. Trump says you’re losing your mind. But this is a way to eat into Sanders’ margins, as you said."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 80008,
-        "fields": {
-            "answer": 80004,
-            "candidate": 300,
-            "answer_feedback": "You receive rousing receptions in Charleston, Atlanta, and Tallahassee. They love you, Joe! Let’s make sure they’ll be voting for you when it’s their turn."
+            "answer_feedback": "Critics quickly find evidence of you praising segregationist Senators as late as 2009. You push back on it, but fail to regain the narrative before your allotted time is up. It wasn’t a great night for you."
         }
     },
     {
@@ -14715,7 +14714,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 90001,
             "candidate": 300,
-            "answer_feedback": "This is your expected position, considering your instrumental role in its passage ten years ago. Your base appreciates you fighting the good fight once again."
+            "answer_feedback": "Taking New England will be tough no matter what. Both Sanders and Warren are highly competitive in this region. Even Buttigieg seems to be gaining ground in New Hampshire. It’s good you’re shoring this up now."
         }
     },
     {
@@ -14724,7 +14723,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 90002,
             "candidate": 300,
-            "answer_feedback": "You’re noticeably light on specifics when asked what you like about M4A. Fox News takes the chance to poke at you, “Joe must be going senile.” You know what you said. Ignore the noise."
+            "answer_feedback": "The Rust Belt is wary of Sanders’ social progressiveness, and looking at your moderate stances on many issues, they can certainly swing your way. Buttigieg is also eating into your support in Iowa. Gotta chip away at both of them."
         }
     },
     {
@@ -14733,7 +14732,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 90003,
             "candidate": 300,
-            "answer_feedback": "Moderate Joe strikes again. Your answer is unpopular to many in the Democratic base. Bernie uses your words as a rally cry and sees a nice boost in the polls as a result. Maybe the party’s passed you by, Joe."
+            "answer_feedback": "It’s not an especially delegate-rich area, pundits are in fact puzzled as to why you’re placing so much focus here. Trump says you’re losing your mind. But this is a way to eat into Sanders’ margins, as you said."
         }
     },
     {
@@ -14742,7 +14741,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 90004,
             "candidate": 300,
-            "answer_feedback": "Your pivot on healthcare is unconvincing to progressives and concerning to moderates. Meanwhile, Trump’s team cuts ads associating you with Bernie Sanders and Joseph Stalin."
+            "answer_feedback": "You receive rousing receptions in Charleston, Atlanta, and Tallahassee. They love you, Joe! Let’s make sure they’ll be voting for you when it’s their turn."
         }
     },
     {
@@ -14751,7 +14750,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 100001,
             "candidate": 300,
-            "answer_feedback": "You stumbled badly in response to a question on Obamacare, implying it should be scaled back. Bernie Sanders takes advantage of the gaffe and comes out on top."
+            "answer_feedback": "It’s a feisty statement, almost Trump-like, and your fundraising gets a decent boost. Trump, for his part, is reportedly fuming and throwing ketchup on the walls."
         }
     },
     {
@@ -14760,7 +14759,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 100002,
             "candidate": 300,
-            "answer_feedback": "While you were clearly knowledgeable on the topics, you came across as dull. Warren is projected to get the biggest boost from the night."
+            "answer_feedback": "Trump allies pounce on you, accusing you of corruption, but sometimes when the opposition plays dirty, you gotta hit back. As an added bonus, your fellow Democrats lend you verbal support."
         }
     },
     {
@@ -14769,7 +14768,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 100003,
             "candidate": 300,
-            "answer_feedback": "Pundits praise Buttigieg’s performance in the debates, but you also had a good night. A surprisingly good night."
+            "answer_feedback": "It’s a safe play, stepping out of the way and letting Trump get hit with all the bad coverage. Besides, you’re not going to sway people one way or another on this. Everybody’s dug in."
         }
     },
     {
@@ -14777,6 +14776,42 @@ campaignTrail_temp.answer_feedback_json = [
         "pk": 100008,
         "fields": {
             "answer": 100004,
+            "candidate": 300,
+            "answer_feedback": "Trump wastes no time swinging against Hunter, but you know consequences are coming for him. If nothing else, voters are more sympathetic to your situation, giving everything your family has gone through."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 140005,
+        "fields": {
+            "answer": 140001,
+            "candidate": 300,
+            "answer_feedback": "You stumbled badly in response to a question on Obamacare, implying it should be scaled back. Bernie Sanders takes advantage of the gaffe and comes out on top."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 140006,
+        "fields": {
+            "answer": 140002,
+            "candidate": 300,
+            "answer_feedback": "While you were clearly knowledgeable on the topics, you came across as dull. Warren is projected to get the biggest boost from the night."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 140007,
+        "fields": {
+            "answer": 140003,
+            "candidate": 300,
+            "answer_feedback": "Pundits praise Buttigieg’s performance in the debates, but you also had a good night. A surprisingly good night."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 140008,
+        "fields": {
+            "answer": 140004,
             "candidate": 300,
             "answer_feedback": "This was for the best. Your already-high polling numbers get another boost after the debate, but Amy Klobuchar gets one as well."
         }
