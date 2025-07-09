@@ -490,58 +490,34 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 50001,
+        "pk": 70001,
         "fields": {
-            "question": 50000,
+            "question": 70000,
             "description": "For most Americans, this race is about one thing and one thing only: beating Trump. We’ll spend the night focusing on electability, and stressing how I’m the candidate with the best shot at taking the White House in November."
         }
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 50002,
+        "pk": 70002,
         "fields": {
-            "question": 50000,
+            "question": 70000,
             "description": "Bernie’s the biggest name on the stage tonight, so why don’t we take the fight to him? I’ll grill him on taxes, his welfare policy, you name it. The further we can drag him down, the better."
         }
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 50003,
+        "pk": 70003,
         "fields": {
-            "question": 50000,
+            "question": 70000,
             "description": "Listen, the only way to win this thing is going to be locking up the moderate vote. Let’s go after some of the smaller candidates, establishing me as the guy their voters will flock to once they inevitably drop out."
         }
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 50004,
+        "pk": 70004,
         "fields": {
-            "question": 50000,
-            "description": "People are sick of the vile stuff spewed by Trump and his cronies, and the best thing we can do is distance ourselves from that. Let’s tone down the attacks against fellow candidates and try to outline a vision for policies which can continue those mushy feelings of Hope and Change that Barack was always talking about."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 60001,
-        "fields": {
-            "question": 60000,
-            "description": "Listen, that’s… that’s a mischaracterization of my position. I’m proud to have enacted legislation regarding civil rights during my time in the Senate and as Vice President. I never opposed the concept of busing in America, only that imposed on states by the Department of Education, which infringed on state and local authorities."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 60002,
-        "fields": {
-            "question": 60000,
-            "description": "I’ve always been for the use of busing as a way to integrate our schools. The sad reality is that many of its opponents held positions of power within Congress, and we needed their support to get any civil rights bills passed. Still, I wish that things had turned out differently."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 60003,
-        "fields": {
-            "question": 60000,
-            "description": "I won’t deny that my views have changed over time. I was a new member of the Senate when the issue of busing first came up, and I trusted the people around me when they told me that federal enforcement would do more harm than good. After talking to NAACP leaders and other African Americans, I realized I was mistaken on the issue. Despite not being perfect, I’m proud of my record since then. Those men were wrong, and I promise to work towards full equality for all minority groups while in office."
+            "question": 70000,
+            "description": "People are sick of the vile stuff spewed by Trump and his cronies, and the best thing we can do is distance ourselves from that. Let’s tone down the attacks against fellow candidates and try to outline a vision for policies which can continue those mushy feelings of hope and change that Barack was always talking about."
         }
     },
     {
@@ -549,7 +525,7 @@ campaignTrail_temp.answers_json = [
         "pk": 80001,
         "fields": {
             "question": 80000,
-            "description": "New England, specifically New Hampshire. Bernie has the edge there right now, but with Warren siphoning his votes, we can make a run in this area. Maybe even take a lead."
+            "description": "Listen, that’s… that’s a mischaracterization of my position. I’m proud to have enacted legislation regarding civil rights during my time in the Senate and as Vice President. I never opposed the concept of busing in America, only that imposed on states by the Department of Education, which infringed on state and local authorities."
         }
     },
     {
@@ -557,7 +533,7 @@ campaignTrail_temp.answers_json = [
         "pk": 80002,
         "fields": {
             "question": 80000,
-            "description": "Let’s barnstorm the Midwest like hell, including Iowa. Populism is, for lack of a better word, popular there. It's also a base of support for Sanders, and Trump. We need to be involved in the Rust Belt."
+            "description": "I’ve always been for the use of busing as a way to integrate our schools. The sad reality is that many of its opponents held positions of power within Congress, and we needed their support to get any civil rights bills passed. Still, I wish that things had turned out differently."
         }
     },
     {
@@ -565,14 +541,38 @@ campaignTrail_temp.answers_json = [
         "pk": 80003,
         "fields": {
             "question": 80000,
+            "description": "I won’t deny that my views have changed over time. I was a new member of the Senate when the issue of busing first came up, and I trusted the people around me when they told me that federal enforcement would do more harm than good. After talking to NAACP leaders and other African Americans, I realized I was mistaken on the issue. Despite not being perfect, I’m proud of my record since then. Those men were wrong, and I promise to work towards full equality for all minority groups while in office."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90001,
+        "fields": {
+            "question": 90000,
+            "description": "New England, specifically New Hampshire. Bernie has the edge there right now, but with Warren siphoning his votes, we can make a run in this area. Maybe even take a lead."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90002,
+        "fields": {
+            "question": 90000,
+            "description": "Let’s barnstorm the Midwest like hell, including Iowa. Populism is, for lack of a better word, popular there. It's also a base of support for Sanders, and Trump. We need to be involved in the Rust Belt."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90003,
+        "fields": {
+            "question": 90000,
             "description": "I say we hit the Mountain states, even stretching to Nevada. Bernie’s got huge margins there for the most part, but we can eat into his support and how many delegates he picks up in these areas."
         }
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 80004,
+        "pk": 90004,
         "fields": {
-            "question": 80000,
+            "question": 90000,
             "description": "Nothing better than a whistle-stop tour of the South, including South Carolina. This is my firewall and we need to strengthen it every now and again."
         }
     },
@@ -581,7 +581,7 @@ campaignTrail_temp.answers_json = [
         "pk": 100001,
         "fields": {
             "question": 100000,
-            "description": "Let’s focus on healthcare. We can’t just rip away private insurance from people who are happy their plans. That’s what Bernie Sanders wants to do with Medicare for All."
+            "description": "What a goddamn idiot. The only reason he wants to “look into” this is because he’s scared. I can beat him and he knows it. Let’s share this in an email blast. It’ll drive him nuts that I’m making money off his screwups."
         }
     },
     {
@@ -589,7 +589,7 @@ campaignTrail_temp.answers_json = [
         "pk": 100002,
         "fields": {
             "question": 100000,
-            "description": "Foreign policy is the way to go. No one has more executive experience here than I do, which is sorely needed given Trump’s disastrous term."
+            "description": "This kind of behavior is exactly why he needs to be voted out of office. No president who respects his authority, and this country, would do such a thing. He’s unfit to serve and must be impeached."
         }
     },
     {
@@ -597,7 +597,7 @@ campaignTrail_temp.answers_json = [
         "pk": 100003,
         "fields": {
             "question": 100000,
-            "description": "We must brush up on fiscal policy. I helped Obama bring the economy back after Republicans ruined it. I know how to grow the economy."
+            "description": "I’m not talking about this, it’d be inappropriate. We’ll just keep campaigning and let people say whatever the hell they wanna say."
         }
     },
     {
@@ -605,6 +605,38 @@ campaignTrail_temp.answers_json = [
         "pk": 100004,
         "fields": {
             "question": 100000,
+            "description": "My son did nothing wrong. If he wants to play dirty against me, fine, but leave my family out of this."
+        }
+    }
+    {
+        "model": "campaign_trail.answer",
+        "pk": 140001,
+        "fields": {
+            "question": 140000,
+            "description": "Let’s focus on healthcare. We can’t just rip away private insurance from people who are happy their plans. That’s what Bernie Sanders wants to do with Medicare for All."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 140002,
+        "fields": {
+            "question": 140000,
+            "description": "Foreign policy is the way to go. No one has more executive experience here than I do, which is sorely needed given Trump’s disastrous term."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 140003,
+        "fields": {
+            "question": 140000,
+            "description": "We must brush up on fiscal policy. I helped Obama bring the economy back after Republicans ruined it. I know how to grow the economy."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 140004,
+        "fields": {
+            "question": 140000,
             "description": "It’s best to take a defensive posture here. I’m the frontrunner, so everyone’s going to be looking to attack me. Can’t let them drag us down."
         }
     }
