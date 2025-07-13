@@ -121,7 +121,7 @@ campaignTrail_temp.questions_json = [
         "pk": 140000,
         "fields": {
             "priority": 3,
-            "description": "The field has narrowed since the last debate and the requirements to participate in the next one has gone up. Ten candidates have qualified, including your chief rivals Sanders, Buttigieg, and Elizabeth Warren. What will you focus on in this debate?",
+            "description": "The field has narrowed since the last debate and the requirements to participate in the next one has gone up. Ten candidates have qualified, including your chief rivals Sanders, Warren and Buttigieg. What will you focus on in this debate?",
             "likelihood": 1
         }
     },
@@ -607,7 +607,39 @@ campaignTrail_temp.answers_json = [
             "question": 100000,
             "description": "My son did nothing wrong. If he wants to play dirty against me, fine, but leave my family out of this."
         }
-    }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 110001,
+        "fields": {
+            "question": 110000,
+            "description": "I have a lot of respect for Senator Warren, but I’m the only one that can beat Donald Trump. Cut some ads together targeting the early primary states. Focus on electability."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 110002,
+        "fields": {
+            "question": 110000,
+            "description": "I agree, we need to knock her back. She’s got an elitist attitude with a real “my-way-or-the-highway” approach. That kind of condescending attitude is going to turn off the swing voters in the general."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 110003,
+        "fields": {
+            "question": 110000,
+            "description": "Actually, I don’t see the problem right now. Obviously we can’t let her beat me, but the better she’s doing, the longer she’s in the race dividing the progressive vote with Sanders. We’ll focus on consolidating the moderate bloc."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 110004,
+        "fields": {
+            "question": 110000,
+            "description": "As far as I’m concerned, they’re two peas in a pod. They both have unrealistic ideas which are gonna divide the country. We need someone who can bring us together and usher in a return to normalcy."
+        }
+    },
     {
         "model": "campaign_trail.answer",
         "pk": 140001,
@@ -14778,6 +14810,42 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 100004,
             "candidate": 300,
             "answer_feedback": "Trump wastes no time swinging against Hunter, but you know consequences are coming for him. If nothing else, voters are more sympathetic to your situation, giving everything your family has gone through."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 110005,
+        "fields": {
+            "answer": 110001,
+            "candidate": 300,
+            "answer_feedback": "Your polling in these states (minus South Carolina) hasn’t been great lately so it’s good to see you trying to fix that. Plus it’s important to promote your own candidacy rather than just attacking others."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 110006,
+        "fields": {
+            "answer": 110002,
+            "candidate": 300,
+            "answer_feedback": "You come out swinging against Warren, determined to stop her from overtaking you. She hits back, telling voters in Iowa that she’s not running a “consultant-driven campaign with vague ideas”. It’s gonna be a showdown."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 110007,
+        "fields": {
+            "answer": 110003,
+            "candidate": 300,
+            "answer_feedback": "You stay mum on attacks from Sanders and Warren, instead poking at Buttigieg’s lack of experience and Klobuchar’s low polling. It’s not having much of an effect at the moment, in fact it gives both Sanders and Warren an opening to overtake you."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 110008,
+        "fields": {
+            "answer": 110004,
+            "candidate": 300,
+            "answer_feedback": "It’s been a consistent theme of yours from the start, that unity and electability must be prioritized over ideology and grand reforms. It’s not a message that will win over hardcore liberals, but it offers a clear path to victory, in the primaries and against Trump."
         }
     },
     {
