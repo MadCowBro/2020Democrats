@@ -15713,7 +15713,8 @@ cyoAdventure = function(a) {
 	e.noCounter += 1;
 
     if (e.noCounter == 15) {
-                menuItemsA.push(BloombergObject); 
+                menuItemsA.push(BloombergObject);
+            refreshHeadquarter();
     }
 }
 
