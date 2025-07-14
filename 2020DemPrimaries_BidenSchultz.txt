@@ -15745,7 +15745,7 @@ var changeGameDisp = (hide) => {
 };
   
 
-// If you die in Butler, you get the candidate switcher
+// If you drop out, you get the candidate switcher
 e.candidateSwitcher = () => {
   let potential_running_mate_pks = e.running_mate_json.filter(f=>f.fields.candidate == e.candidate_id).map(f=>f.fields.running_mate);
   let pot_run_mat = potential_running_mate_pks.map(f=>e.candidate_json.find(_f=>_f.pk===f));
@@ -15758,7 +15758,7 @@ e.candidateSwitcher = () => {
       <div id="running_mate_form">
           <form name="running mate">
               <p></p>
-              <h3>Please select President Trump's successor:</h3> 
+              <h3>Please endorse a new candidate:</h3> 
               <select name="running_mate_id" id="running_mate_id">
                   ${running_mate_options}
               </select>
@@ -15829,7 +15829,7 @@ e.candidateSwitcher = () => {
           $("#running_mate_pic").attr("src", e.running_mate_image_url)
       }
 
-      if(e.running_mate_last_name==="Trump Jr."){
+      if(e.running_mate_last_name==="Warren"){
       campaignTrail_temp.running_mate_image_url = "https://itsastronomical.com/assets/2024/square/donjr.png";
               var button1 = document.getElementById('view_electoral_map');	
       
@@ -15842,7 +15842,7 @@ e.candidateSwitcher = () => {
         }, 50);
         console.log(campaignTrail_temp.questions_json[7])
       }
-      if(e.running_mate_last_name==="Haley"){
+      if(e.running_mate_last_name==="Bloomberg"){
       campaignTrail_temp.running_mate_image_url = "https://itsastronomical.com/assets/2024/square/haley.png";
               var button1 = document.getElementById('view_electoral_map');	
       
@@ -15855,7 +15855,7 @@ e.candidateSwitcher = () => {
         }, 50);
         console.log(campaignTrail_temp.questions_json[7])
       }
-      if(e.running_mate_last_name==="DeSantis"){
+      if(e.running_mate_last_name==="Buttigieg"){
       campaignTrail_temp.running_mate_image_url = "https://itsastronomical.com/assets/2024/square/desantis.png";
               var button1 = document.getElementById('view_electoral_map');	
       
@@ -15868,34 +15868,8 @@ e.candidateSwitcher = () => {
         }, 50);
         console.log(campaignTrail_temp.questions_json[7])
       }
-      if(e.running_mate_last_name==="Vance"){
+      if(e.running_mate_last_name==="Klobuchar"){
       campaignTrail_temp.running_mate_image_url = "https://itsastronomical.com/assets/2024/square/vance.png";
-              var button1 = document.getElementById('view_electoral_map');	
-      
-        button1.click();
-      
-      
-        setTimeout(function(){
-        var button2 = document.getElementById('resume_questions_button');	
-              button2.click();
-        }, 50);
-        console.log(campaignTrail_temp.questions_json[7])
-      }
-      if(e.running_mate_last_name==="Burgum"){
-      campaignTrail_temp.running_mate_image_url = "https://itsastronomical.com/assets/2024/square/burgum.png";
-              var button1 = document.getElementById('view_electoral_map');	
-      
-        button1.click();
-      
-      
-        setTimeout(function(){
-        var button2 = document.getElementById('resume_questions_button');	
-              button2.click();
-        }, 50);
-        console.log(campaignTrail_temp.questions_json[7])
-      }
-      if(e.running_mate_last_name==="Kennedy"){
-      campaignTrail_temp.running_mate_image_url = "https://itsastronomical.com/assets/2024/square/rfk.png";
               var button1 = document.getElementById('view_electoral_map');	
       
         button1.click();
