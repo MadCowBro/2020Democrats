@@ -14995,33 +14995,30 @@ e.noCounter = 0
 
 document.getElementById("header").src = "https://i.imgur.com/DJufG1P.png";
 
-const targetNode = document.getElementById("game_window");
-const config = { attributes: true, childList: true, subtree: true };
-
-function onGameWindowChanged(mutationList, observer) {
-    updateQuestionBanner();
+const customStyling = document.createElement("style");
+customStyling.innerHTML = `
+#campaign_sign {
+    background-image: url("https://i.imgur.com/isWYBsB.png");
+    background-size: cover;
+    border-color: #c9c9c9;    
+    border-width: .01em;
+    margin: 0 auto;
+    background-position: center;
+    width: 100%; 
+    height: 104px; 
+    margin-left: -0.07em;
+  }
+#campaign_sign p {
+    color: rgb(0 0 0 / 0%);
 }
-
-function updateQuestions(mutationList, observer) {
-    if (answerObject.fields.condition != null) {
-        answer.disabled = !(eval(answerObject.fields.condition));
-    }
 }
-
-const observer = new MutationObserver(onGameWindowChanged);
-	observer.observe(targetNode, config);
-
-e.VPisCandidate = 0;
-	function updateQuestionBanner() {
-		let questionBanner = document.getElementById("campaign_sign");
-		if(!questionBanner || questionBanner.nodeName != "DIV") return;
-		let img = document.createElement('img');
-    if(e.VPisCandidate == 0)
-    {
-			img.src = 'https://i.imgur.com/isWYBsB.png';
-    } 
-		questionBanner.replaceWith(img);
-	}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 10px 2px #3399ff; }
+  50%  { box-shadow: 0 0 20px 5px #00ccff; }
+  100% { box-shadow: 0 0 10px 2px #3399ff; }
+}
+`;
+document.head.appendChild(customStyling);
 
   // Select the node that will be observed for mutations
   const windowsAdvisorTargetNode = document.getElementById("game_window");
