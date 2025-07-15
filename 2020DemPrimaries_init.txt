@@ -376,6 +376,191 @@ campaignTrail_temp.candidate_json = [
             "candidate_score": 0,
             "running_mate": true
         }
+    },
+    // Endorsement Candidates
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 3,
+        "fields": {
+            "first_name": "Elizabeth",
+            "last_name": "Warren",
+            "election": 21,
+            "party": "Democratic",
+            "state": "Massachusetts",
+            "priority": 3,
+            "description": "<p><em>Pocahontas</em></p><p>The daughter of a janitor and a telephone operator has been slowly rising in the ranks of the Democratic Party, with hard-line left stances on policies such as healthcare and finance, as you'd somewhat expect from a Massachusetts Senator. Before that, she was a teenage waitress, then a Harvard Law professor, then… a 2020 presidential candidate. However, she directly competes with Sanders for the progressive wing of the party, and this potential split in the votes could end up costing both her and the left of the party a sizable amount of heartache, and cause another candidate like Clinton to sleepwalk to a defeat against Trump in November.</p>",
+            "color_hex": "#b51c27",
+            "secondary_color_hex": "#FFFFC0",
+            "is_active": 1,
+            "image_url": "https://i.imgur.com/ScrCZzP.png",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "<p><em>Pocahontas</em></p>",
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 4,
+        "fields": {
+            "first_name": "Michael",
+            "last_name": "Bloomberg",
+            "election": 21,
+            "party": "Democratic",
+            "state": "New York",
+            "priority": 4,
+            "description": "<p><em>Mini Mike</em></p><p>Mayors of New York, a tricky bunch sometimes. Lindsay. Giuliani. Bloomberg. But beyond that, he built an empire. A technocratic empire. Philanthropy on Tony Stark levels… in his dreams perhaps. Nonetheless, Michael Bloomberg is back and he's looking to steer the ship to the destination of his dreams, the Presidency. Bloomberg and Trump have some similarities, as they're both rich businessmen from NYC. So can this mix match actually lead to Bloomberg getting enough support from the party who hates Trump above all? Time will soon tell. Tick tock…</p>",
+            "color_hex": "#9270de",
+            "secondary_color_hex": "#A1FFA1",
+            "is_active": 1,
+            "image_url": "https://i.imgur.com/F7BFXpm.png",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "<p><em>Mini Mike</em></p>",
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 5,
+        "fields": {
+            "first_name": "Pete",
+            "last_name": "Buttigieg",
+            "election": 21,
+            "party": "Democratic",
+            "state": "Indiana",
+            "priority": 5,
+            "description": "<p><em>Alfred E. Neuman</em></p><p>Harvard grad, Rhodes Scholar and Navy officer. Fluent in eight languages and a skilled pianist/guitarist. In 2012, he became mayor of South Bend, Indiana, earning him the nickname “Mayor Pete”. His tenure helped the struggling city and threw him into the spotlight, where headlines soon asked whether he might become the first gay President. Now a candidate in the 2020 presidential race, he presents himself as a young and forward-thinking alternative in a crowded field. He offers a calm demeanor and a vision that could resonate with Democratic voters ready to pass the torch to a new generation of leadership, capable of defeating Trump in November.</p>",
+            "color_hex": "#febe01",
+            "secondary_color_hex": "#90C0FF",
+            "is_active": 1,
+            "image_url": "https://i.imgur.com/Y1X5bvv.png",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "<p><em>Alfred E. Neuman</em></p>",
+            "candidate_score": 0,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 6,
+        "fields": {
+            "first_name": "Amy",
+            "last_name": "Klobuchar",
+            "election": 21,
+            "party": "Democratic",
+            "state": "Minnesota",
+            "priority": 2,
+            "description": "<p>Abominable Snowwoman</p>",
+            "color_hex": "#43b3ac",
+            "secondary_color_hex": "#FFA0A0",
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/UlvKH2K.png",
+            "electoral_victory_message": "<h3>Congratulations! You have won the 2020 election.</h3><p>For the second time in a row, many analysts saw a victory for you as practically impossible. But whatever they say, it is clear that your Make America Great Again agenda has been vindicated. Where do you take things from here?</p>",
+            "electoral_loss_message": "<h3>Sorry! You have lost the 2020 election.</h3><p>After an election in which many of your supporters claimed democracy itself was at stake, what happens now? Many analysts believe the party will need to go in a completely different direction next time. As for yourself, will you take these results sitting down, or will you prepare yourself for an epic political comeback in 2024?</p>",
+            "no_electoral_majority_message": "<h3>Congratulations! You have won the 2020 election.</h3><p>In spite of the 269-269 tie in the electoral college, Republicans control a majority of state delegations in the House of Representatives. A lot of liberals are absolutely distraught and outraged that the election came down to such a technicality, but hey, those are the rules!</p>",
+            "description_as_running_mate": "<p>Abominable Snowwoman</p>",
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 1003,
+        "fields": {
+            "first_name": "Roger",
+            "last_name": "Lau",
+            "election": 21,
+            "party": "Democratic",
+            "state": "Massachusetts",
+            "priority": 8,
+            "description": "'",
+            "color_hex": "#b51c27",
+            "secondary_color_hex": "#90C0FF",
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/3GxcRgu.png",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "<p>Ever since 2012 and Warren’s introduction to the national stage, former Kerry advisor Roger Lau has been a steadfast friend to her, and his knowledge of Massachusetts politics has served her well. Being the first Asian-American campaign head of a major presidential bid, Lau must help Warren thread the needle between Bernie’s socialist insurgent campaign and the moderate Biden, harnessing long-standing progressive support while garnering former Clintonites as the candidate of “sensible progressivism”. If he succeeds, he will have been an important player in breaking the glass ceiling, but the road ahead is narrow and with little room for error.</p>",
+            "candidate_score": 0,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 1004,
+        "fields": {
+            "first_name": "Kevin",
+            "last_name": "Sheekey",
+            "election": 21,
+            "party": "Democratic",
+            "state": "New York",
+            "priority": 9,
+            "description": "'",
+            "color_hex": "#9270de",
+            "secondary_color_hex": "#90C0FF",
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/cdWaACm.png",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "<p>Sheekey has worked for many political candidates and figures over the years, including former New York Senator Daniel Patrick Moynihan, becoming his Chief of Staff after helping his 1994 re-election campaign. In 2001, he helped with Michael Bloomberg's first mayoral run, despite encouraging him not to run in the first place. In 2005, after Bloomberg won a 2nd term, the “Governator”, Arnold Schwarznegger, offered Sheekey a position as his campaign manager for his re-election campaign. Since then, Sheekey has worked at Bloomberg L.P all these years, until Bloomberg announced his run for President. Can “one of the sharpest political minds of his generation” lead the former 3-term Mayor of NYC to the nomination, and then to victory in November? Or will this investment not pay off?</p>",
+            "candidate_score": 0,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 1005,
+        "fields": {
+            "first_name": "Mike",
+            "last_name": "Schmuhl",
+            "election": 21,
+            "party": "Democratic",
+            "state": "Indiana",
+            "priority": 10,
+            "description": "'",
+            "color_hex": "#febe01",
+            "secondary_color_hex": "#FFA0A0",
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/DnsrKqh.png",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "<p>Mike and Pete are high school buddies. Both South Bend Democrats. It was bound to happen someday. In 2011, they reconnected and Schmuhl managed Pete’s 2011 mayoral campaign. Since then, he has only worked in Indiana and has a Master's degree in Sciences Po in Paris. Schmuhl returned to the US in 2015 and advised more congressional candidates in Indiana, until 2020, where he now manages one of the largest party campaigns in American history, the first openly gay candidate for the Presidency of the United States. Can Mike and Pete write this chapter, or will they just be a footnote in a Trumpian Dynasty?</p>",
+            "candidate_score": 0,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 1006,
+        "fields": {
+            "first_name": "Amy",
+            "last_name": "Campaign Manager",
+            "election": 21,
+            "party": "Democratic",
+            "state": "Minnesota",
+            "priority": 9,
+            "description": "'",
+            "color_hex": "#43b3ac",
+            "secondary_color_hex": "#90C0FF",
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/cdWaACm.png",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "Remind me to research who Klob campaign manager is.",
+            "candidate_score": 0,
+            "running_mate": true
+        }
     }
 ]
 
