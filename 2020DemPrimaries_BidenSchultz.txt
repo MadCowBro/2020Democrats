@@ -14993,6 +14993,10 @@ e.cyoa = true
 e = campaignTrail_temp
 e.noCounter = 0
 
+// Making notation of what variables I will eventually need
+// candidate variables like warren to determine whether they pop up as endorsement option
+// active candidate variables like warren_active to determine whether they are in contention, which will also factor into endorsement page
+
 document.getElementById("header").src = "https://i.imgur.com/DJufG1P.png";
 
 const customStyling = document.createElement("style");
@@ -15889,8 +15893,41 @@ cyoAdventure = function(a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
 	e.noCounter += 1;
 
-    if (ans == 11001) {
-window.setTimeout(e.candidateSwitcher, 20)
+    if(ans == 11001) {
+  campaignTrail_temp.running_mate_json = JSON.parse(`[{
+  "model": "campaign_trail.running_mate",
+  "pk": 30000,
+  "fields": {
+      "candidate": 300,
+      "running_mate": 3
+      }
+  }
+  {
+  "model": "campaign_trail.running_mate",
+  "pk": 30000,
+  "fields": {
+      "candidate": 300,
+      "running_mate": 4
+      }
+  },
+  {
+  "model": "campaign_trail.running_mate",
+  "pk": 30000,
+  "fields": {
+      "candidate": 300,
+      "running_mate": 5
+      }
+  },
+  {
+  "model": "campaign_trail.running_mate",
+  "pk": 30000,
+  "fields": {
+      "candidate": 300,
+      "running_mate": 6
+      }
+  }]`);  
+    
+        window.setTimeout(e.candidateSwitcher, 20)
     }
 
     if (e.noCounter == 15) {
