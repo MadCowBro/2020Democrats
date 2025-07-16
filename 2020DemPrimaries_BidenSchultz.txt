@@ -15841,7 +15841,6 @@ e.candidateSwitcher = () => {
         var button2 = document.getElementById('resume_questions_button');	
               button2.click();
         }, 50);
-        console.log(campaignTrail_temp.questions_json[7])
       }
       if(e.running_mate_last_name==="Bloomberg"){
       campaignTrail_temp.running_mate_image_url = "https://itsastronomical.com/assets/2024/square/haley.png";
@@ -15854,7 +15853,6 @@ e.candidateSwitcher = () => {
         var button2 = document.getElementById('resume_questions_button');	
               button2.click();
         }, 50);
-        console.log(campaignTrail_temp.questions_json[7])
       }
       if(e.running_mate_last_name==="Buttigieg"){
       campaignTrail_temp.running_mate_image_url = "https://itsastronomical.com/assets/2024/square/desantis.png";
@@ -15867,7 +15865,6 @@ e.candidateSwitcher = () => {
         var button2 = document.getElementById('resume_questions_button');	
               button2.click();
         }, 50);
-        console.log(campaignTrail_temp.questions_json[7])
       }
       if(e.running_mate_last_name==="Klobuchar"){
       campaignTrail_temp.running_mate_image_url = "https://itsastronomical.com/assets/2024/square/vance.png";
@@ -15880,7 +15877,6 @@ e.candidateSwitcher = () => {
         var button2 = document.getElementById('resume_questions_button');	
               button2.click();
         }, 50);
-        console.log(campaignTrail_temp.questions_json[7])
       }
       
       $("#inner_window_4").remove();
@@ -15904,7 +15900,7 @@ cyoAdventure = function(a) {
   }
   {
   "model": "campaign_trail.running_mate",
-  "pk": 30000,
+  "pk": 30003,
   "fields": {
       "candidate": 300,
       "running_mate": 4
@@ -15912,7 +15908,7 @@ cyoAdventure = function(a) {
   },
   {
   "model": "campaign_trail.running_mate",
-  "pk": 30000,
+  "pk": 30006,
   "fields": {
       "candidate": 300,
       "running_mate": 5
@@ -15920,7 +15916,7 @@ cyoAdventure = function(a) {
   },
   {
   "model": "campaign_trail.running_mate",
-  "pk": 30000,
+  "pk": 30009,
   "fields": {
       "candidate": 300,
       "running_mate": 6
