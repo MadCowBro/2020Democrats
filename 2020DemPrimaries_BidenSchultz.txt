@@ -15669,6 +15669,7 @@ function closeHeadquarter() {
 
         popOutMenu.remove();
     }
+    closeHeadquarterFlag = 1;
 }
 
 function refreshHeadquarter() {
@@ -15832,7 +15833,7 @@ var changeGameDisp = (hide) => {
     
     $("#candidate_id_button").click((_e)=>{
         _e.preventDefault();
-        closeSurrogateFlag = 1;
+        closeHeadquarterFlag = 1;
         $("#inner_window_4").remove();
         changeGameDisp(false);
     })
@@ -15843,40 +15844,7 @@ cyoAdventure = function(a) {
 	e.noCounter += 1;
 
     if(ans == 11001) {
-  campaignTrail_temp.running_mate_json = JSON.parse(`[{
-  "model": "campaign_trail.running_mate",
-  "pk": 30000,
-  "fields": {
-      "candidate": 300,
-      "running_mate": 3
-      }
-  }
-  {
-  "model": "campaign_trail.running_mate",
-  "pk": 30003,
-  "fields": {
-      "candidate": 300,
-      "running_mate": 4
-      }
-  },
-  {
-  "model": "campaign_trail.running_mate",
-  "pk": 30006,
-  "fields": {
-      "candidate": 300,
-      "running_mate": 5
-      }
-  },
-  {
-  "model": "campaign_trail.running_mate",
-  "pk": 30009,
-  "fields": {
-      "candidate": 300,
-      "running_mate": 6
-      }
-  }]`);  
-    
-        window.setTimeout(e.candidateSwitcher, 20)
+window.setTimeout(e.candidateSwitcher, 20)
     }
 
     if (e.noCounter == 15) {
