@@ -15855,8 +15855,10 @@ window.setTimeout(e.candidateSwitcher, 20)
     if (e.noCounter == 15) {
         bloomberg_active += 1;
         if (bloomberg_active == 1) {
-            menuItemsA = []; 
-                menuItemsA.push(BloombergObject);
+            const index = menuItemsA.findIndex(item => item.id === 'BLOOMBERG_A');
+            if (index !== -1) {
+                menuItemsA.splice(index, 1);
+            }
         }
         refreshHeadquarter();
     }
