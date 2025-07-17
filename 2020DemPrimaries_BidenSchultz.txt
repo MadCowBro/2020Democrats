@@ -14995,7 +14995,13 @@ e.noCounter = 0
 
 // Making notation of what variables I will eventually need
 // candidate variables like warren to determine whether they pop up as endorsement option
-// active candidate variables like warren_active to determine whether they are in contention, which will also factor into endorsement page
+var biden_active = 1;
+var sanders_active = 1;
+var warren_active = 1;
+var bloomberg_active = 0;
+var buttigieg_active = 1;
+var klobuchar_active = 1;
+var others_active = 1;
 
 document.getElementById("header").src = "https://i.imgur.com/DJufG1P.png";
 
@@ -15588,25 +15594,25 @@ function openHeadquarter() {
         menuItemsA.forEach(item => {
             const menuItem = document.createElement('div');
 
-            if(item.id == "BIDEN_A"){
+            if(item.id == "BIDEN_A" && biden_active == 1){
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
-            if(item.id == "SANDERS_A"){
+            if(item.id == "SANDERS_A" && sanders_active == 1){
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
-            if(item.id == "WARREN_A"){
+            if(item.id == "WARREN_A" && warren_active == 1){
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
-            if(item.id == "BUTTIGIEG_A"){
+            if(item.id == "BUTTIGIEG_A" && buttigieg_active == 1){
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
-            if(item.id == "KLOBUCHAR_A"){
+            if(item.id == "KLOBUCHAR_A" && klobuchar_active == 1){
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
-            if(item.id == "OTHERS_A"){
+            if(item.id == "OTHERS_A" && others_active == 1){
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
-            if(item.id == "BLOOMBERG_A"){
+            if(item.id == "BLOOMBERG_A" && bloomberg_active == 1){
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
             
@@ -15854,8 +15860,11 @@ window.setTimeout(e.candidateSwitcher, 20)
     }
 
     if (e.noCounter == 15) {
+        bloomberg_active += 1;
+        if (bloomberg_active == 1) {
                 menuItemsA.push(BloombergObject);
-            refreshHeadquarter();
+        }
+        refreshHeadquarter();
     }
 }
 
