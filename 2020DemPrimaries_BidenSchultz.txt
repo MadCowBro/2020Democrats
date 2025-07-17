@@ -15862,6 +15862,7 @@ window.setTimeout(e.candidateSwitcher, 20)
     if (e.noCounter == 15) {
         bloomberg_active += 1;
         if (bloomberg_active == 1) {
+            menuItemsA = []; 
                 menuItemsA.push(BloombergObject);
         }
         refreshHeadquarter();
