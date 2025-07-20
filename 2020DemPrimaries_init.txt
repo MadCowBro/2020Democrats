@@ -1,3 +1,17 @@
+function removeCandidateSummary() {
+  try {
+    const candidateSummary = document.querySelector("#candidate_summary");
+    if (candidateSummary && storedChar == 21) {
+      const ulList = candidateSummary.querySelector("ul");
+      if (ulList) {
+        candidateSummary.removeChild(ulList);
+      }
+    }
+  } catch {}
+}
+window.setInterval(removeCandidateSummary,10)
+
+
 campaignTrail_temp.global_parameter_json = [
     {
         "model": "campaign_trail.global_parameter",
