@@ -103,7 +103,7 @@ campaignTrail_temp.questions_json = [
         "pk": 120000,
         "fields": {
             "priority": 2,
-            "description": "Senator Elizabeth Warren, who declined to run for office even after a draft movement to convince her to run, has not made an endorsement in this race. Will you attempt to gain her endorsement?",
+            "description": "It’s come up time and again that the main motivator for Democratic voters is finding the candidate that can best beat Donald Trump. This is perfect for you as you’ve made electability a centerpiece of your campaign. Which of Trump’s many controversial policies would you like to use to further boost your argument?",
             "likelihood": 1
         }
     },
@@ -157,7 +157,7 @@ campaignTrail_temp.questions_json = [
         "pk": 180000,
         "fields": {
             "priority": 3,
-            "description": "Earlier today, the Democratic National Convention suspended Senator Sanders' access to voter data after a staffer reportedly viewed data belonging to your Campaign during a failure of a firewall. How will you respond to this incident?",
+            "description": "Progressives have repeatedly floated the idea of expanding the Supreme Court as a way to combat the right-wing shift at the very top of the judicial branch. Predictably, Trump and his allies have accused Democrats of wanting to “pack the Court” and upending “150 years of judicial standards”. Where do you weigh in on this?",
             "likelihood": 1
         }
     },
@@ -166,7 +166,7 @@ campaignTrail_temp.questions_json = [
         "pk": 190000,
         "fields": {
             "priority": 3,
-            "description": "As 2016 begins, the primary season begins, with Iowa coming up shortly. Today, you’re holding a rally in the state. What exactly will you focus on during your speech?",
+            "description": "The New Year has been rung in and we are now weeks away from the Iowa caucuses. What would you like the focus point of the campaign to be in this crucial final stretch before primary voting begins?",
             "likelihood": 1
         }
     },
@@ -175,7 +175,7 @@ campaignTrail_temp.questions_json = [
         "pk": 200000,
         "fields": {
             "priority": 3,
-            "description": "It is officially the day of the Iowa Caucus, the first contest in a series of Presidential Primaries and Caucuses to determine the Democratic Nominee. Where within Iowa would you like to campaign today?",
+            "description": "The first true test of your standing in the race is about to begin. The polls aren’t especially favorable to you, but you can exceed expectations with a strong rally blitz, perhaps even win the Iowa caucuses outright. Where will you campaign?",
             "likelihood": 1
         }
     },
@@ -650,10 +650,10 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 120001,
+        "pk": 120003,
         "fields": {
             "question": 120000,
-            "description": "Test answer."
+            "description": "Forget his policies, his character is completely beneath the office he holds. He has no respect for the institutions of our nation nor the people he serves. He’s a bully I’d like to smack in the mouth."
         }
     },
     {
@@ -661,7 +661,7 @@ campaignTrail_temp.answers_json = [
         "pk": 130001,
         "fields": {
             "question": 130000,
-            "description": "Test answer."
+            "description": "All his immigration policies have been cruel: the Muslim ban, putting kids in cages, the Wall, all of it."
         }
     },
     {
@@ -701,7 +701,7 @@ campaignTrail_temp.answers_json = [
         "pk": 150001,
         "fields": {
             "question": 150000,
-            "description": "Test answer."
+            "description": "We gotta go after every single one. Create a real circling the wagons moment to telegraph to the voters that I’m their best shot at winning next year."
         }
     },
     {
@@ -709,7 +709,47 @@ campaignTrail_temp.answers_json = [
         "pk": 160001,
         "fields": {
             "question": 160000,
-            "description": "Test answer."
+            "description": "This guy’s gonna be courting our voters, we can’t have that. Hit him hard—anything you can find on him. He’s got skeletons in his closet, I know it."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170001,
+        "fields": {
+            "question": 170000,
+            "description": "This guy’s gonna be courting our voters, we can’t have that. Hit him hard—anything you can find on him. He’s got skeletons in his closet, I know it."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 180001,
+        "fields": {
+            "question": 180000,
+            "description": "No, I'm not prepared to go on and try to pack the Court, because we'll live to rue that day. We do that, and we begin to lose any credibility the Court has at all."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 180002,
+        "fields": {
+            "question": 180000,
+            "description": "I get the sentiment behind it, but I’m not a fan. We add three justices. Next time around, we lose control, they add three justices. It’s not gonna work."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 180003,
+        "fields": {
+            "question": 180000,
+            "description": "Anyone advocating for this is playing into Trump’s hands. He wants nothing more than to brand the eventual nominee as extreme and radical. He’ll do so no matter what, but the more fringe positions we adopt, the more effective that attack is gonna be."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 180004,
+        "fields": {
+            "question": 180000,
+            "description": "It’s a great question, and frankly, I think it deserves serious consideration. The judges Trump appointed to the Court are uniquely unqualified and dangerous. God knows what would happen if he gets the chance to expand the conservative majority."
         }
     }
 ]
@@ -14931,6 +14971,42 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 140004,
             "candidate": 300,
             "answer_feedback": "This was for the best. Your already-high polling numbers get another boost after the debate, but Amy Klobuchar gets one as well."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 180005,
+        "fields": {
+            "answer": 180001,
+            "candidate": 300,
+            "answer_feedback": "This is completely in line with your views, but progressives aren’t having it. They say by not committing to bold and decisive action, you’re part of the problem. Some people, man."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 180006,
+        "fields": {
+            "answer": 180002,
+            "candidate": 300,
+            "answer_feedback": "Your justification is more than enough to placate your base, but progressives dismiss your remarks as the opinion of an out of touch establishmentarian. In any event, it’s consistent with your reputation."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 180007,
+        "fields": {
+            "answer": 180003,
+            "candidate": 300,
+            "answer_feedback": "You’re 100% correct, yet progressives demand action be taken to reverse the damage Trump has wrought on the nation, through any means necessary. Some pundits note though that you didn’t outright dismiss the idea."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 180008,
+        "fields": {
+            "answer": 180004,
+            "candidate": 300,
+            "answer_feedback": "Trump and his allies in the media waste no time tying to “Crazy Bernie”, “Pocahontas”, and the “Radical Left”. Your team bills the shift as an “evolution”, which has led your campaign to have newfound appeal among progressives. Just be aware there might be a cost in the general election."
         }
     }
 ]
