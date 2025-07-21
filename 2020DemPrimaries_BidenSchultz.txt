@@ -650,10 +650,34 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
+        "pk": 120001,
+        "fields": {
+            "question": 120000,
+            "description": "His trade war with China is so shortsighted. President Trump thinks he's being tough. All that he's delivered as a consequence of that is American farmers, manufacturers and consumers losing and paying more."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 120002,
+        "fields": {
+            "question": 120000,
+            "description": "His foreign policy is an embarrassment. He treats allies like enemies and enemies as allies. He is very quickly turning America into a laughingstock."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
         "pk": 120003,
         "fields": {
             "question": 120000,
             "description": "Forget his policies, his character is completely beneath the office he holds. He has no respect for the institutions of our nation nor the people he serves. He’s a bully I’d like to smack in the mouth."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 120004,
+        "fields": {
+            "question": 120000,
+            "description": "He is a threat to our democracy. His blatant disregard for institutional norms and carelessness for the rule of law is alarming. This is not who we are as a country."
         }
     },
     {
@@ -14935,6 +14959,42 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 110004,
             "candidate": 300,
             "answer_feedback": "It’s been a consistent theme of yours from the start, that unity and electability must be prioritized over ideology and grand reforms. It’s not a message that will win over hardcore liberals, but it offers a clear path to victory, in the primaries and against Trump."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 120005,
+        "fields": {
+            "answer": 120001,
+            "candidate": 300,
+            "answer_feedback": "The gulf between you and the base on free trade is ever-expanding. Sanders and Warren take advantage, criticizing you for downplaying the threat China poses to US interests. You later clarify, “There's no going back to business as usual on trade with me.”"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 120006,
+        "fields": {
+            "answer": 120002,
+            "candidate": 300,
+            "answer_feedback": "The Rupert Murdoch machine goes on the attack against you, echoing Trump’s claims that you hate America. Yet the more they focus on you, the more Democrats think you can beat him."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 120007,
+        "fields": {
+            "answer": 120003,
+            "candidate": 300,
+            "answer_feedback": "Republicans rally around their embattled leader, accusing you of violent rhetoric and making light of assault. You know damn well they’re not acting in good faith, enabling Trump’s far worse language. That’s why you have to beat him. Beat him like a drum."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 120008,
+        "fields": {
+            "answer": 120004,
+            "candidate": 300,
+            "answer_feedback": "It’s a safe play. Maybe not as effective as you hoped, as Democrats are already in favor of democracy."
         }
     },
     {
