@@ -112,7 +112,7 @@ campaignTrail_temp.questions_json = [
         "pk": 130000,
         "fields": {
             "priority": 2,
-            "description": "Gun control is a complex issue that different wings of the Democratic Party feel different about. How exactly will you clarify your position on gun control at your next rally?",
+            "description": "Trump made immigration a centerpiece of his 2016 campaign, and he has enacted a host of abhorrent policies in office, in addition to consistently using racist and dehumanizing language to describe immigrants. How will you approach this issue, should you be elected president?",
             "likelihood": 1
         }
     },
@@ -685,7 +685,31 @@ campaignTrail_temp.answers_json = [
         "pk": 130001,
         "fields": {
             "question": 130000,
-            "description": "All his immigration policies have been cruel: the Muslim ban, putting kids in cages, the Wall, all of it."
+            "description": "All his immigration policies have been cruel: the Muslim ban, putting kids in cages, the wall, all of it. I will overturn his inhumane acts on day one. We need to restore dignity to our immigration system."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 130002,
+        "fields": {
+            "question": 130000,
+            "description": "I’m sick of hearing about this damn wall. It’s unserious and a waste of your taxpayer dollars, just like all his other atrocious policies."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 130003,
+        "fields": {
+            "question": 130000,
+            "description": "Look, I understand the need to be tough on the illegal aliens, but Trump is going about it in the meanest and most chaotic ways possible. We need to be tough, but we also need to be fair and fix our legal immigration system."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 130004,
+        "fields": {
+            "question": 130000,
+            "description": "Man, he doesn’t have a damn clue about what makes this country great. We’re a nation of immigrants. He should know that, his parents were both immigrants. Rather than demonizing them, we need to protect them. Treat them as fellow human beings."
         }
     },
     {
@@ -14995,6 +15019,42 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 120004,
             "candidate": 300,
             "answer_feedback": "It’s a safe play. Maybe not as effective as you hoped, as Democrats are already in favor of democracy."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 130005,
+        "fields": {
+            "answer": 130001,
+            "candidate": 300,
+            "answer_feedback": "You launch into a blistering tirade against the Trump administration in a rally speech. The anger and passion in your words propels it to go viral, and your campaign gets a small boost as a result."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 130006,
+        "fields": {
+            "answer": 130002,
+            "candidate": 300,
+            "answer_feedback": "Most Democrats are already against the wall. Good to know you are too, but it doesn’t differentiate you from the pack."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 130007,
+        "fields": {
+            "answer": 130003,
+            "candidate": 300,
+            "answer_feedback": "Left-wing media chastises you for the use of the term “illegal aliens”. You apologize and commit to calling them “undocumented immigrants” from now on, making a joke that things were different when you were growing up."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 130008,
+        "fields": {
+            "answer": 130004,
+            "candidate": 300,
+            "answer_feedback": "You’re light on specifics, but you seem to be pivoting in a more liberal direction on immigration. It’ll certainly help in the primaries."
         }
     },
     {
