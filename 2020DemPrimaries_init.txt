@@ -1,16 +1,3 @@
-function removeCandidateSummary() {
-  try {
-    const candidateSummary = document.querySelector("#candidate_summary");
-    if (candidateSummary && storedChar == 21) {
-      const ulList = candidateSummary.querySelector("ul");
-      if (ulList) {
-        candidateSummary.removeChild(ulList);
-      }
-    }
-  } catch {}
-}
-window.setInterval(removeCandidateSummary,10)
-
 
 campaignTrail_temp.global_parameter_json = [
     {
@@ -690,6 +677,18 @@ jet_data = {
 
 //#startcode
 
+function removeCandidateSummary() {
+  try {
+    const candidateSummary = document.querySelector("#candidate_summary");
+    if (candidateSummary) {
+      const ulList = candidateSummary.querySelector("ul");
+      if (ulList) {
+        candidateSummary.removeChild(ulList);
+      }
+    }
+  } catch {}
+  }
+  window.setInterval(removeCandidateSummary,200)
 
 quotes = ["'If you have a problem figuring out whether you’re for me or Trump then you ain’t black.'- Joe Biden", "'I am once again asking for your financial support.' - Bernie Sanders", "'My name is Elizabeth and I'm running for president, because that's what girls do.' - Elizabeth Warren", "'People say, do you really want a general election between two New York billionaires? To which I say, who’s the other one?' - Michael Bloomberg", "'Feet are gross.' - Pete Buttigieg"]
 customquote = quotes[Math.floor((Math.random() * quotes.length))]
