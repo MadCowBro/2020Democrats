@@ -139,7 +139,7 @@ campaignTrail_temp.questions_json = [
         "pk": 160000,
         "fields": {
             "priority": 3,
-            "description": "Once a more fringe, left-wing political topic, climate change and global warming have become a growing concern among Democrats, Independents, and even some Republicans. What is your stance on climate and green issues?",
+            "description": "It’s been rumored for sometime, but now it’s official: Michael Bloomberg has made a late entrance into the race for the nomination. Whether the former mayor of New York City is running because he doubts you can win the nomination or because it’s a vanity campaign is irrelevant, you must push on. What do you have to say?",
             "likelihood": 1
         }
     },
@@ -754,10 +754,50 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
+        "pk": 150002,
+        "fields": {
+            "question": 150000,
+            "description": "There is one endorsement which, heh, trumps the rest: Barack. If he comes out and endorses his old vice president, we’ve got this thing locked up, man."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 150003,
+        "fields": {
+            "question": 150000,
+            "description": "No, we can’t pursue these people like that, it gives off an air of desperation. They should endorse us because they believe in what we’re doing, what we’re building. Not because we’re offering Cabinet positions or whatever."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
         "pk": 160001,
         "fields": {
             "question": 160000,
             "description": "This guy’s gonna be courting our voters, we can’t have that. Hit him hard—anything you can find on him. He’s got skeletons in his closet, I know it."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 160002,
+        "fields": {
+            "question": 160000,
+            "description": "Of course Donald Trump’s best friend is trying to help him out by mudding our waters. I want everyone to know just how tight those two New York billionaire buddies are."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 160003,
+        "fields": {
+            "question": 160000,
+            "description": "I’ve got no problem with it. If people think he’s running because of me, well, the last polls I looked at, I’m pretty far ahead. Michael is a solid guy. Let’s see where it goes."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 160004,
+        "fields": {
+            "question": 160000,
+            "description": "Oh c’mon. He’s not gonna get anywhere, not now. Voters are going to look and make a judgment. What is he bringing in? What's he adding to the race?"
         }
     },
     {
@@ -15091,6 +15131,69 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 140004,
             "candidate": 300,
             "answer_feedback": "This was for the best. Your already-high polling numbers get another boost after the debate, but Amy Klobuchar gets one as well."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 150004,
+        "fields": {
+            "answer": 150001,
+            "candidate": 300,
+            "answer_feedback": "This falls flat. Former candidates simply aren’t convinced that you are in prime position right now to secure the nomination. They want to back a winner."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 150005,
+        "fields": {
+            "answer": 150002,
+            "candidate": 300,
+            "answer_feedback": "He still doesn’t bite. It’s nothing personal surely, he’s just looking at things through a political lens, but man, it hurts. He’s your friend."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 150006,
+        "fields": {
+            "answer": 150003,
+            "candidate": 300,
+            "answer_feedback": "You get a couple, Representative Tim Ryan for instance, but the rest stay neutral for now. Waiting to see how the race shakes out."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 160005,
+        "fields": {
+            "answer": 160001,
+            "candidate": 300,
+            "answer_feedback": "He certainly does, and they come pouring out: stop-and-frisk, the Portable Bloomberg, numerous attack on Obama, and more. The carbon copy of Donald Trump thinks he deserves to be the Democratic nominee."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 160006,
+        "fields": {
+            "answer": 160002,
+            "candidate": 300,
+            "answer_feedback": "Bloomberg denies it, telling reporters that he’s “sick of” Donald Trump, but your campaign gets right to work bringing out the receipts. They put together a record of the two praising each other over the years. It’s anathema to primary voters."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 160007,
+        "fields": {
+            "answer": 160003,
+            "candidate": 300,
+            "answer_feedback": "Don’t get too complacent, Joe. Bloomberg may not seem like much of a threat right now, but the possibility of him peeling just enough votes from you to give Sanders a plurality is real."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 160008,
+        "fields": {
+            "answer": 160004,
+            "candidate": 300,
+            "answer_feedback": "Somehow, someway, Bloomberg finds appeal. His strategy is certainly unconventional, but voters across the political spectrum seem to like unconventional these days."
         }
     },
     {
