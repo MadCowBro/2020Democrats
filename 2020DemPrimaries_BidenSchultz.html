@@ -148,7 +148,7 @@ campaignTrail_temp.questions_json = [
         "pk": 170000,
         "fields": {
             "priority": 3,
-            "description": "The United States House Select Committee on Benghazi has requested that you testify to the committee. How will you handle this hearing, and will it affect your campaign at all?",
+            "description": "It’s starting to feel like the pundits will hype up anyone but you. Pete Buttigieg is the latest media darling, as his polling has put him among the top contenders in early primary contests. In order to regain the narrative, you need to do something about this, Joe.",
             "likelihood": 1
         }
     },
@@ -805,7 +805,31 @@ campaignTrail_temp.answers_json = [
         "pk": 170001,
         "fields": {
             "question": 170000,
-            "description": "This guy’s gonna be courting our voters, we can’t have that. Hit him hard—anything you can find on him. He’s got skeletons in his closet, I know it."
+            "description": "He seems like a bright kid, but Pete doesn’t have a shot in hell. Get a meeting set up with him. We can offer him a spot in the Cabinet or something."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170002,
+        "fields": {
+            "question": 170000,
+            "description": "He’s a good man, I don’t want to do anything untoward to hurt him. Besides, polls consistently show they want some experienced to take on Donald Trump. That’s not Pete."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170003,
+        "fields": {
+            "question": 170000,
+            "description": "It’s simple; he’s doing well in Iowa and New Hampshire, then we go campaign over there. We take care of business on our end, and his path is gone."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170004,
+        "fields": {
+            "question": 170000,
+            "description": "Tie him to McKinsey. People will have a lot of questions about his role there."
         }
     },
     {
@@ -838,6 +862,70 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 180000,
             "description": "It’s a great question, and frankly, I think it deserves serious consideration. The judges Trump appointed to the Court are uniquely unqualified and dangerous. God knows what would happen if he gets the chance to expand the conservative majority."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 190001,
+        "fields": {
+            "question": 190000,
+            "description": "I can’t stress this enough, we need to be smart about who we vote for. We nominate someone who’s way left on the issues, we lose. Trump will beat ‘em. We can’t lose."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 190002,
+        "fields": {
+            "question": 190000,
+            "description": "Donald Trump has been a nightmare for this country. I will roll back every single one of his numerous harmful policies and set this country back on the right track."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 190003,
+        "fields": {
+            "question": 190000,
+            "description": "My record speaks for itself. I served this country faithfully as vice president for eight years and as a Senator for decades before that. Looking at the slate of candidates, I’m the only one that can right all the wrongs of the last four years."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 190004,
+        "fields": {
+            "question": 190000,
+            "description": "It’s time to switch things up. Let’s start leaning into more populist proposals like weed legalization, criminal justice reform and setting up a council to study reparations."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 200001,
+        "fields": {
+            "question": 200000,
+            "description": "Let’s do a bus tour of rural Iowa. We can reach voters no one else will with our message of “No Malarkey”."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 200002,
+        "fields": {
+            "question": 200000,
+            "description": "We’ll do a big final rally in Des Moines, focusing on generating as much turnout as possible."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 200003,
+        "fields": {
+            "question": 200000,
+            "description": "Cedar Rapids is a great place to wrap up our Iowa campaign. Our messaging on free trade will resonate here."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 200004,
+        "fields": {
+            "question": 200000,
+            "description": "We should go down the western border of the state, starting in Sioux City and making our way down to the Omaha suburbs. We’ll need these voters come November."
         }
     }
 ]
@@ -15198,6 +15286,42 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
+        "pk": 170005,
+        "fields": {
+            "answer": 170001,
+            "candidate": 300,
+            "answer_feedback": "His campaign rejects the request to sit down with him. He firmly believes he has a chance and wants to see it through."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 170006,
+        "fields": {
+            "answer": 170002,
+            "candidate": 300,
+            "answer_feedback": "Yes, the electability argument is your strongest, but it’s important to recognize when you’re losing ground. Switch things up a little."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 170007,
+        "fields": {
+            "answer": 170003,
+            "candidate": 300,
+            "answer_feedback": "Smart. It remains to be seen whether that’s enough, but it’s certainly better than nothing."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 170008,
+        "fields": {
+            "answer": 170004,
+            "candidate": 300,
+            "answer_feedback": "Super PACs supporting you push out ads digging into his time at McKinsey, questioning who his clients and if his campaign has been compromised by them. To his credit, he releases a client list shortly afterwards."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
         "pk": 180005,
         "fields": {
             "answer": 180001,
@@ -15230,6 +15354,78 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 180004,
             "candidate": 300,
             "answer_feedback": "Trump and his allies in the media waste no time tying to “Crazy Bernie”, “Pocahontas”, and the “Radical Left”. Your team bills the shift as an “evolution”, which has led your campaign to have newfound appeal among progressives. Just be aware there might be a cost in the general election."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 190005,
+        "fields": {
+            "answer": 190001,
+            "candidate": 300,
+            "answer_feedback": "At times it sounds like a broken record. Many on the left don’t want to see you as the standard bearer, but someone needs to unite the party and unseat the wannabe demagogue. Prove to them you can do that."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 190006,
+        "fields": {
+            "answer": 190002,
+            "candidate": 300,
+            "answer_feedback": "It’s not a message that stands out, pretty much all Democrats want to undo the Trump presidency. With your name recognition and stature though, that may be enough."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 190007,
+        "fields": {
+            "answer": 190003,
+            "candidate": 300,
+            "answer_feedback": "A dignified speech that doesn’t call out the sitting president by name. Can the reserved establishment politician win in an increasingly populist era?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 190008,
+        "fields": {
+            "answer": 190004,
+            "candidate": 300,
+            "answer_feedback": "An interesting pivot that’s got people talking, “Did he have a change of heart or is he simply reading the tea leaves and moving leftward with the party?” Either way, it keeps your campaign in the news."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 200005,
+        "fields": {
+            "answer": 200001,
+            "candidate": 300,
+            "answer_feedback": "You get mocked for not campaigning in the big cities, but if anyone can reach out to these target voters, it’s you."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 200006,
+        "fields": {
+            "answer": 200002,
+            "candidate": 300,
+            "answer_feedback": "The rally turnout wasn’t what you hoped it would be, but it’s not crowd size or polling that matters. It’s the votes. They’ll come out for you on Election Day."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 200007,
+        "fields": {
+            "answer": 200003,
+            "candidate": 300,
+            "answer_feedback": "You made a strong push at the end there. Let’s hope it pays off."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 200008,
+        "fields": {
+            "answer": 200004,
+            "candidate": 300,
+            "answer_feedback": "Suburbanites have been bolting from the GOP since 2016, but do these voters see you as the best choice the Democrats have to offer? We’re about to find out."
         }
     }
 ]
