@@ -16352,7 +16352,7 @@ window.setTimeout(e.candidateSwitcher, 20)
         if (bloomberg_active == 1) {
             const index = menuItemsA.findIndex(item => item.id === 'BLOOMBERG_A');
             if (index !== -1) {
-                menuItemsA.splice(index, 1);
+                menuItemsA.splice(index, 0);
             }
         }
         refreshHeadquarter();
