@@ -16231,26 +16231,6 @@ if (!element) {
 	document.body.appendChild(controlElement);
 }
 
-let closeHeadquarterFlag = 0;
-let headquarterUsed = 0;
-
-const headquarterReset = setInterval(function() {
-    const pollsButton = document.getElementById("view_electoral_map");
-    const backpollsButton = document.getElementById("resume_questions_button");
-    
-    if(closeHeadquarterFlag == 1){
-        if(pollsButton){
-            headquarterUsed = 1;
-            closeHeadquarter();
-            pollsButton.click();
-        }
-        if(backpollsButton){
-            backpollsButton.click();
-            closeHeadquarterFlag = 0;
-        }
-    }
-}, 0.1);
-
 cyoAdventure = function(a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
 	e.noCounter += 1;
