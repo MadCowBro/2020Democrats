@@ -15488,16 +15488,6 @@ e.cyoa = true
 e = campaignTrail_temp
 e.noCounter = 0
 
-// Making notation of what variables I will eventually need
-// candidate variables like warren to determine whether they pop up as endorsement option
-var biden_active = 1;
-var sanders_active = 1;
-var warren_active = 1;
-var bloomberg_active = 0;
-var buttigieg_active = 1;
-var klobuchar_active = 1;
-var others_active = 1;
-
 document.getElementById("header").src = "https://i.imgur.com/DJufG1P.png";
 
 const customStyling = document.createElement("style");
@@ -16151,8 +16141,8 @@ function openHeadquarter() {
     }
     else {
         const buttonRect = event.target.getBoundingClientRect();
-        popOutMenu.style.left = buttonRect.right + 353 + 'px'; // Offset X
-        popOutMenu.style.top = buttonRect.top - 292 + 'px'; // Offset Y
+        popOutMenu.style.top = (buttonRect.top - popOutMenu.offsetHeight - 10) + 'px';
+        popOutMenu.style.left = (buttonRect.left + (buttonRect.width / 2) - (popOutMenu.offsetWidth / 2)) + 'px';
         savedX = popOutMenu.getBoundingClientRect().left;
         savedY = popOutMenu.getBoundingClientRect().top;
     }
@@ -16255,103 +16245,12 @@ const headquarterReset = setInterval(function() {
     }
 }, 0.1);
 
-var changeGameDisp = (hide) => {
-    disp = "";
-    if (hide) {
-      disp = "none";
-    }
-    Array.from(gameWindow.children).forEach(f=>{
-        if(!f.classList.contains("game_header") && (f.id != "main_content_area" || !$("#campaign_sign")[0])) 
-            f.style.display = disp
-    });
-};
-  
-
-// If you drop out, you get the candidate switcher
-    e.candidateSwitcher = () => {
-    
-    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
-    let candidate_options = `<option value="${f.pk}">${e.candidate_json[id].fields.first_name} ${e.candidate_json[id].fields.last_name}</option>\n`;
-    let candidate_html = `
-        <div id="candidate_form">
-            <form name="candidate mate">
-                <p></p>
-                <h3>Please endorse a new candidate:</h3> 
-                <select name="candidate_id" id="candidate_id">
-                    ${candidate_options}
-                </select>
-                <p></p>
-            </form>
-        </div>
-        <div class="person_description_window" id="running_mate_description_window">
-            <div class="person_image" id="running_mate_image"> <img src="${e.candidate_json[id].fields.image_url}" width="210" height="250"> </div>
-            <div class="person_summary" id="running_mate_summary" style="line-height: 1;">
-                <ul>
-                    <li>Name: ${e.candidate_json[id].fields.first_name} ${e.candidate_json[id].fields.last_name}</li>
-                    <li>Party: Democratic</li>
-                    <li>Home State: ${e.candidate_json[id].fields.state}</li>
-                </ul>
-                ${e.candidate_json[id].fields.description}
-            </div>
-        </div>
-        <p> <button class="person_button" id="candidate_id_button">Continue</button> </p>
-    `
-    
-    let candidate_screen = document.createElement("div");
-    candidate_screen.classList.add("inner_window_w_desc");
-    candidate_screen.id = "inner_window_4";
-    candidate_screen.innerHTML = candidate_html;
-    
-    changeGameDisp(true);
-    
-    gameWindow.appendChild(candidate_screen);
-    
-    // now we make the stuff do stuff!
-    
-    // $("#candidate_id").change((_e)=>{
-    //     _e.preventDefault()
-    
-    //     let value = Number($("#candidate_id").val());
-    //     let i = potential_running_mate_pks.findIndex(f=>f === value);
-    
-    //     let screen_html = `
-    //         <div class="person_image" id="running_mate_image"> <img src="${pot_run_mat[i].fields.image_url}" width="210" height="250"> </div>
-    //         <div class="person_summary" id="running_mate_summary" style="line-height: 1;">
-    //             <ul>
-    //                 <li>Name: ${pot_run_mat[i].fields.first_name} ${pot_run_mat[i].fields.last_name}</li>
-    //                 <li>Party: ${pot_run_mat[i].fields.party}</li>
-    //                 <li>Home State: ${pot_run_mat[i].fields.state}</li>
-    //             </ul>
-    //             ${pot_run_mat[i].fields.description_as_running_mate}
-    //         </div>
-    //     `
-    
-    //     $("#running_mate_description_window").html(screen_html);
-    
-    // });
-    // // VP selected!
-    
-    $("#candidate_id_button").click((_e)=>{
-        _e.preventDefault();
-        closeHeadquarterFlag = 1;
-        $("#inner_window_4").remove();
-        changeGameDisp(false);
-    })
-    }
-
 cyoAdventure = function(a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
 	e.noCounter += 1;
 
-    if(ans == 11001) {
-window.setTimeout(e.candidateSwitcher, 20)
-    }
-
     if (e.noCounter == 15) {
-        bloomberg_active += 1;
-        if (bloomberg_active == 1) {
-            menuItemsA.push(BloombergObject);
-        }
+        menuItemsA.push(BloombergObject);
         refreshHeadquarter();
     }
 }
