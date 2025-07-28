@@ -21,8 +21,8 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 30000,
         "fields": {
-            "priority": 1,
-            "description": "Current opinion polling shows you leading Sanders by a wide margin. However, this margin thins with every new poll conducted. How will you try to consolidate your status as the front-runner?",
+            "priority": 2,
+            "description": "When you announced your campaign, you raised an eye-popping $6.3 million in the first 24 hours, more than any other candidate. Of course, you need money consistently flowing in if the campaign is to go the distance. How will you continue these efforts?",
             "likelihood": 1
         }
     },
@@ -31,7 +31,7 @@ campaignTrail_temp.questions_json = [
         "pk": 40000,
         "fields": {
             "priority": 2,
-            "description": "When you announced your campaign, you raised an eye-popping $6.3 million in the first 24 hours, more than any other candidate. Of course, you need money consistently flowing in if the campaign is to go the distance. How will you continue these efforts?",
+            "description": "In 1988, you were one of the youngest candidates. In 2020, you are among the oldest. With criticisms about your age intensifying, there’s been internal debate about whether you should pledge to only serve a single term. What’s your stance on this?",
             "likelihood": 1
         }
     },
@@ -39,8 +39,8 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 50000,
         "fields": {
-            "priority": 2,
-            "description": "In 1988, you were one of the youngest candidates. In 2020, you are among the oldest. With criticisms about your age intensifying, there’s been internal debate about whether you should pledge to only serve a single term. What’s your stance on this?",
+            "priority": 1,
+            "description": "Current opinion polling shows you leading Sanders by a wide margin. However, this margin thins with every new poll conducted. How will you try to consolidate your status as the front-runner?",
             "likelihood": 1
         }
     },
@@ -389,7 +389,7 @@ campaignTrail_temp.answers_json = [
         "pk": 30001,
         "fields": {
             "question": 30000,
-            "description": "I’ll campaign heavily in the Rust Belt. Apart from the farmers of the Rockies and Plains, this is the most heavily pro-Sanders group out there. I’m cool with labor, right?"
+            "description": "Well, we passed that first test with flying colors, so we keep doing what works—more fundraisers, more big money donors. Bernie Sanders wants to, what’s he say, “eat the rich”? We’re not doing that. We shouldn’t demonize the rich."
         }
     },
     {
@@ -397,7 +397,7 @@ campaignTrail_temp.answers_json = [
         "pk": 30002,
         "fields": {
             "question": 30000,
-            "description": "We don’t need to complicate this much. We need speeches all over the country, and we need to get some friends like Clinton, Obama and even Colin Powell to be with me on the campaign trail. We are above the mudslinging."
+            "description": "Bernie’s been ragging on us for not having enough small dollar donors. I say we go to the Internet, get folks involved in our campaign that way. No one’s going after older people on Facebook, so we can tap into that market."
         }
     },
     {
@@ -405,7 +405,15 @@ campaignTrail_temp.answers_json = [
         "pk": 30003,
         "fields": {
             "question": 30000,
-            "description": "Let’s hit on Trump heavily. He’s a punching bag no Democrat likes. We’ll also focus on Sanders’ general unelectability and how he would massively turn off a lot of the more moderate Democrats with his rhetoric. It could lead to losses in the House, or God forbid, Trump’s re-election."
+            "description": "We gotta get out there more. Can’t be so choosy about where we are if we wanna win this thing. It’s a simple concept; the more we appear, the more people get excited about us, and the more money they donate."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 30004,
+        "fields": {
+            "question": 30000,
+            "description": "Listen, nobody in this race has a better relationship with folks like Barack than me. We pile on the endorsements, and talk up my time as vice president. The Obama-Biden voters are with us, man."
         }
     },
     {
@@ -413,7 +421,7 @@ campaignTrail_temp.answers_json = [
         "pk": 40001,
         "fields": {
             "question": 40000,
-            "description": "Well, we passed that first test with flying colors, so we keep doing what works—more fundraisers, more big money donors. Bernie Sanders wants to, what’s he say, “eat the rich”? We’re not doing that. We shouldn’t demonize the rich."
+            "description": "Listen Jack, I may be old, but I haven’t lost my damn mind. I have no doubt I can serve two terms. Forget you mentioned anything about this."
         }
     },
     {
@@ -421,7 +429,7 @@ campaignTrail_temp.answers_json = [
         "pk": 40002,
         "fields": {
             "question": 40000,
-            "description": "Bernie’s been ragging on us for not having enough small dollar donors. I say we go to the Internet, get folks involved in our campaign that way. No one’s going after older people on Facebook, so we can tap into that market."
+            "description": "Look, I feel good, but I understand folks’ desire to see a new generation of leaders. I am the only one who can beat Donald Trump—that’s why I’m running—but I would be honored to serve as a transitional president."
         }
     },
     {
@@ -429,15 +437,7 @@ campaignTrail_temp.answers_json = [
         "pk": 40003,
         "fields": {
             "question": 40000,
-            "description": "We gotta get out there more. Can’t be so choosy about where we are if we wanna win this thing. It’s a simple concept; the more we appear, the more people get excited about us, and the more money they donate."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 40004,
-        "fields": {
-            "question": 40000,
-            "description": "Listen, nobody in this race has a better relationship with folks like Barack than me. We pile on the endorsements, and talk up my time as vice president. The Obama-Biden voters are with us, man."
+            "description": "I see the appeal, but we can’t be talking about this publicly. Donald Trump would call it weakness and the other Democrats would ask why I’m even running in the first place."
         }
     },
     {
@@ -445,7 +445,7 @@ campaignTrail_temp.answers_json = [
         "pk": 50001,
         "fields": {
             "question": 50000,
-            "description": "Listen Jack, I may be old, but I haven’t lost my damn mind. I have no doubt I can serve two terms. Forget you mentioned anything about this."
+            "description": "I’ll campaign heavily in the Rust Belt. Apart from the farmers of the Rockies and Plains, this is the most heavily pro-Sanders group out there. I’m cool with labor, right?"
         }
     },
     {
@@ -453,7 +453,7 @@ campaignTrail_temp.answers_json = [
         "pk": 50002,
         "fields": {
             "question": 50000,
-            "description": "Look, I feel good, but I understand folks’ desire to see a new generation of leaders. I am the only one who can beat Donald Trump—that’s why I’m running—but I would be honored to serve as a transitional president."
+            "description": "We don’t need to complicate this much. We need speeches all over the country, and we need to get some friends like Clinton, Obama and even Colin Powell to be with me on the campaign trail. We are above the mudslinging."
         }
     },
     {
@@ -461,7 +461,7 @@ campaignTrail_temp.answers_json = [
         "pk": 50003,
         "fields": {
             "question": 50000,
-            "description": "I see the appeal, but we can’t be talking about this publicly. Donald Trump would call it weakness and the other Democrats would ask why I’m even running in the first place."
+            "description": "Let’s hit on Trump heavily. He’s a punching bag no Democrat likes. We’ll also focus on Sanders’ general unelectability and how he would massively turn off a lot of the more moderate Democrats with his rhetoric. It could lead to losses in the House, or God forbid, Trump’s re-election."
         }
     },
     {
@@ -14818,65 +14818,65 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 30004,
-        "fields": {
-            "answer": 30001,
-            "candidate": 300,
-            "answer_feedback": "Hillary did still win the two biggest states in that area in the 2016 primary, but you’re right, this is where most Sanders supporters are. Good luck in this crucial region."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 30005,
         "fields": {
-            "answer": 30002,
-            "candidate": 300,
-            "answer_feedback": "This may be for the best, especially considering how heated the attacks have been lately. You might rise above the rest of the pack by staying above this petty debauchery."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 30006,
-        "fields": {
-            "answer": 30003,
-            "candidate": 300,
-            "answer_feedback": "Many Democrats want to defeat Trump no matter what, and it’s indeed true that you’re more likely to win than Sanders. However, considering Sanders’ energy and grassroots support, it might be best not to hit too hard."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 40005,
-        "fields": {
-            "answer": 40001,
+            "answer": 30001,
             "candidate": 300,
             "answer_feedback": "You’re an early favorite among the donor class, but associating with them too much risks backlash from the vocally online part of the electorate, so keep that in mind."
         }
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 40006,
+        "pk": 30006,
         "fields": {
-            "answer": 40002,
+            "answer": 30002,
             "candidate": 300,
             "answer_feedback": "It’s a bold strategy, which pays off for you. By targeting certain voters other candidates are ignoring, you’re building yourself a strong stable of support. Good work, Joe."
         }
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 40007,
+        "pk": 30007,
         "fields": {
-            "answer": 40003,
+            "answer": 30003,
             "candidate": 300,
             "answer_feedback": "You attend the same “cattle call” events as all the other candidates, in Iowa and elsewhere, but you fail to stand out from the crowd. Oftentimes, you come across as an old, out of touch politician, something grassroots Democrats are decidedly not excited about."
         }
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 40008,
+        "pk": 30008,
         "fields": {
-            "answer": 40004,
+            "answer": 30004,
             "candidate": 300,
             "answer_feedback": "This works. You extend your endorsement lead over everyone else and see a small boost in donations. You haven’t gotten Barack’s endorsement yet though. Rumors are he wants to stay neutral."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 40004,
+        "fields": {
+            "answer": 40001,
+            "candidate": 300,
+            "answer_feedback": "The pledge likely wouldn’t have done much good anyways. There’s a reason McCain advisers talked him out of doing that in 2008."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 40005,
+        "fields": {
+            "answer": 40002,
+            "candidate": 300,
+            "answer_feedback": "Your comments are quickly construed to mean that you are only serving a single term. It’s not what you meant, but it leaves enough ambiguity that Democrats respect your position."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 40006,
+        "fields": {
+            "answer": 40003,
+            "candidate": 300,
+            "answer_feedback": "You privately tell aides, and family, that you’re considering serving a single term. Rumors leak of this, but the campaign squashes them quickly enough."
         }
     },
     {
@@ -14885,7 +14885,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 50001,
             "candidate": 300,
-            "answer_feedback": "The pledge likely wouldn’t have done much good anyways. There’s a reason McCain advisers talked him out of doing that in 2008."
+            "answer_feedback": "Hillary did still win the two biggest states in that area in the 2016 primary, but you’re right, this is where most Sanders supporters are. Good luck in this crucial region."
         }
     },
     {
@@ -14894,7 +14894,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 50002,
             "candidate": 300,
-            "answer_feedback": "Your comments are quickly construed to mean that you are only serving a single term. It’s not what you meant, but it leaves enough ambiguity that Democrats respect your position."
+            "answer_feedback": "This may be for the best, especially considering how heated the attacks have been lately. You might rise above the rest of the pack by staying above this petty debauchery."
         }
     },
     {
@@ -14903,7 +14903,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 50003,
             "candidate": 300,
-            "answer_feedback": "You privately tell aides, and family, that you’re considering serving a single term. Rumors leak of this, but the campaign squashes them quickly enough."
+            "answer_feedback": "Many Democrats want to defeat Trump no matter what, and it’s indeed true that you’re more likely to win than Sanders. However, considering Sanders’ energy and grassroots support, it might be best not to hit too hard."
         }
     },
     {
