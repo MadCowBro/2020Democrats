@@ -16139,10 +16139,16 @@ function openHeadquarter() {
         popOutMenu.style.left = savedX + 'px';
         popOutMenu.style.top = savedY + 'px';
     }
-    else {
+else {
         const buttonRect = event.target.getBoundingClientRect();
+        
+        // Vertically position the menu above the Field button
         popOutMenu.style.top = (buttonRect.top - popOutMenu.offsetHeight - 10) + 'px';
+
+        // Horizontally center the menu relative to the button
         popOutMenu.style.left = (buttonRect.left + (buttonRect.width / 2) - (popOutMenu.offsetWidth / 2)) + 'px';
+        
+        // Save the initial calculated position
         savedX = popOutMenu.getBoundingClientRect().left;
         savedY = popOutMenu.getBoundingClientRect().top;
     }
