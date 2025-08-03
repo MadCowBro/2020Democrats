@@ -14370,6 +14370,7 @@ e.cyoa = true
 e = campaignTrail_temp
 e.noCounter = 0
 
+// Inshift simulates the launch of a presidential campaign (otherwise numbers won't go up)
 function BloombergInshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(829);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.2;
@@ -14485,6 +14486,124 @@ function BloombergInshift() {
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(200462);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.2;
+}
+
+// Fadeshift simulates a candidate losing momentum regardless of player answers
+function BernieFadeshift() {
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(727);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(728);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(729);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(730);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(731);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(732);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(733);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(734);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(735);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(736);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(737);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(738);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(739);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(740);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(741);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(742);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(743);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(744);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(745);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(746);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(747);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(748);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(749);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(750);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(751);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(752);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(753);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(754);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(755);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(756);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(757);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(758);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(759);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(760);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(761);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(762);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(763);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(764);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(765);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(766);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(767);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(768);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(769);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(770);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(771);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(772);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(773);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(774);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(775);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(776);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(777);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(20025);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(20026);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(20027);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(20028);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(20029);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(20046);
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
 }
 
 // Making notation of what variables I will eventually need
@@ -15258,6 +15377,14 @@ cyoAdventure = function(a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
 	e.noCounter += 1;
 
+    if (ans == 30001 || ans == 30002 || ans == 30003 || ans == 30004) {
+        BernieFadeshift();
+    }
+
+    if (ans == 50001 || ans == 50002 || ans == 50003) {
+        BernieFadeshift();
+    }
+	
     if (ans == 150001 || ans == 150002 || ans == 150003) {
         bloomberg_active += 1;
         if (bloomberg_active == 1) {
