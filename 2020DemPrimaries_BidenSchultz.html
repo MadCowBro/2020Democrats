@@ -344,6 +344,15 @@ campaignTrail_temp.questions_json = [
             "description": "Here we go. It's early June now, and after over a year of campaigning, the final primaries are set to begin. Where would you like to close out this campaign?",
             "likelihood": 1
         }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 90100,
+        "fields": {
+            "priority": 2,
+            "description": "Following the incident at the debate, polling has shown you steadily dropping among key demographics, most notably the African-American community. If they keep leaving, your campaign is as good as dead. How do you plan to staunch the bleeding here?",
+            "likelihood": 1
+        }
     }
 ]
 
@@ -922,6 +931,14 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 200000,
             "description": "We should go down the western border of the state, starting in Sioux City and making our way down to the Omaha suburbs. We’ll need these voters come November."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90101,
+        "fields": {
+            "question": 90100,
+            "description": "Test answer."
         }
     }
 ]
@@ -15727,6 +15744,10 @@ const headquarterReset = setInterval(function() {
     }
 }, 0.1);
 
+function tunnel(new_q){
+    return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
+}
+
 cyoAdventure = function(a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
 	e.noCounter += 1;
@@ -15742,6 +15763,12 @@ cyoAdventure = function(a) {
     if (ans == 60001 || ans == 60002 || ans == 60003 || ans == 60004) {
         PeteFadeshift();
     }
+
+    if (e.noCounter == 8) {
+	    if (ans == 80001) {
+            campaignTrail_temp.questions_json[8] = tunnel(90100);
+	    }
+	}
 
     if (ans == 120001 || ans == 120002 || ans == 120003 || ans == 120004) {
         PeteFadeshift();
