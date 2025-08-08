@@ -14979,6 +14979,7 @@ function PeteFadeshift() {
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.85;
 }
 
+// main candidate_active variables
 var biden_active = 1;
 var sanders_active = 1;
 var warren_active = 1;
@@ -14987,7 +14988,11 @@ var buttigieg_active = 1;
 var klobuchar_active = 1;
 var others_active = 1;
 
+// secret and fakeout candidate_active variables
+var harris_active = 1;
+
     let BloombergObject = { photo: 'https://i.imgur.com/LdVeYwI.png', text: '<b>Michael Bloomberg</b><br><b>Former Mayor of NYC</b><br>Donald Trump’s billionaire buddy swoops in to disrupt the primaries. He hopes to make his mark, to take voters away from you, but he has as much baggage as he does funds. Make him regret his decision.', button: 'Defer', id: 'BLOOMBERG_A'};
+    let HarrisObject = { photo: 'https://i.imgur.com/aSEPybd.png', text: '<b>Kamala Harris</b><br><b>Senator from California</b><br>She’s enjoying a rise in the polls after you fumbled the busing debate moment with her. Her longevity in the campaign is questionable, but her potency isn’t. She’s direct competition for African-American voters.', button: 'Defer', id: 'HARRIS_A'};
 
 document.getElementById("header").src = "https://i.imgur.com/DJufG1P.png";
 
@@ -15592,6 +15597,9 @@ function openHeadquarter() {
             if(item.id == "BLOOMBERG_A" && bloomberg_active == 1){
                 menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
+	        if(item.id == "HARRIS_A" && harris_active == 1){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
+            }
             
             menuItem.style.display = 'flex';
             menuItem.style.alignItems = 'flex-start';
@@ -15767,6 +15775,7 @@ cyoAdventure = function(a) {
     if (e.noCounter == 8) {
 	    if (ans == 80001) {
             campaignTrail_temp.questions_json[8] = tunnel(90100);
+	        menuItemsA.splice(4, 1, HarrisObject);
 	    }
 	}
 
