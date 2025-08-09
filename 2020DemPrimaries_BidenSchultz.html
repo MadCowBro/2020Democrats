@@ -15848,11 +15848,13 @@ cyoAdventure = function(a) {
 	    if (ans == 80001) {
             campaignTrail_temp.questions_json[8] = tunnel(90100);
 	        menuItemsA.splice(5, 1, HarrisObject);
+	        refreshHeadquarter();
 	    }
 	}
 
     if (ans == 80002 || ans == 80003) {
 	    menuItemsA.splice(5, 1, BookerObject);
+	    refreshHeadquarter();
 	}
 
 	if (ans == 90001 || ans == 90002 || ans == 90003 || ans == 90004) {
@@ -15860,6 +15862,7 @@ cyoAdventure = function(a) {
 	    if (trump_popup == 1) {
             menuItemsA.push(TrumpObject);
 	    }
+	    refreshHeadquarter();
 	}
 
     if (ans == 120001 || ans == 120002 || ans == 120003 || ans == 120004) {
@@ -15868,6 +15871,7 @@ cyoAdventure = function(a) {
 
 	if (ans == 140001 || ans == 140002 || ans == 140003 || ans == 140004) {
 		menuItemsA.splice(5, 1, YangObject);
+	    refreshHeadquarter();
 	}
 	
     if (ans == 150001 || ans == 150002 || ans == 150003) {
@@ -15885,6 +15889,7 @@ cyoAdventure = function(a) {
 	    if (obama_popup == 1) {
             menuItemsA.push(ObamaObject);
 	    }
+    refreshHeadquarter();
 	}
 
     if (ans == 170001 || ans == 170002 || ans == 170003 || ans == 170004) {
@@ -15893,6 +15898,7 @@ cyoAdventure = function(a) {
 
 	if (ans == 200001 || ans == 200002 || ans == 200003 || ans == 200004) {
 	    menuItemsA.splice(5, 1, SteyerObject);
+	    refreshHeadquarter();
 	}
 }
 
