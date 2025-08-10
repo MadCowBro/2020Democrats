@@ -15928,9 +15928,15 @@ cyoAdventure = function(a) {
 	WarrenFadeshift();
     }
 
-	if (ans == 200001 || ans == 200002 || ans == 200003 || ans == 200004) {
+	if (e.noCounter == 20) {
+		let IowaResult = campaignTrail_temp.final_state_results.find((x) => x.state == 195);
+        if(IowaResult.result[0].candidate == !300) {
+            campaignTrail_temp.questions_json[20] = tunnel(210000);
+        }
+	    if (ans == 200001 || ans == 200002 || ans == 200003 || ans == 200004) {
 	    menuItemsA.splice(5, 1, SteyerObject);
 	    refreshHeadquarter();
+	    }
 	}
 }
 
