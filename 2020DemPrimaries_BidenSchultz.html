@@ -25,7 +25,7 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 30000,
         "fields": {
-            "priority": 1,
+            "priority": 2,
             "description": "When you announced your campaign, you raised an eye-popping $6.3 million in the first 24 hours, more than any other candidate. Of course, you need money consistently flowing in if the campaign is to go the distance. How will you continue these efforts?",
             "likelihood": 1
         }
@@ -16221,38 +16221,77 @@ cyoAdventure = function(a) {
     let BerniePolling = (pop_vote.find(p => p.pk === 301)).pvp
     let WarrenPolling = (pop_vote.find(p => p.pk === 302)).pvp
     let PetePolling = (pop_vote.find(p => p.pk === 304)).pvp
-
-	if (BerniePolling >= 0.3 && sanders_boost == 0) {
-	    Berniementumshift();
-		sanders_boost += 1;
-	}
-	if (WarrenPolling >= 0.15 && warren_boost == 0) {
-	    Warrenmentumshift();
-		warren_boost += 1;
-	}
-	if (WarrenPolling >= 0.2 && warren_boost == 1) {
-	    Warrenmentumshift();
-		warren_boost += 1;
-	}
-	if (WarrenPolling >= 0.25 && warren_boost == 2) {
-	    Warrenmentumshift();
-		warren_boost += 1;
-	}
-	if (PetePolling >= 0.1 && buttigieg_boost == 0) {
-	    Petementumshift();
-		buttigieg_boost += 1;
-	}
 	
     if (ans == 30001 || ans == 30002 || ans == 30003 || ans == 30004) {
         BernieFadeshift();
+		if (BerniePolling >= 0.3 && sanders_boost == 0) {
+	        Berniementumshift();
+		    sanders_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.15 && warren_boost == 0) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.2 && warren_boost == 1) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.25 && warren_boost == 2) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (PetePolling >= 0.1 && buttigieg_boost == 0) {
+	        Petementumshift();
+		    buttigieg_boost += 1;
+	    }
     }
 
     if (ans == 50001 || ans == 50002 || ans == 50003) {
         BernieFadeshift();
+		if (BerniePolling >= 0.3 && sanders_boost == 0) {
+	        Berniementumshift();
+		    sanders_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.15 && warren_boost == 0) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.2 && warren_boost == 1) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.25 && warren_boost == 2) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (PetePolling >= 0.1 && buttigieg_boost == 0) {
+	        Petementumshift();
+		    buttigieg_boost += 1;
+	    }
     }
 
     if (ans == 60001 || ans == 60002 || ans == 60003 || ans == 60004) {
         PeteFadeshift();
+		if (BerniePolling >= 0.3 && sanders_boost == 0) {
+	        Berniementumshift();
+		    sanders_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.15 && warren_boost == 0) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.2 && warren_boost == 1) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.25 && warren_boost == 2) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (PetePolling >= 0.1 && buttigieg_boost == 0) {
+	        Petementumshift();
+		    buttigieg_boost += 1;
+	    }
     }
 
     if (e.noCounter == 8) {
@@ -16278,6 +16317,26 @@ cyoAdventure = function(a) {
 
     if (ans == 120001 || ans == 120002 || ans == 120003 || ans == 120004) {
         PeteFadeshift();
+		if (BerniePolling >= 0.3 && sanders_boost == 0) {
+	        Berniementumshift();
+		    sanders_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.15 && warren_boost == 0) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.2 && warren_boost == 1) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.25 && warren_boost == 2) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (PetePolling >= 0.1 && buttigieg_boost == 0) {
+	        Petementumshift();
+		    buttigieg_boost += 1;
+	    }
     }
 
 	if (ans == 140001 || ans == 140002 || ans == 140003 || ans == 140004) {
@@ -16288,6 +16347,26 @@ cyoAdventure = function(a) {
     if (ans == 150001 || ans == 150002 || ans == 150003) {
         bloomberg_active += 1;
         WarrenFadeshift();
+		if (BerniePolling >= 0.3 && sanders_boost == 0) {
+	        Berniementumshift();
+		    sanders_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.15 && warren_boost == 0) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.2 && warren_boost == 1) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.25 && warren_boost == 2) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (PetePolling >= 0.1 && buttigieg_boost == 0) {
+	        Petementumshift();
+		    buttigieg_boost += 1;
+	    }
         if (bloomberg_active == 1) {
             BloombergInshift();
             menuItemsA.push(BloombergObject);
@@ -16304,7 +16383,27 @@ cyoAdventure = function(a) {
 	}
 
     if (ans == 170001 || ans == 170002 || ans == 170003 || ans == 170004) {
-	WarrenFadeshift();
+	    WarrenFadeshift();
+		if (BerniePolling >= 0.3 && sanders_boost == 0) {
+	        Berniementumshift();
+		    sanders_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.15 && warren_boost == 0) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.2 && warren_boost == 1) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (WarrenPolling >= 0.25 && warren_boost == 2) {
+	        Warrenmentumshift();
+		    warren_boost += 1;
+	    }
+	    if (PetePolling >= 0.1 && buttigieg_boost == 0) {
+	        Petementumshift();
+		    buttigieg_boost += 1;
+	    }
     }
 
 	if (e.noCounter == 20) {
