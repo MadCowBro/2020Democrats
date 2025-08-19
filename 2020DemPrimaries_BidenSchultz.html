@@ -16781,6 +16781,20 @@ function tunnel(new_q){
     return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
 }
 
+	function applyMultiplier(candidateId, multiplier, StateId) { // from Our Revolution, supposed to be more precise than applyDrift
+		if (StateId === undefined || StateId.length === 0) { //applies everywhere
+			for (let StateNum = 1100; StateNum<1156; StateNum++ ) {
+				current_multiplier=e.candidate_state_multiplier_json.find(p=>p.fields.state==StateNum&& p.fields.candidate==candidateId).fields.state_multiplier
+				applyDrift(candidateId,current_multiplier*multiplier,StateNum) //apply that multiplier in that state.
+			}
+		}
+		else {
+			current_multiplier=e.candidate_state_multiplier_json.find(p=>p.fields.state==StateId&& p.fields.candidate==candidateId).fields.state_multiplier
+			applyDrift(candidateId,current_multiplier*multiplier,StateId) //apply that multiplier in that state.
+		}
+	
+	}
+
 cyoAdventure = function(a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
 	e.noCounter += 1;
@@ -16922,10 +16936,55 @@ cyoAdventure = function(a) {
 	}
 		
 	if (e.noCounter == 20) {
-		let IowaResult = campaignTrail_temp.final_state_results.find((x) => x.state == 195);
-        if(IowaResult.result[0].candidate == !300) {
-            campaignTrail_temp.questions_json[20] = tunnel(210000);
-        }
+	    let Bernie = e.final_overall_results.find(c => c.candidate == 301);
+        let Pete = e.final_overall_results.find(c => c.candidate == 304);
+		let Iowa = campaignTrail_temp.final_state_results.find((x) => x.state == 195);
+        let BidenIA = Iowa.result.find(r => r.candidate == 300);
+        let BernieIA = Iowa.result.find(r => r.candidate == 301);
+        let WarrenIA = Iowa.result.find(r => r.candidate == 302);
+        let PeteIA = Iowa.result.find(r => r.candidate == 304);
+        let KlobucharIA = Iowa.result.find(r => r.candidate == 310);
+        let margin = Math.abs(BernieIA.percent - PeteIA.percent); 
+        if (BidenIA.percent >= 20.00 && BidenIA.percent < 25.00) {
+            applyMultiplier(300, 0.01)
+        } else if (BidenIA.percent >= 25.00) {
+            applyMultiplier(300, 0.02)
+		}
+		if (BernieIA.percent >= 20.00 && BernieIA.percent < 25.00) {
+            applyMultiplier(301, 0.01)
+		} else if (BernieIA.percent >= 25.00) {
+			applyMultiplier(301, 0.02)
+		}
+		if (WarrenIA.percent >= 20.00 && WarrenIA.percent < 25.00) {
+            applyMultiplier(302, 0.01)
+		} else if (WarrenIA.percent >= 25.00) {
+            applyMultiplier(302, 0.02)
+		}
+		if (PeteIA.percent >= 20.00 && PeteIA.percent < 25.00) {
+            applyMultiplier(304, 0.01)
+		} else if (PeteIA.percent >= 25.00) {
+            applyMultiplier(304, 0.02)
+		}
+		if (KlobucharIA.percent >= 10.00 && KlobucharIA.percent < 15.00) {
+            applyMultiplier(310, 0.01)
+		} else if (KlobucharIA.percent >= 15.00) {
+            applyMultiplier(310, 0.02)
+		}
+		if (Iowa.result[0].candidate == 300) {
+            applyMultiplier(300, 0.025)
+		} else if (Iowa.result[0].candidate == 301) {
+            applyMultiplier(301, 0.025)
+		} else if (Iowa.result[0].candidate == 302) {
+            applyMultiplier(302, 0.025)
+		} else if (Iowa.result[0].candidate == 304) {
+            applyMultiplier(304, 0.025)
+		}
+		if ((Iowa.result[0].candidate == 301) && (margin <= 1.5)) {
+			BernieIA.electoral_votes -= 2;
+			PeteIA.electoral_votes += 2;
+			Bernie.electoral_votes -= 2;
+			Pete.electoral_votes += 2;
+		}
 	}
 }
 
