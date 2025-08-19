@@ -197,7 +197,7 @@ campaignTrail_temp.questions_json = [
         "pk": 220000,
         "fields": {
             "priority": 3,
-            "description": "Electoral reform has become a huge issues amongst Democratic voters ever since 2010, when <i>Citizens United v. FEC</i> was decided by the United States Supreme Court, and allowed unlimited contributions to Super PACs. Gerrymandering, often by overzealous Republicans, has also led to the Republicans having a built-in advantage in the House of Representatives. What is your plan push for electoral reform?",
+            "description": "New Hampshire Day! Where will you campaign?",
             "likelihood": 1
         }
     },
@@ -206,7 +206,7 @@ campaignTrail_temp.questions_json = [
         "pk": 230000,
         "fields": {
             "priority": 3,
-            "description": "Over the next few weeks, the three remaining primaries - New Hampshire, Nevada, and South Carolina, will commence. While your campaign will make last pushes in all three areas, where would you like to make an extra effort around?",
+            "description": "Time for the Nevada debate. What will you say?",
             "likelihood": 1
         }
     },
@@ -215,7 +215,7 @@ campaignTrail_temp.questions_json = [
         "pk": 240000,
         "fields": {
             "priority": -2,
-            "description": "With Barack Obama being the current president, how do you plan to address his legacy as you campaign for the Democratic nomination?",
+            "description": "You need Jim Clyburn to endorse you here in South Carolina. How will you go about that?",
             "likelihood": 1
         }
     },
@@ -224,7 +224,7 @@ campaignTrail_temp.questions_json = [
         "pk": 250000,
         "fields": {
             "priority": -1,
-            "description": "After those early primaries, it's now here - Super Tuesday. With the largest amount of delegates up for grabs in a single day, where you choose to campaign may be a critical decision. Where would you like to close out before Super Tuesday?",
+            "description": "Congrats on bouncing back strong. Buttigieg and Klobuchar are reportedly dropping out to endorse you. What next?",
             "likelihood": 1
         }
     },
@@ -351,6 +351,15 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "priority": 2,
             "description": "Following the incident at the debate, polling has shown you steadily dropping among key demographics, most notably the African-American community. If they keep leaving, your campaign is as good as dead. How do you plan to staunch the bleeding here?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 250100,
+        "fields": {
+            "priority": -1,
+            "description": "You still retained some small hope that when you picked up the phone call from Barack, he would finally give you his endorsement, end this parade of humiliation. You knew better. “You’ve had a good run, Joe, but it’s time to bring the party together. We need to put our best foot forward if we’re going to beat Donald–”",
             "likelihood": 1
         }
     }
@@ -943,26 +952,34 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 210002,
+        "pk": 220001,
         "fields": {
-            "question": 210000,
-            "description": "The results are clearly a sign we need to go after Bernie Sanders more. Blanket the state with ads focusing on his desire to blow up the system. Tie it to Trump’s own inclination for disruption."
+            "question": 220000,
+            "description": "Nashua, obviously."
         }
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 210003,
+        "pk": 230001,
         "fields": {
-            "question": 210000,
-            "description": "We can’t let New Hampshire be another embarrassment, but we knew going in that Nevada and South Carolina were gonna be more favorable to us. Let’s start campaigning there a little early."
+            "question": 230000,
+            "description": "Go after Bloomberg, of course."
         }
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 210004,
+        "pk": 240001,
         "fields": {
-            "question": 210000,
-            "description": "I think we’ve been underestimating this Mayor Pete. It’s time to go on the offensive against him and unite the anti-Sanders part of the electorate."
+            "question": 240000,
+            "description": "I must meet with him. Right now."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 250001,
+        "fields": {
+            "question": 250000,
+            "description": "My only focus is on Super Tuesday."
         }
     },
     {
@@ -970,7 +987,23 @@ campaignTrail_temp.answers_json = [
         "pk": 90101,
         "fields": {
             "question": 90100,
-            "description": "Test answer."
+            "description": "I apologize."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 250101,
+        "fields": {
+            "question": 250100,
+            "description": "Why couldn’t you just come and see me, would it be too much for you to give me even that small courtesy? Why can’t you ever respect me? All that, Jesus man, all that talk about how Clinton was the only one. You put that man in office. He’d be in jail right now if I—"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 250102,
+        "fields": {
+            "question": 250100,
+            "description": "Well, this is it, isn’t it? I only ever wanted–I’m sorry–all I ever wanted was what you had, you know? The opportunity you had to lead, to make your mark. I guess sometimes things just don’t work out the way you’d like them to, huh?"
         }
     }
 ]
@@ -14482,6 +14515,24 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 300,
             "answer_feedback": "Suburbanites have been bolting from the GOP since 2016, but do these voters see you as the best choice the Democrats have to offer? We’re about to find out."
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 250103,
+        "fields": {
+            "answer": 250101,
+            "candidate": 300,
+            "answer_feedback": "He hangs up. Tears well up in your eyes as you throw the phone across the room. “Fuck him,” you say. “Never needed the approval of that pompous know-it-all to win anyway”. You step out, ready to rage against the dying of the light."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 250104,
+        "fields": {
+            "answer": 250102,
+            "candidate": 300,
+            "answer_feedback": "Barack tells you he’s thankful for everything you did for him, tells you you should be proud of all the work you’ve done. There’s something awkward in his voice, like he’s waiting for you to give him permission to stop. You gently cut him off to say you’ll go out tomorrow to make the announcement. It ends. You sit alone in silence at the end of the world."
+        }
     }
 ]
 
@@ -16943,12 +16994,12 @@ cyoAdventure = function(a) {
 	if (e.noCounter == 20) {
 	    let Bernie = e.final_overall_results.find(c => c.candidate == 301);
         let Pete = e.final_overall_results.find(c => c.candidate == 304);
-		let Iowa = campaignTrail_temp.final_state_results.find((x) => x.state == 195);
-        let BidenIA = Iowa.result.find(r => r.candidate == 300);
-        let BernieIA = Iowa.result.find(r => r.candidate == 301);
-        let WarrenIA = Iowa.result.find(r => r.candidate == 302);
-        let PeteIA = Iowa.result.find(r => r.candidate == 304);
-        let KlobucharIA = Iowa.result.find(r => r.candidate == 310);
+		let IA = campaignTrail_temp.final_state_results.find((x) => x.state == 195);
+        let BidenIA = IA.result.find(r => r.candidate == 300);
+        let BernieIA = IA.result.find(r => r.candidate == 301);
+        let WarrenIA = IA.result.find(r => r.candidate == 302);
+        let PeteIA = IA.result.find(r => r.candidate == 304);
+        let KlobucharIA = IA.result.find(r => r.candidate == 310);
         let margin = Math.abs(BernieIA.percent - PeteIA.percent); 
         if (BidenIA.percent >= 20.00 && BidenIA.percent < 25.00) {
             applyMultiplier(300, 0.01)
@@ -16975,20 +17026,27 @@ cyoAdventure = function(a) {
 		} else if (KlobucharIA.percent >= 15.00) {
             applyMultiplier(310, 0.02)
 		}
-		if (Iowa.result[0].candidate == 300) {
+		if (IA.result[0].candidate == 300) {
             applyMultiplier(300, 0.025)
-		} else if (Iowa.result[0].candidate == 301) {
+		} else if (IA.result[0].candidate == 301) {
             applyMultiplier(301, 0.025)
-		} else if (Iowa.result[0].candidate == 302) {
+		} else if (IA.result[0].candidate == 302) {
             applyMultiplier(302, 0.025)
-		} else if (Iowa.result[0].candidate == 304) {
+		} else if (IA.result[0].candidate == 304) {
             applyMultiplier(304, 0.025)
 		}
-		if ((Iowa.result[0].candidate == 301) && (margin <= 1.5)) {
+		if ((IA.result[0].candidate == 301) && (margin <= 1.5)) {
 			BernieIA.electoral_votes -= 2;
 			PeteIA.electoral_votes += 2;
 			Bernie.electoral_votes -= 2;
 			Pete.electoral_votes += 2;
+		}
+	}
+
+	if (e.noCounter == 24) {
+		let SC = campaignTrail_temp.final_state_results.find((x) => x.state == 220);
+		if (SC.result[0].candidate == !300) {
+			campaignTrail_temp.questions_json[24] = tunnel(250100);
 		}
 	}
 }
