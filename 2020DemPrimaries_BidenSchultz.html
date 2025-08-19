@@ -14534,37 +14534,7 @@ campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/Tby0qkg.png";
 campaignTrail_temp.candidate_last_name = "Biden";
 campaignTrail_temp.running_mate_last_name = "Campaign";
 
-const style_overwrite = document.createElement("style");
-style_overwrite.innerHTML = 
-`#campaign_sign {
-  background-color: #297FC2;
-  border-color: #FB4F4A;
-}
-style.innerHTML = 
-  .inner_window_question h3 {
-    background-color: #0080CA;
-  }
-  .overlay_window h3 {
-    background-color: #214191;
-  }
-#menu_container {
-  background-color: #006499;
-}
-#overall_result_container {
-  background-color: #BEE5FF;
-}
-#state_info h3 {
-  background-color: #DFE9EB;
-}
-#overall_result h3 {
-  background-color: #DFE9EB;
-}`
-;
-document.head.appendChild(style_overwrite);
-
-let style = document.createElement('style');
-style.type = 'text/css';
-style.id = 'dynamic-style';
+document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#214191!important;}</style>";
 
 e.cyoa = true
 
