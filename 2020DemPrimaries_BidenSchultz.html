@@ -14534,7 +14534,12 @@ campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/Tby0qkg.png";
 campaignTrail_temp.candidate_last_name = "Biden";
 campaignTrail_temp.running_mate_last_name = "Campaign";
 
-document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#214191!important;}</style>";
+document.head.innerHTML += `
+<style>
+.inner_window_question h3 {
+    background-color: #214191;
+}
+</style>`
 
 e.cyoa = true
 
