@@ -17171,6 +17171,42 @@ cyoAdventure = function(a) {
 	}
 
 	if (ans == 250102) {
+        campaignTrail_temp.running_mate_json = JSON.parse(`[{
+        "model": "campaign_trail.running_mate",
+        "pk": 1,
+        "fields": {
+            "candidate": 301,
+            "running_mate": 3003
+            }
+      }, {
+      "model": "campaign_trail.running_mate",
+      "pk": 2,
+      "fields": {
+          "candidate": 301,
+          "running_mate": 3004
+          }
+      }, {
+      "model": "campaign_trail.running_mate",
+      "pk": 3,
+      "fields": {
+          "candidate": 301,
+          "running_mate": 3002
+          }
+      }, {
+      "model": "campaign_trail.running_mate",
+      "pk": 4,
+      "fields": {
+          "candidate": 300,
+          "running_mate": 3001
+          }
+      }, {
+      "model": "campaign_trail.running_mate",
+      "pk": 5,
+      "fields": {
+          "candidate": 300,
+          "running_mate": 3005
+          }
+    }]`);  
         window.setTimeout(e.vpSwitcher, 20)
 	}
 }
