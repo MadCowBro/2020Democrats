@@ -16974,6 +16974,10 @@ function tunnel(new_q){
 	
 	}
 
+let SC = campaignTrail_temp.final_state_results.find((x) => x.state == 220);
+let BidenSC = SC.result.find(r => r.candidate == 300);
+let BidenWonSC = SC.result[0].candidate === 300;
+				
 cyoAdventure = function(a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
 	e.noCounter += 1;
@@ -16985,10 +16989,6 @@ cyoAdventure = function(a) {
     let BloombergPolling = (pop_vote.find(p => p.pk === 303)).pvp
     let PetePolling = (pop_vote.find(p => p.pk === 304)).pvp
     let KlobucharPolling = (pop_vote.find(p => p.pk === 310)).pvp
-
-	let SC = campaignTrail_temp.final_state_results.find((x) => x.state == 220);
-    let BidenSC = SC.result.find(r => r.candidate == 300);
-    let BidenWonSC = SC.result[0].candidate === 300;
 
     if (e.noCounter < 20) {
 		if (BidenPolling >= 0.4 && biden_boost == 0) {
