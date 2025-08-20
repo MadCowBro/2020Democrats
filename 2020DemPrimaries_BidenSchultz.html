@@ -17168,7 +17168,9 @@ cyoAdventure = function(a) {
 
 	if (e.noCounter == 24) {
 		let SC = campaignTrail_temp.final_state_results.find((x) => x.state == 220);
-		if (SC && SC.result[0].candidate !== 300) {
+        let BidenSC = SC.result.find(r => r.candidate == 300);
+        let BidenWonSC = SC.result[0].candidate === 300;
+		if (!BidenWonSC) {
 			campaignTrail_temp.questions_json[24] = tunnel(250100);
 		}
 	}
