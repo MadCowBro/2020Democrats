@@ -16927,17 +16927,25 @@ var changeGameDisp = (hide) => {
             $("#running_mate_pic").attr("src", e.running_mate_image_url)
         }
 
-    if(e.running_mate_last_name==="Borah"){ // Use this to change questions based on your VP
-	    console.log(campaignTrail_temp.questions_json[5])
-        campaignTrail_temp.questions_json[5] = {
-        "model": "campaign_trail.question",
-        "pk": 3058094,
-        "fields": {
-          "priority": 1,
-          "description": "You've steered the convention to select William Borah as the nominee. Given the policy differences between you two - why?",
-          "likelihood": 1
-        }
-      }
+    if(e.running_mate_last_name==="Endorsement"){ // Use this to change questions based on your VP
+        e.primary_code = [
+          {
+            "breakQ": 19, // the question on which the primaries for these states will occur (note that questions start at 0 in the code, so when you see on screen "Question 1", it actually means Question 0)
+            "states": [195] // IA
+          },
+          {
+            "breakQ": 21,
+            "states": [209] // NH
+          },
+          {
+            "breakQ": 23,
+            "states": [208, 220] // NV, SC
+          },
+          {
+            "breakQ": 24,
+            "states": [181, 7000, 184, 185, 186, 199, 201, 203, 213, 216, 222, 223, 224, 225, 226, 7005, 192, 202, 204, 205, 214, 227, 7002, 183, 189, 193, 230, 182, 231, 215, 196, 207, 217, 191, 228, 194, 200, 206, 211, 218, 219, 221, 7001, 7004, 190, 229, 197, 212, 188, 210, 198, 7003, 187] // All the rest
+          }
+        ]
 	var button1 = document.getElementById('view_electoral_map');	
 
 	button1.click();
