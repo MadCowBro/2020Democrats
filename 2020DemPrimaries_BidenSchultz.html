@@ -362,6 +362,15 @@ campaignTrail_temp.questions_json = [
             "description": "You still retained some small hope that when you picked up the phone call from Barack, he would finally give you his endorsement, end this parade of humiliation. You knew better. “You’ve had a good run, Joe, but it’s time to bring the party together. We need to put our best foot forward if we’re going to beat Donald–”",
             "likelihood": 1
         }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 260100,
+        "fields": {
+            "priority": -1,
+            "description": "What will you say as you suspend your campaign?",
+            "likelihood": 1
+        }
     }
 ]
 
@@ -1005,7 +1014,15 @@ campaignTrail_temp.answers_json = [
             "question": 250100,
             "description": "Well, this is it, isn’t it? I only ever wanted–I’m sorry–all I ever wanted was what you had, you know? The opportunity you had to lead, to make your mark. I guess sometimes things just don’t work out the way you’d like them to, huh?"
         }
-    }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 260101,
+        "fields": {
+            "question": 260100,
+            "description": "May the best candidate win."
+        }
+    },
 ]
 
 campaignTrail_temp.states_json = [
@@ -16942,10 +16959,12 @@ var changeGameDisp = (hide) => {
             "states": [208, 220] // NV, SC
           },
           {
-            "breakQ": 24,
+            "breakQ": 25,
             "states": [181, 7000, 184, 185, 186, 199, 201, 203, 213, 216, 222, 223, 224, 225, 226, 7005, 192, 202, 204, 205, 214, 227, 7002, 183, 189, 193, 230, 182, 231, 215, 196, 207, 217, 191, 228, 194, 200, 206, 211, 218, 219, 221, 7001, 7004, 190, 229, 197, 212, 188, 210, 198, 7003, 187] // All the rest
           }
         ]
+	    e.global_parameter_json[0].fields.question_count = 26
+	    campaignTrail_temp.questions_json[25] = tunnel(260100);
 	var button1 = document.getElementById('view_electoral_map');	
 
 	button1.click();
