@@ -16,7 +16,6 @@ button, input[type="button"], input[type="submit"] {
 }
 
 button:hover, input[type="button"]:hover, input[type="submit"]:hover {
-  background: linear-gradient(135deg, #b8d4ff, #90bbff);
   filter: brightness(1.05);
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
@@ -48,7 +47,6 @@ select {
 }
 
 select:hover {
-  background: linear-gradient(135deg, #b8d4ff, #90bbff);
   filter: brightness(1.05);
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
@@ -94,7 +92,6 @@ input[type="radio"] {
   outline: none;
   cursor: pointer;
   position: relative;
-  transition: background 0.3s ease-in-out, filter 0.3s ease-in-out;
   background: rgba(255,255,255,0.05);
 }
 
@@ -103,28 +100,21 @@ input[type="radio"]::before {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 0;
-  height: 0;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: #fff;
+  background: linear-gradient(135deg, #6fa6f2, #5c93e6);
   transform: translate(-50%, -50%) scale(0);
-  transition: all 0.2s ease;
-}
-
-input[type="radio"]:checked {
-  background: linear-gradient(135deg, #c9deff, #a3c8ff);
-  border-color: #666;
+  opacity: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 input[type="radio"]:checked::before {
-  width: 8px;
-  height: 8px;
   transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 
-input[type="radio"]:hover {
-  filter: brightness(1.1);
-}
+input[type="radio"]:hover { filter: brightness(1.1); }
 
 input[type="range"] {
   all: unset;
@@ -139,6 +129,7 @@ input[type="range"] {
     document.head.appendChild(style);
   }
 })();
+
 
 
 campaignTrail_temp.global_parameter_json = [
