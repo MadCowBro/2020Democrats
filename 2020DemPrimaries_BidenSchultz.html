@@ -16856,7 +16856,7 @@ var changeGameDisp = (hide) => {
         <div id="running_mate_form">
             <form name="running mate">
                 <p></p>
-                <h3>Please select your running mate:</h3> 
+                <h3>Please endorse a fellow candidate:</h3> 
                 <select name="running_mate_id" id="running_mate_id">
                     ${running_mate_options}
                 </select>
@@ -16899,7 +16899,7 @@ var changeGameDisp = (hide) => {
             <div class="person_summary" id="running_mate_summary">
                 <ul>
                     <li>Name: ${pot_run_mat[i].fields.first_name} ${pot_run_mat[i].fields.last_name}</li>
-                    <li>Wing: ${pot_run_mat[i].fields.party}</li>
+                    <li>Party: ${pot_run_mat[i].fields.party}</li>
                     <li>Home State: ${pot_run_mat[i].fields.state}</li>
                 </ul>
                 ${pot_run_mat[i].fields.description_as_running_mate}
@@ -17175,21 +17175,21 @@ cyoAdventure = function(a) {
         "model": "campaign_trail.running_mate",
         "pk": 1,
         "fields": {
-            "candidate": 301,
+            "candidate": 300,
             "running_mate": 3003
             }
       }, {
       "model": "campaign_trail.running_mate",
       "pk": 2,
       "fields": {
-          "candidate": 301,
+          "candidate": 300,
           "running_mate": 3004
           }
       }, {
       "model": "campaign_trail.running_mate",
       "pk": 3,
       "fields": {
-          "candidate": 301,
+          "candidate": 300,
           "running_mate": 3002
           }
       }, {
