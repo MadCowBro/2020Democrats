@@ -16987,20 +16987,21 @@ function tunnel(new_q){
     return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
 }
 
-	function applyMultiplier(candidateId, multiplier, StateId) { // from Our Revolution, supposed to be more precise than applyDrift
-		if (StateId === undefined || StateId.length === 0) { //applies everywhere
-			for (let StateNum = 1100; StateNum<1156; StateNum++ ) {
-				current_multiplier=e.candidate_state_multiplier_json.find(p=>p.fields.state==StateNum&& p.fields.candidate==candidateId).fields.state_multiplier
-				applyDrift(candidateId,current_multiplier*multiplier,StateNum) //apply that multiplier in that state.
-			}
+function applyMultiplier(candidateId, multiplier, StateId) { // from Our Revolution, supposed to be more precise than applyDrift
+	if (StateId === undefined || StateId.length === 0) { //applies everywhere
+		for (let StateNum = 1100; StateNum<1156; StateNum++ ) {
+			current_multiplier=e.candidate_state_multiplier_json.find(p=>p.fields.state==StateNum&& p.fields.candidate==candidateId).fields.state_multiplier
+			applyDrift(candidateId,current_multiplier*multiplier,StateNum) //apply that multiplier in that state.
 		}
-		else {
-			current_multiplier=e.candidate_state_multiplier_json.find(p=>p.fields.state==StateId&& p.fields.candidate==candidateId).fields.state_multiplier
-			applyDrift(candidateId,current_multiplier*multiplier,StateId) //apply that multiplier in that state.
-		}
-	
 	}
-				
+	else {
+		current_multiplier=e.candidate_state_multiplier_json.find(p=>p.fields.state==StateId&& p.fields.candidate==candidateId).fields.state_multiplier
+		applyDrift(candidateId,current_multiplier*multiplier,StateId) //apply that multiplier in that state.
+	}	
+}
+
+let primaryStates = JSON.parse(e.primary_states);
+			
 cyoAdventure = function(a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
 	e.noCounter += 1;
@@ -17012,7 +17013,6 @@ cyoAdventure = function(a) {
     let BloombergPolling = (pop_vote.find(p => p.pk === 303)).pvp
     let PetePolling = (pop_vote.find(p => p.pk === 304)).pvp
     let KlobucharPolling = (pop_vote.find(p => p.pk === 310)).pvp
-	let primaryStates = JSON.parse(e.primary_states);
 
     if (e.noCounter < 20) {
 		if (BidenPolling >= 0.4 && biden_boost == 0) {
