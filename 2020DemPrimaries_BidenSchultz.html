@@ -16999,6 +16999,8 @@ function applyMultiplier(candidateId, multiplier, StateId) { // from Our Revolut
 		applyDrift(candidateId,current_multiplier*multiplier,StateId) //apply that multiplier in that state.
 	}	
 }
+
+let primaryStates = JSON.parse(e.primary_states);
 			
 cyoAdventure = function(a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
@@ -17011,7 +17013,6 @@ cyoAdventure = function(a) {
     let BloombergPolling = (pop_vote.find(p => p.pk === 303)).pvp
     let PetePolling = (pop_vote.find(p => p.pk === 304)).pvp
     let KlobucharPolling = (pop_vote.find(p => p.pk === 310)).pvp
-	let primaryStates = JSON.parse(e.primary_states);
 
     if (e.noCounter < 20) {
 		if (BidenPolling >= 0.4 && biden_boost == 0) {
