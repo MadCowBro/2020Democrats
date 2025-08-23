@@ -17141,9 +17141,10 @@ cyoAdventure = function(a) {
 	}
 		
 	if (e.noCounter == 20) {
+		let primParsed = JSON.parse(e.primary_states);
 	    let Bernie = e.final_overall_results.find(c => c.candidate == 301);
         let Pete = e.final_overall_results.find(c => c.candidate == 304);
-		let IA = campaignTrail_temp.final_state_results.find((x) => x.state == 195);
+		let IAResult = primParsed.find((f) => f.abbr === 'IA');
         let BidenIA = IA.result.find(r => r.candidate == 300);
         let BernieIA = IA.result.find(r => r.candidate == 301);
         let WarrenIA = IA.result.find(r => r.candidate == 302);
@@ -17175,16 +17176,16 @@ cyoAdventure = function(a) {
 		} else if (KlobucharIA.percent >= 15.00) {
             applyMultiplier(310, 0.02)
 		}
-		if (IA.result[0].candidate == 300) {
+		if (IAResult == 300) {
             applyMultiplier(300, 0.025)
-		} else if (IA.result[0].candidate == 301) {
+		} else if (IAResult == 301) {
             applyMultiplier(301, 0.025)
-		} else if (IA.result[0].candidate == 302) {
+		} else if (IAResult == 302) {
             applyMultiplier(302, 0.025)
-		} else if (IA.result[0].candidate == 304) {
+		} else if (IAResult == 304) {
             applyMultiplier(304, 0.025)
 		}
-		if ((IA.result[0].candidate == 301) && (margin <= 1.5)) {
+		if ((IAResult == 301) && (margin <= 1.5)) {
 			BernieIA.electoral_votes -= 2;
 			PeteIA.electoral_votes += 2;
 			Bernie.electoral_votes -= 2;
@@ -17193,7 +17194,6 @@ cyoAdventure = function(a) {
 	}
 
 	if (e.noCounter == 24) {
-		let primParsed = JSON.parse(e.primary_states);
 		let SCResult = primParsed.find((f) => f.abbr === 'SC');
 		if (SCResult !== 300) {
 			campaignTrail_temp.questions_json[24] = tunnel(250100);
