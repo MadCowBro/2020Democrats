@@ -17145,11 +17145,11 @@ cyoAdventure = function(a) {
 	    let Bernie = e.final_overall_results.find(c => c.candidate == 301);
         let Pete = e.final_overall_results.find(c => c.candidate == 304);
 		let IAResult = primParsed.find((f) => f.abbr === 'IA');
-        let BidenIA = IA.result.find(r => r.candidate == 300);
-        let BernieIA = IA.result.find(r => r.candidate == 301);
-        let WarrenIA = IA.result.find(r => r.candidate == 302);
-        let PeteIA = IA.result.find(r => r.candidate == 304);
-        let KlobucharIA = IA.result.find(r => r.candidate == 310);
+        let BidenIA = IAResult.result.find(r => r.candidate == 300);
+        let BernieIA = IAResult.result.find(r => r.candidate == 301);
+        let WarrenIA = IAResult.result.find(r => r.candidate == 302);
+        let PeteIA = IAResult.result.find(r => r.candidate == 304);
+        let KlobucharIA = IAResult.result.find(r => r.candidate == 310);
         let margin = Math.abs(BernieIA.percent - PeteIA.percent); 
         if (BidenIA.percent >= 20.00 && BidenIA.percent < 25.00) {
             applyMultiplier(300, 0.01)
