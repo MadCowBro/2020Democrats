@@ -17161,16 +17161,16 @@ cyoAdventure = function(a) {
     }
 
     if (e.noCounter == 8) {
-	    if (ans == 80001) {
-            campaignTrail_temp.questions_json[8] = tunnel(90100);
-	        menuItemsA.splice(5, 1, HarrisObject);
-	        refreshHeadquarter();
-	    }
-	}
-
-    if (ans == 80002 || ans == 80003) {
 		steyer_active += 1;
-	    menuItemsA.splice(5, 1, BookerObject);
+		orourke_active -= 1;
+		if (orourke_active == 0) {
+	        if (ans == 80001) {
+                campaignTrail_temp.questions_json[8] = tunnel(90100);
+	            menuItemsA.splice(5, 1, HarrisObject);
+	        } else if (ans == 80002 || ans == 80003) {
+	            menuItemsA.splice(5, 1, BookerObject);
+		    }
+		}
 	    refreshHeadquarter();
 	}
 
@@ -17216,7 +17216,7 @@ cyoAdventure = function(a) {
                 campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 304).fields.first_name = "Andrew"
                 campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 304).fields.last_name = "Yang"
                 campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 304).fields.color_hex = '#1F90FF';
-	            menuItemsA.splice(4, 1, YangObject);
+	            menuItemsA.splice(3, 1, YangObject);
 	            refreshHeadquarter();
 			}
 		}
@@ -17232,7 +17232,11 @@ cyoAdventure = function(a) {
 			}
 		}
 	}
-		
+
+    if (e.noCounter == 19) {
+		menuItemsA.splice(5, 1);
+	}
+			
 	if (e.noCounter == 20) {
 		const primParsed = JSON.parse(e.primary_states);
 		let IAResult = primParsed.find((f) => f.abbr === 'IA');
@@ -17285,7 +17289,7 @@ cyoAdventure = function(a) {
 	}
 
 	if (e.noCounter == 24) {
-        menuItemsA.push(GabbardObject);
+        menuItemsA.splice(5, 1, GabbardObject);
         refreshHeadquarter();
 		const primParsed = JSON.parse(e.primary_states);
 		let SCResult = primParsed.find((f) => f.abbr === 'SC');
