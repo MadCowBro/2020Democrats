@@ -16148,8 +16148,9 @@ var harris_active = 1;
 var booker_active = 1;
 var yang_active = 1;
 var steyer_active = 0;
+var gabbard_active = 1;
 
-// special field popups
+// special field popups (aka not actually candidates)
 var trump_popup = 0;
 var obama_popup = 0;
 
@@ -16158,6 +16159,7 @@ var obama_popup = 0;
     let BookerObject = { photo: 'https://i.imgur.com/UsZ1mf7.png', text: '<b>Cory Booker</b><br><b>Senator from New Jersey</b><br>In one of the most divisive times in our country’s history, he’s making unity the centerpiece of his campaign. It’s not getting him far. He lacks the gravitas and political know-how you’ve spent fifty years cultivating.', button: 'Defer', id: 'BOOKER_A'};
     let YangObject = { photo: 'https://i.imgur.com/CdItldv.png', text: '<b>Andrew Yang</b><br><b>Entrepreneur from New York</b><br>A quirky guy who’s whole campaign seems based on this UBI thing. He’s got an online fan base, but no reason to think that’ll translate into him be a serious threat at the polls. He’ll wash out.', button: 'Defer', id: 'YANG_A'};
     let SteyerObject = { photo: 'https://i.imgur.com/yqAyOa7.png', text: '<b>Tom Steyer</b><br><b>Hedge fund manager from California</b><br>Just like you, he sees South Carolina as his make-or-break point. He’s making inroads, reaching third and even second place in state polls. For you to succeed, he needs to fail.', button: 'Defer', id: 'STEYER_A'};
+    let GabbardObject = { photo: 'https://i.imgur.com/HTDaLih.png', text: '<b>Tulsi Gabbard</b><br><b>Representative from Hawaii</b><br>As the minor candidates continue to drop out, Gabbard is one of the few who remain. She seems to be centering her campaign on foreign policy, and that won’t get her anywhere. Ignore her.', button: 'Defer', id: 'GABBARD_A'};
     let TrumpObject = { photo: 'https://i.imgur.com/jpmUxm1.png', text: '<b>Donald Trump</b><br><b>The Current Guy</b><br>The weakest tough guy you’ve ever seen. Resorts to conspiracy theories and lies because he can’t fight you on the merits. He’s too stupid.', button: 'Defer', id: 'TRUMP_A'};
     let ObamaObject = { photo: 'https://i.imgur.com/j5jGIWt.png', text: '<b>Barack Obama</b><br><b>Former Friend & POTUS</b><br>It’d be so easy for him to endorse you and clear the field, yet he won’t. 2016 would’ve gone far differently if he didn’t talk you out of running. You’ll make it, with or without his help.', button: 'Defer', id: 'OBAMA_A'};
 
@@ -16780,6 +16782,9 @@ function openHeadquarter() {
 	        if(item.id == "STEYER_A" && steyer_active == 1){
                 menuItem.style.background = 'linear-gradient(rgba(33, 65, 145, 0.9), rgba(33, 65, 145, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
+	        if(item.id == "GABBARD_A" && gabbard_active == 1){
+                menuItem.style.background = 'linear-gradient(rgba(33, 65, 145, 0.9), rgba(33, 65, 145, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
+            }
 	        if(item.id == "TRUMP_A" && trump_popup == 1){
                 menuItem.style.background = 'linear-gradient(rgba(33, 65, 145, 0.9), rgba(33, 65, 145, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
             }
@@ -17280,6 +17285,8 @@ cyoAdventure = function(a) {
 	}
 
 	if (e.noCounter == 24) {
+        menuItemsA.push(GabbardObject);
+        refreshHeadquarter();
 		const primParsed = JSON.parse(e.primary_states);
 		let SCResult = primParsed.find((f) => f.abbr === 'SC');
 		if (SCResult !== 300) {
