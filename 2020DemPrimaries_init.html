@@ -1,34 +1,81 @@
+function appendStyle() {
+    if (!document.querySelector('meta[name="viewport"]')) {
+        const metaTag = document.createElement('meta');
+        metaTag.name = "viewport";
+        metaTag.content = "width=device-width, initial-scale=1";
+        document.head.appendChild(metaTag);
+    }
+
+    // Custom styles here
+    if (!document.querySelector('#radio-option-style')) {
+        const style = document.createElement('style');
+        style.id = 'radio-option-style';
+        style.textContent = `
+          body {
+               background-image: url(https://i.imgur.com/jHLCKQv.png);
+               background-position: center;
+               background-size: cover;
+          }
+        `;
+        document.head.appendChild(style);
+    }
+}
+
+appendStyle();
+
 (() => {
   const css = `
 button, input[type="button"], input[type="submit"] {
   font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
   font-size: 0.9em;
-  font-weight: 500;
-  padding: 6px 14px;
-  border-radius: 2px;
-  border: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 3px;
+  border: 1px solid #7da5d9;
   background: linear-gradient(135deg, #c9deff, #a3c8ff);
   color: #0d2140;
-  box-shadow: none;
   cursor: pointer;
-  transition: background 0.45s ease-in-out, filter 0.45s ease-in-out, box-shadow 0.45s ease-in-out;
   appearance: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  box-shadow: none;
+  transition: filter 0.25s ease, background 0.25s ease;
+}
+
+button::after, input[type="button"]::after, input[type="submit"]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #a6c9ff, #7eaefc);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+  pointer-events: none;
+  z-index: -1;
 }
 
 button:hover, input[type="button"]:hover, input[type="submit"]:hover {
-  filter: brightness(1.05);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  filter: brightness(1.08);
+  box-shadow: none;
+  transform: none;
+}
+
+button:active::after, input[type="button"]:active::after, input[type="submit"]:active::after {
+  opacity: 1;
+  transition-duration: 0.12s;
 }
 
 button:active, input[type="button"]:active, input[type="submit"]:active {
-  background: linear-gradient(135deg, #a6c9ff, #7eaefc);
-  filter: brightness(1.02);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  filter: brightness(0.98);
+  box-shadow: none;
+  transform: none;
 }
 
 button:disabled, input[type="button"]:disabled, input[type="submit"]:disabled {
-  opacity: 0.5;
+  opacity: 0.55;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 select {
@@ -36,25 +83,23 @@ select {
   font-size: 0.9em;
   font-weight: 500;
   padding: 6px 12px;
-  border-radius: 2px;
-  border: none;
+  border-radius: 3px;
+  border: 1px solid #7da5d9;
   background: linear-gradient(135deg, #c9deff, #a3c8ff);
   color: #0d2140;
   box-shadow: none;
   cursor: pointer;
   appearance: none;
-  transition: background 0.45s ease-in-out, filter 0.45s ease-in-out, box-shadow 0.45s ease-in-out;
+  transition: background 0.25s ease, filter 0.25s ease;
 }
 
 select:hover {
-  filter: brightness(1.05);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  filter: brightness(1.08);
 }
 
 select:active {
   background: linear-gradient(135deg, #a6c9ff, #7eaefc);
-  filter: brightness(1.02);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  filter: brightness(0.98);
 }
 
 select:disabled {
@@ -74,7 +119,7 @@ select:disabled {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #a3c8ff, #7eaefc);
   border-radius: 4px;
-  transition: background 0.45s ease-in-out;
+  transition: background 0.25s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -129,7 +174,6 @@ input[type="range"] {
     document.head.appendChild(style);
   }
 })();
-
 
 
 campaignTrail_temp.global_parameter_json = [
