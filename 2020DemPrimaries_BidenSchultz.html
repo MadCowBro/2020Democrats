@@ -17262,16 +17262,14 @@ cyoAdventure = function(a) {
 	}
 			
 	if (e.noCounter == 20) {
-		const primParsed = JSON.parse(e.primary_states);
-		let IAResult = primParsed.find((f) => f.abbr === 'IA');
-        let BidenIA = IAResult.result.find(r => r.candidate == 300).percent;
-        let BernieIA = IAResult.result.find(r => r.candidate == 301).percent;
-        let WarrenIA = IAResult.result.find(r => r.candidate == 302).percent;
-        let PeteIA = IAResult.result.find(r => r.candidate == 304).percent;
-        let KlobucharIA = IAResult.result.find(r => r.candidate == 310).percent;
+        let BidenIA = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===300).percent;
+        let BernieIA = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===301).percent;
+        let WarrenIA = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===302).percent;
+        let PeteIA = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===304).percent;
+        let KlobucharIA = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===310).percent;
         let margin = Math.abs(BernieIA - PeteIA);
-		let BernieIADelegates = IAResult.result.find(r => r.candidate == 301).electoral_votes;
-		let PeteIADelegates = IAResult.result.find(r => r.candidate == 304).electoral_votes;
+		let BernieIADelegates = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===301).electoral_votes;
+		let PeteIADelegates = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===304).electoral_votes;
         if (BidenIA >= 20.00 && BidenIA < 25.00) {
             applyMultiplier(300, 0.01)
         } else if (BidenIA >= 25.00) {
@@ -17297,16 +17295,16 @@ cyoAdventure = function(a) {
 		} else if (KlobucharIA >= 15.00) {
             applyMultiplier(310, 0.02)
 		}
-		if (IAResult == 300) {
+		if (BidenIA > BernieIA && BidenIA > WarrenIA && BidenIA > PeteIA) {
             applyMultiplier(300, 0.025)
-		} else if (IAResult == 301) {
+		} else if (BernieIA > BidenIA && BernieIA > WarrenIA && BernieIA > PeteIA) {
             applyMultiplier(301, 0.025)
-		} else if (IAResult == 302) {
+		} else if (WarrenIA > BidenIA && WarrenIA > BernieIA && WarrenIA > PeteIA) {
             applyMultiplier(302, 0.025)
-		} else if (IAResult == 304) {
+		} else if (PeteIA > BidenIA && PeteIA > BernieIA && PeteIA > WarrenIA) {
             applyMultiplier(304, 0.025)
 		}
-		if ((IAResult == 301) && (margin <= 1.5)) {
+		if ((BernieIA) && (margin <= 1.5)) {
 			BernieIADelegates -= 2;
 			PeteIADelegates += 2;
 		}
@@ -17315,9 +17313,9 @@ cyoAdventure = function(a) {
 	if (e.noCounter == 24) {
         menuItemsA.splice(5, 1, GabbardObject);
         refreshHeadquarter();
-		const primParsed = JSON.parse(e.primary_states);
-		let SCResult = primParsed.find((f) => f.abbr === 'SC');
-		if (SCResult !== 300) {
+        let BidenSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===300).percent;
+		let BernieSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===301).percent;
+		if (BernieSC > BidenSC) {
 			campaignTrail_temp.questions_json[24] = tunnel(250100);
 		}
 	}
