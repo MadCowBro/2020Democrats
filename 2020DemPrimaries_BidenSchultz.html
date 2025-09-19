@@ -8,7 +8,7 @@ campaignTrail_temp.questions_json = [
         "pk": 10000,
         "fields": {
             "priority": 0,
-            "description": "Every time you read one of the bills that Trump’s pushing for on Capitol Hill, you seethe with rage. You’re 76 and have never been as charismatic or ubiquitous as Trump, but something in your gut is telling you to run. After all, who else in the Democratic Party can stop Trump? Will you do it, Joe?",
+            "description": "[AUGUST 12, 2017] You knew as soon as the race was called last year that you would run for President. Today, a neo-Nazi march in Charlottesville devolved into violence as counter-protestors were rammed by a car, leaving a woman dead. Your jaw tightens as you watch the mayhem unfold. It’s a disgrace, you must put an end to this nightmare. How will you prepare for the inevitable showdown?",
             "likelihood": 1
         }
     },
@@ -17,7 +17,7 @@ campaignTrail_temp.questions_json = [
         "pk": 20000,
         "fields": {
             "priority": 1,
-            "description": "Shortly after your entrance in the race, you get hit with criticism from the progressive wing of the party. After their close loss in 2016, 2020 was supposed to be their year. They fear your career establishment and moderate stances will sink the Democrats’ chance of defeating Trump. Would you like to pivot in a different direction for this campaign?",
+            "description": "[APRIL 2019] Shortly after your entrance in the race, you get hit with criticism from the progressive wing of the party. After their close loss in 2016, 2020 was supposed to be their year. They fear your career establishment and moderate stances will sink the Democrats’ chance of defeating Trump. Would you like to pivot in a different direction for this campaign?",
             "likelihood": 1
         }
     },
@@ -380,7 +380,31 @@ campaignTrail_temp.answers_json = [
         "pk": 10001,
         "fields": {
             "question": 10000,
-            "description": "You bet I’m gonna. Trump has shown an atrociousness in the presidency not seen since Johnson - Andrew, not Lyndon - was around. He is racist, misogynistic, ableist and homophobic. I’m launching a challenge to the President immediately. I’m 76, I’m well aware, but we can do this. For the soul of America."
+            "description": "My father taught me that silence is complicity. Well, I’m done being silent. We’re in a battle for the soul of the nation. History has thrust this task upon us, and I’m as ready as I’ll ever be. We’ve got to show up for Democrats across the country next year, our institutions won’t survive much longer if we don’t."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 10002,
+        "fields": {
+            "question": 10000,
+            "description": "They’ve been pushing me aside my whole life, but this is more than an election: we need to come together if we’re going to beat Trump. We need to get people lined up behind us before this turns into a horror show."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 10003,
+        "fields": {
+            "question": 10000,
+            "description": "I’ve always stood for the same things, but this election will be different. We’ve gotta figure out how we can get people behind an agenda to restore Our Democracy and rescue the middle class, get our campaign infrastructure up and running before takeoff."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 10004,
+        "fields": {
+            "question": 10000,
+            "description": "I’m not going to rush into this. This is going to be a family affair. I’m going to talk to Jill and the kids, even the grandkids too. We’ll make a decision together."
         }
     },
     {
@@ -11080,7 +11104,7 @@ campaignTrail_temp.answer_score_global_json = [
 campaignTrail_temp.answer_score_issue_json = [
     {
         "model": "campaign_trail.answer_score_issue",
-        "pk": 10003,
+        "pk": 10009,
         "fields": {
             "answer": 10001,
             "issue": 28,
@@ -11090,7 +11114,7 @@ campaignTrail_temp.answer_score_issue_json = [
     },
     {
         "model": "campaign_trail.answer_score_issue",
-        "pk": 10004,
+        "pk": 10010,
         "fields": {
             "answer": 10001,
             "issue": 29,
@@ -11100,7 +11124,7 @@ campaignTrail_temp.answer_score_issue_json = [
     },
     {
         "model": "campaign_trail.answer_score_issue",
-        "pk": 10005,
+        "pk": 10011,
         "fields": {
             "answer": 10001,
             "issue": 30,
@@ -11110,7 +11134,7 @@ campaignTrail_temp.answer_score_issue_json = [
     },
     {
         "model": "campaign_trail.answer_score_issue",
-        "pk": 10006,
+        "pk": 10012,
         "fields": {
             "answer": 10001,
             "issue": 31,
@@ -13999,11 +14023,38 @@ campaignTrail_temp.answer_score_state_json = [
 campaignTrail_temp.answer_feedback_json = [
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 10002,
+        "pk": 10005,
         "fields": {
             "answer": 10001,
             "candidate": 300,
-            "answer_feedback": "Trump is quick to call you out for remembering the 1860s like it was yesterday, and the progressive wing of the party, who thought they’d easily win 2020 after coming so close in 2016, are also fairly disappointed. However, moderate Democrats and those in that respectable Lincoln Project finally have a Democrat they can get behind."
+            "answer_feedback": "Americans soundly reject the Trump agenda in November 2018, allowing Democrats to take back the House and block his poisonous bills. Unfortunately, you wore yourself out during the home stretch, leading you to scale back your public appearances at the start of your campaign."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 10006,
+        "fields": {
+            "answer": 10002,
+            "candidate": 300,
+            "answer_feedback": "You could tell from the tone in Barack’s voice that it just wasn’t going to happen, and the other bigwigs follow suit in staying neutral, opening the floodgates as a record number of candidates enter the field."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 10007,
+        "fields": {
+            "answer": 10003,
+            "candidate": 300,
+            "answer_feedback": "You publicly say you’re “keeping your 2020 options open” while you huddle with close aides. Trump mocks you along the way, giving you the moniker “Sleepy Joe”. By April 2019, you’ve had enough. It’s time to shut this guy up."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 10008,
+        "fields": {
+            "answer": 10004,
+            "candidate": 300,
+            "answer_feedback": "You worry about the effect another campaign could have on your family, but this isn’t an ordinary election, Trump is a uniquely destructive force. You feel a calling to run. For the soul of America. Jill puts her hand on your shoulder and smiles at you when you say you’re in."
         }
     },
     {
