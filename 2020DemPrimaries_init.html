@@ -1,3 +1,35 @@
+document.head.innerHTML += `
+<style>
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .overlay_window {
+    animation: fadeInScale 0.3s cubic-bezier(0.3, 1.2, 0.2, 1) forwards;
+    opacity: 0;
+    background: #ededed;
+    border-radius: 0.2rem;
+    box-shadow:
+      0 0 0.5em rgba(226, 224, 255, 0.5),
+      0 0 0.75em rgba(224, 224, 255, 0.3),
+      0 0 1em rgba(224, 226, 255, 0.1);
+    display: flex;
+    flex-flow: column;
+
+  }
+.overlay_window h3 {
+  background-color: #ababab;
+</style>
+}`;
+
+
 function appendStyle() {
     if (!document.querySelector('meta[name="viewport"]')) {
         const metaTag = document.createElement('meta');
