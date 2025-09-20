@@ -38,13 +38,12 @@ function appendStyle() {
         document.head.appendChild(metaTag);
     }
 
-    // Custom styles here
     if (!document.querySelector('#radio-option-style')) {
         const style = document.createElement('style');
         style.id = 'radio-option-style';
         style.textContent = `
           body {
-               background-image: url(https://i.imgur.com/jHLCKQv.png);
+               background-image: url(https://i.imgur.com/NqonKeE.jpeg);
                background-position: center;
                background-size: cover;
           }
@@ -64,7 +63,7 @@ button, input[type="button"], input[type="submit"] {
   padding: 6px 12px;
   border-radius: 3px;
   border: 1px solid #7da5d9;
-  background: linear-gradient(135deg, #c9deff, #a3c8ff);
+  background: linear-gradient(135deg, #a8dfff, #d4edff);
   color: #0d2140;
   cursor: pointer;
   appearance: none;
@@ -80,7 +79,7 @@ button::after, input[type="button"]::after, input[type="submit"]::after {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(135deg, #a6c9ff, #7eaefc);
+  background: linear-gradient(135deg, #91cfff, #bfe7ff);
   opacity: 0;
   transition: opacity 0.18s ease;
   pointer-events: none;
@@ -89,8 +88,6 @@ button::after, input[type="button"]::after, input[type="submit"]::after {
 
 button:hover, input[type="button"]:hover, input[type="submit"]:hover {
   filter: brightness(1.08);
-  box-shadow: none;
-  transform: none;
 }
 
 button:active::after, input[type="button"]:active::after, input[type="submit"]:active::after {
@@ -100,14 +97,11 @@ button:active::after, input[type="button"]:active::after, input[type="submit"]:a
 
 button:active, input[type="button"]:active, input[type="submit"]:active {
   filter: brightness(0.98);
-  box-shadow: none;
-  transform: none;
 }
 
 button:disabled, input[type="button"]:disabled, input[type="submit"]:disabled {
   opacity: 0.55;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
 select {
@@ -117,7 +111,7 @@ select {
   padding: 4px 10px;
   border-radius: 3px;
   border: 1px solid #7da5d9;
-  background: linear-gradient(135deg, #c9deff, #a3c8ff);
+  background: linear-gradient(135deg, #a8dfff, #d4edff);
   color: #0d2140;
   box-shadow: none;
   cursor: pointer;
@@ -130,7 +124,7 @@ select:hover {
 }
 
 select:active {
-  background: linear-gradient(135deg, #a6c9ff, #7eaefc);
+  background: linear-gradient(135deg, #91cfff, #bfe7ff);
   filter: brightness(0.98);
 }
 
@@ -145,17 +139,17 @@ select:disabled {
 }
 
 ::-webkit-scrollbar-track {
-  background: #e8f0ff;
+  background: #e8f4ff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #a3c8ff, #7eaefc);
+  background: linear-gradient(135deg, #a8dfff, #91cfff);
   border-radius: 4px;
   transition: background 0.25s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #90bbff, #6ea3f5);
+  background: linear-gradient(135deg, #91cfff, #7fbfff);
 }
 
 input[type="radio"] {
@@ -164,7 +158,7 @@ input[type="radio"] {
   appearance: none;
   width: 16px;
   height: 16px;
-  border: 2px solid #666;
+  border: 2px solid #7da5d9;
   border-radius: 50%;
   outline: none;
   cursor: pointer;
@@ -180,7 +174,7 @@ input[type="radio"]::before {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #6fa6f2, #5c93e6);
+  background: linear-gradient(135deg, #91cfff, #7fbfff);
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
   transition: transform 0.2s ease, opacity 0.2s ease;
@@ -198,7 +192,7 @@ input[type="range"] {
 }
 `;
 
-  const id = 'gradient-c9deff-theme';
+  const id = 'gradient-babyblue-theme';
   if (!document.getElementById(id)) {
     const style = document.createElement('style');
     style.id = id;
@@ -241,7 +235,7 @@ style.id = 'dynamic-style';
 
 style.innerHTML = `
   .campaign_trail_start_emphasis {
-    background: linear-gradient(135deg, #1e3a5f, #3a6ea5);
+    background: linear-gradient(135deg, #a8dfff, #d4edff);
     color: #000000;
   }
 
@@ -257,25 +251,26 @@ style.innerHTML = `
   #menu_container,
   #state_result_container,
   #overall_result_container {
-    background: linear-gradient(135deg, #cce0ff, #99c2ff) !important;
+    background: linear-gradient(135deg, #a8dfff, #d4edff) !important;
     color: #000000;
   }
 
   #map_container {
-    background: linear-gradient(135deg, #e6f0ff, #cce0ff) !important;
+    background: linear-gradient(135deg, #a8dfff, #d4edff) !important;
     background-size: 150% 150%;
     border-radius: 0.75px;
     color: #003366;
   }
 
   .game_header h2 {
-    color: #b8d9ff;
+    color: #ffffff;
   }
 
   .overlay_window {
     height: auto;
   }
 `;
+
 
 document.head.appendChild(style);
 
@@ -892,23 +887,42 @@ corrr = `
 </h2>
 `;
 
+$("#game_window")[0].style.background = "linear-gradient(135deg, #a8dfff, #d4edff)";
 
 
-nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#0d2140";
 
-nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#da2040";
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = 
+  "linear-gradient(135deg, #7fc8ff, #d4edff)";
 
-document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = 
+  "linear-gradient(135deg, #d4edff, #a8dfff)";
 
-$("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
+document.getElementsByClassName("game_header")[0].style.background = 
+  nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
 
-$(".container")[0].style.backgroundColor = "#FFFFFF";
+$("#game_window")[0].style.background = 
+  nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
+
+$(".container")[0].style.background = 
+  "linear-gradient(145deg, #e6f5ff, #d4edff)";
+
+
 
 document.getElementById("header").src = "https://i.imgur.com/DlshB3R.png";
 
 document.body.background = "https://i.imgur.com/jHLCKQv.png";
 
-document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#00a7df!important;}</style>";
+document.head.innerHTML += `
+<style>
+  #results_container {
+    color: #000000;
+  }
+  .inner_window_w_desc {
+    background: linear-gradient(135deg, #a8dfff, #d4edff) !important;
+  }
+</style>
+`;
+
 
 HistHexcolour=["#214191","#238b24","#b51c27","#9270de","#febe01","#43b3ac","#fd6ab3"];
         HistName=["Joe Biden","Bernie Sanders","Elizabeth Warren","Michael Bloomberg","Pete Buttigieg","Amy Klobuchar","Tulsi Gabbard/Others"];
