@@ -14,20 +14,28 @@ document.head.innerHTML += `
   .overlay_window {
     animation: fadeInScale 0.3s cubic-bezier(0.3, 1.2, 0.2, 1) forwards;
     opacity: 0;
-    background: #ededed;
+    background: linear-gradient(135deg, #1e2b4d, #283b66);
+    color: #ffffff;
     border-radius: 0.2rem;
     box-shadow:
-      0 0 0.5em rgba(226, 224, 255, 0.5),
-      0 0 0.75em rgba(224, 224, 255, 0.3),
-      0 0 1em rgba(224, 226, 255, 0.1);
+      0 0 0.5em rgba(30, 43, 77, 0.5),
+      0 0 0.75em rgba(40, 59, 102, 0.3),
+      0 0 1em rgba(40, 59, 102, 0.1);
     display: flex;
     flex-flow: column;
-
   }
-.overlay_window h3 {
-  background-color: #ababab;
+
+  .overlay_window h3 {
+    background: linear-gradient(135deg, #1b2a49, #2e3f70, #24325a);
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 6px 10px;
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
 </style>
-}`;
+`;
+
 
 
 function appendStyle() {
@@ -43,7 +51,7 @@ function appendStyle() {
         style.id = 'radio-option-style';
         style.textContent = `
           body {
-               background-image: url(https://i.imgur.com/NqonKeE.jpeg);
+               background-image: url(https://i.imgur.com/JpuM18f.jpeg);
                background-position: center;
                background-size: cover;
           }
@@ -62,16 +70,16 @@ button, input[type="button"], input[type="submit"] {
   font-weight: 600;
   padding: 6px 12px;
   border-radius: 3px;
-  border: 1px solid #7da5d9;
-  background: linear-gradient(135deg, #a8dfff, #d4edff);
-  color: #0d2140;
+  border: 1px solid #2e4c8f;
+  background: linear-gradient(135deg, #1b2a49, #2e4c8f, #243b6b);
+  color: #f0f4ff;
   cursor: pointer;
   appearance: none;
   position: relative;
   overflow: hidden;
   z-index: 0;
-  box-shadow: none;
-  transition: filter 0.25s ease, background 0.25s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+  transition: filter 0.25s ease, background 0.25s ease, transform 0.15s ease;
 }
 
 button::after, input[type="button"]::after, input[type="submit"]::after {
@@ -79,7 +87,7 @@ button::after, input[type="button"]::after, input[type="submit"]::after {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(135deg, #91cfff, #bfe7ff);
+  background: linear-gradient(135deg, #243b6b, #2e4c8f, #1b2a49);
   opacity: 0;
   transition: opacity 0.18s ease;
   pointer-events: none;
@@ -88,6 +96,7 @@ button::after, input[type="button"]::after, input[type="submit"]::after {
 
 button:hover, input[type="button"]:hover, input[type="submit"]:hover {
   filter: brightness(1.08);
+  transform: translateY(-1px);
 }
 
 button:active::after, input[type="button"]:active::after, input[type="submit"]:active::after {
@@ -96,7 +105,8 @@ button:active::after, input[type="button"]:active::after, input[type="submit"]:a
 }
 
 button:active, input[type="button"]:active, input[type="submit"]:active {
-  filter: brightness(0.98);
+  filter: brightness(0.95);
+  transform: translateY(0);
 }
 
 button:disabled, input[type="button"]:disabled, input[type="submit"]:disabled {
@@ -110,22 +120,24 @@ select {
   font-weight: 500;
   padding: 4px 10px;
   border-radius: 3px;
-  border: 1px solid #7da5d9;
-  background: linear-gradient(135deg, #a8dfff, #d4edff);
-  color: #0d2140;
-  box-shadow: none;
+  border: 1px solid #2e4c8f;
+  background: linear-gradient(135deg, #1b2a49, #243b6b, #2e4c8f);
+  color: #f0f4ff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   cursor: pointer;
   appearance: none;
-  transition: background 0.25s ease, filter 0.25s ease;
+  transition: background 0.25s ease, filter 0.25s ease, transform 0.15s ease;
 }
 
 select:hover {
   filter: brightness(1.08);
+  transform: translateY(-1px);
 }
 
 select:active {
-  background: linear-gradient(135deg, #91cfff, #bfe7ff);
-  filter: brightness(0.98);
+  background: linear-gradient(135deg, #243b6b, #2e4c8f, #1b2a49);
+  filter: brightness(0.95);
+  transform: translateY(0);
 }
 
 select:disabled {
@@ -139,17 +151,17 @@ select:disabled {
 }
 
 ::-webkit-scrollbar-track {
-  background: #e8f4ff;
+  background: #111827;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #a8dfff, #91cfff);
+  background: linear-gradient(135deg, #243b6b, #2e4c8f, #1b2a49);
   border-radius: 4px;
   transition: background 0.25s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #91cfff, #7fbfff);
+  background: linear-gradient(135deg, #2e4c8f, #3d5ca8, #243b6b);
 }
 
 input[type="radio"] {
@@ -158,7 +170,7 @@ input[type="radio"] {
   appearance: none;
   width: 16px;
   height: 16px;
-  border: 2px solid #7da5d9;
+  border: 2px solid #2e4c8f;
   border-radius: 50%;
   outline: none;
   cursor: pointer;
@@ -174,7 +186,7 @@ input[type="radio"]::before {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #91cfff, #7fbfff);
+  background: linear-gradient(135deg, #2e4c8f, #3d5ca8);
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
   transition: transform 0.2s ease, opacity 0.2s ease;
@@ -185,14 +197,14 @@ input[type="radio"]:checked::before {
   opacity: 1;
 }
 
-input[type="radio"]:hover { filter: brightness(1.1); }
+input[type="radio"]:hover { filter: brightness(1.15); }
 
 input[type="range"] {
   all: unset;
 }
 `;
 
-  const id = 'gradient-babyblue-theme';
+  const id = 'gradient-darkblue-theme';
   if (!document.getElementById(id)) {
     const style = document.createElement('style');
     style.id = id;
@@ -235,31 +247,47 @@ style.id = 'dynamic-style';
 
 style.innerHTML = `
   .campaign_trail_start_emphasis {
-    background: linear-gradient(135deg, #a8dfff, #d4edff);
-    color: #000000;
+    background: linear-gradient(135deg, #1b2a49, #2e4c8f, #243b6b);
+    color: #f0f4ff;
+    font-weight: 600;
   }
 
   a:-webkit-any-link {
-    color: #003366;
+    color: #3d5ca8;
+    text-decoration: none;
+    transition: color 0.2s ease;
   }
 
-  .inner_window_question h3,
-  .overlay_window h3,
-  #state_info h3,
+  a:-webkit-any-link:hover {
+    color: #5476c2;
+  }
+
   #state_result h3,
   #overall_result h3,
-  #menu_container,
-  #state_result_container,
-  #overall_result_container {
-    background: linear-gradient(135deg, #a8dfff, #d4edff) !important;
-    color: #000000;
+  #state_info h3 {
+    background: linear-gradient(135deg, #1b2a49, #2e4c8f, #243b6b);
+    color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    transition: background 0.25s ease;
   }
 
+.inner_window_question h3 {
+  background: linear-gradient(to bottom, #2c3e70, #3b4f8f);
+  color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background 0.25s ease;
+  padding: 6px 10px;
+  margin: 0;
+}
+
+
   #map_container {
-    background: linear-gradient(135deg, #a8dfff, #d4edff) !important;
+    background: linear-gradient(135deg, #e3dcff, #f8f5ff) !important;
     background-size: 150% 150%;
     border-radius: 0.75px;
-    color: #003366;
+    color: #2e2159;
   }
 
   .game_header h2 {
@@ -271,8 +299,8 @@ style.innerHTML = `
   }
 `;
 
-
 document.head.appendChild(style);
+
 
 
 
@@ -282,7 +310,7 @@ campaignTrail_temp.election_json = [
         "pk": 21,
         "fields": {
             "year": 2020,
-            "summary": "<div style='overflow-y:scroll;height:200px;'>The Democrats are soul-searching. Hillary Clinton’s shocking defeat at the hands of Donald Trump in 2016 left the party without a clear leader. They must find someone who can forever expel this disease from the American body politic.<p>Over 25 candidates have thrown their hats into the ring, surging past the record set by the GOP only four years ago. However, these five candidates have emerged as frontrunners amidst the chaos:</p><ul><li>Former Vice President Joe Biden</li><li>Vermont Senator and 2016 primaries runner-up Bernie Sanders</li><li>Massachusetts Senator Elizabeth Warren</li><li>Former NYC mayor (and Republican) Michael Bloomberg</li><li>South Bend, IN mayor Pete Buttigieg</li></ul><p>As battles over ideology and influence rage, Democrats rush to find an answer to one question: <b>Who can beat Trump?</b></p></div>",
+            "summary": "<div style='overflow-y:scroll;height:200px;'><p>The Democrats are soul-searching. Hillary Clinton’s shocking defeat at the hands of Donald Trump in 2016 left the party without a clear leader. They must find someone who can forever expel this disease from the American body politic.<br><br>Over 25 candidates have thrown their hats into the ring, surging past the record set by the GOP only four years ago. However, these five candidates have emerged as frontrunners amidst the chaos:</p><ul><li>Former Vice President Joe Biden</li><li>Vermont Senator and 2016 primaries runner-up Bernie Sanders</li><li>Massachusetts Senator Elizabeth Warren</li><li>Former NYC mayor (and Republican) Michael Bloomberg</li><li>South Bend, IN mayor Pete Buttigieg</li></ul><p>As battles over ideology and influence rage, Democrats rush to find an answer to one question: <b>Who can beat Trump?</b></p></div>",
             "image_url": "https://i.imgur.com/mZfiHux.png",
             "winning_electoral_vote_number": 1990,
             "advisor_url": "https://i.imgur.com/qoBuKgY.png",
@@ -873,29 +901,29 @@ function removeCandidateSummary() {
   }
   window.setInterval(removeCandidateSummary,200)
 
-corrr = `
-<h2 style="
-    background: linear-gradient(to top, #7FCFFF, #D4EDFF);
+ corrr = `
+  <h2 style="
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 36px;
     color: white;
-    text-align: center;
-    margin: 0;
-    width: 100%;
-    min-height: 40px;
-    line-height: 40px;
-">
-    WHO CAN BEAT TRUMP?
-</h2>
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #1b2a49, #2e3f70, #24325a);
+    border-radius: 6px;
+    box-shadow: inset 0 0 10px rgba(0,255,255,0.08), 0 0 8px rgba(0,255,255,0.04);
+  ">
+   WHO CAN BEAT TRUMP?
+  </h2>
 `;
 
-$("#game_window")[0].style.background = "linear-gradient(135deg, #a8dfff, #d4edff)";
 
 
+$("#game_window")[0].style.background = "linear-gradient(135deg, #1e2b4d, #283b66)";
 
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = 
-  "linear-gradient(135deg, #7fc8ff, #d4edff)";
+  "linear-gradient(135deg, #1b2a49, #2e3f70, #24325a)";
 
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = 
-  "linear-gradient(135deg, #d4edff, #a8dfff)";
+  "linear-gradient(135deg, #1e2b4d, #283b66)";
 
 document.getElementsByClassName("game_header")[0].style.background = 
   nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
@@ -904,7 +932,7 @@ $("#game_window")[0].style.background =
   nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
 
 $(".container")[0].style.background = 
-  "linear-gradient(145deg, #e6f5ff, #d4edff)";
+  "linear-gradient(145deg, #1c294c, #25385f)";
 
 
 
@@ -915,13 +943,21 @@ document.body.background = "https://i.imgur.com/jHLCKQv.png";
 document.head.innerHTML += `
 <style>
   #results_container {
-    color: #000000;
+    color: #ffffff;
+    background: linear-gradient(135deg, #1b2a49, #2e3f70, #24325a);
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
   }
+
   .inner_window_w_desc {
-    background: linear-gradient(135deg, #a8dfff, #d4edff) !important;
+    background: linear-gradient(135deg, #1e2b4d, #283b66) !important;
+    color: #000000 !important;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   }
 </style>
 `;
+
 
 
 HistHexcolour=["#214191","#238b24","#b51c27","#9270de","#febe01","#43b3ac","#fd6ab3"];
@@ -1047,7 +1083,30 @@ function addDynamicCSS() {
 			height: auto;
             min-height: 6em;
 		}
-
+		#final_results_description h3 {
+			color: white;
+		}
+		#overall_details_container h3 {
+			color: white;
+		}
+		#overall_election_details h4 {
+			color: white;
+		}
+		#main_content_area_reading p {
+			color: white;
+		}
+		#main_content_area_reading h3.results_tab_header {
+			color: white;
+		}
+		.inner_window_w_desc h3 {
+			color: white;
+		}
+	p#credits {
+		color: white;
+	}
+	#final_results_description p {
+		color: white;
+	}
 	
     `;
 
