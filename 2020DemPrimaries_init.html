@@ -145,6 +145,16 @@ select:disabled {
   cursor: not-allowed;
 }
 
+select option {
+  background-color: #243b6b;
+  color: #f0f4ff;
+}
+
+select option:hover {
+  background-color: #2e4c8f;
+  color: #ffffff;
+}
+
 ::-webkit-scrollbar {
   width: 9px;
   height: 9px;
@@ -197,10 +207,65 @@ input[type="radio"]:checked::before {
   opacity: 1;
 }
 
-input[type="radio"]:hover { filter: brightness(1.15); }
+input[type="radio"]:hover {
+  filter: brightness(1.15);
+}
 
 input[type="range"] {
-  all: unset;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(135deg, #1b2a49, #243b6b, #2e4c8f);
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, #2e4c8f, #3d5ca8);
+  border-radius: 50%;
+  border: 2px solid #2e4c8f;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  filter: brightness(1.15);
+  transform: scale(1.1);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, #2e4c8f, #3d5ca8);
+  border-radius: 50%;
+  border: 2px solid #2e4c8f;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  filter: brightness(1.15);
+  transform: scale(1.1);
+}
+
+input[type="range"]::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, #2e4c8f, #3d5ca8);
+  border-radius: 50%;
+  border: 2px solid #2e4c8f;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+input[type="range"]::-ms-thumb:hover {
+  filter: brightness(1.15);
+  transform: scale(1.1);
 }
 `;
 
@@ -212,6 +277,7 @@ input[type="range"] {
     document.head.appendChild(style);
   }
 })();
+
 
 
 campaignTrail_temp.global_parameter_json = [
