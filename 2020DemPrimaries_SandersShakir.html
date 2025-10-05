@@ -1,3 +1,67 @@
+// Grab the existing style tag, or create it if it doesn't exist
+var existingStyle = document.getElementById('dynamic-style');
+if (!existingStyle) {
+  existingStyle = document.createElement('style');
+  existingStyle.type = 'text/css';
+  existingStyle.id = 'dynamic-style';
+  document.head.appendChild(existingStyle);
+}
+
+// Overwrite the CSS directly
+existingStyle.innerHTML = `
+  .campaign_trail_start_emphasis {
+    background: linear-gradient(135deg, #0d2a18, #1f6a2e, #184d28);
+    color: #e4f7ea;
+    font-weight: 600;
+  }
+
+  a:-webkit-any-link {
+    color: #299c46;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:-webkit-any-link:hover {
+    color: #3ad35b;
+  }
+
+  #state_result h3,
+  #overall_result h3,
+  #state_info h3 {
+    background: linear-gradient(135deg, #0d2a18, #1f6a2e, #184d28);
+    color: #e4f7ea;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    transition: background 0.25s ease;
+  }
+
+  .inner_window_question h3 {
+    background: linear-gradient(to bottom, #154524, #1f6a2e);
+    color: #e4f7ea;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: background 0.25s ease;
+    padding: 6px 10px;
+    margin: 0;
+  }
+
+  #map_container {
+    background: linear-gradient(135deg, #b2ffcb, #d7ffe5) !important;
+    background-size: 150% 150%;
+    border-radius: 0.75px;
+    color: #0f2415;
+  }
+
+  .game_header h2 {
+    color: #e4f7ea;
+  }
+
+  .overlay_window {
+    height: auto;
+  }
+`;
+
+
 (() => {
   const css = `
   @keyframes fadeInScale {
@@ -253,6 +317,43 @@
   style.textContent = css;
   document.head.appendChild(style);
 })();
+
+// Green-themed header
+corrr = `
+  <h2 style="
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 36px;
+    color: #e4f7ea;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #0d2a18, #1f6a2e, #184d28);
+    border-radius: 6px;
+    box-shadow: inset 0 0 10px rgba(0,255,0,0.08), 0 0 8px rgba(0,255,0,0.04);
+  ">
+   WHO CAN BEAT TRUMP?
+  </h2>
+`;
+
+// Game window background
+$("#game_window")[0].style.background = "linear-gradient(135deg, #0d2a18, #1f6a2e)";
+
+// Update your theme object for consistency
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = 
+  "linear-gradient(135deg, #0d2a18, #1f6a2e, #184d28)";
+
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = 
+  "linear-gradient(135deg, #0d2a18, #1f6a2e)";
+
+// Apply the new green gradients
+document.getElementsByClassName("game_header")[0].style.background = 
+  nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
+
+$("#game_window")[0].style.background = 
+  nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
+
+// Container background
+$(".container")[0].style.background = 
+  "linear-gradient(145deg, #154524, #1f6a2e)";
+
 
 
 campaignTrail_temp.questions_json = [
