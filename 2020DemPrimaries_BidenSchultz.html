@@ -17347,7 +17347,7 @@ function tunnel(new_q){
 
 function applyMultiplier(candidateId, multiplier, StateId) { // from Our Revolution, supposed to be more precise than applyDrift
 	if (StateId === undefined || StateId.length === 0) { //applies everywhere
-		for (let StateNum = 1100; StateNum<1156; StateNum++ ) {
+		for (let StateNum = 181; StateNum<7005; StateNum++ ) {
 			current_multiplier=e.candidate_state_multiplier_json.find(p=>p.fields.state==StateNum&& p.fields.candidate==candidateId).fields.state_multiplier
 			applyDrift(candidateId,current_multiplier*multiplier,StateNum) //apply that multiplier in that state.
 		}
@@ -17513,37 +17513,51 @@ cyoAdventure = function(a) {
 		let PeteIADelegates = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===304).electoral_votes;
         if (BidenIA >= 20.00 && BidenIA < 25.00) {
             applyMultiplier(300, 0.01)
+            applyMultiplier(300, -0.1, 209)
         } else if (BidenIA >= 25.00) {
             applyMultiplier(300, 0.02)
+            applyMultiplier(300, 0.01, 209)
 		}
 		if (BernieIA >= 20.00 && BernieIA < 25.00) {
             applyMultiplier(301, 0.01)
+            applyMultiplier(301, 0.02, 209)
 		} else if (BernieIA >= 25.00) {
 			applyMultiplier(301, 0.02)
+            applyMultiplier(301, 0.04, 209)
 		}
 		if (WarrenIA >= 20.00 && WarrenIA < 25.00) {
             applyMultiplier(302, 0.01)
+            applyMultiplier(302, -0.05, 209)
 		} else if (WarrenIA >= 25.00) {
             applyMultiplier(302, 0.02)
+            applyMultiplier(302, 0.05, 209)
 		}
 		if (PeteIA >= 20.00 && PeteIA < 25.00) {
             applyMultiplier(304, 0.01)
+            applyMultiplier(304, 0.06, 209)
 		} else if (PeteIA >= 25.00) {
             applyMultiplier(304, 0.02)
+            applyMultiplier(304, 0.12, 209)
 		}
 		if (KlobucharIA >= 10.00 && KlobucharIA < 15.00) {
             applyMultiplier(310, 0.01)
+            applyMultiplier(310, 0.05, 209)
 		} else if (KlobucharIA >= 15.00) {
             applyMultiplier(310, 0.02)
+            applyMultiplier(310, 0.1, 209)
 		}
 		if (BidenIA > BernieIA && BidenIA > WarrenIA && BidenIA > PeteIA) {
             applyMultiplier(300, 0.025)
+            applyMultiplier(300, 0.1, 209)
 		} else if (BernieIA > BidenIA && BernieIA > WarrenIA && BernieIA > PeteIA) {
             applyMultiplier(301, 0.025)
+            applyMultiplier(301, 0.06, 209)
 		} else if (WarrenIA > BidenIA && WarrenIA > BernieIA && WarrenIA > PeteIA) {
             applyMultiplier(302, 0.025)
+            applyMultiplier(302, 0.15, 209)
 		} else if (PeteIA > BidenIA && PeteIA > BernieIA && PeteIA > WarrenIA) {
             applyMultiplier(304, 0.025)
+            applyMultiplier(304, 0.25, 209)
 		}
 		if ((BernieIA) && (margin <= 1.5)) {
 			BernieIADelegates -= 2;
