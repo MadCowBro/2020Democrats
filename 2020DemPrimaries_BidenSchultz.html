@@ -17534,14 +17534,14 @@ cyoAdventure = function(a) {
 		}
 		if (PeteIA >= 20.00 && PeteIA < 25.00) {
             applyMultiplier(304, 0.01)
-            applyMultiplier(304, 0.06, 209)
+            applyMultiplier(304, 0.125, 209)
 		} else if (PeteIA >= 25.00) {
             applyMultiplier(304, 0.02)
             applyMultiplier(304, 0.12, 209)
 		}
 		if (KlobucharIA >= 10.00 && KlobucharIA < 15.00) {
             applyMultiplier(310, 0.01)
-            applyMultiplier(310, 0.05, 209)
+            applyMultiplier(310, 0.25, 209)
 		} else if (KlobucharIA >= 15.00) {
             applyMultiplier(310, 0.02)
             applyMultiplier(310, 0.1, 209)
@@ -17557,7 +17557,7 @@ cyoAdventure = function(a) {
             applyMultiplier(302, 0.15, 209)
 		} else if (PeteIA > BidenIA && PeteIA > BernieIA && PeteIA > WarrenIA) {
             applyMultiplier(304, 0.025)
-            applyMultiplier(304, 0.25, 209)
+            applyMultiplier(304, 0.5, 209)
 		}
 		if ((BernieIA) && (margin <= 1.5)) {
 			BernieIADelegates -= 2;
