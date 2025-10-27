@@ -15569,20 +15569,6 @@ cyoAdventure = function(a) {
     }
 }
 
-let Bernie = e.final_overall_results.find(c => c.candidate == 301);
-let Pete = e.final_overall_results.find(c => c.candidate == 304);
-let Iowa = campaignTrail_temp.final_state_results.find((x) => x.state == 195);
-let BernieIA = Iowa.result.find(r => r.candidate == 301);
-let PeteIA = Iowa.result.find(r => r.candidate == 304);
-let margin = Math.abs(BernieIA.percent - PeteIA.percent);
-
-	if ((Iowa.result[0].candidate == 301) && (margin <= 1.5)) {
-			BernieIA.electoral_votes -= 1;
-			PeteIA.electoral_votes += 1;
-			Bernie.electoral_votes -= 1;
-			Pete.electoral_votes += 1;
-	}
-
 campaignTrail_temp.jet_data = [{
     "nicknames": {
         "300": "Biden",
