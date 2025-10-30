@@ -11195,7 +11195,7 @@ campaignTrail_temp.answer_score_global_json = [
         "fields": {
             "answer": 210002,
             "candidate": 300,
-            "affected_candidate": 302,
+            "affected_candidate": 301,
             "global_multiplier": -0.013
         }
     },
@@ -14649,7 +14649,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 310,
-            "state_multiplier": 0.9
+            "state_multiplier": 0.45
         }
     },
     {
@@ -14704,7 +14704,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 310,
-            "state_multiplier": 0.8
+            "state_multiplier": 0.4
         }
     },
     {
@@ -14759,7 +14759,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 310,
-            "state_multiplier": 0.7
+            "state_multiplier": 0.35
         }
     }
 ]
@@ -18135,10 +18135,10 @@ cyoAdventure = function(a) {
             applyMultiplier(300, -0.01)
             applyMultiplier(300, -0.275, 209)
         } else if (BidenIA >= 20.00 && BidenIA < 25.00) {
-            applyMultiplier(300, 0.01)
+            applyMultiplier(300, 0.02)
             applyMultiplier(300, -0.1, 209)
         } else if (BidenIA >= 25.00) {
-            applyMultiplier(300, 0.02)
+            applyMultiplier(300, 0.04)
             applyMultiplier(300, 0.01, 209)
 		}
         if (BernieIA < 15.00) {
@@ -18164,7 +18164,7 @@ cyoAdventure = function(a) {
             applyMultiplier(302, 0.01)
             applyMultiplier(302, -0.05, 209)
 		} else if (WarrenIA >= 25.00) {
-            applyMultiplier(302, 0.02)
+            applyMultiplier(302, 0.04)
             applyMultiplier(302, 0.05, 209)
 		}
         if (PeteIA < 15.00) {
@@ -18190,17 +18190,17 @@ cyoAdventure = function(a) {
             applyMultiplier(310, 0.01)
             applyMultiplier(310, 0.025, 209)
 		} else if (KlobucharIA >= 15.00) {
-            applyMultiplier(310, 0.02)
+            applyMultiplier(310, 0.04)
             applyMultiplier(310, 0.1, 209)
 		}
 		if (BidenIA > BernieIA && BidenIA > WarrenIA && BidenIA > PeteIA) {
-            applyMultiplier(300, 0.025)
+            applyMultiplier(300, 0.05)
             applyMultiplier(300, 0.1, 209)
 		} else if (BernieIA > BidenIA && BernieIA > WarrenIA && BernieIA > PeteIA) {
             applyMultiplier(301, 0.025)
             applyMultiplier(301, 0.06, 209)
 		} else if (WarrenIA > BidenIA && WarrenIA > BernieIA && WarrenIA > PeteIA) {
-            applyMultiplier(302, 0.025)
+            applyMultiplier(302, 0.05)
             applyMultiplier(302, 0.15, 209)
 		} else if (PeteIA > BidenIA && PeteIA > BernieIA && PeteIA > WarrenIA) {
             applyMultiplier(304, 0.025)
