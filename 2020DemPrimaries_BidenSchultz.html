@@ -17962,6 +17962,34 @@ function tunnel(new_q){
     return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
 }
 
+function applyDrift(candidateId, driftAmount, stateId) {
+	// Loop through each object in the JSON array
+	campaignTrail_temp.candidate_state_multiplier_json.forEach((item) => {
+	    // Check if the candidate ID matches the given candidate
+	    if (item.fields.candidate === candidateId) {
+		    // If stateId is undefined or empty, apply drift to all states for that candidate
+		    if (stateId === undefined || stateId.length === 0) {
+		        item.fields.state_multiplier += driftAmount;
+		        item.fields.state_multiplier = Math.max(0, item.fields.state_multiplier); // Ensure the multiplier never goes below 0
+		    } else {
+		        // If stateId is an array, loop through it
+		        if (Array.isArray(stateId)) {
+			        if (stateId.includes(item.fields.state)) {
+			            item.fields.state_multiplier += driftAmount;
+			            item.fields.state_multiplier = Math.max(0, item.fields.state_multiplier); // Ensure the multiplier never goes below 0
+			        }
+		        } else {
+			        // If stateId is a single value, just check it
+			        if (item.fields.state === stateId) {
+			            item.fields.state_multiplier += driftAmount;
+			            item.fields.state_multiplier = Math.max(0, item.fields.state_multiplier); // Ensure the multiplier never goes below 0
+			        }
+		        }
+		    }
+	    }
+	});
+}
+	
 function applyMultiplier(candidateId, multiplier, StateId) { // from Our Revolution, supposed to be more precise than applyDrift
 	if (StateId === undefined || StateId.length === 0) { //applies everywhere
 		for (let StateNum = 181; StateNum<7005; StateNum++ ) {
