@@ -18212,6 +18212,132 @@ cyoAdventure = function(a) {
 		}
 	}
 
+	if (e.noCounter == 22) {
+        let BidenNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===300).percent;
+        let BernieNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===301).percent;
+        let WarrenNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===302).percent;
+        let PeteNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===304).percent;
+        let KlobucharNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===310).percent;
+        if (BidenNH < 5.00) {
+            applyMultiplier(300, -0.04)
+            applyMultiplier(300, -0.5, 208)
+            applyMultiplier(300, -0.3, 220)
+        } else if (BidenNH >= 5.00 && BidenNH < 10.00) {
+            applyMultiplier(300, -0.02)
+            applyMultiplier(300, -0.3, 208)
+            applyMultiplier(300, -0.2, 220)
+        } else if (BidenNH >= 10.00 && BidenNH < 15.00) {
+            applyMultiplier(300, -0.01)
+            applyMultiplier(300, -0.15, 208)
+            applyMultiplier(300, -0.05, 220)
+        } else if (BidenNH >= 15.00 && BidenNH < 20.00) {
+            applyMultiplier(300, 0.01)
+            applyMultiplier(300, -0.05, 208)
+            applyMultiplier(300, 0.05, 220)
+        } else if (BidenNH >= 20.00) {
+            applyMultiplier(300, 0.02)
+            applyMultiplier(300, 0.05, 208)
+            applyMultiplier(300, 0.1, 220)
+        }
+        if (BernieNH < 15.00) {
+            applyMultiplier(301, -0.02)
+            applyMultiplier(301, -0.1, 208)
+            applyMultiplier(301, -0.15, 220)
+        } else if (BernieNH >= 15.00 && BernieNH < 20.00) {
+            applyMultiplier(301, -0.01)
+            applyMultiplier(301, -0.05, 208)
+            applyMultiplier(301, -0.075, 220)
+        } else if (BernieNH >= 20.00 && BernieNH < 25.00) {
+            applyMultiplier(301, 0.01)
+            applyMultiplier(301, 0.1, 208)
+            applyMultiplier(301, 0.075, 220)
+        } else if (BernieNH >= 25.00) {
+			applyMultiplier(301, 0.02)
+            applyMultiplier(301, 0.2, 208)
+            applyMultiplier(301, 0.15, 220)
+        }
+        if (WarrenNH < 5.00) {
+            applyMultiplier(302, -0.02)
+            applyMultiplier(302, -0.03, 208)
+            applyMultiplier(302, -0.2, 220)
+        } else if (WarrenNH >= 5.00 && WarrenNH < 10.00) {
+            applyMultiplier(302, -0.01)
+            applyMultiplier(302, -0.01, 208)
+            applyMultiplier(302, -0.1, 220)
+        } else if (WarrenNH >= 10.00 && WarrenNH < 15.00) {
+            applyMultiplier(302, 0.01)
+            applyMultiplier(302, 0.02, 208)
+            applyMultiplier(302, -0.05, 220)
+        } else if (WarrenNH >= 15.00 && WarrenNH < 20.00) {
+            applyMultiplier(302, 0.02)
+            applyMultiplier(302, 0.04, 208)
+            applyMultiplier(302, 0.05, 220)
+        } else if (WarrenNH >= 20.00) {
+            applyMultiplier(302, 0.04)
+            applyMultiplier(302, 0.12, 208)
+            applyMultiplier(302, 0.1, 220)
+        }
+        if (PeteNH < 15.00) {
+            applyMultiplier(304, -0.02)
+            applyMultiplier(304, -0.125, 208)
+            applyMultiplier(304, -0.2, 220)
+        } else if (PeteNH >= 15.00 && PeteNH < 20.00) {
+            applyMultiplier(304, -0.01)
+            applyMultiplier(304, 0.05, 208)
+            applyMultiplier(304, 0.2, 220)
+        } else if (PeteNH >= 20.00 && PeteNH < 25.00) {
+            applyMultiplier(304, 0.01)
+            applyMultiplier(304, 0.25, 208)
+            applyMultiplier(304, 0.5, 220)
+        } else if (PeteNH >= 25.00) {
+            applyMultiplier(304, 0.02)
+            applyMultiplier(304, 0.375, 208)
+            applyMultiplier(304, 0.7, 220)
+        }
+        if (KlobucharNH < 5.00) {
+            applyMultiplier(310, -0.08)
+            applyMultiplier(310, -0.4, 208)
+            applyMultiplier(310, -0.75, 220)
+        } else if (KlobucharNH >= 5.00 && KlobucharNH < 10.00) {
+            applyMultiplier(310, -0.04)
+            applyMultiplier(310, -0.2, 208)
+            applyMultiplier(310, -0.5, 220)
+        } else if (KlobucharNH >= 10.00 && KlobucharNH < 15.00) {
+            applyMultiplier(310, -0.02)
+            applyMultiplier(310, -0.1, 208)
+            applyMultiplier(310, 0.5, 220)
+        } else if (KlobucharNH >= 15.00 && KlobucharNH < 20.00) {
+            applyMultiplier(310, 0.04)
+            applyMultiplier(310, 0.5, 208)
+            applyMultiplier(310, 1, 220)
+        } else if (KlobucharNH >= 20.00) {
+            applyMultiplier(310, 0.08)
+            applyMultiplier(310, 0.7, 208)
+            applyMultiplier(310, 1.5, 220)
+        }
+        if (BidenNH > BernieNH && BidenNH > WarrenNH && BidenNH > PeteNH && BidenNH > KlobucharNH) {
+            applyMultiplier(300, 0.05)
+            applyMultiplier(300, 0.1, 208)
+            applyMultiplier(300, 0.05, 220)
+        } else if (BernieNH > BidenNH && BernieNH > WarrenNH && BernieNH > PeteNH && BernieNH > KlobucharNH) {
+            applyMultiplier(301, 0.025)
+            applyMultiplier(301, 0.05, 208)
+            applyMultiplier(301, 0.05, 220)
+        } else if (WarrenNH > BidenNH && WarrenNH > BernieNH && WarrenNH > PeteNH && WarrenNH > KlobucharNH) {
+            applyMultiplier(302, 0.05)
+            applyMultiplier(302, 0.15, 208)
+            applyMultiplier(302, 0.1, 220)
+        } else if (PeteNH > BidenNH && PeteNH > BernieNH && PeteNH > WarrenNH && PeteNH > KlobucharNH) {
+            applyMultiplier(304, 0.025)
+            applyMultiplier(304, 0.5, 208)
+            applyMultiplier(304, 0.2, 220)
+        } else if (KlobucharNH > BidenNH && KlobucharNH > BernieNH && KlobucharNH > WarrenNH && KlobucharNH > PeteNH) {
+            applyMultiplier(310, 0.1)
+            applyMultiplier(310, 0.5, 208)
+            applyMultiplier(310, 0.2, 220)
+        }
+	}
+
 	if (e.noCounter == 24) {
         menuItemsA.splice(5, 1, GabbardObject);
         refreshHeadquarter();
