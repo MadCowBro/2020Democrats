@@ -16947,7 +16947,7 @@ function Klobmentumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201071);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201072);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.125;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201073);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201074);
@@ -17992,7 +17992,7 @@ function applyDrift(candidateId, driftAmount, stateId) {
 	
 function applyMultiplier(candidateId, multiplier, StateId) { // from Our Revolution, supposed to be more precise than applyDrift
 	if (StateId === undefined || StateId.length === 0) { //applies everywhere
-		for (let StateNum = 181; StateNum<7005; StateNum++ ) {
+		for (let StateNum = 181; StateNum<7006; StateNum++ ) {
 			current_multiplier=e.candidate_state_multiplier_json.find(p=>p.fields.state==StateNum&& p.fields.candidate==candidateId).fields.state_multiplier
 			applyDrift(candidateId,current_multiplier*multiplier,StateNum) //apply that multiplier in that state.
 		}
@@ -18157,11 +18157,11 @@ cyoAdventure = function(a) {
 		let BernieIADelegates = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===301).electoral_votes;
 		let PeteIADelegates = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===304).electoral_votes;
         if (BidenIA < 15.00) {
-            applyMultiplier(300, -0.02)
-            applyMultiplier(300, -0.55, 209)
+            applyMultiplier(300, -0.04)
+            applyMultiplier(300, -0.6, 209)
         } else if (BidenIA >= 15.00 && BidenIA < 20.00) {
-            applyMultiplier(300, -0.01)
-            applyMultiplier(300, -0.275, 209)
+            applyMultiplier(300, -0.02)
+            applyMultiplier(300, -0.3, 209)
         } else if (BidenIA >= 20.00 && BidenIA < 25.00) {
             applyMultiplier(300, 0.02)
             applyMultiplier(300, -0.1, 209)
