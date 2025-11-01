@@ -17993,12 +17993,12 @@ function applyDrift(candidateId, driftAmount, stateId) {
 function applyMultiplier(candidateId, multiplier, StateId) { // from Our Revolution, supposed to be more precise than applyDrift
 	if (StateId === undefined || StateId.length === 0) { //applies everywhere
 		for (let StateNum = 181; StateNum<7006; StateNum++ ) {
-			current_multiplier=e.candidate_state_multiplier_json.find(p=>p.fields.state==StateNum&& p.fields.candidate==candidateId).fields.state_multiplier
+			current_multiplier=e.candidate_state_multiplier_json.find(f=>f.fields.state==StateNum&& f.fields.candidate==candidateId).fields.state_multiplier
 			applyDrift(candidateId,current_multiplier*multiplier,StateNum) //apply that multiplier in that state.
 		}
 	}
 	else {
-		current_multiplier=e.candidate_state_multiplier_json.find(p=>p.fields.state==StateId&& p.fields.candidate==candidateId).fields.state_multiplier
+		current_multiplier=e.candidate_state_multiplier_json.find(f=>f.fields.state==StateId&& f.fields.candidate==candidateId).fields.state_multiplier
 		applyDrift(candidateId,current_multiplier*multiplier,StateId) //apply that multiplier in that state.
 	}	
 }
