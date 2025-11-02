@@ -18145,13 +18145,13 @@ cyoAdventure = function(a) {
 		let PeteIADelegates = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===304).electoral_votes;
         if (BidenIA < 15.00) {
             applyDrift(300, -0.04)
-            applyDrift(300, -0.6, 209)
+            applyDrift(300, -0.3, 209)
         } else if (BidenIA >= 15.00 && BidenIA < 20.00) {
             applyDrift(300, -0.02)
-            applyDrift(300, -0.3, 209)
+            applyDrift(300, -0.15, 209)
         } else if (BidenIA >= 20.00 && BidenIA < 25.00) {
             applyDrift(300, 0.02)
-            applyDrift(300, -0.1, 209)
+            applyDrift(300, -0.05, 209)
         } else if (BidenIA >= 25.00) {
             applyDrift(300, 0.04)
             applyDrift(300, 0.01, 209)
@@ -18171,13 +18171,13 @@ cyoAdventure = function(a) {
 		}
         if (WarrenIA < 15.00) {
             applyDrift(302, -0.02)
-            applyDrift(302, -0.3, 209)
+            applyDrift(302, -0.15, 209)
         } else if (WarrenIA >= 15.00 && WarrenIA < 20.00) {
             applyDrift(302, -0.01)
-            applyDrift(302, -0.15, 209)
+            applyDrift(302, -0.08, 209)
         } else if (WarrenIA >= 20.00 && WarrenIA < 25.00) {
             applyDrift(302, 0.01)
-            applyDrift(302, -0.05, 209)
+            applyDrift(302, -0.02, 209)
 		} else if (WarrenIA >= 25.00) {
             applyDrift(302, 0.04)
             applyDrift(302, 0.05, 209)
@@ -18197,10 +18197,10 @@ cyoAdventure = function(a) {
 		}
 	    if (KlobucharIA < 5.00) {
             applyDrift(310, -0.02)
-            applyDrift(310, -0.25, 209)
+            applyDrift(310, -0.125, 209)
         } else if (KlobucharIA >= 5.00 && KlobucharIA < 10.00) {
             applyDrift(310, -0.01)
-            applyDrift(310, -0.025, 209)
+            applyDrift(310, -0.01, 209)
         } else if (KlobucharIA >= 10.00 && KlobucharIA < 15.00) {
             applyDrift(310, 0.01)
             applyDrift(310, 0.025, 209)
@@ -18213,7 +18213,7 @@ cyoAdventure = function(a) {
             applyDrift(300, 0.1, 209)
 		} else if (BernieIA > BidenIA && BernieIA > WarrenIA && BernieIA > PeteIA) {
             applyDrift(301, 0.025)
-            applyDrift(301, 0.06, 209)
+            applyDrift(301, 0.03, 209)
 		} else if (WarrenIA > BidenIA && WarrenIA > BernieIA && WarrenIA > PeteIA) {
             applyDrift(302, 0.05)
             applyDrift(302, 0.15, 209)
@@ -18273,23 +18273,23 @@ cyoAdventure = function(a) {
         }
         if (WarrenNH < 5.00) {
             applyDrift(302, -0.02)
-            applyDrift(302, -0.03, 208)
+            applyDrift(302, -0.06, 208)
             applyDrift(302, -0.2, 220)
         } else if (WarrenNH >= 5.00 && WarrenNH < 10.00) {
             applyDrift(302, -0.01)
-            applyDrift(302, -0.01, 208)
+            applyDrift(302, -0.02, 208)
             applyDrift(302, -0.1, 220)
         } else if (WarrenNH >= 10.00 && WarrenNH < 15.00) {
             applyDrift(302, 0.01)
-            applyDrift(302, 0.02, 208)
+            applyDrift(302, 0.01, 208)
             applyDrift(302, -0.05, 220)
         } else if (WarrenNH >= 15.00 && WarrenNH < 20.00) {
             applyDrift(302, 0.02)
-            applyDrift(302, 0.04, 208)
+            applyDrift(302, 0.02, 208)
             applyDrift(302, 0.05, 220)
         } else if (WarrenNH >= 20.00) {
             applyDrift(302, 0.04)
-            applyDrift(302, 0.12, 208)
+            applyDrift(302, 0.06, 208)
             applyDrift(302, 0.1, 220)
         }
         if (PeteNH < 15.00) {
@@ -18311,15 +18311,15 @@ cyoAdventure = function(a) {
         }
         if (KlobucharNH < 5.00) {
             applyDrift(310, -0.08)
-            applyDrift(310, -0.4, 208)
-            applyDrift(310, -0.75, 220)
+            applyDrift(310, -0.2, 208)
+            applyDrift(310, -0.4, 220)
         } else if (KlobucharNH >= 5.00 && KlobucharNH < 10.00) {
             applyDrift(310, -0.04)
-            applyDrift(310, -0.2, 208)
-            applyDrift(310, -0.5, 220)
+            applyDrift(310, -0.1, 208)
+            applyDrift(310, -0.25, 220)
         } else if (KlobucharNH >= 10.00 && KlobucharNH < 15.00) {
             applyDrift(310, -0.02)
-            applyDrift(310, -0.1, 208)
+            applyDrift(310, -0.05, 208)
             applyDrift(310, 0.5, 220)
         } else if (KlobucharNH >= 15.00 && KlobucharNH < 20.00) {
             applyDrift(310, 0.04)
