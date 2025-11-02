@@ -18164,10 +18164,10 @@ cyoAdventure = function(a) {
             applyDrift(301, -0.08, 209)
         } else if (BernieIA >= 20.00 && BernieIA < 25.00) {
             applyDrift(301, 0.01)
-            applyDrift(301, 0.02, 209)
+            applyDrift(301, 0.01, 209)
 		} else if (BernieIA >= 25.00) {
 			applyDrift(301, 0.02)
-            applyDrift(301, 0.04, 209)
+            applyDrift(301, 0.02, 209)
 		}
         if (WarrenIA < 15.00) {
             applyDrift(302, -0.02)
@@ -18189,23 +18189,23 @@ cyoAdventure = function(a) {
             applyDrift(304, -0.01)
             applyDrift(304, 0.06, 209)
         } else if (PeteIA >= 20.00 && PeteIA < 25.00) {
-            applyDrift(304, 0.01)
+            applyDrift(304, 0.02)
             applyDrift(304, 0.125, 209)
 		} else if (PeteIA >= 25.00) {
-            applyDrift(304, 0.02)
+            applyDrift(304, 0.04)
             applyDrift(304, 0.25, 209)
 		}
 	    if (KlobucharIA < 5.00) {
-            applyDrift(310, -0.02)
+            applyDrift(310, -0.01)
             applyDrift(310, -0.125, 209)
         } else if (KlobucharIA >= 5.00 && KlobucharIA < 10.00) {
-            applyDrift(310, -0.01)
+            applyDrift(310, 0.01)
             applyDrift(310, -0.01, 209)
         } else if (KlobucharIA >= 10.00 && KlobucharIA < 15.00) {
-            applyDrift(310, 0.01)
+            applyDrift(310, 0.02)
             applyDrift(310, 0.025, 209)
 		} else if (KlobucharIA >= 15.00) {
-            applyDrift(310, 0.04)
+            applyDrift(310, 0.08)
             applyDrift(310, 0.1, 209)
 		}
 		if (BidenIA > BernieIA && BidenIA > WarrenIA && BidenIA > PeteIA) {
@@ -18213,7 +18213,7 @@ cyoAdventure = function(a) {
             applyDrift(300, 0.1, 209)
 		} else if (BernieIA > BidenIA && BernieIA > WarrenIA && BernieIA > PeteIA) {
             applyDrift(301, 0.025)
-            applyDrift(301, 0.03, 209)
+            applyDrift(301, 0.015, 209)
 		} else if (WarrenIA > BidenIA && WarrenIA > BernieIA && WarrenIA > PeteIA) {
             applyDrift(302, 0.05)
             applyDrift(302, 0.15, 209)
@@ -18310,23 +18310,23 @@ cyoAdventure = function(a) {
             applyDrift(304, 0.7, 220)
         }
         if (KlobucharNH < 5.00) {
-            applyDrift(310, -0.08)
+            applyDrift(310, -0.04)
             applyDrift(310, -0.2, 208)
             applyDrift(310, -0.4, 220)
         } else if (KlobucharNH >= 5.00 && KlobucharNH < 10.00) {
-            applyDrift(310, -0.04)
+            applyDrift(310, -0.02)
             applyDrift(310, -0.1, 208)
             applyDrift(310, -0.25, 220)
         } else if (KlobucharNH >= 10.00 && KlobucharNH < 15.00) {
-            applyDrift(310, -0.02)
+            applyDrift(310, -0.01)
             applyDrift(310, -0.05, 208)
             applyDrift(310, 0.5, 220)
         } else if (KlobucharNH >= 15.00 && KlobucharNH < 20.00) {
-            applyDrift(310, 0.04)
+            applyDrift(310, 0.08)
             applyDrift(310, 0.5, 208)
             applyDrift(310, 1, 220)
         } else if (KlobucharNH >= 20.00) {
-            applyDrift(310, 0.08)
+            applyDrift(310, 0.16)
             applyDrift(310, 0.7, 208)
             applyDrift(310, 1.5, 220)
         }
