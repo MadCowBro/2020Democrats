@@ -18273,7 +18273,21 @@ cyoAdventure = function(a) {
         refreshHeadquarter();
         let BidenSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===300).percent;
 		let BernieSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===301).percent;
+        if (BidenSC < 15.00) {
+            applyDrift(300, -0.25)
+        } else if (BidenSC >= 15.00 && BidenSC < 20.00) {
+            applyDrift(300, -0.2)
+        } else if (BidenSC >= 20.00 && BidenSC < 30.00) {
+            applyDrift(300, -0.1)
+        } else if (BidenSC >= 30.00 && BidenSC < 40.00) {
+            applyDrift(300, 0.2)
+        } else if (BidenSC >= 40.00 && BidenSC < 50.00) {
+            applyDrift(300, 0.4)
+        } else if (BidenSC >= 50.00) {
+            applyDrift(300, 0.5)
+        }
 		if (BernieSC > BidenSC) {
+            applyDrift(300, 0.2)
 			campaignTrail_temp.questions_json[24] = tunnel(250100);
 		}
 	}
