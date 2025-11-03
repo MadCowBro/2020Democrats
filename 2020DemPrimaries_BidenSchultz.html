@@ -14594,7 +14594,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 300,
-            "state_multiplier": -0.15
+            "state_multiplier": -0.075
         }
     },
     {
@@ -14660,7 +14660,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 300,
-            "state_multiplier": -0.12
+            "state_multiplier": -0.06
         }
     },
     {
@@ -14715,7 +14715,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 300,
-            "state_multiplier": -0.14
+            "state_multiplier": -0.07
         }
     },
     {
@@ -16947,7 +16947,7 @@ function Klobmentumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201071);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201072);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.125;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201073);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201074);
@@ -18135,6 +18135,10 @@ cyoAdventure = function(a) {
 	}
 			
 	if (e.noCounter == 20) {
+		if (KlobucharPolling > 0.03 && klobuchar_boost == 0) {
+		    Klobmentumshift();
+		    klobuchar_boost += 1;
+		}			
         let BidenIA = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===300).percent;
         let BernieIA = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===301).percent;
         let WarrenIA = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===302).percent;
