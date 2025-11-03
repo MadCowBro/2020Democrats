@@ -18143,83 +18143,50 @@ cyoAdventure = function(a) {
         let margin = Math.abs(BernieIA - PeteIA);
 		let BernieIADelegates = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===301).electoral_votes;
 		let PeteIADelegates = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===304).electoral_votes;
-        if (BidenIA < 15.00) {
-            applyDrift(300, -0.04)
-            applyDrift(300, -0.3, 209)
+        if (BidenIA < 10.00) {
+            applyDrift(300, -0.075)
+            applyDrift(300, -0.5, 209)
+        } else if (BidenIA >= 10.00 && BidenIA < 15.00) {
+            applyDrift(300, -0.05)
+            applyDrift(300, -0.35, 209)
         } else if (BidenIA >= 15.00 && BidenIA < 20.00) {
-            applyDrift(300, -0.02)
-            applyDrift(300, -0.15, 209)
+            applyDrift(300, -0.025)
+            applyDrift(300, -0.2, 209)
         } else if (BidenIA >= 20.00 && BidenIA < 25.00) {
-            applyDrift(300, 0.02)
+            applyDrift(300, 0.025)
             applyDrift(300, -0.05, 209)
         } else if (BidenIA >= 25.00) {
-            applyDrift(300, 0.04)
-            applyDrift(300, 0.01, 209)
+            applyDrift(300, 0.05)
+            applyDrift(300, 0.05, 209)
 		}
-        if (BernieIA < 15.00) {
-            applyDrift(301, -0.02)
-            applyDrift(301, -0.16, 209)
-        } else if (BernieIA >= 15.00 && BernieIA < 20.00) {
-            applyDrift(301, -0.01)
-            applyDrift(301, -0.08, 209)
-        } else if (BernieIA >= 20.00 && BernieIA < 25.00) {
-            applyDrift(301, 0.01)
-            applyDrift(301, 0.01, 209)
-		} else if (BernieIA >= 25.00) {
-			applyDrift(301, 0.02)
-            applyDrift(301, 0.02, 209)
-		}
-        if (WarrenIA < 15.00) {
-            applyDrift(302, -0.02)
-            applyDrift(302, -0.15, 209)
-        } else if (WarrenIA >= 15.00 && WarrenIA < 20.00) {
-            applyDrift(302, -0.01)
-            applyDrift(302, -0.08, 209)
-        } else if (WarrenIA >= 20.00 && WarrenIA < 25.00) {
-            applyDrift(302, 0.01)
-            applyDrift(302, -0.02, 209)
-		} else if (WarrenIA >= 25.00) {
-            applyDrift(302, 0.04)
-            applyDrift(302, 0.05, 209)
-		}
-        if (PeteIA < 15.00) {
-            applyDrift(304, -0.02)
-            applyDrift(304, -0.125, 209)
-        } else if (PeteIA >= 15.00 && PeteIA < 20.00) {
-            applyDrift(304, -0.01)
-            applyDrift(304, 0.06, 209)
-        } else if (PeteIA >= 20.00 && PeteIA < 25.00) {
-            applyDrift(304, 0.02)
-            applyDrift(304, 0.125, 209)
-		} else if (PeteIA >= 25.00) {
-            applyDrift(304, 0.04)
-            applyDrift(304, 0.25, 209)
-		}
-	    if (KlobucharIA < 5.00) {
-            applyDrift(310, -0.01)
-            applyDrift(310, -0.125, 209)
-        } else if (KlobucharIA >= 5.00 && KlobucharIA < 10.00) {
-            applyDrift(310, 0.01)
-            applyDrift(310, -0.01, 209)
-        } else if (KlobucharIA >= 10.00 && KlobucharIA < 15.00) {
-            applyDrift(310, 0.02)
-            applyDrift(310, 0.025, 209)
-		} else if (KlobucharIA >= 15.00) {
-            applyDrift(310, 0.08)
-            applyDrift(310, 0.1, 209)
-		}
+        if (BidenIA > BernieIA) {
+            applyDrift(301, -0.025)
+            applyDrift(301, -0.05, 209)
+        }
+        if (BidenIA > WarrenIA) {
+            applyDrift(302, -0.025)
+            applyDrift(302, -0.05, 209)
+        }
+        if (BidenIA > PeteIA) {
+            applyDrift(304, -0.025)
+            applyDrift(304, -0.05, 209)
+        }
+	    if (KlobucharIA > BidenIA) {
+            applyDrift(310, 0.05)
+            applyDrift(310, 0.05, 209)
+        }
 		if (BidenIA > BernieIA && BidenIA > WarrenIA && BidenIA > PeteIA) {
             applyDrift(300, 0.05)
-            applyDrift(300, 0.1, 209)
+            applyDrift(300, 0.05, 209)
 		} else if (BernieIA > BidenIA && BernieIA > WarrenIA && BernieIA > PeteIA) {
             applyDrift(301, 0.025)
-            applyDrift(301, 0.01, 209)
+            applyDrift(301, 0.025, 209)
 		} else if (WarrenIA > BidenIA && WarrenIA > BernieIA && WarrenIA > PeteIA) {
             applyDrift(302, 0.05)
-            applyDrift(302, 0.15, 209)
+            applyDrift(302, 0.05, 209)
 		} else if (PeteIA > BidenIA && PeteIA > BernieIA && PeteIA > WarrenIA) {
             applyDrift(304, 0.025)
-            applyDrift(304, 0.5, 209)
+            applyDrift(304, 0.025, 209)
 		}
 		if ((BernieIA) && (margin <= 1.5)) {
 			BernieIADelegates -= 2;
@@ -18234,122 +18201,66 @@ cyoAdventure = function(a) {
         let PeteNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===304).percent;
         let KlobucharNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===310).percent;
         if (BidenNH < 5.00) {
-            applyDrift(300, -0.08)
-            applyDrift(300, -0.5, 208)
-            applyDrift(300, -0.3, 220)
-        } else if (BidenNH >= 5.00 && BidenNH < 10.00) {
-            applyDrift(300, -0.04)
+            applyDrift(300, -0.3)
             applyDrift(300, -0.3, 208)
-            applyDrift(300, -0.2, 220)
+            applyDrift(300, -0.02, 220)
+        } else if (BidenNH >= 5.00 && BidenNH < 10.00) {
+            applyDrift(300, -0.2)
+            applyDrift(300, -0.2, 208)
+            applyDrift(300, -0.01, 220)
         } else if (BidenNH >= 10.00 && BidenNH < 15.00) {
-            applyDrift(300, -0.02)
-            applyDrift(300, -0.15, 208)
-            applyDrift(300, -0.05, 220)
+            applyDrift(300, -0.1)
+            applyDrift(300, -0.1, 208)
+            applyDrift(300, 0.01, 220)
         } else if (BidenNH >= 15.00 && BidenNH < 20.00) {
-            applyDrift(300, 0.02)
+            applyDrift(300, -0.05)
             applyDrift(300, -0.05, 208)
-            applyDrift(300, 0.05, 220)
+            applyDrift(300, 0.02, 220)
         } else if (BidenNH >= 20.00) {
-            applyDrift(300, 0.04)
+            applyDrift(300, 0.05)
             applyDrift(300, 0.05, 208)
-            applyDrift(300, 0.1, 220)
+            applyDrift(300, 0.04, 220)
         }
-        if (BernieNH < 15.00) {
-            applyDrift(301, -0.02)
-            applyDrift(301, -0.1, 208)
-            applyDrift(301, -0.15, 220)
-        } else if (BernieNH >= 15.00 && BernieNH < 20.00) {
-            applyDrift(301, -0.01)
+        if (BidenNH > BernieNH) {
+            applyDrift(301, -0.05)
             applyDrift(301, -0.05, 208)
-            applyDrift(301, -0.075, 220)
-        } else if (BernieNH >= 20.00 && BernieNH < 25.00) {
-            applyDrift(301, 0.01)
-            applyDrift(301, 0.05, 208)
-            applyDrift(301, 0.075, 220)
-        } else if (BernieNH >= 25.00) {
-			applyDrift(301, 0.02)
-            applyDrift(301, 0.1, 208)
-            applyDrift(301, 0.15, 220)
+            applyDrift(301, -0.02, 220)
         }
-        if (WarrenNH < 5.00) {
-            applyDrift(302, -0.02)
-            applyDrift(302, -0.06, 208)
-            applyDrift(302, -0.2, 220)
-        } else if (WarrenNH >= 5.00 && WarrenNH < 10.00) {
-            applyDrift(302, -0.01)
-            applyDrift(302, -0.02, 208)
-            applyDrift(302, -0.1, 220)
-        } else if (WarrenNH >= 10.00 && WarrenNH < 15.00) {
-            applyDrift(302, 0.01)
-            applyDrift(302, 0.01, 208)
-            applyDrift(302, -0.05, 220)
-        } else if (WarrenNH >= 15.00 && WarrenNH < 20.00) {
-            applyDrift(302, 0.02)
-            applyDrift(302, 0.02, 208)
-            applyDrift(302, 0.05, 220)
-        } else if (WarrenNH >= 20.00) {
-            applyDrift(302, 0.04)
-            applyDrift(302, 0.06, 208)
-            applyDrift(302, 0.1, 220)
+        if (BidenNH > WarrenNH) {
+            applyDrift(302, -0.05)
+            applyDrift(302, -0.05, 208)
+            applyDrift(302, -0.02, 220)
         }
-        if (PeteNH < 15.00) {
-            applyDrift(304, -0.02)
-            applyDrift(304, -0.125, 208)
-            applyDrift(304, -0.2, 220)
-        } else if (PeteNH >= 15.00 && PeteNH < 20.00) {
-            applyDrift(304, -0.01)
-            applyDrift(304, 0.05, 208)
-            applyDrift(304, 0.2, 220)
-        } else if (PeteNH >= 20.00 && PeteNH < 25.00) {
-            applyDrift(304, 0.01)
-            applyDrift(304, 0.25, 208)
-            applyDrift(304, 0.5, 220)
-        } else if (PeteNH >= 25.00) {
-            applyDrift(304, 0.02)
-            applyDrift(304, 0.375, 208)
-            applyDrift(304, 0.7, 220)
+        if (BidenNH > PeteNH) {
+            applyDrift(304, -0.05)
+            applyDrift(304, -0.05, 208)
+            applyDrift(304, -0.02, 220)
         }
-        if (KlobucharNH < 5.00) {
-            applyDrift(310, -0.04)
-            applyDrift(310, -0.2, 208)
-            applyDrift(310, -0.4, 220)
-        } else if (KlobucharNH >= 5.00 && KlobucharNH < 10.00) {
-            applyDrift(310, -0.02)
-            applyDrift(310, -0.1, 208)
-            applyDrift(310, -0.25, 220)
-        } else if (KlobucharNH >= 10.00 && KlobucharNH < 15.00) {
-            applyDrift(310, -0.01)
+        if (BidenNH > KlobucharNH) {
+            applyDrift(310, -0.05)
             applyDrift(310, -0.05, 208)
-            applyDrift(310, 0.5, 220)
-        } else if (KlobucharNH >= 15.00 && KlobucharNH < 20.00) {
-            applyDrift(310, 0.08)
-            applyDrift(310, 0.5, 208)
-            applyDrift(310, 1, 220)
-        } else if (KlobucharNH >= 20.00) {
-            applyDrift(310, 0.16)
-            applyDrift(310, 0.7, 208)
-            applyDrift(310, 1.5, 220)
+            applyDrift(310, -0.02, 220)
         }
         if (BidenNH > BernieNH && BidenNH > WarrenNH && BidenNH > PeteNH && BidenNH > KlobucharNH) {
             applyDrift(300, 0.05)
-            applyDrift(300, 0.1, 208)
+            applyDrift(300, 0.05, 208)
             applyDrift(300, 0.05, 220)
         } else if (BernieNH > BidenNH && BernieNH > WarrenNH && BernieNH > PeteNH && BernieNH > KlobucharNH) {
-            applyDrift(301, 0.025)
+            applyDrift(301, 0.02)
             applyDrift(301, 0.05, 208)
             applyDrift(301, 0.05, 220)
         } else if (WarrenNH > BidenNH && WarrenNH > BernieNH && WarrenNH > PeteNH && WarrenNH > KlobucharNH) {
             applyDrift(302, 0.05)
-            applyDrift(302, 0.15, 208)
-            applyDrift(302, 0.1, 220)
+            applyDrift(302, 0.05, 208)
+            applyDrift(302, 0.05, 220)
         } else if (PeteNH > BidenNH && PeteNH > BernieNH && PeteNH > WarrenNH && PeteNH > KlobucharNH) {
-            applyDrift(304, 0.025)
-            applyDrift(304, 0.5, 208)
-            applyDrift(304, 0.2, 220)
+            applyDrift(304, 0.02)
+            applyDrift(304, 0.02, 208)
+            applyDrift(304, 0.02, 220)
         } else if (KlobucharNH > BidenNH && KlobucharNH > BernieNH && KlobucharNH > WarrenNH && KlobucharNH > PeteNH) {
-            applyDrift(310, 0.1)
-            applyDrift(310, 0.5, 208)
-            applyDrift(310, 0.2, 220)
+            applyDrift(310, 0.05)
+            applyDrift(310, 0.02, 208)
+            applyDrift(310, 0.02, 220)
         }
 	}
 
