@@ -305,7 +305,7 @@ existingStyle.innerHTML = `
   }
 
   body {
-    background-image: url('https://i.imgur.com/JpuM18f.jpeg');
+    background-image: url('https://i.postimg.cc/m2JWkW3B/IMG-2892.webp');
     background-position: center;
     background-size: cover;
   }
@@ -14914,23 +14914,23 @@ e.primary_code = [
     "states": [195] // IA
   },
   {
-    "breakQ": 20,
+    "breakQ": 21,
     "states": [209] // NH
   },
   {
-    "breakQ": 22,
+    "breakQ": 23,
     "states": [208, 220] // NV, SC
   },
   {
-    "breakQ": 24,
+    "breakQ": 25,
     "states": [181, 7000, 184, 185, 186, 199, 201, 203, 213, 216, 222, 223, 224, 225, 226] // AL, AS, AR, CA, CO, ME, MA, MN, NC, OK, TN, TX, UT, VT, VA
   },
   {
-    "breakQ": 26,
+    "breakQ": 27,
     "states": [7005, 192, 202, 204, 205, 214, 227, 7002] // Democrats Abroad, ID, MI, MS, MO, ND, WA, MP
   },
   {
-    "breakQ": 28,
+    "breakQ": 29,
     "states": [183, 189, 193] // AZ, FL, IL
   },
   {
@@ -14938,58 +14938,49 @@ e.primary_code = [
     "states": [230, 182, 231, 215] // WI, AK, WY, OH
   },
   {
-    "breakQ": 32,
+    "breakQ": 33,
     "states": [196, 207, 217, 191] // KS, NE, OR, HI
   },
   {
-    "breakQ": 34,
+    "breakQ": 35,
     "states": [228, 194, 200, 206, 211, 218, 219, 221] // DC, IN, MD, MT, NM, PA, RI, SD
   },
   {
-    "breakQ": 36,
-    "states": [7001, 7004, 190, 229, 197, 212] // GU, VI, GA, WV, KY, NY
-  },
-  {
     "breakQ": 37,
-    "states": [188, 210, 198, 7003, 187] // DE, NJ, LA, PR, CT
+    "states": [7001, 7004, 190, 229, 197, 212, 188, 210, 198, 7003, 187] // GU, VI, GA, WV, KY, NY, DE, NJ, LA, PR, CT
   }
 ]
 
-campaignTrail_temp.candidate_image_url = "https://i.imgur.com/GuSfd0e.png";
-campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/YtRe56z.png";
+campaignTrail_temp.candidate_image_url = "https://i.postimg.cc/Y9QgzKCj/2020-DNC-Sanders.png";
+campaignTrail_temp.running_mate_image_url = "https://i.postimg.cc/Pf6jGwPN/IMG-2872.webp";
 campaignTrail_temp.candidate_last_name = "Sanders";
 campaignTrail_temp.running_mate_last_name = "Campaign";
 
-document.getElementById("header").src = "https://i.imgur.com/ZU4QbI1.png";
-document.body.background = "https://i.imgur.com/JpuM18f.jpeg";
+document.getElementById("header").src = "https://i.postimg.cc/hGHBYWjY/2020-Sanders-Banner.jpg";
 
-const targetNode = document.getElementById("game_window");
-const config = { attributes: true, childList: true, subtree: true };
-
-function onGameWindowChanged(mutationList, observer) {
-    updateQuestionBanner();
+const customStyling = document.createElement("style");
+customStyling.innerHTML = `
+#campaign_sign {
+    background-image: url("https://i.postimg.cc/C1bDsTLJ/2020-DNC-Bernie-Sign.png");
+    background-size: cover;
+    border-color: #c9c9c9;    
+    border-width: .01em;
+    margin: 0 auto;
+    background-position: center;
+    width: 100%; 
+    height: 104px; 
+    margin-left: -0.07em;
+  }
+#campaign_sign p {
+    color: rgb(0 0 0 / 0%);
 }
-
-function updateQuestions(mutationList, observer) {
-    if (answerObject.fields.condition != null) {
-        answer.disabled = !(eval(answerObject.fields.condition));
-    }
+@keyframes pulse {
+  0%   { box-shadow: 0 0 10px 2px #3399ff; }
+  50%  { box-shadow: 0 0 20px 5px #00ccff; }
+  100% { box-shadow: 0 0 10px 2px #3399ff; }
 }
-
-const observer = new MutationObserver(onGameWindowChanged);
-	observer.observe(targetNode, config);
-
-e.VPisCandidate = 0;
-	function updateQuestionBanner() {
-		let questionBanner = document.getElementById("campaign_sign");
-		if(!questionBanner || questionBanner.nodeName != "DIV") return;
-		let img = document.createElement('img');
-    if(e.VPisCandidate == 0)
-    {
-			img.src = 'https://i.imgur.com/NdiMF8b.png';
-    } 
-		questionBanner.replaceWith(img);
-	}
+`;
+document.head.appendChild(customStyling);
 
   // Select the node that will be observed for mutations
   const windowsAdvisorTargetNode = document.getElementById("game_window");
@@ -15089,50 +15080,50 @@ e.VPisCandidate = 0;
     const song1 = new Song(
       "Power to the People",
       "John Lennon/Plastic Ono Band",
-      "https://i.imgur.com/sV9WdFs.png",
-      "https://file.garden/Z-8vn6l_RynAMnyS/POWER%20TO%20THE%20PEOPLE.%20(Ultimate%20Mix%2C%202020)%20-%20John%20LennonPlastic%20Ono%20Band%20(official%20music%20video%20HD).mp3"
+      "https://i.postimg.cc/pLjbnckq/IMG-2908.jpg",
+      "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/POWER%20TO%20THE%20PEOPLE.%20(Ultimate%20Mix%2C%202020)%20-%20John%20LennonPlastic%20Ono%20Band%20(official%20music%20video%20HD).mp3"
     );
 
     const song2 = new Song(
       "What’s Going On",
       "Marvin Gaye",
-      "https://i.imgur.com/wBnJ38L.png",
-      "https://file.garden/Z-8vn6l_RynAMnyS/Marvin%20Gaye%20-%20What%E2%80%99s%20Going%20On.mp3"
+      "https://i.postimg.cc/pdtNQQ1D/IMG-2909.jpg",
+      "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/Marvin%20Gaye%20-%20What%E2%80%99s%20Going%20On.mp3"
     );
     
     const song3 = new Song(
       "The Times They Are A-Changin’",
       "Bob Dylan",
-      "https://i.imgur.com/ETFt4iN.png",
-      "https://file.garden/Z-8vn6l_RynAMnyS/Bob%20Dylan%20-%20The%20Times%20They%20Are%20A-Changin%E2%80%99%20(Official%20Audio).mp3"
+      "https://i.postimg.cc/W4PRmmf7/IMG-2910.jpg",
+      "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/Bob%20Dylan%20-%20The%20Times%20They%20Are%20A-Changin%E2%80%99%20(Official%20Audio).mp3"
     );
   
     const song4 = new Song(
       "They’re Building a Wall",
       "David Rovics",
-      "https://i.imgur.com/67l7wdZ.png",
-      "https://file.garden/Z-8vn6l_RynAMnyS/They%E2%80%99re%20Building%20a%20Wall.mp3"
+      "https://i.postimg.cc/s2RFPP0T/IMG-2911.jpg",
+      "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/They%E2%80%99re%20Building%20a%20Wall.mp3"
     );
   
     const song5 = new Song(
       "America",
       "Simon & Garfunkel",
-      "https://i.imgur.com/BFc0vt2.png",
-      "https://file.garden/Z-8vn6l_RynAMnyS/Simon%20%26%20Garfunkel%20-%20America%20(Audio).mp3"
+      "https://i.postimg.cc/JhWw33d6/IMG-2912.jpg",
+      "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/Simon%20%26%20Garfunkel%20-%20America%20(Audio).mp3"
     );
   
     const song6 = new Song(
       "Seven Nation Army",
       "The White Stripes",
-      "https://i.imgur.com/sE55RPu.png",
-      "https://file.garden/Z-8vn6l_RynAMnyS/The%20White%20Stripes%20-%20Seven%20Nation%20Army%20(Official%20Music%20Video).mp3"
+      "https://i.postimg.cc/TPX8jjHH/IMG-2913.jpg",
+      "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/The%20White%20Stripes%20-%20Seven%20Nation%20Army%20(Official%20Music%20Video).mp3"
     );
   
     const song7 = new Song(
       "We Shall Overcome",
       "Pete Seeger",
-      "https://i.imgur.com/9KwWVxL.png",
-      "https://file.garden/Z-8vn6l_RynAMnyS/We%20Shall%20Overcome.mp3"
+      "https://i.postimg.cc/q7dfccZF/IMG-2914.jpg",
+      "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/We%20Shall%20Overcome.mp3"
     );
 
     playlist.addSong(song1);
@@ -15155,7 +15146,7 @@ e.VPisCandidate = 0;
   
   const infoContainer = document.createElement("div");
   infoContainer.id = "info-container";
-  infoContainer.style.backgroundImage = "url('https://i.imgur.com/BB1ejv6.png')";
+  infoContainer.style.backgroundImage = "url('https://i.postimg.cc/VshtzPjP/IMG-2992.png')";
   infoContainer.style.backgroundSize = "cover"; // Optional: adjust based on your needs
   infoContainer.style.color = "white"; // Set text color to white
   
@@ -15184,19 +15175,19 @@ e.VPisCandidate = 0;
   
   const prevButton = document.createElement("img");
   prevButton.id = "prevButton";
-  prevButton.src = "https://i.imgur.com/imIqTEA.png";
+  prevButton.src = "https://i.postimg.cc/dQfCJcGH/IMG-2990.png";
   prevButton.alt = "Previous";
   controls.appendChild(prevButton);
   
   const playPauseButton = document.createElement("img");
   playPauseButton.id = "playPauseButton";
-  playPauseButton.src = "https://i.imgur.com/oQbfTxw.png"; // Set the default play image
+  playPauseButton.src = "https://i.postimg.cc/L4WPmFzK/IMG-2993.png"; // Set the default play image
   playPauseButton.alt = "Play/Pause";
   controls.appendChild(playPauseButton);
   
   const nextButton = document.createElement("img");
   nextButton.id = "nextButton";
-  nextButton.src = "https://i.imgur.com/7TtaN04.png";
+  nextButton.src = "https://i.postimg.cc/fWPdMQY6/IMG-2991.png";
   nextButton.alt = "Next";
   controls.appendChild(nextButton);
   
@@ -15206,10 +15197,10 @@ e.VPisCandidate = 0;
     const audio = document.getElementById("audio");
     if (audio.paused) {
       audio.play();
-      playPauseButton.src = "https://i.imgur.com/oQbfTxw.png"; // Set the pause image
+      playPauseButton.src = "https://i.postimg.cc/L4WPmFzK/IMG-2993.png"; // Set the pause image
     } else {
       audio.pause();
-      playPauseButton.src = "https://i.imgur.com/ttdoyfG.png"; // Set the play image
+      playPauseButton.src = "https://i.postimg.cc/BZzFJfxG/IMG-2994.png"; // Set the play image
     }
   });
   
@@ -15247,7 +15238,7 @@ e.VPisCandidate = 0;
     volumeContainer.id = "volume-container";
   
   const volumeLabel = document.createElement("img");
-  volumeLabel.src = "https://i.imgur.com/0BJYsXt.png";
+  volumeLabel.src = "https://i.postimg.cc/wT7d9jmn/IMG-2888.webp";
   volumeLabel.alt = "Volume";
   volumeContainer.appendChild(volumeLabel);
   
@@ -15339,7 +15330,7 @@ e.VPisCandidate = 0;
       display: flex;
       flex-direction: row;
     height:191px;
-      background-Image: url("https://i.imgur.com/Ok791w6.png");
+      background-Image: url("https://i.postimg.cc/bNsjqwtW/IMG-2889.webp");
     }
   
     #display-box {
@@ -15375,10 +15366,50 @@ e.VPisCandidate = 0;
     padding-top:15px;
   
     }
+    /* Modern vertical slider styling */
     .is-vertical #volumeSlider {
-    width: 16px;
-    appearance: slider-vertical;
-  }
+      width: 150px;               /* becomes height when rotated */
+      height: 16px;               /* becomes width */
+      transform: rotate(-90deg);  /* rotate to make it vertical */
+      appearance: none;
+      -webkit-appearance: none;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    /* WebKit browsers (Chrome, Safari, Edge) */
+    .is-vertical #volumeSlider::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 6px;
+      background: #ccc;
+      border-radius: 3px;
+    }
+
+    .is-vertical #volumeSlider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      background: #333;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-top: -5px; /* centers thumb */
+    }
+
+    /* Firefox */
+    .is-vertical #volumeSlider::-moz-range-track {
+      width: 100%;
+      height: 6px;
+      background: #ccc;
+      border-radius: 3px;
+    }
+
+    .is-vertical #volumeSlider::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      background: #333;
+      border-radius: 50%;
+      cursor: pointer;
+    }
   
     #controls {
       display: flex;
@@ -15467,12 +15498,12 @@ function addHeadquarterButton() {
 }
 
 const menuItemsA = [ 
-    { photo: 'https://i.imgur.com/UHdgmxV.png', text: '<b>Joe Biden</b><br><b>Former Vice President</b><br>The ordained frontrunner. Deeply empathetic, but his time has passed. Should be easier to beat than Hillary Clinton.', button: 'Defer', id: 'BIDEN_A'},
-    { photo: 'https://i.imgur.com/K1g90Pd.png', text: '<b>Bernie Sanders</b><br><b>Senator from Vermont</b><br>You’re back after a strong but failed attempt in 2016. Once again, your biggest competition is the party establishment. At least the superdelegates won’t be a problem this time.', button: 'Defer', id: 'SANDERS_A'},
-    { photo: 'https://i.imgur.com/4TqqrPA.png', text: '<b>Elizabeth Warren</b><br><b>Senator from Massachusetts</b><br>A dear friend, and a strong competitor. She’ll eat into your progressive base… unless you can get her to drop out and back you. Attack her too much though, and she might punish you for it.', button: 'Defer', id: 'WARREN_A'},
-    { photo: 'https://i.imgur.com/EY2CSTd.png', text: '<b>Pete Buttigieg</b><br><b>Mayor of South Bend, Indiana</b><br>Young and charismatic. Draws more from Biden’s camp than yours. Would it be possible to give him a helping hand?', button: 'Defer', id: 'BUTTIGIEG_A'},
-    { photo: 'https://i.imgur.com/7AY2JyC.png', text: '<b>Amy Klobuchar</b><br><b>Senator from Minnesota</b><br>You likely would’ve picked her as your running mate if you won the nomination in 2016. If she gains momentum, she’ll weaken Biden and Buttigieg, possibly Warren. Good.', button: 'Defer', id: 'KLOBUCHAR_A'},
-    { photo: 'https://i.imgur.com/HTDaLih.png', text: '<b>All the Rest</b><br><b>Various Positions</b><br>Unfortunately for them, everyone else is drawing dead. Some are interesting like Yang. Others are carbon copies of one another.', button: 'Defer', id: 'OTHERS_A'},
+    { photo: 'https://i.postimg.cc/T1HMnZZ1/IMG-2783.jpg', text: '<b>Joe Biden</b><br><b>Former Vice President</b><br>The ordained frontrunner. Deeply empathetic, but his time has passed. Should be easier to beat than Hillary Clinton.', button: 'Defer', id: 'BIDEN_A'},
+    { photo: 'https://i.postimg.cc/6q1JCDDc/IMG-2786.jpg', text: '<b>Bernie Sanders</b><br><b>Senator from Vermont</b><br>You’re back after a strong but failed attempt in 2016. Once again, your biggest competition is the party establishment. At least the superdelegates won’t be a problem this time.', button: 'Defer', id: 'SANDERS_A'},
+    { photo: 'https://i.postimg.cc/pr1bKggk/IMG-2788.jpg', text: '<b>Elizabeth Warren</b><br><b>Senator from Massachusetts</b><br>A dear friend, and a strong competitor. She’ll eat into your progressive base… unless you can get her to drop out and back you. Attack her too much though, and she might punish you for it.', button: 'Defer', id: 'WARREN_A'},
+    { photo: 'https://i.postimg.cc/T1HMnZZN/IMG-2789.jpg', text: '<b>Pete Buttigieg</b><br><b>Mayor of South Bend, Indiana</b><br>Young and charismatic. Draws more from Biden’s camp than yours. Would it be possible to give him a helping hand?', button: 'Defer', id: 'BUTTIGIEG_A'},
+    { photo: 'https://i.postimg.cc/J7TLwkGm/IMG-2868.webp', text: '<b>Amy Klobuchar</b><br><b>Senator from Minnesota</b><br>You likely would’ve picked her as your running mate if you won the nomination in 2016. If she gains momentum, she’ll weaken Biden and Buttigieg, possibly Warren. Good.', button: 'Defer', id: 'KLOBUCHAR_A'},
+    { photo: 'https://i.postimg.cc/SQZh0MJS/IMG-2869.webp', text: '<b>All the Rest</b><br><b>Various Positions</b><br>Unfortunately for them, everyone else is drawing dead. Some are interesting like Yang. Others are carbon copies of one another.', button: 'Defer', id: 'OTHERS_A'},
 ]
 
 function openHeadquarter() {      
@@ -15491,7 +15522,7 @@ function openHeadquarter() {
         popOutMenu.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
         popOutMenu.style.border = '1px solid #ccc';
         popOutMenu.style.zIndex = '1000';
-        popOutMenu.style.backgroundImage = 'url("https://i.imgur.com/eS7tZRW.png")';
+        popOutMenu.style.backgroundImage = 'url("https://i.postimg.cc/dtpc3cRK/IMG-2890.webp")';
         popOutMenu.style.backgroundSize = 'cover';
         popOutMenu.style.backgroundPosition = 'bottom';
         popOutMenu.style.alignItems = 'center';     
@@ -15547,22 +15578,22 @@ function openHeadquarter() {
             const menuItem = document.createElement('div');
 
             if(item.id == "BIDEN_A"){
-                menuItem.style.background = 'linear-gradient(rgba(35, 139, 36, 0.9), rgba(35, 139, 36, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
+                menuItem.style.background = 'linear-gradient(rgba(35, 139, 36, 0.9), rgba(35, 139, 36, 0.5)), url("https://i.postimg.cc/Fs7QhHS4/IMG-2891.webp")';
             }
             if(item.id == "SANDERS_A"){
-                menuItem.style.background = 'linear-gradient(rgba(35, 139, 36, 0.9), rgba(35, 139, 36, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
+                menuItem.style.background = 'linear-gradient(rgba(35, 139, 36, 0.9), rgba(35, 139, 36, 0.5)), url("https://i.postimg.cc/Fs7QhHS4/IMG-2891.webp")';
             }
             if(item.id == "WARREN_A"){
-                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
+                menuItem.style.background = 'linear-gradient(rgba(35, 139, 36, 0.9), rgba(35, 139, 36, 0.5)), url("https://i.postimg.cc/Fs7QhHS4/IMG-2891.webp")';
             }
             if(item.id == "BUTTIGIEG_A"){
-                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
+                menuItem.style.background = 'linear-gradient(rgba(35, 139, 36, 0.9), rgba(35, 139, 36, 0.5)), url("https://i.postimg.cc/Fs7QhHS4/IMG-2891.webp")';
             }
             if(item.id == "KLOBUCHAR_A"){
-                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
+                menuItem.style.background = 'linear-gradient(rgba(35, 139, 36, 0.9), rgba(35, 139, 36, 0.5)), url("https://i.postimg.cc/Fs7QhHS4/IMG-2891.webp")';
             }
             if(item.id == "OTHERS_A"){
-                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/liA0kKm.png")';
+                menuItem.style.background = 'linear-gradient(rgba(35, 139, 36, 0.9), rgba(35, 139, 36, 0.5)), url("https://i.postimg.cc/Fs7QhHS4/IMG-2891.webp")';
             }
             
             menuItem.style.display = 'flex';
