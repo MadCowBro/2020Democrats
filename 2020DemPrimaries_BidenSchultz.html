@@ -14868,7 +14868,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 300,
-            "state_multiplier": -0.07
+            "state_multiplier": -0.035
         }
     },
     {
@@ -15044,7 +15044,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 300,
-            "state_multiplier": -0.1
+            "state_multiplier": -0.05
         }
     },
     {
@@ -17220,7 +17220,7 @@ function BernieFadeshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(753);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(754);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.8;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.85;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(755);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.7;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(756);
@@ -19415,20 +19415,20 @@ cyoAdventure = function(a) {
         let PeteNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===304).percent;
         let KlobucharNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===310).percent;
         if (BidenNH < 5.00) {
-            applyDrift(300, -0.3)
-            applyDrift(300, -0.3, 208)
+            applyDrift(300, -0.15)
+            applyDrift(300, -0.15, 208)
             applyDrift(300, -0.02, 220)
         } else if (BidenNH >= 5.00 && BidenNH < 10.00) {
-            applyDrift(300, -0.2)
-            applyDrift(300, -0.2, 208)
-            applyDrift(300, -0.01, 220)
-        } else if (BidenNH >= 10.00 && BidenNH < 15.00) {
             applyDrift(300, -0.1)
             applyDrift(300, -0.1, 208)
-            applyDrift(300, 0.01, 220)
-        } else if (BidenNH >= 15.00 && BidenNH < 20.00) {
+            applyDrift(300, -0.01, 220)
+        } else if (BidenNH >= 10.00 && BidenNH < 15.00) {
             applyDrift(300, -0.05)
             applyDrift(300, -0.05, 208)
+            applyDrift(300, 0.01, 220)
+        } else if (BidenNH >= 15.00 && BidenNH < 20.00) {
+            applyDrift(300, -0.025)
+            applyDrift(300, -0.025, 208)
             applyDrift(300, 0.02, 220)
         } else if (BidenNH >= 20.00) {
             applyDrift(300, 0.05)
