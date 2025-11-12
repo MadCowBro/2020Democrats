@@ -19888,8 +19888,8 @@ cyoAdventure = function(a) {
 
 	if (e.noCounter == 24) {
         menuItemsA.splice(5, 1, GabbardObject);
-        removeCandidate(304, { mode: 'toCandidate', target: 300, touch: 'both' });
-        removeCandidate(310, { mode: 'toCandidate', target: 300, touch: 'both' });
+        removeCandidate(304, { mode: 'toCandidate', target: 300, touch: 'final' });
+        removeCandidate(310, { mode: 'toCandidate', target: 300, touch: 'final' });
         refreshHeadquarter();
         let BidenSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===300).percent;
 		let BernieSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===301).percent;
