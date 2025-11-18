@@ -20009,8 +20009,6 @@ cyoAdventure = function(a) {
         campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.last_name = "Gabbard"
         campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.color_hex = '#FD6AB4';
         menuItemsA.splice(5, 1, GabbardObject);
-        removeCandidate(304, { mode: 'toCandidate', target: 300, touch: 'final' });
-        removeCandidate(310, { mode: 'toCandidate', target: 300, touch: 'final' });
         refreshHeadquarter();
         let BidenSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===300).percent;
 		let BernieSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===301).percent;
@@ -20033,6 +20031,11 @@ cyoAdventure = function(a) {
 		}
 	}
 
+	if (e.noCounter == 25) {
+		applyDrift (304, -1)
+		applyDrift (310, -1)
+	}
+	
 	if (ans == 250102) {
         campaignTrail_temp.running_mate_json = JSON.parse(`[{
         "model": "campaign_trail.running_mate",
