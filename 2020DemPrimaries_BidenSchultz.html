@@ -345,12 +345,39 @@ campaignTrail_temp.questions_json = [
             "likelihood": 1
         }
     },
-    {
+    {//For answer swapper function
+        "model": "campaign_trail.question",
+        "pk": 999999,
+        "fields": {
+            "priority": 2,
+            "description": "Dummy Q",
+            "likelihood": 1
+        }
+    },
+    {//Alternate Question 9 (Biden fucks up debate)
         "model": "campaign_trail.question",
         "pk": 90100,
         "fields": {
             "priority": 2,
             "description": "Following the incident at the debate, polling has shown you steadily dropping among key demographics, most notably the African-American community. If they keep leaving, your campaign is as good as dead. How do you plan to staunch the bleeding here?",
+            "likelihood": 1
+        }
+    },
+    {//Alternate Question 17 (Klobuchar ahead of Pete)
+        "model": "campaign_trail.question",
+        "pk": 170100,
+        "fields": {
+            "priority": 3,
+            "description": "It’s starting to feel like the pundits will hype up anyone but you. Amy Klobuchar is the latest media darling, as her polling has put her among the top contenders in early primary contests. In order to regain the narrative, you need to do something about this, Joe.",
+            "likelihood": 1
+        }
+    },
+    {//Alternate Question 17 (Pete struggling)
+        "model": "campaign_trail.question",
+        "pk": 170200,
+        "fields": {
+            "priority": 3,
+            "description": "After a brief moment of hype, Pete Buttigieg has fallen in the polls, with the young Indiana mayor now looking like he won’t even reach viability in Iowa. One gentle push can be all it takes to clear another moderate from the field.",
             "likelihood": 1
         }
     },
@@ -881,6 +908,14 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
+        "pk": 170005,
+        "fields": {
+            "question": 999999,
+            "description": "He’s a good man, I don’t want to do anything untoward to hurt him. Amy Klobuchar on the other hand, she’s not looking too good. If we can get her out of the race, we’ll outflank Pete."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
         "pk": 180001,
         "fields": {
             "question": 180000,
@@ -1169,6 +1204,78 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
+        "pk": 170101,
+        "fields": {
+            "question": 170100,
+            "description": "She’s a smart woman, she can see that staying in the race will only hurt our side of the party. Get a meeting set up with her. We can offer her a spot in the Cabinet. Maybe even VP, who knows?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170102,
+        "fields": {
+            "question": 170100,
+            "description": "Her experience is commendable. That being said, we need the best possible candidate to go against Donald Trump. You can’t look at this field and tell me I’m not the best."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170103,
+        "fields": {
+            "question": 170100,
+            "description": "It’s simple; she’s doing well in Iowa and New Hampshire, then we go campaign over there. We take care of business on our end, and her path is gone."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170104,
+        "fields": {
+            "question": 170100,
+            "description": "She was the one who threw a stapler at someone, right? We already have a president with bad temperament, we don’t need another."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170201,
+        "fields": {
+            "question": 170200,
+            "description": "He seems like a bright kid, but he doesn’t have the experience to lead the country right now. Get a meeting set up with him. We can offer him a spot in the Cabinet or something."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170202,
+        "fields": {
+            "question": 170200,
+            "description": "He’s a good man, I don’t want to do anything untoward to hurt him. If he is on his way out, I wish him the best in future endeavors."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170203,
+        "fields": {
+            "question": 170200,
+            "description": "A gentle push? No, I want a strong push in Iowa and New Hampshire. Nothing against the guy, but we need to get ahead of Sanders and Warren."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170204,
+        "fields": {
+            "question": 170200,
+            "description": "Tie him to McKinsey. If what I’m hearing is right, it can be the final nail in his coffin."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170205,
+        "fields": {
+            "question": 999999,
+            "description": "He’s a good man, I don’t want to do anything untoward to hurt him. Amy Klobuchar on the other hand, she’s not looking too good either. If we can get her out of the race, it’ll put pressure on Pete to do the same."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
         "pk": 250101,
         "fields": {
             "question": 250100,
@@ -1190,7 +1297,7 @@ campaignTrail_temp.answers_json = [
             "question": 260100,
             "description": "May the best candidate win."
         }
-    },
+    }
 ]
 
 campaignTrail_temp.states_json = [
@@ -10653,7 +10760,7 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 170009,
+        "pk": 170011,
         "fields": {
             "answer": 170001,
             "candidate": 300,
@@ -10663,7 +10770,7 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 170010,
+        "pk": 170012,
         "fields": {
             "answer": 170001,
             "candidate": 300,
@@ -10673,7 +10780,7 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 170011,
+        "pk": 170013,
         "fields": {
             "answer": 170002,
             "candidate": 300,
@@ -10683,7 +10790,7 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 170012,
+        "pk": 170014,
         "fields": {
             "answer": 170002,
             "candidate": 300,
@@ -10693,29 +10800,9 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 170013,
-        "fields": {
-            "answer": 170003,
-            "candidate": 300,
-            "affected_candidate": 300,
-            "global_multiplier": 0.00625
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 170014,
-        "fields": {
-            "answer": 170003,
-            "candidate": 300,
-            "affected_candidate": 304,
-            "global_multiplier": 0.00625
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 170015,
         "fields": {
-            "answer": 170004,
+            "answer": 170003,
             "candidate": 300,
             "affected_candidate": 300,
             "global_multiplier": 0.00625
@@ -10725,10 +10812,50 @@ campaignTrail_temp.answer_score_global_json = [
         "model": "campaign_trail.answer_score_global",
         "pk": 170016,
         "fields": {
+            "answer": 170003,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "global_multiplier": 0.00625
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170017,
+        "fields": {
+            "answer": 170004,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.00625
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170018,
+        "fields": {
             "answer": 170004,
             "candidate": 300,
             "affected_candidate": 304,
             "global_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170019,
+        "fields": {
+            "answer": 170005,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "global_multiplier": 0.0125
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170020,
+        "fields": {
+            "answer": 170005,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "global_multiplier": -0.02
         }
     },
     {
@@ -11609,6 +11736,187 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 300,
             "affected_candidate": 303,
             "global_multiplier": -0.16
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170109,
+        "fields": {
+            "answer": 170101,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170110,
+        "fields": {
+            "answer": 170101,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "global_multiplier": 0.0225
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170111,
+        "fields": {
+            "answer": 170102,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170112,
+        "fields": {
+            "answer": 170102,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "global_multiplier": 0.0125
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170115,
+        "fields": {
+            "answer": 170103,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.00625
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170116,
+        "fields": {
+            "answer": 170103,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "global_multiplier": 0.00625
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170117,
+        "fields": {
+            "answer": 170104,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.00625
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170118,
+        "fields": {
+            "answer": 170104,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "global_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170211,
+        "fields": {
+            "answer": 170201,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170212,
+        "fields": {
+            "answer": 170201,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "global_multiplier": -0.0225
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170213,
+        "fields": {
+            "answer": 170202,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170214,
+        "fields": {
+            "answer": 170202,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "global_multiplier": -0.006
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170215,
+        "fields": {
+            "answer": 170203,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.00625
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170216,
+        "fields": {
+            "answer": 170203,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "global_multiplier": -0.006
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170217,
+        "fields": {
+            "answer": 170204,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.00625
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170218,
+        "fields": {
+            "answer": 170204,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "global_multiplier": -0.0125
+        }
+    },
+
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170219,
+        "fields": {
+            "answer": 170205,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 170220,
+        "fields": {
+            "answer": 170205,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "global_multiplier": -0.03
         }
     }
 ]
@@ -12786,7 +13094,7 @@ campaignTrail_temp.answer_score_issue_json = [
     },
     {
         "model": "campaign_trail.answer_score_issue",
-        "pk": 170017,
+        "pk": 170021,
         "fields": {
             "answer": 170002,
             "issue": 29,
@@ -13291,6 +13599,16 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 250004,
             "issue": 29,
             "issue_score": 0,
+            "issue_importance": 5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 170119,
+        "fields": {
+            "answer": 170102,
+            "issue": 29,
+            "issue_score": -0.1,
             "issue_importance": 5
         }
     }
@@ -14620,7 +14938,7 @@ campaignTrail_temp.answer_score_state_json = [
     },
     {
         "model": "campaign_trail.answer_score_state",
-        "pk": 170018,
+        "pk": 170022,
         "fields": {
             "answer": 170003,
             "state": 195,
@@ -14631,7 +14949,7 @@ campaignTrail_temp.answer_score_state_json = [
     },
     {
         "model": "campaign_trail.answer_score_state",
-        "pk": 170019,
+        "pk": 170023,
         "fields": {
             "answer": 170003,
             "state": 209,
@@ -15827,6 +16145,50 @@ campaignTrail_temp.answer_score_state_json = [
             "affected_candidate": 300,
             "state_multiplier": 0.0075
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 170118,
+        "fields": {
+            "answer": 170103,
+            "state": 195,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.0125
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 170119,
+        "fields": {
+            "answer": 170103,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.0125
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 170222,
+        "fields": {
+            "answer": 170203,
+            "state": 195,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.0125
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 170223,
+        "fields": {
+            "answer": 170203,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.0125
+        }
     }
 ]
 
@@ -16364,7 +16726,7 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 170005,
+        "pk": 170006,
         "fields": {
             "answer": 170001,
             "candidate": 300,
@@ -16373,7 +16735,7 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 170006,
+        "pk": 170007,
         "fields": {
             "answer": 170002,
             "candidate": 300,
@@ -16382,7 +16744,7 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 170007,
+        "pk": 170008,
         "fields": {
             "answer": 170003,
             "candidate": 300,
@@ -16391,11 +16753,20 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 170008,
+        "pk": 170009,
         "fields": {
             "answer": 170004,
             "candidate": 300,
             "answer_feedback": "Super PACs supporting you push out ads digging into his time at McKinsey, questioning who his clients and if his campaign has been compromised by them. To his credit, he releases a client list shortly afterwards."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 170010,
+        "fields": {
+            "answer": 170005,
+            "candidate": 300,
+            "answer_feedback": "It’s worth a shot. If she does drop out, especially before Iowa, you’ll just need to make sure her voters don’t flock to Buttigieg."
         }
     },
     {
@@ -16711,6 +17082,87 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 260004,
             "candidate": 300,
             "answer_feedback": "Klobuchar’s exit certainly helps in Minnesota, but it would take an incredible performance to win Colorado and Utah. It will eat into Bernie’s numbers though."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 170105,
+        "fields": {
+            "answer": 170101,
+            "candidate": 300,
+            "answer_feedback": "Klobuchar appreciates your “generous offer”, but turns it down. She’s betting on her surge continuing."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 170106,
+        "fields": {
+            "answer": 170102,
+            "candidate": 300,
+            "answer_feedback": "The fact of the matter is many voters are looking for a new generation of leaders. Fair or not, they feel the Democratic leadership you represent led to Trump in the first place."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 170107,
+        "fields": {
+            "answer": 170103,
+            "candidate": 300,
+            "answer_feedback": "Smart. It remains to be seen whether that’s enough, but it’s certainly better than nothing."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 170108,
+        "fields": {
+            "answer": 170104,
+            "candidate": 300,
+            "answer_feedback": "Critics accuse you of sexism for leaning into the “angry woman” characterization of Klobuchar, but her polling takes a hit as comparisons are made to Trump."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 170206,
+        "fields": {
+            "answer": 170201,
+            "candidate": 300,
+            "answer_feedback": "His campaign rejects the request to sit down with him, but that doesn’t stop the media from reporting that Pete is “weighing his options”."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 170207,
+        "fields": {
+            "answer": 170202,
+            "candidate": 300,
+            "answer_feedback": "Buttigieg will likely try to hang on through Iowa, hoping he can outdo his polling there. His odds of surviving beyond that though are looking increasingly dim."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 170208,
+        "fields": {
+            "answer": 170203,
+            "candidate": 300,
+            "answer_feedback": "Smart. It remains to be seen whether that’s enough, but it’s certainly better than nothing."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 170209,
+        "fields": {
+            "answer": 170204,
+            "candidate": 300,
+            "answer_feedback": "Super PACs supporting you push out ads digging into his time at McKinsey, questioning who his clients and if his campaign has been compromised by them. He does release a client list shortly afterwards, but it may be too little, too late."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 170210,
+        "fields": {
+            "answer": 170205,
+            "candidate": 300,
+            "answer_feedback": "It’s worth a shot. If she does drop out, especially before Iowa, you’ll just need to make sure her voters don’t flock to Buttigieg and give him newfound momentum."
         }
     },
     {
