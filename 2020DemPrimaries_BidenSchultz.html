@@ -381,7 +381,16 @@ campaignTrail_temp.questions_json = [
             "likelihood": 1
         }
     },
-    {
+    {//Alternate Question 22 (Biden skips NH)
+        "model": "campaign_trail.question",
+        "pk": 220100,
+        "fields": {
+            "priority": 3,
+            "description": "You’re receiving a ton of flak from the media for essentially bypassing the New Hampshire primary. Do you care to silence the critics or have you fully moved on?",
+            "likelihood": 1
+        }
+    },
+    {//Alternate Question 25 (Biden bombs SC)
         "model": "campaign_trail.question",
         "pk": 250100,
         "fields": {
@@ -390,7 +399,7 @@ campaignTrail_temp.questions_json = [
             "likelihood": 1
         }
     },
-    {
+    {//Alternate Question 26 (Biden ends campaign pre-ST)
         "model": "campaign_trail.question",
         "pk": 260100,
         "fields": {
@@ -1272,6 +1281,30 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 999999,
             "description": "He’s a good man, I don’t want to do anything untoward to hurt him. Amy Klobuchar on the other hand, she’s not looking too good either. If we can get her out of the race, it’ll put pressure on Pete to do the same."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 220101,
+        "fields": {
+            "question": 220100,
+            "description": "I don’t care. We’re going to South Carolina for our launch party where we’ll tell our supporters there we’re not going down without a fight."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 220102,
+        "fields": {
+            "question": 220100,
+            "description": "Listen, we’ve got a lot of folks there ready to campaign for us, like John Kerry and Jeanne Shaheen. Get them doing rallies and such in the big cities: Concord, Manchester and Nashua."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 220103,
+        "fields": {
+            "question": 220100,
+            "description": "Goddamnit, I’m not “bypassing” anything. Get me up close and personal with the voters there. Schedule as many town halls and other events as possible; we got some ground to make up."
         }
     },
     {
@@ -13611,6 +13644,56 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue_score": -0.1,
             "issue_importance": 5
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 220107,
+        "fields": {
+            "answer": 220101,
+            "issue": 27,
+            "issue_score": 0.4,
+            "issue_importance": 6
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 220108,
+        "fields": {
+            "answer": 220101,
+            "issue": 28,
+            "issue_score": 0.4,
+            "issue_importance": 6
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 220109,
+        "fields": {
+            "answer": 220102,
+            "issue": 29,
+            "issue_score": -0.45,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 220110,
+        "fields": {
+            "answer": 220103,
+            "issue": 27,
+            "issue_score": -0.2,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 220111,
+        "fields": {
+            "answer": 220103,
+            "issue": 28,
+            "issue_score": -0.4,
+            "issue_importance": 3
+        }
     }
 ]
 
@@ -16189,6 +16272,182 @@ campaignTrail_temp.answer_score_state_json = [
             "affected_candidate": 300,
             "state_multiplier": 0.0125
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220112,
+        "fields": {
+            "answer": 220101,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": -0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220113,
+        "fields": {
+            "answer": 220101,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.045
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220114,
+        "fields": {
+            "answer": 220101,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "state_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220115,
+        "fields": {
+            "answer": 220101,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 302,
+            "state_multiplier": -0.08
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220116,
+        "fields": {
+            "answer": 220101,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "state_multiplier": 0.16
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220117,
+        "fields": {
+            "answer": 220101,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "state_multiplier": 0.45
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220118,
+        "fields": {
+            "answer": 220102,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220119,
+        "fields": {
+            "answer": 220102,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "state_multiplier": -0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220120,
+        "fields": {
+            "answer": 220102,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 302,
+            "state_multiplier": -0.125
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220121,
+        "fields": {
+            "answer": 220102,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "state_multiplier": 0.14
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220122,
+        "fields": {
+            "answer": 220102,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "state_multiplier": 0.4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220123,
+        "fields": {
+            "answer": 220103,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": -0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220124,
+        "fields": {
+            "answer": 220103,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "state_multiplier": -0.07
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220125,
+        "fields": {
+            "answer": 220103,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 302,
+            "state_multiplier": -0.15
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220126,
+        "fields": {
+            "answer": 220103,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "state_multiplier": 0.125
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 220127,
+        "fields": {
+            "answer": 220103,
+            "state": 209,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "state_multiplier": 0.35
+        }
     }
 ]
 
@@ -17163,6 +17422,33 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 170205,
             "candidate": 300,
             "answer_feedback": "It’s worth a shot. If she does drop out, especially before Iowa, you’ll just need to make sure her voters don’t flock to Buttigieg and give him newfound momentum."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 220104,
+        "fields": {
+            "answer": 220101,
+            "candidate": 300,
+            "answer_feedback": "The media continues to mock your decision, airing comments from New Hampshire voters who are offended at your non-appearance in the state. Everyone’s ready to say farewell to your campaign when you’re just getting started."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 220105,
+        "fields": {
+            "answer": 220102,
+            "candidate": 300,
+            "answer_feedback": "The surrogate-led events fall flat, with Kerry drawing two dozen attendees in Manchester. Be prepared for a poor performance."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 220106,
+        "fields": {
+            "answer": 220103,
+            "candidate": 300,
+            "answer_feedback": "You arrive just in time to make a mad dash across the state, hoping to weaken Sanders, Warren, Buttigieg, even Klobuchar. Good luck, Joe."
         }
     },
     {
@@ -20173,6 +20459,12 @@ cyoAdventure = function(a) {
 		if ((BernieIA) && (margin <= 1.5)) {
 			BernieIADelegates -= 2;
 			PeteIADelegates += 2;
+		}
+	}
+
+	if (e.noCounter == 21) {
+		if (ans == 210003) {
+			campaignTrail_temp.questions_json[21] = tunnel(220100);
 		}
 	}
 
