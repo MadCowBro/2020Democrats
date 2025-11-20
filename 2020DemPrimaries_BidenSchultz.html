@@ -20177,6 +20177,10 @@ cyoAdventure = function(a) {
 	}
 
 	if (e.noCounter == 22) {
+		yang_active -= 1;
+		if (yang_active == 0 && buttigieg_active == 0) {
+			menuItemsA.splice(3, 1);
+		}
         let BidenNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===300).percent;
         let BernieNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===301).percent;
         let WarrenNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===302).percent;
@@ -20252,6 +20256,10 @@ cyoAdventure = function(a) {
         campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.last_name = "Gabbard"
         campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.color_hex = '#FD6AB4';
         menuItemsA.splice(5, 1, GabbardObject);
+		steyer_active -= 1;
+		if (steyer_active == 0 && klobuchar_active == 0) {
+			menuItemsA.splice(4, 1);
+		}
         refreshHeadquarter();
         let BidenSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===300).percent;
 		let BernieSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===301).percent;
