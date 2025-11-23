@@ -11951,6 +11951,26 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 310,
             "global_multiplier": -0.03
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 250105,
+        "fields": {
+            "answer": 250101,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": -0.08
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 250106,
+        "fields": {
+            "answer": 250102,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": -1
+        }
     }
 ]
 
@@ -20302,15 +20322,15 @@ cyoAdventure = function(a) {
 		}
 	}
 	
-    if (ans == 30001 || ans == 30002 || ans == 30003 || ans == 30004) {
+    if (e.noCounter == 3) {
         BernieFadeshift();
     }
 
-    if (ans == 50001 || ans == 50002 || ans == 50003) {
+    if (e.noCounter == 5) {
         BernieFadeshift();
     }
 
-    if (ans == 60001 || ans == 60002 || ans == 60003 || ans == 60004) {
+    if (e.noCounter == 6) {
         PeteFadeshift();
     }
 
@@ -20328,7 +20348,7 @@ cyoAdventure = function(a) {
 	    refreshHeadquarter();
 	}
 
-	if (ans == 90001 || ans == 90002 || ans == 90003 || ans == 90004) {
+	if (e.noCounter == 9) {
         trump_popup += 1;
 	    if (trump_popup == 1) {
             menuItemsA.push(TrumpObject);
@@ -20336,27 +20356,25 @@ cyoAdventure = function(a) {
 	    refreshHeadquarter();
 	}
 
-    if (ans == 120001 || ans == 120002 || ans == 120003 || ans == 120004) {
+    if (e.noCounter == 12) {
         PeteFadeshift();
     }
 	
-    if (ans == 150001 || ans == 150002 || ans == 150003) {
+    if (e.noCounter == 15) {
         bloomberg_active += 1;
         WarrenFadeshift();
         if (bloomberg_active == 1) {
             BloombergInshift();
             menuItemsA.push(BloombergObject);
         }
+		if (ans == 150002) {
+	        obama_popup += 1;
+	        if (obama_popup == 1) {
+                menuItemsA.push(ObamaObject);
+		    }
+	    }
         refreshHeadquarter();
     }
-
-	if (ans == 150002) {
-	    obama_popup += 1;
-	    if (obama_popup == 1) {
-            menuItemsA.push(ObamaObject);
-	    }
-    refreshHeadquarter();
-	}
 
 	if (e.noCounter == 16) {
 		if (PetePolling < 0.04 && KlobucharPolling < 0.03) {
@@ -20577,46 +20595,6 @@ cyoAdventure = function(a) {
 	if (e.noCounter == 25) {
 		applyDrift (304, -1)
 		applyDrift (310, -1)
-	}
-	
-	if (ans == 250102) {
-        campaignTrail_temp.running_mate_json = JSON.parse(`[{
-        "model": "campaign_trail.running_mate",
-        "pk": 1,
-        "fields": {
-            "candidate": 300,
-            "running_mate": 3003
-            }
-      }, {
-      "model": "campaign_trail.running_mate",
-      "pk": 2,
-      "fields": {
-          "candidate": 300,
-          "running_mate": 3004
-          }
-      }, {
-      "model": "campaign_trail.running_mate",
-      "pk": 3,
-      "fields": {
-          "candidate": 300,
-          "running_mate": 3002
-          }
-      }, {
-      "model": "campaign_trail.running_mate",
-      "pk": 4,
-      "fields": {
-          "candidate": 300,
-          "running_mate": 3001
-          }
-      }, {
-      "model": "campaign_trail.running_mate",
-      "pk": 5,
-      "fields": {
-          "candidate": 300,
-          "running_mate": 3005
-          }
-    }]`);  
-        window.setTimeout(e.vpSwitcher, 20)
 	}
 }
 
