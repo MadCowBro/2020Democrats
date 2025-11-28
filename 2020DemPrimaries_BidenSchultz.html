@@ -1259,7 +1259,31 @@ campaignTrail_temp.answers_json = [
         "pk": 90101,
         "fields": {
             "question": 90100,
-            "description": "I apologize."
+            "description": "I don’t want to discuss the politics of 50 years ago, I wanna discuss the politics of now. We need to talk about how we plan to improve the lives of African Americans now, and that starts with beating the racist in the Oval Office."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90102,
+        "fields": {
+            "question": 90100,
+            "description": "I apologize for my comments. They were incredibly insensitive. I am committed to learning from my mistakes so I can be a better leader for all Americans."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90103,
+        "fields": {
+            "question": 90100,
+            "description": "Look, it was a different time. I didn’t get to pick and choose my Senate colleagues, but I did choose to work with them for the sake of the American people. That’s what politics is about: putting aside your differences to get things done."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90104,
+        "fields": {
+            "question": 90100,
+            "description": "What the hell is her position on busing anyway? We spent so much time litigating my stance, what’s hers? I wanna know."
         }
     },
     {
@@ -11924,6 +11948,86 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 90109,
+        "fields": {
+            "answer": 90101,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 90110,
+        "fields": {
+            "answer": 90101,
+            "candidate": 300,
+            "affected_candidate": 311,
+            "global_multiplier": -0.0625
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 90111,
+        "fields": {
+            "answer": 90102,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": -0.035
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 90112,
+        "fields": {
+            "answer": 90102,
+            "candidate": 300,
+            "affected_candidate": 311,
+            "global_multiplier": -0.0625
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 90113,
+        "fields": {
+            "answer": 90103,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": -0.045
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 90114,
+        "fields": {
+            "answer": 90103,
+            "candidate": 300,
+            "affected_candidate": 311,
+            "global_multiplier": -0.0625
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 90115,
+        "fields": {
+            "answer": 90104,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 90116,
+        "fields": {
+            "answer": 90104,
+            "candidate": 300,
+            "affected_candidate": 311,
+            "global_multiplier": -0.0625
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 170109,
         "fields": {
             "answer": 170101,
@@ -13824,6 +13928,66 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 29,
             "issue_score": 0,
             "issue_importance": 5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 90117,
+        "fields": {
+            "answer": 90101,
+            "issue": 28,
+            "issue_score": 0.5,
+            "issue_importance": 4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 90118,
+        "fields": {
+            "answer": 90101,
+            "issue": 30,
+            "issue_score": 0.5,
+            "issue_importance": 4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 90119,
+        "fields": {
+            "answer": 90102,
+            "issue": 29,
+            "issue_score": 0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 90120,
+        "fields": {
+            "answer": 90102,
+            "issue": 30,
+            "issue_score": 0.2,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 90121,
+        "fields": {
+            "answer": 90103,
+            "issue": 28,
+            "issue_score": -0.6,
+            "issue_importance": 8
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 90122,
+        "fields": {
+            "answer": 90103,
+            "issue": 29,
+            "issue_score": -0.5,
+            "issue_importance": 10
         }
     },
     {
@@ -17724,6 +17888,42 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 260004,
             "candidate": 300,
             "answer_feedback": "Klobuchar’s exit certainly helps in Minnesota, but it would take an incredible performance to win Colorado and Utah. It will eat into Bernie’s numbers though."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 90105,
+        "fields": {
+            "answer": 90101,
+            "candidate": 300,
+            "answer_feedback": "Kamala Harris rides on the high of the debate for a little while, but your pivot helps you save some face. When her polling starts to drop—the warning signs are already there, be ready to take back the momentum."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 90106,
+        "fields": {
+            "answer": 90102,
+            "candidate": 300,
+            "answer_feedback": "Behind the consultant-polished statement, you fume at Harris for humiliating you in front of millions of viewers. Thankfully, rumors start to emerge of her staffers fighting with each other, leaving the Harris campaign adrift."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 90107,
+        "fields": {
+            "answer": 90103,
+            "candidate": 300,
+            "answer_feedback": "Why? Just why? Is it really so hard for you to distance yourself from the likes of James Eastland and Strom Thurmond?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 90108,
+        "fields": {
+            "answer": 90104,
+            "candidate": 300,
+            "answer_feedback": "At first, Harris says she only supported federally mandated busing when local governments opposed, which is your position. Then less than 24 hours later, she says she doesn’t agree with your position. She’s not cut out to take on Trump."
         }
     },
     {
