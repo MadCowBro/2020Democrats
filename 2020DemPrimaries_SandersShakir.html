@@ -15366,49 +15366,11 @@ document.head.appendChild(customStyling);
     padding-top:15px;
   
     }
-    /* Modern vertical slider styling */
+
     .is-vertical #volumeSlider {
-      width: 100px;               /* becomes height when rotated */
       height: 16px;               /* becomes width */
       transform: rotate(-90deg);  /* rotate to make it vertical */
       appearance: none;
-      -webkit-appearance: none;
-      background: transparent;
-      cursor: pointer;
-    }
-
-    /* WebKit browsers (Chrome, Safari, Edge) */
-    .is-vertical #volumeSlider::-webkit-slider-runnable-track {
-      width: 100%;
-      height: 6px;
-      background: #ccc;
-      border-radius: 3px;
-    }
-
-    .is-vertical #volumeSlider::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 16px;
-      height: 16px;
-      background: #333;
-      border-radius: 50%;
-      cursor: pointer;
-      margin-top: -5px; /* centers thumb */
-    }
-
-    /* Firefox */
-    .is-vertical #volumeSlider::-moz-range-track {
-      width: 100%;
-      height: 6px;
-      background: #ccc;
-      border-radius: 3px;
-    }
-
-    .is-vertical #volumeSlider::-moz-range-thumb {
-      width: 16px;
-      height: 16px;
-      background: #333;
-      border-radius: 50%;
-      cursor: pointer;
     }
   
     #controls {
