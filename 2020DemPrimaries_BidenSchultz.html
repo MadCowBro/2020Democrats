@@ -21313,7 +21313,7 @@ cyoAdventure = function(a) {
         WarrenFadeshift();
         if (bloomberg_active == 1) {
             BloombergInshift();
-            menuItemsA.push(BloombergObject);
+            menuItemsA.splice(5, 1, BloombergObject);
         }
 		if (ans == 150002) {
 	        obama_popup += 1;
@@ -21360,11 +21360,8 @@ cyoAdventure = function(a) {
 		}
 	}
 
-    if (e.noCounter == 19) {
-		menuItemsA.splice(5, 1);
-	}
-			
-	if (e.noCounter == 20) {
+	// Have to stop using e.noCounter here because I’m pretty sure the primaries mess with it
+	if (ans == 200001 || ans == 200002 || ans == 200003 || ans == 200004) {
 		if (KlobucharPolling > 0.03 && klobuchar_boost == 0) {
 		    Klobmentumshift();
 		    klobuchar_boost += 1;
@@ -21435,13 +21432,11 @@ cyoAdventure = function(a) {
 		}
 	}
 
-	if (e.noCounter == 21) {
-		if (ans == 210003) {
+	if (ans == 210003) {
 			campaignTrail_temp.questions_json[21] = tunnel(220100);
-		}
 	}
 
-	if (e.noCounter == 22) {
+	if (ans == 220001 || ans == 220002 || ans == 220003 || ans == 220101 || ans == 220102 || ans == 220103) {
 		yang_active -= 1;
 		if (yang_active == 0 && buttigieg_active == 0) {
 			menuItemsA.splice(3, 1);
@@ -21518,7 +21513,7 @@ cyoAdventure = function(a) {
 		}
 	}
 
-	if (e.noCounter == 24) {
+	if (ans == 240001 || ans == 240002 || ans == 240003 || ans == 240004) {
 	    Gabbardshift();
         campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.first_name = "Tulsi"
         campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.last_name = "Gabbard"
