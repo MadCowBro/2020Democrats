@@ -14774,7 +14774,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 208,
             "candidate": 300,
             "affected_candidate": 311,
-            "state_multiplier": 0.4
+            "state_multiplier": 0.2
         }
     },
     {
@@ -14950,7 +14950,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 208,
             "candidate": 300,
             "affected_candidate": 311,
-            "state_multiplier": 0.4
+            "state_multiplier": 0.2
         }
     },
     {
@@ -15270,7 +15270,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 208,
             "candidate": 300,
             "affected_candidate": 311,
-            "state_multiplier": 0.4
+            "state_multiplier": 0.2
         }
     },
     {
@@ -21383,16 +21383,16 @@ cyoAdventure = function(a) {
 		}
         if (BidenIA < 10.00) {
             applyDrift(300, -0.075)
-            applyDrift(300, -0.5, 209)
+            applyDrift(300, -0.1, 209)
         } else if (BidenIA >= 10.00 && BidenIA < 15.00) {
             applyDrift(300, -0.05)
-            applyDrift(300, -0.35, 209)
+            applyDrift(300, -0.05, 209)
         } else if (BidenIA >= 15.00 && BidenIA < 20.00) {
             applyDrift(300, -0.025)
-            applyDrift(300, -0.2, 209)
+            applyDrift(300, -0.025, 209)
         } else if (BidenIA >= 20.00 && BidenIA < 25.00) {
             applyDrift(300, 0.025)
-            applyDrift(300, -0.05, 209)
+            applyDrift(300, -0.01, 209)
         } else if (BidenIA >= 25.00) {
             applyDrift(300, 0.05)
             applyDrift(300, 0.05, 209)
@@ -21515,16 +21515,6 @@ cyoAdventure = function(a) {
 	}
 
 	if (ans == 240001 || ans == 240002 || ans == 240003 || ans == 240004) {
-	    Gabbardshift();
-        campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.first_name = "Tulsi"
-        campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.last_name = "Gabbard"
-        campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.color_hex = '#FD6AB4';
-        menuItemsA.splice(5, 1, GabbardObject);
-		steyer_active -= 1;
-		if (steyer_active == 0 && klobuchar_active == 0) {
-			menuItemsA.splice(4, 1);
-		}
-        refreshHeadquarter();
         let BidenSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===300).percent;
 		let BernieSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===301).percent;
         if (BidenSC < 15.00) {
@@ -21540,13 +21530,22 @@ cyoAdventure = function(a) {
         } else if (BidenSC >= 50.00) {
             applyDrift(300, 0.15)
         }
-		if (BernieSC > BidenSC) {
+		if (BidenSC < 35.00) {
             applyDrift(301, 0.09)
 			campaignTrail_temp.questions_json[24] = tunnel(250100);
 		}
 	}
 
 	if (ans == 250001 || ans == 250002 || ans == 250003 || ans == 250004) {
+	    Gabbardshift();
+        campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.first_name = "Tulsi"
+        campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.last_name = "Gabbard"
+        campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.color_hex = '#FD6AB4';
+        menuItemsA.splice(5, 1, GabbardObject);
+		steyer_active -= 1;
+		if (steyer_active == 0 && klobuchar_active == 0) {
+			menuItemsA.splice(4, 1);
+		}
 		buttigieg_active -= 1;
 			if (buttigieg_active == 0) {
                 applyDrift (304, -1)
