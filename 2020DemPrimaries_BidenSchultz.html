@@ -21448,19 +21448,19 @@ cyoAdventure = function(a) {
         let PeteNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===304).percent;
         let KlobucharNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===310).percent;
         if (BidenNH < 5.00) {
-            applyDrift(300, -0.15)
+            applyDrift(300, -0.015)
             applyDrift(300, -0.075, 208)
             applyDrift(300, -0.02, 220)
         } else if (BidenNH >= 5.00 && BidenNH < 10.00) {
-            applyDrift(300, -0.1)
+            applyDrift(300, -0.01)
             applyDrift(300, -0.05, 208)
             applyDrift(300, -0.01, 220)
         } else if (BidenNH >= 10.00 && BidenNH < 15.00) {
-            applyDrift(300, -0.05)
+            applyDrift(300, -0.005)
             applyDrift(300, -0.025, 208)
             applyDrift(300, 0.01, 220)
         } else if (BidenNH >= 15.00 && BidenNH < 20.00) {
-            applyDrift(300, -0.025)
+            applyDrift(300, 0.025)
             applyDrift(300, -0.01, 208)
             applyDrift(300, 0.02, 220)
         } else if (BidenNH >= 20.00) {
@@ -21558,7 +21558,25 @@ cyoAdventure = function(a) {
 			}
 		refreshHeadquarter();
 	} else if (ans == 250102) {
-            e.question_number = 37;
+        e.question_number = 37;
+		e.primary_code = [
+  {
+    "breakQ": 19,
+    "states": [195] // IA
+  },
+  {
+    "breakQ": 21,
+    "states": [209] // NH
+  },
+  {
+    "breakQ": 23,
+    "states": [208, 220] // NV, SC
+  },
+  {
+    "breakQ": 37,
+    "states": [181, 7000, 184, 185, 186, 199, 201, 203, 213, 216, 222, 223, 224, 225, 226, 7005, 192, 202, 204, 205, 214, 227, 7002, 183, 189, 193, 230, 182, 231, 215, 196, 207, 217, 191, 228, 194, 200, 206, 211, 218, 219, 221, 7001, 7004, 190, 229, 197, 212, 188, 210, 198, 7003, 187] // From ST onwards
+  }
+]
 	}
 }
 
