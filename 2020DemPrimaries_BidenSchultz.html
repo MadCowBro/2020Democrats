@@ -440,7 +440,7 @@ campaignTrail_temp.questions_json = [
         "pk": 260100,
         "fields": {
             "priority": -1,
-            "description": "What will you say as you suspend your campaign?",
+            "description": "It’s the end of everything. Fifty years of public service, only to fall short of your dream for the third and final time. Who knows if any of them can beat Bernie Sanders, let alone Donald Trump, but will you endorse any of the alternatives on your way out?",
             "likelihood": 1
         }
     }
@@ -1444,7 +1444,39 @@ campaignTrail_temp.answers_json = [
         "pk": 260101,
         "fields": {
             "question": 260100,
-            "description": "May the best candidate win."
+            "description": "Not now, but I will support whoever becomes the nominee. We must, God, we must beat Donald Trump."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 260102,
+        "fields": {
+            "question": 260100,
+            "description": "Michael Bloomberg, like him or not, is the most capable candidate left. I give him my full support in his quest to beat Donald Trump."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 260103,
+        "fields": {
+            "question": 260100,
+            "description": "Pete Buttigieg is the future of the party. We must help him as much as possible—he’s practically a baby—but his optimism will shine through the misery of the Trump era."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 260104,
+        "fields": {
+            "question": 260100,
+            "description": "Amy Klobuchar is the clear and sensible choice. I was going to pick a woman to be my running mate, but I guess the next best option is endorsing the first female President of the United States."
+        }
+    },
+    {//Alternate Answer for 250001 (Warren strong)
+        "model": "campaign_trail.answer",
+        "pk": 260105,
+        "fields": {
+            "question": 999999,
+            "description": "Goddamn it, none of these other candidates are cutting it. If we throw our support behind Elizabeth Warren, then she can stop Sanders. I fear how she’d do in the general, but he would ruin us for sure."
         }
     }
 ]
@@ -12306,6 +12338,46 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 300,
             "global_multiplier": -1
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 260111,
+        "fields": {
+            "answer": 260002,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 260112,
+        "fields": {
+            "answer": 260003,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "global_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 260113,
+        "fields": {
+            "answer": 260004,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "global_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 260114,
+        "fields": {
+            "answer": 260005,
+            "candidate": 300,
+            "affected_candidate": 302,
+            "global_multiplier": 0.1
+        }
     }
 ]
 
@@ -18437,6 +18509,51 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 300,
             "answer_feedback": "Barack tells you he’s thankful for everything you did for him, tells you you should be proud of all the work you’ve done. There’s something awkward in his voice, like he’s waiting for you to give him permission to stop. You gently cut him off to say you’ll go out tomorrow to make the announcement. It ends. You sit alone in silence at the end of the world."
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 260106,
+        "fields": {
+            "answer": 260101,
+            "candidate": 300,
+            "answer_feedback": "With you bowing out of the race, Super Tuesday polling is all over the place. If none of the moderates can beat each other out though, Bernie Sanders is destined for the nomination. God help us all."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 260107,
+        "fields": {
+            "answer": 260102,
+            "candidate": 300,
+            "answer_feedback": "You try to get Buttigieg and Klobuchar to step aside, but they refuse. It’ll take a dominant Super Tuesday performance from Bloomberg to silence his naysayers. Will he succeed where you failed?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 260108,
+        "fields": {
+            "answer": 260103,
+            "candidate": 300,
+            "answer_feedback": "Even when you clasp hands with him onstage, you still harbor doubts about his ability. It’s too late now, though. You failed. The next generation must step up."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 260109,
+        "fields": {
+            "answer": 260104,
+            "candidate": 300,
+            "answer_feedback": "On paper, she’s a solid candidate, but this is no ordinary election. The future of our country is at stake and it’s being placed in the arms of someone who hasn’t been in the game nearly as long as you. Godspeed, Senator Klobuchar."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 260110,
+        "fields": {
+            "answer": 260105,
+            "candidate": 300,
+            "answer_feedback": "Your endorsement of Warren lands like a grenade. No one expected that, especially her. Obama in particular is not happy, but if he doesn’t like it, too bad. He should’ve helped you when you needed it."
+        }
     }
 ]
 
@@ -21558,6 +21675,10 @@ cyoAdventure = function(a) {
 			}
 		refreshHeadquarter();
 	} else if (ans == 250102) {
+		campaignTrail_temp.questions_json[25] = tunnel(260100);
+		if (WarrenPolling >= 20.00) {
+			answerSwapper(260101, 260105, true);
+		}
 		e.primary_code = [
   {
     "breakQ": 19,
