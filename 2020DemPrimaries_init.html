@@ -1076,7 +1076,7 @@ e.creditsPage = () => {
       changeGameDisp(true);
       var menuHeader = document.createElement("div");
       menuHeader.classList.add("inner_window_front");
-      menuHeader.innerHTML = `<h1 style='font-family: "Tahoma";'><font color='#bbd7ff'>The Team</font></h1>`;
+      menuHeader.innerHTML = `<h1 style='font-family: "Helvetica";'><font color='#2C4886'>The Team</font></h1>`;
       menuHeader.id = "SOTUheader";
       menuHeader.style = "height: 50px;background-color:#2d2d2d";
       var newMenu = document.createElement("div");
@@ -1171,10 +1171,16 @@ function addDynamicCSS() {
         .overlay_window {
             height: auto;
 		}
+          .visit_text {
+            height: auto;
+            color: white;
+		}
         .recommended_reading_box {
             height: auto;
             }
-	p#credits {
+             p#credits,
+             div#site_credits p,
+             div#site_credits a {
 		color: white;
 	}
 	#final_results_description p {
@@ -1192,3 +1198,53 @@ function addDynamicCSS() {
 }
 
 addDynamicCSS();
+
+let previousCandidateId = null;
+function handleCandidateView() {
+    const candidateButton = document.getElementById("candidate_id_button");
+    const runningMateButton = document.getElementById("running_mate_id_button");
+    const candidateSummary = document.querySelector("#candidate_summary > ul");
+    const candidateIdElement = document.getElementById("candidate_id");
+    const c = Number(candidateIdElement?.value) ?? -1;
+    const candObj = e.candidate_json.find((f) => f.pk === c);
+
+if (c === 300) {
+    candidateButton.style.display = "";
+} else {
+    candidateButton.style.display = "none";
+}
+
+
+    previousCandidateId = c;
+}
+
+function startCandidateWatcher() {
+    setInterval(() => {
+        const candidateIdElement = document.getElementById("candidate_id");
+        const currentValue = Number(candidateIdElement?.value) ?? -1;
+
+        if (currentValue !== previousCandidateId) {
+            handleCandidateView();
+        }
+    }, 100);
+}
+
+function waitForCandidateForm() {
+    const targetNode = document.getElementById("candidate_form");
+
+    if (targetNode) {
+        const newObserver = new MutationObserver((mut, obs) => {
+            handleCandidateView();
+        });
+
+        newObserver.observe(targetNode, { childList: true, subtree: true });
+
+        startCandidateWatcher();
+        handleCandidateView();
+    } else {
+        setTimeout(waitForCandidateForm, 100);
+    }
+}
+
+waitForCandidateForm();
+
