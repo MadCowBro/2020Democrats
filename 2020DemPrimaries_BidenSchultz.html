@@ -12336,7 +12336,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 250102,
             "candidate": 300,
             "affected_candidate": 300,
-            "global_multiplier": -1
+            "global_multiplier": -2
         }
     },
     {
@@ -12346,7 +12346,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 260002,
             "candidate": 300,
             "affected_candidate": 303,
-            "global_multiplier": 0.1
+            "global_multiplier": 1
         }
     },
     {
@@ -12356,7 +12356,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 260003,
             "candidate": 300,
             "affected_candidate": 304,
-            "global_multiplier": 0.1
+            "global_multiplier": 1
         }
     },
     {
@@ -12366,7 +12366,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 260004,
             "candidate": 300,
             "affected_candidate": 310,
-            "global_multiplier": 0.1
+            "global_multiplier": 1
         }
     },
     {
@@ -12376,7 +12376,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 260005,
             "candidate": 300,
             "affected_candidate": 302,
-            "global_multiplier": 0.1
+            "global_multiplier": 1
         }
     }
 ]
@@ -21626,6 +21626,9 @@ cyoAdventure = function(a) {
             applyDrift(310, 0.02, 208)
             applyDrift(310, 0.02, 220)
         }
+		if (WarrenNH <= 5.00) {
+			applyDrift(302, -1)
+		}
 		if (BidenIA >= 20.00) {
 			campaignTrail_temp.questions_json[22] = tunnel(230100);
 		}
@@ -21675,6 +21678,7 @@ cyoAdventure = function(a) {
 			}
 		refreshHeadquarter();
 	} else if (ans == 250102) {
+        campaignTrail_temp.global_parameter_json[0]["fields"].question_count = "26";
 		campaignTrail_temp.questions_json[25] = tunnel(260100);
 		if (WarrenPolling >= 20.00) {
 			answerSwapper(260101, 260105, true);
