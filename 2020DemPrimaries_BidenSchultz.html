@@ -12336,7 +12336,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 250102,
             "candidate": 300,
             "affected_candidate": 300,
-            "global_multiplier": -3
+            "global_multiplier": -4
         }
     },
     {
@@ -16222,7 +16222,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 302,
-            "state_multiplier": -0.04
+            "state_multiplier": -0.02
         }
     },
     {
@@ -16277,7 +16277,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 302,
-            "state_multiplier": -0.06
+            "state_multiplier": -0.03
         }
     },
     {
@@ -16332,7 +16332,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 302,
-            "state_multiplier": -0.075
+            "state_multiplier": -0.03
         }
     },
     {
@@ -21403,6 +21403,7 @@ cyoAdventure = function(a) {
 		steyer_active += 1;
 		orourke_active -= 1;
 		if (orourke_active == 0) {
+		    applydrift(311, -0.5, 223)
 	        if (ans == 80001) {
                 campaignTrail_temp.questions_json[8] = tunnel(90100);
 	            menuItemsA.splice(5, 1, HarrisObject);
@@ -21650,7 +21651,7 @@ cyoAdventure = function(a) {
         } else if (BidenSC >= 50.00) {
             applyDrift(300, 0.15)
         }
-		if (BidenSC < 33.00) {
+		if (BernieSC > BidenSC) {
             applyDrift(301, 0.04)
 			campaignTrail_temp.questions_json[24] = tunnel(250100);
 		}
