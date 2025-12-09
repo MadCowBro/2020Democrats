@@ -16364,7 +16364,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 304,
-            "state_multiplier": 0.16
+            "state_multiplier": 0.08
         }
     },
     {
@@ -16419,7 +16419,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 304,
-            "state_multiplier": 0.14
+            "state_multiplier": 0.07
         }
     },
     {
@@ -16474,7 +16474,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 304,
-            "state_multiplier": 0.125
+            "state_multiplier": 0.06
         }
     },
     {
@@ -18812,7 +18812,7 @@ campaignTrail_temp.answer_feedback_json = [
         "model": "campaign_trail.answer_feedback",
         "pk": 230206,
         "fields": {
-            "answer": 230102,
+            "answer": 230202,
             "candidate": 300,
             "answer_feedback": "Electability has consistently been your strongest argument, though it’s been weakened by your performance so far. Still, are the other candidates really in that much better of a position?"
         }
@@ -18821,7 +18821,7 @@ campaignTrail_temp.answer_feedback_json = [
         "model": "campaign_trail.answer_feedback",
         "pk": 230207,
         "fields": {
-            "answer": 230103,
+            "answer": 230203,
             "candidate": 300,
             "answer_feedback": "Your swipe at Bloomberg was well-timed and well-received. Your overall assertiveness in this debate is causing voters to give you another look."
         }
@@ -18830,7 +18830,7 @@ campaignTrail_temp.answer_feedback_json = [
         "model": "campaign_trail.answer_feedback",
         "pk": 230208,
         "fields": {
-            "answer": 230104,
+            "answer": 230204,
             "candidate": 300,
             "answer_feedback": "You make a passioned plea to Nevada voters. Let’s hope they listen. The walls are closing in."
         }
@@ -20020,7 +20020,7 @@ function Petementumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(200982);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(200983);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.075;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(200984);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(200985);
@@ -22031,16 +22031,17 @@ cyoAdventure = function(a) {
 	if (ans == 250001 || ans == 250002 || ans == 250003 || ans == 250004) {
 		buttigieg_active -= 1;
 			if (buttigieg_active == 0) {
-                applyDrift (304, -1)
+                applyDrift(304, -1)
 	            menuItemsA.splice(3, 1);
 			}
 		klobuchar_active -= 1;
 			if (klobuchar_active == 0) {
-                applyDrift (310, -1)
+                applyDrift(310, -1)
 	            menuItemsA.splice(4, 1);
 			}
 		refreshHeadquarter();
 	} else if (ans == 250102) {
+		applyDrift(300, -1)
         campaignTrail_temp.global_parameter_json[0]["fields"].question_count = "26";
 		campaignTrail_temp.questions_json[25] = tunnel(260100);
 		if (WarrenPolling >= 20.00) {
