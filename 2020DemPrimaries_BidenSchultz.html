@@ -426,6 +426,15 @@ campaignTrail_temp.questions_json = [
             "likelihood": 1
         }
     },
+    {//Alternate Question 23 (Warren drops out after NH)
+        "model": "campaign_trail.question",
+        "pk": 230200,
+        "fields": {
+            "priority": 3,
+            "description": "Warren’s disastrous performance in New Hampshire helped you perform slightly better than expected, but it also clears the progressive lane for Sanders. You can still clear your own lane, and starting in Las Vegas, with a debate three days before the Nevada caucuses. How will you convince the audience they need to ride with Biden?",
+            "likelihood": 1
+        }
+    },
     {//Alternate Question 25 (Biden bombs SC)
         "model": "campaign_trail.question",
         "pk": 250100,
@@ -1420,6 +1429,38 @@ campaignTrail_temp.answers_json = [
         "pk": 230104,
         "fields": {
             "question": 230100,
+            "description": "We’ve got to remind people why I’m in this race. I’ve always fought for the little guy and I always will. I know what it's like to be knocked down. But I know we have to get back up. We have to provide some safety and security for the American people."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 230201,
+        "fields": {
+            "question": 230200,
+            "description": "Bloomberg’s going to be onstage tonight for the first time; he’s gonna get all sorts of heat. Let’s pile on and make sure his Super Tuesday plans go bust."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 230202,
+        "fields": {
+            "question": 230200,
+            "description": "You wanna know who can beat Donald Trump? I can beat Donald Trump. I can beat him in the toss-up states too, I’m ahead by eight points across the board. I’m better positioned than anybody else to beat Donald Trump."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 230203,
+        "fields": {
+            "question": 230200,
+            "description": "For all this talk about healthcare, I’m the only candidate who actually got anything done on health care. The president tasked me to get the votes for Obamacare. And the plan everyone wants is the plan I introduced: attaching a public option paid for by tax hikes on billionaires like Mike Bloomberg."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 230204,
+        "fields": {
+            "question": 230200,
             "description": "We’ve got to remind people why I’m in this race. I’ve always fought for the little guy and I always will. I know what it's like to be knocked down. But I know we have to get back up. We have to provide some safety and security for the American people."
         }
     },
@@ -12321,6 +12362,46 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 230209,
+        "fields": {
+            "answer": 230201,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": -0.15
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 230210,
+        "fields": {
+            "answer": 230202,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": 0.008
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 230211,
+        "fields": {
+            "answer": 230203,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": -0.15
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 230212,
+        "fields": {
+            "answer": 230204,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": 0.024
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 250105,
         "fields": {
             "answer": 250101,
@@ -14247,6 +14328,56 @@ campaignTrail_temp.answer_score_issue_json = [
         "pk": 230117,
         "fields": {
             "answer": 230104,
+            "issue": 27,
+            "issue_score": 0.2,
+            "issue_importance": 4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 230213,
+        "fields": {
+            "answer": 230201,
+            "issue": 28,
+            "issue_score": 0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 230214,
+        "fields": {
+            "answer": 230201,
+            "issue": 30,
+            "issue_score": 0.2,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 230215,
+        "fields": {
+            "answer": 230202,
+            "issue": 29,
+            "issue_score": 0,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 230216,
+        "fields": {
+            "answer": 230203,
+            "issue": 29,
+            "issue_score": 0.2,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 230217,
+        "fields": {
+            "answer": 230204,
             "issue": 27,
             "issue_score": 0.2,
             "issue_importance": 4
@@ -16244,7 +16375,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 310,
-            "state_multiplier": 0.45
+            "state_multiplier": 0.22
         }
     },
     {
@@ -16299,7 +16430,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 310,
-            "state_multiplier": 0.4
+            "state_multiplier": 0.2
         }
     },
     {
@@ -16354,7 +16485,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 310,
-            "state_multiplier": 0.35
+            "state_multiplier": 0.18
         }
     },
     {
@@ -17385,6 +17516,182 @@ campaignTrail_temp.answer_score_state_json = [
         "pk": 230137,
         "fields": {
             "answer": 230104,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "state_multiplier": 0.08
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230218,
+        "fields": {
+            "answer": 230201,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.12
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230219,
+        "fields": {
+            "answer": 230201,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "state_multiplier": 0.13
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230220,
+        "fields": {
+            "answer": 230201,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230221,
+        "fields": {
+            "answer": 230201,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230222,
+        "fields": {
+            "answer": 230202,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230223,
+        "fields": {
+            "answer": 230202,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "state_multiplier": 0.11
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230224,
+        "fields": {
+            "answer": 230202,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230225,
+        "fields": {
+            "answer": 230202,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230226,
+        "fields": {
+            "answer": 230203,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230227,
+        "fields": {
+            "answer": 230203,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230228,
+        "fields": {
+            "answer": 230203,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "state_multiplier": -0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230229,
+        "fields": {
+            "answer": 230203,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "state_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230230,
+        "fields": {
+            "answer": 230204,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230231,
+        "fields": {
+            "answer": 230204,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230232,
+        "fields": {
+            "answer": 230204,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "state_multiplier": 0.007
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230233,
+        "fields": {
+            "answer": 230204,
             "state": 220,
             "candidate": 300,
             "affected_candidate": 310,
@@ -18494,6 +18801,42 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
+        "pk": 230205,
+        "fields": {
+            "answer": 230201,
+            "candidate": 300,
+            "answer_feedback": "You and Sanders take turns knocking him around on everything from stop-and-frisk to healthcare. It doesn’t help much in Nevada, but he emerges from the debate a weakened candidate."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 230206,
+        "fields": {
+            "answer": 230102,
+            "candidate": 300,
+            "answer_feedback": "Electability has consistently been your strongest argument, though it’s been weakened by your performance so far. Still, are the other candidates really in that much better of a position?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 230207,
+        "fields": {
+            "answer": 230103,
+            "candidate": 300,
+            "answer_feedback": "Your swipe at Bloomberg was well-timed and well-received. Your overall assertiveness in this debate is causing voters to give you another look."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 230208,
+        "fields": {
+            "answer": 230104,
+            "candidate": 300,
+            "answer_feedback": "You make a passioned plea to Nevada voters. Let’s hope they listen. The walls are closing in."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
         "pk": 250103,
         "fields": {
             "answer": 250101,
@@ -19560,7 +19903,7 @@ function Bloommentumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(831);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(832);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.125;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(833);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(834);
@@ -19876,7 +20219,7 @@ function Klobmentumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201087);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201088);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.075;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201089);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201090);
@@ -20376,449 +20719,464 @@ document.head.appendChild(customStyling);
   };
 })();
 
-  // Select the node that will be observed for mutations
-  const windowsAdvisorTargetNode = document.getElementById("game_window");
-  
-  // Options for the observer (which mutations to observe)
-  const windowsAdvisorConfig = { attributes: true, childList: true, subtree: true };
-  
-  // Callback function to execute when mutations are observed
-  const callback = (mutationList, observer) => {
-      visitWindow = document.getElementsByClassName("overlay_window")[0];
-  
-      if(visitWindow == null || visitWindow.classList.contains("done")) {
-          return;
-      }
-      visitWindow.classList.add("done");
-      visitWindow.classList.add("window");
-      let titleBar = visitWindow.querySelector("h3");
-      titleBar.classList.add("title-bar");
-      titleBar.classList.add("title-bar-text")
-      titleBar.style.paddingLeft = "3px";
-  };
-  
-  class Song {
-    constructor(title, artist, coverLink, audioLink) {
-      this.title = title;
-      this.artist = artist;
-      this.coverLink = coverLink;
-      this.audioLink = audioLink;
-    }
-    getTitle() {
-      return this.title;
-    }
-  
-    getArtist() {
-      return this.artist;
-    }
-  
-    getCoverLink() {
-      return this.coverLink;
-    }
-  
-    getAudioLink() {
-      return this.audioLink;
-    }
-  }
-  
-  class Playlist {
-    constructor() {
-      this.songs = [];
-      this.currentSongIndex = 0;
-    }
-  
-    addSong(song) {
-      this.songs.push(song);
-    }
-  
-    getCurrentSong() {
-      return this.songs[this.currentSongIndex];
-    }
-  
-    playNext() {
-      this.currentSongIndex = (this.currentSongIndex + 1) % this.songs.length;
-    }
-  
-    playPrevious() {
-      this.currentSongIndex = (this.currentSongIndex - 1 + this.songs.length) % this.songs.length;
-    }
-  }
-  window.Playlist=Playlist
-  window.Song=Song
-  
-  function changePlaylist(newPlaylist) {
-    playlist = newPlaylist;
-    playlist.currentSongIndex = 0;
-    updateUI(playlist);
-    const audio = document.getElementById("audio");
-    audio.src = playlist.getCurrentSong().audioLink;
-    audio.play();
-  }
-  window.changePlaylist=changePlaylist
-  
-  function updateUI(playlist) {
-      const currentSong = playlist.getCurrentSong();
-      var player = document.getElementById("player");
-      player.querySelector("#cover").src = currentSong.getCoverLink();
-      player.querySelector("#title").textContent = currentSong.getTitle();
-      player.querySelector("#artist").textContent = currentSong.getArtist();
-  }
-  
-  window.updateUI=updateUI
-  
-  
-  function setupMusicPlayer() {
-    playlist = new Playlist();
-  
-  
-    const song1 = new Song(
-      "We the People",
-      "The Staple Singers",
-      "https://i.postimg.cc/59PVcC6C/IMG-2875.jpg",
-      "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/We%20The%20People.mp3"
-    );
+function changePlaylist(index) {
+  e.selectedSoundtrack = index;
+  newMusicPlayer();  // reload UI + reload its tracks
+}
 
-    const song2 = new Song(
-      "A Sky Full of Stars",
-      "Coldplay",
-      "https://i.postimg.cc/nVdJ8DC7/IMG-2876.jpg",
-      "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/Coldplay%20-%20A%20Sky%20Full%20Of%20Stars%20(Official%20audio).mp3"
-    );
-    
-    const song3 = new Song(
-      "Heroes",
-      "David Bowie",
-      "https://i.postimg.cc/c1DSqnrf/IMG-2877.jpg",
-      "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/David%20Bowie%20-%20Heroes%20(Official%20Video).mp3"
-    );
-  
-    const song4 = new Song(
-      "Move on Up",
-      "Curtis Mayfield",
-      "https://i.postimg.cc/66HXsvyV/IMG-2878.jpg",
-      "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/Curtis%20Mayfield%20-%20Move%20On%20Up.mp3"
-    );
-  
-    const song5 = new Song(
-      "(Your Love Keeps Lifting Me) Higher and Higher",
-      "Jackie Wilson",
-      "https://i.postimg.cc/dQWYMyL6/IMG-2879.jpg",
-      "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/Jackie%20Wilson%20-%20(Your%20Love%20Keeps%20Lifting%20Me)%20Higher%20And%20Higher%20(Best%20Quality).mp3"
-    );
-  
-    const song6 = new Song(
-      "The Wire",
-      "HAIM",
-      "https://i.postimg.cc/vHcdGZVW/IMG-2880.jpg",
-      "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/HAIM%20-%20The%20Wire.mp3"
-    );
-  
-    const song7 = new Song(
-      "We Take Care of Our Own",
-      "Bruce Springsteen",
-      "https://i.postimg.cc/5N6Mf2C8/IMG-2881.jpg",
-      "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/Bruce%20Springsteen%20-%20We%20Take%20Care%20of%20Our%20Own%20(Official%20Video).mp3"
-    );
-
-    playlist.addSong(song1);
-    playlist.addSong(song2);
-    playlist.addSong(song3);
-    playlist.addSong(song4);
-    playlist.addSong(song5);
-    playlist.addSong(song6);
-    playlist.addSong(song7);
-  
-    const playerContainer = document.createElement("div");
-    playerContainer.id = "player";
-  
-   const displayBox = document.createElement("div");
-  displayBox.id = "display-box";
-  
-  const coverElement = document.createElement("img");
-  coverElement.id = "cover";
-  displayBox.appendChild(coverElement);
-  
-  const infoContainer = document.createElement("div");
-  infoContainer.id = "info-container";
-  infoContainer.style.backgroundImage = "url('https://i.postimg.cc/7hCwWXbf/IMG-2974.png')";
-  infoContainer.style.backgroundSize = "cover"; // Optional: adjust based on your needs
-  infoContainer.style.color = "white"; // Set text color to white
-  
-  const songInfo = document.createElement("div");
-  songInfo.id = "song-info";
-  
-  const titleElement = document.createElement("h3");
-  titleElement.id = "title";
-  titleElement.style.fontWeight = 'normal'; // Make it normal as per previous request
-  songInfo.appendChild(titleElement);
-  
-  const artistElement = document.createElement("p");
-  artistElement.id = "artist";
-  songInfo.appendChild(artistElement);
-  
-  infoContainer.appendChild(songInfo);
-  displayBox.appendChild(infoContainer);
-  
-  playerContainer.appendChild(displayBox);
-  
-  const controlsContainer = document.createElement("div");
-  controlsContainer.id = "controls-container";
-  
-  const controls = document.createElement("div");
-  controls.id = "controls";
-  
-  const prevButton = document.createElement("img");
-  prevButton.id = "prevButton";
-  prevButton.src = "https://i.postimg.cc/K8MN0QRv/IMG-2959.png";
-  prevButton.alt = "Previous";
-  controls.appendChild(prevButton);
-  
-  const playPauseButton = document.createElement("img");
-  playPauseButton.id = "playPauseButton";
-  playPauseButton.src = "https://i.postimg.cc/T3Hk4Z3x/IMG-2956.png"; // Set the default play image
-  playPauseButton.alt = "Play/Pause";
-  controls.appendChild(playPauseButton);
-  
-  const nextButton = document.createElement("img");
-  nextButton.id = "nextButton";
-  nextButton.src = "https://i.postimg.cc/k5Pyz8bn/IMG-2960.png";
-  nextButton.alt = "Next";
-  controls.appendChild(nextButton);
-  
-  controlsContainer.appendChild(controls);
-  
-  playPauseButton.addEventListener("click", function () {
-    const audio = document.getElementById("audio");
-    if (audio.paused) {
-      audio.play();
-      playPauseButton.src = "https://i.postimg.cc/T3Hk4Z3x/IMG-2956.png"; // Set the pause image
-    } else {
-      audio.pause();
-      playPauseButton.src = "https://i.postimg.cc/52kPRZ2c/IMG-2955.png"; // Set the play image
-    }
-  });
-  
-  nextButton.addEventListener("click", function () {
-    playlist.playNext();
-    updateUI(playlist);
-    const audio = document.getElementById("audio");
-    audio.src = playlist.getCurrentSong().audioLink;
-    audio.play();
-  });
-  
-  prevButton.addEventListener("click", function () {
-    playlist.playPrevious();
-    updateUI(playlist);
-    const audio = document.getElementById("audio");
-    audio.src = playlist.getCurrentSong().audioLink;
-    audio.play();
-  });
-  
-    const progressBarContainer = document.createElement("div");
-    progressBarContainer.id = "progress-bar-container";
-  
-    const progressBar = document.createElement("progress");
-    progressBar.type = "range";
-    progressBar.id = "progress-bar";
-    progressBar.value = "0";
-    progressBar.max = "100";
-  
-  
-    progressBarContainer.appendChild(progressBar);
-    controlsContainer.appendChild(progressBarContainer);
-    playerContainer.appendChild(controlsContainer);
-  
-   const volumeContainer = document.createElement("div");
-    volumeContainer.id = "volume-container";
-  
-  const volumeLabel = document.createElement("img");
-  volumeLabel.src = "https://i.postimg.cc/9XJpm9RF/Volume-Photoroom.png";
-  volumeLabel.alt = "Volume";
-  volumeContainer.appendChild(volumeLabel);
-  
-    const volumeSliderContainer = document.createElement("div");
-    volumeSliderContainer.classList.add("is-vertical");
-    volumeSliderContainer.style.marginLeft = "23%";
-    volumeSliderContainer.style.height = "126px";
-  
-    const volumeSlider = document.createElement("input");
-    volumeSlider.type = "range";
-    volumeSlider.id = "volumeSlider";
-    volumeSlider.min = 0;
-    volumeSlider.max = 9;
-    volumeSlider.step = 1;
-    volumeSlider.value = 1; // Initial volume
-  
-    volumeSliderContainer.appendChild(volumeSlider);
-  
-    const volumeDisplay = document.createElement("span");
-    volumeDisplay.id = "volume-display";
-    volumeDisplay.style.fontWeight = 'bold'; 
-    volumeDisplay.style.display = 'none';
-    volumeDisplay.textContent = "1";
-  
-    volumeContainer.appendChild(volumeSliderContainer);
-    volumeContainer.appendChild(volumeDisplay);
-  
-    playerContainer.appendChild(volumeContainer);
-  
-    gameWindow_player.insertAdjacentElement("afterend", playerContainer);
-  
-  
-    function updateProgressBar() {
-      const audio = document.getElementById("audio");
-      const progress = (audio.currentTime / audio.duration) * 100;
-      try{progressBar.value = progress}
-    catch{}
-    }
-  
-   
-    progressBar.addEventListener("input", function () {
-      const audio = document.getElementById("audio");
-      const seekTime = (progressBar.value / 100) * audio.duration;
-      audio.currentTime = seekTime;
-    });
-  
-    const audio = document.createElement("audio");
-    audio.id = "audio";
-    audio.src = playlist.getCurrentSong().audioLink;
-    audio.volume = 1/9;
-  
-    audio.addEventListener("timeupdate", updateProgressBar);
-    audio.addEventListener("ended", function () {
-      // Play the next song when the current song ends
-      playlist.playNext();
-      updateUI(playlist);
-      audio.src = playlist.getCurrentSong().audioLink;
-      audio.play();
-    });
-  
-      let currentVolume = 1; // Initial volume
-  
-    volumeSlider.addEventListener("input", function () {
-      currentVolume = parseInt(volumeSlider.value, 10);
-      updateVolumeDisplay();
-      updateAudioVolume();
-    });
-  
-    function updateVolumeDisplay() {
-      volumeDisplay.textContent = currentVolume;
-    }
-  
-     function updateAudioVolume() {
-      const audio = document.getElementById("audio");
-      audio.volume = currentVolume / 9; // Set volume between 0 and 1
-    }
-  
-    document.body.appendChild(audio);
-    audio.play();
-  
-    // Update the UI when the page loads
-    updateUI(playlist);
+const fontStyle = document.createElement("style");
+fontStyle.textContent = `
+  @font-face {
+    font-family: 'Circular Spotify';
+    src: url('https://file.garden/aNvElm887DiA_9HR/CircularSpotifyText-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
   }
 
+  #music_player, #music_player * {
+    font-family: 'Circular Spotify', sans-serif !important;
+  }
+`;
+document.head.appendChild(fontStyle);
+
+const sliderSkinny = document.createElement("style");
+sliderSkinny.textContent = `
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+  height: 4px;
+  cursor: pointer;
+}
+
+/* Track */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px;
+  background: #444;
+  border-radius: 2px;
+}
+input[type="range"]::-moz-range-track {
+  height: 4px;
+  background: #444;
+  border-radius: 2px;
+}
+
+/* Indicator dot (thumb) – visible but non-draggable */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  background: #214191;
+  border-radius: 50%;
+  pointer-events: none;      
+  margin-top: -4px;
+}
+input[type="range"]::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  background: #214191;
+  border-radius: 50%;
+  pointer-events: none;      
+}
+`;
+document.head.appendChild(sliderSkinny);
+
+// -----------------------------------------
+// STYLES
+// -----------------------------------------
+;(function() {
+  const css = `
+    /* Slider sizes */
+    #volume_slider,
+    #progress_slider {
+      width: 400px !important;
+    }
+
+    /* Track title & artist */
+    #track_name {
+      font-size: 28px !important;
+      line-height: 1.2 !important;
+      font-family: 'Circular Spotify', Arial, sans-serif;
+    }
+    #artist_name {
+      font-size: 20px !important;
+      line-height: 1.2 !important;
+      font-family: 'Circular Spotify', Arial, sans-serif;
+    }
+
+    /* Slider labels */
+    label[for="volume_slider"],
+    label[for="progress_slider"] {
+      color: #fff !important;
+      font-family: 'Circular Spotify', Arial, sans-serif;
+    }
+  `;
   const style = document.createElement("style");
-  style.textContent = `
-  #player {
-      border: 3px solid #C9C9C9; /* Add your desired border style */
-      display: flex;
-      flex-direction: row;
-    height:191px;
-      background-Image: url("https://i.postimg.cc/bNsjqwtW/IMG-2889.webp");
-    }
-  
-    #display-box {
-      display: flex;
-      align-items: center;
-      width: 50%;
-    }
-  
-    #cover {
-      width: 176px;
-    height:176px;
-    }
-  
-    #info-container {
-      display: flex;
-      flex-direction: row;
-      height:178px;
-    width:127px;
-    margin-top: 3px;
-    }
-  
-    #song-info {
-      width: 100%;
-    padding:5px;
-    }
-  
-    #controls-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 10px;
-      width:100%;
-    padding-top:15px;
-  
-    }
-    .is-vertical #volumeSlider {
-    width: 16px;
-    appearance: slider-vertical;
-  }
-  
-    #controls {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      width: 80%;
-    }
-  
-    #progress-bar-container {
-      width: 100%;
-    }
-  
-    #progress-bar {
-      width: 80%;
-      margin: auto;
-      display: flex;
-      margin-Top: 20px;
-    }
+  style.textContent = css;
+  document.head.appendChild(style);
+})();
 
-    #menu_container {
-        background-color: transparent;
-    }
+// -----------------------------------------
+// HIDE OLD DEFAULT PLAYER CONTROLS
+// -----------------------------------------
+$("#music_player")[0].children[0].style.display = "none";
+$("#music_player")[0].children[1].style.display = "none";
+document.getElementById("modLoadReveal").style.display = "none";
+document.getElementById("modloaddiv").style.display = "none";
 
-    #overall_result_container {
-        background-color: transparent;
-    }
+// -----------------------------------------
+// CUSTOM MUSIC BOX STYLE
+// -----------------------------------------
+const musicBox = document.getElementById("music_player");
+musicBox.style.cssText = `
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #161616;
+  border: 5px solid #214191;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: auto;
+  font-family: 'Circular Spotify', Arial, sans-serif;
+`;
 
-    #state_result_container {
-        background-color: transparent;
-    }
+// -----------------------------------------
+// UTILS
+// -----------------------------------------
+function clamp(idx, max, min = 0) {
+  return idx > max ? min : idx < min ? max : idx;
+}
 
-    #map_container {
-        background-color: #f6f6f6;
-    }
+// -----------------------------------------
+// BUTTON CREATOR (IMAGE BUTTONS)
+// -----------------------------------------
+function createButtonWithImg(id, imgUrl, size = 40) {
+  const btn = document.createElement("button");
+  btn.id = id;
+  btn.style.cssText = `
+    width: ${size}px;
+    height: ${size}px;
+    border: none;
+    background: none; 
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  `;
+  const img = document.createElement("img");
+  img.src = imgUrl;
+  img.style.cssText = `
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  `;
+  btn.appendChild(img);
+  return btn;
+}
 
-    .final_results_table {
-        color: black;
-      }
+// -----------------------------------------
+// GAME STATE
+// -----------------------------------------
+e = campaignTrail_temp;
+e.selectedSoundtrack = 0;
 
-      #state_result_data_summary table {
-        color: black;
-      }
-      
-      #state_result_data_summary table th,
-      #state_result_data_summary table td {
-        color: black; /* Ensure text color is black for both header and data cells */
-      }
-    
+// -----------------------------------------
+// BUILD CUSTOM PLAYER
+// -----------------------------------------
+function newMusicPlayer() {
+  const old = document.getElementById("custom_player_wrapper");
+  if (old) old.remove();
+
+  const audio = document.getElementById("campaigntrailmusic");
+  audio.preload = "metadata";
+
+  const wrapper = document.createElement("div");
+  wrapper.id = "custom_player_wrapper";
+  wrapper.style.cssText = `
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
   `;
 
-document.head.appendChild(style);
+  // Album cover
+  const cover = document.createElement("div");
+  cover.id = "album_cover";
+  cover.style.cssText = `
+    width: 150px;
+    height: 150px;
+    background: #ddd;
+    border: 3px solid #214191;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+  `;
 
-const gameWindow_player = document.getElementById("game_window");
-//use this function directly or put it in an event listener to start the music on the press of a certain button
-setupMusicPlayer();
+  // Details column
+  const details = document.createElement("div");
+  details.style.cssText = `
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  `;
+
+  // Track info
+  const info = document.createElement("div");
+  info.style.cssText = "margin-bottom: 10px; text-align:center; width:100%;";
+  const titleEl = document.createElement("div");
+  titleEl.id = "track_name";
+  titleEl.style.cssText = "font-size:20px; color:#fff; font-weight:bold;";
+  const artistEl = document.createElement("div");
+  artistEl.id = "artist_name";
+  artistEl.style.cssText = "font-size:14px; color:#fff;";
+  info.append(titleEl, artistEl);
+
+// Sliders
+
+const sliders = document.createElement("div");
+sliders.style.cssText =
+  "display:flex; flex-direction:column; gap:6px; margin-bottom:6px;";
+
+// --- Volume Row ---
+const volRow = document.createElement("div");
+volRow.style.cssText = "display:flex; align-items:center; gap:10px;";
+
+const volLabel = document.createElement("label");
+volLabel.htmlFor = "volume_slider";
+volLabel.innerText = "Volume:";
+volLabel.style.width = "60px";
+
+const volumeSlider = document.createElement("input");
+volumeSlider.id = "volume_slider";
+volumeSlider.type = "range";
+volumeSlider.min = 0;
+volumeSlider.max = 1;
+volumeSlider.step = 0.01;
+volumeSlider.value = 0.5;
+volumeSlider.style.flex = "1";
+
+volRow.append(volLabel, volumeSlider);
+
+// --- Progress Row ---
+const progRow = document.createElement("div");
+progRow.style.cssText = "display:flex; align-items:center; gap:10px;";
+
+const progLabel = document.createElement("label");
+progLabel.htmlFor = "progress_slider";
+progLabel.innerText = "Time:";
+progLabel.style.width = "60px";
+
+const progressSlider = document.createElement("input");
+progressSlider.id = "progress_slider";
+progressSlider.type = "range";
+progressSlider.min = 0;
+progressSlider.max = 1;
+progressSlider.step = 0.001;
+progressSlider.value = 0;
+progressSlider.style.flex = "1";
+
+progressSlider.addEventListener("click", function (event) {
+  if (!audio.duration) return;
+
+  const rect = progressSlider.getBoundingClientRect();
+  const x = event.clientX - rect.left;
+  const ratio = x / rect.width;
+
+  audio.currentTime = ratio * audio.duration;
+})
+
+// Prevent default dragging behavior (block mousedown dragging)
+progressSlider.addEventListener('mousedown', function (e) {
+  // Prevent native drag start on many browsers
+  e.preventDefault();
+});
+
+// For pointer-based browsers (touch)
+progressSlider.addEventListener('pointerdown', function(e){
+  e.preventDefault();
+});
+
+// Click-to-seek: click anywhere along the bar to jump
+progressSlider.addEventListener('click', function (event) {
+  if (!audio.duration) return;
+  const rect = progressSlider.getBoundingClientRect();
+  const x = event.clientX - rect.left;
+  const ratio = Math.max(0, Math.min(1, x / rect.width));
+  audio.currentTime = ratio * audio.duration;
+  // update the visual value immediately
+  progressSlider.value = ratio;
+});
+
+progRow.append(progLabel, progressSlider);
+
+sliders.append(volRow, progRow);
+
+function disableDrag(slider) {
+  slider.addEventListener("mousedown", e => {
+    e.preventDefault(); // stops dragging
+    const rect = slider.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const val = clickX / rect.width;     // convert click to progress
+    slider.value = val;                  // update slider position
+    if (slider === progressSlider) {
+      audio.currentTime = audio.duration * val;
+    }
+  });
+}
+
+disableDrag(progressSlider);
+
+  // -----------------------------------------
+  // Controls
+  // -----------------------------------------
+  const controlsWrap = document.createElement("div");
+  controlsWrap.style.cssText = `
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:25px;
+    margin-top:10px;
+  `;
+
+  const prevBtn = createButtonWithImg("prev_btn", "https://file.garden/aNvElm887DiA_9HR/PrevButton.png", 40);
+  const playBtn = createButtonWithImg("play_pause_btn", "https://file.garden/aNvElm887DiA_9HR/DefaultPPButton.png?v=1763460435758", 55);
+  const nextBtn = createButtonWithImg("next_btn", "https://file.garden/aNvElm887DiA_9HR/NextButton.png", 40);
+  const shuffleBtn = createButtonWithImg("shuffle_btn", "https://file.garden/aNvElm887DiA_9HR/ShuffleButton.png?v=1763556513133", 30);
+  const loopBtn = createButtonWithImg("loop_btn", "https://file.garden/aNvElm887DiA_9HR/LoopButton.png?v=1763556741244", 30);
+
+  controlsWrap.append(shuffleBtn, prevBtn, playBtn, nextBtn, loopBtn);
+
+  details.append(info, sliders, controlsWrap);
+  wrapper.append(cover, details);
+  musicBox.insertBefore(wrapper, audio);
+
+  // -----------------------------------------
+  // TRACK LOADING & LOGIC
+  // -----------------------------------------
+  const tracks = soundtracks[e.selectedSoundtrack].tracklist;
+  let currentIndex = 0;
+  let shuffleMode = false;
+  let loopMode = false;
+
+  function loadTrack(i) {
+    const t = tracks[i];
+    audio.src = t.url;
+    cover.style.backgroundImage = `url('${t.cover}')`;
+    titleEl.innerText = t.name;
+    artistEl.innerText = t.artist;
+    audio.currentTime = 0;
+    audio.loop = loopMode;
+    audio.play();
+    playBtn.firstChild.src = "https://file.garden/aNvElm887DiA_9HR/DefaultPPButton.png?v=1763460435758"; // Pause image
+    currentIndex = i;
+  }
+
+  loadTrack(0);
+
+  // Play / Pause
+  playBtn.onclick = () => {
+    if (audio.paused) {
+      audio.play();
+      playBtn.firstChild.src = "https://file.garden/aNvElm887DiA_9HR/DefaultPPButton.png?v=1763460435758";
+    } else {
+      audio.pause();
+      playBtn.firstChild.src = "https://file.garden/aNvElm887DiA_9HR/ChangedPPButton.png?v=1763460439302";
+    }
+  };
+
+  // Prev / Next
+  prevBtn.onclick = () => loadTrack(clamp(currentIndex - 1, tracks.length - 1));
+  nextBtn.onclick = () => loadTrack(clamp(currentIndex + 1, tracks.length - 1));
+
+  // Shuffle
+  shuffleBtn.onclick = () => {
+    shuffleMode = !shuffleMode;
+    shuffleBtn.firstChild.style.filter = shuffleMode ? "hue-rotate(90deg) brightness(1.3)" : "none";
+  };
+
+  // Loop
+  loopBtn.onclick = () => {
+    loopMode = !loopMode;
+    audio.loop = loopMode;
+    loopBtn.firstChild.style.filter = loopMode ? "hue-rotate(90deg) brightness(1.3)" : "none";
+  };
+
+  // Track ended
+  audio.onended = () => {
+    if (audio.loop) return;
+    if (shuffleMode) {
+      const next = Math.floor(Math.random() * tracks.length);
+      loadTrack(next);
+    } else {
+      nextBtn.click();
+    }
+  };
+
+  // Volume & progress sliders
+  volumeSlider.oninput = e => (audio.volume = +e.target.value);
+  progressSlider.oninput = e => { if(audio.duration) audio.currentTime = +e.target.value * audio.duration; };
+  audio.ontimeupdate = () => { if(audio.duration) progressSlider.value = audio.currentTime / audio.duration; };
+}
+
+// -----------------------------------------
+// TRACKLIST
+// -----------------------------------------
+var soundtracks = [
+  {
+    name: "Biden Songs",
+    tracklist: [
+      {
+        name: "We the People",
+        artist: "The Staple Singers",
+        url: "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/We%20The%20People.mp3",
+        cover: "https://i.postimg.cc/59PVcC6C/IMG-2875.jpg"
+      },
+      {
+        name: "A Sky Full of Stars",
+        artist: "Coldplay",
+        url: "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/Coldplay%20-%20A%20Sky%20Full%20Of%20Stars%20(Official%20audio).mp3",
+        cover: "https://i.postimg.cc/nVdJ8DC7/IMG-2876.jpg"
+      },
+      {
+        name: "Heroes",
+        artist: "David Bowie",
+        url: "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/David%20Bowie%20-%20Heroes%20(Official%20Video).mp3",
+        cover: "https://i.postimg.cc/c1DSqnrf/IMG-2877.jpg"
+      },
+      {
+        name: "Move on Up",
+        artist: "Curtis Mayfield",
+        url: "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/Curtis%20Mayfield%20-%20Move%20On%20Up.mp3",
+        cover: "https://i.postimg.cc/66HXsvyV/IMG-2878.jpg"
+      },
+      {
+        name: "(Your Love Keeps Lifting Me) Higher and Higher",
+        artist: "Jackie Wilson",
+        url: "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/Jackie%20Wilson%20-%20(Your%20Love%20Keeps%20Lifting%20Me)%20Higher%20And%20Higher%20(Best%20Quality).mp3",
+        cover: "https://i.postimg.cc/dQWYMyL6/IMG-2879.jpg"
+      },
+      {
+        name: "The Wire",
+        artist: "HAIM",
+        url: "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/HAIM%20-%20The%20Wire.mp3",
+        cover: "https://i.postimg.cc/vHcdGZVW/IMG-2880.jpg"
+      },
+      {
+        name: "We Take Care of Our Own",
+        artist: "Bruce Springsteen",
+        url: "https://file.garden/Z-8vn6l_RynAMnyS/2020%20Dem%20Primaries/Bruce%20Springsteen%20-%20We%20Take%20Care%20of%20Our%20Own%20(Official%20Video).mp3",
+        cover: "https://i.postimg.cc/5N6Mf2C8/IMG-2881.jpg"
+      }
+    ]
+  }
+];
+
+// Launch
+newMusicPlayer();
+
+changePlaylist(0);
 
 let savedX = null;
 let savedY = null;
@@ -21628,6 +21986,7 @@ cyoAdventure = function(a) {
             applyDrift(310, 0.02, 220)
         }
 		if (WarrenNH <= 5.00) {
+			campaignTrail_temp.questions_json[22] = tunnel(230200);
 			applyDrift(302, -1)
 		}
 		if (BidenIA >= 20.00) {
@@ -21657,7 +22016,7 @@ cyoAdventure = function(a) {
 		}
 	}
 
-	if (ans == 250001 || ans == 250002 || ans == 250003 || ans == 250004) {
+	if (ans == 250001 || ans == 250002 || ans == 250003 || ans == 250004 || ans == 250101 || ans == 250102) {
 	    Gabbardshift();
         campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.first_name = "Tulsi"
         campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.last_name = "Gabbard"
@@ -21667,6 +22026,9 @@ cyoAdventure = function(a) {
 		if (steyer_active == 0 && klobuchar_active == 0) {
 			menuItemsA.splice(4, 1);
 		}
+	}
+			
+	if (ans == 250001 || ans == 250002 || ans == 250003 || ans == 250004) {
 		buttigieg_active -= 1;
 			if (buttigieg_active == 0) {
                 applyDrift (304, -1)
