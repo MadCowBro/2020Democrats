@@ -11077,7 +11077,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 170005,
             "candidate": 300,
             "affected_candidate": 310,
-            "global_multiplier": -0.02
+            "global_multiplier": -0.01
         }
     },
     {
@@ -20020,7 +20020,7 @@ function Petementumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(200982);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(200983);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.075;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(200984);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(200985);
@@ -21761,7 +21761,7 @@ cyoAdventure = function(a) {
 		steyer_active += 1;
 		orourke_active -= 1;
 		if (orourke_active == 0) {
-		    applydrift(311, -0.5, 223)
+		    applyDrift(311, -0.5, 223)
 	        if (ans == 80001) {
                 campaignTrail_temp.questions_json[8] = tunnel(90100);
 	            menuItemsA.splice(5, 1, HarrisObject);
@@ -21987,11 +21987,14 @@ cyoAdventure = function(a) {
         }
 		if (WarrenNH <= 5.00) {
 			campaignTrail_temp.questions_json[22] = tunnel(230200);
-			applyDrift(302, -1)
 		}
 		if (BidenIA >= 20.00) {
 			campaignTrail_temp.questions_json[22] = tunnel(230100);
 		}
+	}
+
+	if (ans == 230201 || ans == 230202 || ans == 230203 || ans == 230204) {
+		applyDrift(302, -1)
 	}
 
 	if (ans == 240001 || ans == 240002 || ans == 240003 || ans == 240004) {
