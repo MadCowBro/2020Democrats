@@ -16320,7 +16320,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 300,
-            "state_multiplier": -0.02
+            "state_multiplier": -0.04
         }
     },
     {
@@ -16386,7 +16386,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 300,
-            "state_multiplier": -0.015
+            "state_multiplier": -0.03
         }
     },
     {
@@ -16441,7 +16441,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 300,
-            "state_multiplier": -0.02
+            "state_multiplier": -0.04
         }
     },
     {
@@ -19321,7 +19321,7 @@ function WarrenFadeshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(781);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.8;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(782);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.95;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(783);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.8;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(784);
@@ -21983,7 +21983,7 @@ cyoAdventure = function(a) {
             applyDrift(310, 0.02, 208)
             applyDrift(310, 0.02, 220)
         }
-		if (WarrenNH < 5.00) {
+		if (WarrenNH < 0.05) {
 			campaignTrail_temp.questions_json[22] = tunnel(230200);
 		}
 		if (BidenIA >= 20.00) {
