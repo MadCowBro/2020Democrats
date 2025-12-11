@@ -19193,7 +19193,7 @@ function BernieFadeshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(769);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(770);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.875;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(771);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(772);
@@ -21712,10 +21712,11 @@ cyoAdventure = function(a) {
     }
 
 	if (e.noCounter == 16) {
-		if (PetePolling < 0.04 && KlobucharPolling < 0.03) {
-			answerSwapper(170202, 170205, true);
-		} else if (PetePolling < 0.04) {
+		if (PetePolling < 0.05) {
 			campaignTrail_temp.questions_json[16] = tunnel(170200);
+			if (KlobucharPolling < 0.03) {
+			    answerSwapper(170202, 170205, true);
+		    }
 		} else if (KlobucharPolling < 0.03) {
 			answerSwapper(170002, 170005, true);
 		}
