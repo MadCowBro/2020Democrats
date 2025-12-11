@@ -16231,7 +16231,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 300,
-            "state_multiplier": -0.08
+            "state_multiplier": -0.16
         }
     },
     {
@@ -16297,7 +16297,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 300,
-            "state_multiplier": -0.06
+            "state_multiplier": -0.12
         }
     },
     {
@@ -16352,7 +16352,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 300,
-            "state_multiplier": -0.08
+            "state_multiplier": -0.16
         }
     },
     {
@@ -17045,7 +17045,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 300,
-            "state_multiplier": -0.04
+            "state_multiplier": -0.16
         }
     },
     {
@@ -17111,7 +17111,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 300,
-            "state_multiplier": -0.03
+            "state_multiplier": -0.12
         }
     },
     {
@@ -17166,7 +17166,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 300,
-            "state_multiplier": -0.04
+            "state_multiplier": -0.16
         }
     },
     {
@@ -19658,7 +19658,7 @@ function Berniementumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(769);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.02;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(770);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.02;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.01;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(771);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.02;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(772);
@@ -21925,6 +21925,7 @@ cyoAdventure = function(a) {
             applyDrift(300, 0.15)
         }
 		if (BernieSC > BidenSC) {
+			applyDrift(300, -0.1)
             applyDrift(301, 0.04)
 			campaignTrail_temp.questions_json[24] = tunnel(250100);
 		}
