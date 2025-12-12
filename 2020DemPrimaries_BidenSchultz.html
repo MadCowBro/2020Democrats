@@ -16814,7 +16814,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 220,
             "candidate": 300,
             "affected_candidate": 302,
-            "state_multiplier": 0.18
+            "state_multiplier": 0.09
         }
     },
     {
@@ -21714,14 +21714,11 @@ cyoAdventure = function(a) {
 	if (e.noCounter == 16) {
 		if (PetePolling < 0.05) {
 			campaignTrail_temp.questions_json[16] = tunnel(170200);
-			buttigieg_active -= 1;
 			if (KlobucharPolling < 0.03) {
 			    answerSwapper(170202, 170205, true);
-				klobuchar_active -= 1;
 		    }
 		} else if (KlobucharPolling < 0.03) {
 			answerSwapper(170002, 170005, true);
-			klobuchar_active -= 1;
 		}
 		if (KlobucharPolling > PetePolling) {
 			campaignTrail_temp.questions_json[16] = tunnel(170100);
@@ -21729,6 +21726,12 @@ cyoAdventure = function(a) {
 	}
 
     if (e.noCounter == 17) {
+		if ((PetePolling < 0.04) && (ans == 170201 || ans == 170202 || ans == 170203 || ans == 170204 || ans == 170205)) {
+			buttigieg_active -= 1;
+		}
+		if ((KlobucharPolling < 0.02) && (ans == 170005 || ans == 170205) {
+			klobuchar_active -= 1;
+		}
 	    WarrenFadeshift();
     }
 
@@ -21817,7 +21820,7 @@ cyoAdventure = function(a) {
 	}
 
 	if (ans == 210003) {
-			campaignTrail_temp.questions_json[21] = tunnel(220100);
+		campaignTrail_temp.questions_json[21] = tunnel(220100);
 	}
 
 	if (ans == 220001 || ans == 220002 || ans == 220003 || ans == 220101 || ans == 220102 || ans == 220103) {
@@ -21825,6 +21828,7 @@ cyoAdventure = function(a) {
 		if (yang_active == 0 && buttigieg_active == 0) {
 			menuItemsA.splice(3, 1);
 		}
+		refreshHeadquarter();
         let BidenIA = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===300).percent;
         let BidenNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===300).percent;
         let BernieNH = campaignTrail_temp.current_results[1][28].result.find(result => result.candidate===301).percent;
@@ -21902,7 +21906,12 @@ cyoAdventure = function(a) {
 	}
 
 	if (ans == 230201 || ans == 230202 || ans == 230203 || ans == 230204) {
-		applyDrift(302, -1)
+		warren_active -= 1;
+		if (warren_active == 0) {
+		    applyDrift(302, -1)
+			menuItemsA.splice(2, 1);
+		}
+		refreshHeadquarter();
 	}
 
 	if (ans == 240001 || ans == 240002 || ans == 240003 || ans == 240004) {
@@ -21939,6 +21948,7 @@ cyoAdventure = function(a) {
 		if (steyer_active == 0 && klobuchar_active == 0) {
 			menuItemsA.splice(4, 1);
 		}
+		refreshHeadquarter();
 	}
 			
 	if (ans == 250001 || ans == 250002 || ans == 250003 || ans == 250004) {
@@ -21952,7 +21962,6 @@ cyoAdventure = function(a) {
                 applyDrift(310, -1)
 	            menuItemsA.splice(4, 1);
 			}
-		refreshHeadquarter();
 	} else if (ans == 250102) {
 		applyDrift(300, -1)
         campaignTrail_temp.global_parameter_json[0]["fields"].question_count = "26";
