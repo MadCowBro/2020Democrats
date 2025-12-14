@@ -5655,7 +5655,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 300,
             "state": 186,
-            "state_multiplier": 1.1
+            "state_multiplier": 1.075
         }
     },
     {
@@ -6114,7 +6114,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 301,
             "state": 186,
-            "state_multiplier": 1.05
+            "state_multiplier": 1.075
         }
     },
     {
@@ -16374,7 +16374,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 209,
             "candidate": 300,
             "affected_candidate": 302,
-            "state_multiplier": -0.06
+            "state_multiplier": -0.075
         }
     },
     {
@@ -19143,7 +19143,7 @@ function BernieFadeshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(744);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(745);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.95;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.975;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(746);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(747);
@@ -21893,7 +21893,7 @@ cyoAdventure = function(a) {
             applyDrift(304, 0.02, 208)
             applyDrift(304, 0.02, 220)
         } else if (KlobucharNH > BidenNH && KlobucharNH > BernieNH && KlobucharNH > WarrenNH && KlobucharNH > PeteNH) {
-            applyDrift(310, 0.05)
+            applyDrift(310, 0.02)
             applyDrift(310, 0.02, 208)
             applyDrift(310, 0.02, 220)
         }
