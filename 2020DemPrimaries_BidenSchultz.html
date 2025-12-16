@@ -435,6 +435,15 @@ campaignTrail_temp.questions_json = [
             "likelihood": 1
         }
     },
+    {//Alternate Question 23 (Biden wins NH)
+        "model": "campaign_trail.question",
+        "pk": 230300,
+        "fields": {
+            "priority": 3,
+            "description": "After back to back upset wins in Iowa and New Hampshire, you’re primed to continue your steamroll. You’re in Las Vegas, with a debate three days before the Nevada caucuses. How will you convince the audience they need to keep riding with Biden?",
+            "likelihood": 1
+        }
+    },
     {//Alternate Question 25 (Biden bombs SC)
         "model": "campaign_trail.question",
         "pk": 250100,
@@ -1566,6 +1575,38 @@ campaignTrail_temp.answers_json = [
         "pk": 230204,
         "fields": {
             "question": 230200,
+            "description": "We’ve got to remind people why I’m in this race. I’ve always fought for the little guy and I always will. I know what it's like to be knocked down. But I know we have to get back up. We have to provide some safety and security for the American people."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 230301,
+        "fields": {
+            "question": 230300,
+            "description": "Bloomberg’s going to be onstage tonight for the first time; he’s gonna get all sorts of heat. Let’s pile on and make sure his Super Tuesday plans go bust."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 230302,
+        "fields": {
+            "question": 230300,
+            "description": "You wanna know who can beat Donald Trump? I can beat Donald Trump. I can beat him in the toss-up states too, I’m ahead by eight points across the board. I’m better positioned than anybody else to beat Donald Trump."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 230303,
+        "fields": {
+            "question": 230300,
+            "description": "For all this talk about healthcare, I’m the only candidate who actually got anything done on health care. The president tasked me to get the votes for Obamacare. And the plan everyone wants is the plan I introduced: attaching a public option paid for by tax hikes on billionaires like Mike Bloomberg."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 230304,
+        "fields": {
+            "question": 230300,
             "description": "We’ve got to remind people why I’m in this race. I’ve always fought for the little guy and I always will. I know what it's like to be knocked down. But I know we have to get back up. We have to provide some safety and security for the American people."
         }
     },
@@ -12869,6 +12910,46 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 230309,
+        "fields": {
+            "answer": 230301,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": -0.225
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 230310,
+        "fields": {
+            "answer": 230302,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 230311,
+        "fields": {
+            "answer": 230303,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": -0.225
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 230312,
+        "fields": {
+            "answer": 230304,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": 0.016
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 250105,
         "fields": {
             "answer": 250101,
@@ -15105,6 +15186,56 @@ campaignTrail_temp.answer_score_issue_json = [
         "pk": 230217,
         "fields": {
             "answer": 230204,
+            "issue": 27,
+            "issue_score": 0.2,
+            "issue_importance": 4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 230313,
+        "fields": {
+            "answer": 230301,
+            "issue": 28,
+            "issue_score": 0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 230314,
+        "fields": {
+            "answer": 230301,
+            "issue": 30,
+            "issue_score": 0.2,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 230315,
+        "fields": {
+            "answer": 230302,
+            "issue": 29,
+            "issue_score": 0,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 230316,
+        "fields": {
+            "answer": 230303,
+            "issue": 29,
+            "issue_score": 0.2,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 230317,
+        "fields": {
+            "answer": 230304,
             "issue": 27,
             "issue_score": 0.2,
             "issue_importance": 4
@@ -18932,6 +19063,226 @@ campaignTrail_temp.answer_score_state_json = [
     },
     {
         "model": "campaign_trail.answer_score_state",
+        "pk": 230318,
+        "fields": {
+            "answer": 230301,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.12
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230319,
+        "fields": {
+            "answer": 230301,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "state_multiplier": 0.13
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230320,
+        "fields": {
+            "answer": 230301,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 302,
+            "state_multiplier": 0.08
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230321,
+        "fields": {
+            "answer": 230301,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "state_multiplier": 0.08
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230322,
+        "fields": {
+            "answer": 230301,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230323,
+        "fields": {
+            "answer": 230302,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230324,
+        "fields": {
+            "answer": 230302,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "state_multiplier": 0.11
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230325,
+        "fields": {
+            "answer": 230302,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 302,
+            "state_multiplier": -0.07
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230326,
+        "fields": {
+            "answer": 230302,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "state_multiplier": 0.4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230327,
+        "fields": {
+            "answer": 230302,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "state_multiplier": 0.08
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230328,
+        "fields": {
+            "answer": 230303,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230329,
+        "fields": {
+            "answer": 230303,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230330,
+        "fields": {
+            "answer": 230303,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 302,
+            "state_multiplier": -0.09
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230331,
+        "fields": {
+            "answer": 230303,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "state_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230332,
+        "fields": {
+            "answer": 230303,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "state_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230333,
+        "fields": {
+            "answer": 230304,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230334,
+        "fields": {
+            "answer": 230304,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230335,
+        "fields": {
+            "answer": 230304,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 302,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230336,
+        "fields": {
+            "answer": 230304,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "state_multiplier": 0.006
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 230337,
+        "fields": {
+            "answer": 230304,
+            "state": 208,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "state_multiplier": 0.08
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
         "pk": 260229,
         "fields": {
             "answer": 260201,
@@ -20327,6 +20678,42 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 230204,
             "candidate": 300,
             "answer_feedback": "You make a passioned plea to Nevada voters. Let’s hope they listen. The walls are closing in."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 230305,
+        "fields": {
+            "answer": 230301,
+            "candidate": 300,
+            "answer_feedback": "You, Sanders, and Warren take turns knocking him around on everything from stop-and-frisk to healthcare. Not that you need much assistance right now, but he emerges from the debate a weakened candidate."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 230306,
+        "fields": {
+            "answer": 230302,
+            "candidate": 300,
+            "answer_feedback": "Electability has consistently been your strongest argument, bolstered by your wins so far. The other candidates can’t argue they’d be better alternatives right now."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 230307,
+        "fields": {
+            "answer": 230303,
+            "candidate": 300,
+            "answer_feedback": "Your swipe at Bloomberg was well-timed and well-received. Your overall assertiveness in this debate is keeping voters engaged."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 230308,
+        "fields": {
+            "answer": 230304,
+            "candidate": 300,
+            "answer_feedback": "You make a passioned plea to Nevada voters. They’re listening and they’re ready to show up for you."
         }
     },
     {
@@ -23502,6 +23889,7 @@ cyoAdventure = function(a) {
             applyDrift(310, -0.02, 220)
         }
         if (BidenNH > BernieNH && BidenNH > WarrenNH && BidenNH > PeteNH && BidenNH > KlobucharNH) {
+			campaignTrail_temp.questions_json[22] = tunnel(230300);
             applyDrift(300, 0.05)
             applyDrift(300, 0.05, 208)
             applyDrift(300, 0.05, 220)
