@@ -23806,25 +23806,29 @@ cyoAdventure = function(a) {
             applyDrift(310, 0.05)
             applyDrift(310, 0.05, 209)
         }
-		if (BidenIA > BernieIA && BidenIA > WarrenIA && BidenIA > PeteIA) {
-			campaignTrail_temp.questions_json[20] = tunnel(210300);
+		if (BidenIA > BernieIA && BidenIA > WarrenIA && BidenIA > PeteIA && BidenIA > KlobucharIA) {
             applyDrift(300, 0.05)
             applyDrift(300, 0.05, 209)
-		} else if (BernieIA > BidenIA && BernieIA > WarrenIA && BernieIA > PeteIA) {
+		} else if (BernieIA > BidenIA && BernieIA > WarrenIA && BernieIA > PeteIA && BernieIA > KlobucharIA) {
             applyDrift(301, 0.025)
             applyDrift(301, 0.025, 209)
-		} else if (WarrenIA > BidenIA && WarrenIA > BernieIA && WarrenIA > PeteIA) {
+		} else if (WarrenIA > BidenIA && WarrenIA > BernieIA && WarrenIA > PeteIA && WarrenIA > KlobucharIA) {
             applyDrift(302, 0.05)
             applyDrift(302, 0.05, 209)
-		} else if (PeteIA > BidenIA && PeteIA > BernieIA && PeteIA > WarrenIA) {
+		} else if (PeteIA > BidenIA && PeteIA > BernieIA && PeteIA > WarrenIA && PeteIA > KlobucharIA) {
             applyDrift(304, 0.025)
             applyDrift(304, 0.025, 209)
+		} else if (KlobucharIA > BidenIA && KlobucharIA > BernieIA && KlobucharIA > WarrenIA && KlobucharIA > PeteIA) {
+            applyDrift(310, 0.025)
+            applyDrift(310, 0.025, 209)
 		}
 		if ((BernieIA) && (margin <= 1.5)) {
 			BernieIADelegates -= 2;
 			PeteIADelegates += 2;
 		}
-		if (BidenIA < 15.00) {
+		if (BidenIA > BernieIA && BidenIA > WarrenIA && BidenIA > PeteIA && BidenIA > KlobucharIA) {
+			campaignTrail_temp.questions_json[20] = tunnel(210300);
+		} else if (BidenIA < 15.00) {
 			campaignTrail_temp.questions_json[20] = tunnel(210100);
 		} else if (BidenIA > 20.00) {
 			campaignTrail_temp.questions_json[20] = tunnel(210200);
