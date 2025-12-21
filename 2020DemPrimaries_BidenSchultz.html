@@ -23133,7 +23133,6 @@ function tunnel(new_q){
 }
 
 // answerswapper function from MTE
-
 function answerSwapper(pk1, pk2, takeEffects = true) {
     // Hardcoded JSON data for answers
     const answerData = campaignTrail_temp.answers_json;
@@ -23168,6 +23167,35 @@ function answerSwapper(pk1, pk2, takeEffects = true) {
             });
         });
     }
+}
+
+//change a state effect, searches for candidate and answers and state. If no effect exists, create a new one with changeAmount as value
+//example call: changeStateEffect(77, 4002, 451, -0.005)
+function changeStateEffect(affectedCandidate, answer, state, changeAmount) {
+  let found = false;
+  // Loop through each object in the JSON array
+  campaignTrail_temp.answer_score_state_json.forEach((item) => {
+    // Check if the affected candidate, answer, and state fields match the provided values
+    if (item.fields.affected_candidate === affectedCandidate && item.fields.answer === answer && item.fields.state === state) {
+      // Update the state_multiplier
+      item.fields.state_multiplier += changeAmount;
+      found = true;
+    }
+  });
+ 
+  // If no matching entry was found, create a new one
+  if (!found) {
+    const lastEntry = campaignTrail_temp.answer_score_state_json[campaignTrail_temp.answer_score_state_json.length - 1];
+    const newEntry = JSON.parse(JSON.stringify(lastEntry)); // Clone the last entry
+ 
+    newEntry.pk = lastEntry.pk + 1;
+    newEntry.fields.affected_candidate = affectedCandidate;
+    newEntry.fields.answer = answer;
+    newEntry.fields.state = state;
+    newEntry.fields.state_multiplier = changeAmount;  // Overwrite state_multiplier with changeAmount
+ 
+    campaignTrail_temp.answer_score_state_json.push(newEntry);
+  }
 }
 			  
 function applyDrift(candidateId, driftAmount, stateId) {
@@ -23342,6 +23370,22 @@ cyoAdventure = function(a) {
 		if (klobuchar_active == 0) {
             applyDrift(310, -1)
 	        menuItemsA.splice(4, 1, SteyerObject);
+		}
+		refreshHeadquarter();
+	}
+
+    if (e.noCounter == 19) {
+		if (buttigieg_active == 0) {
+            changeStateEffect(304, 200001, 195, -0.5);
+			changeStateEffect(304, 200002, 195, -0.3);
+			changeStateEffect(304, 200003, 195, -0.6);
+			changeStateEffect(304, 200004, 195, -0.7);
+		}
+		if (klobuchar_active == 0) {
+            changeStateEffect(310, 200001, 195, -0.2);
+			changeStateEffect(310, 200002, 195, -0.03);
+			changeStateEffect(310, 200003, 195, -0.22);
+			changeStateEffect(310, 200004, 195, -0.4);
 		}
 		refreshHeadquarter();
 	}
