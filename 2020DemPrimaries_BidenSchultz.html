@@ -8,7 +8,7 @@ campaignTrail_temp.questions_json = [
         "pk": 10000,
         "fields": {
             "priority": 0,
-            "description": "[AUGUST 12, 2017] You knew as soon as the race was called last year that you would run for President. Today, a neo-Nazi march in Charlottesville devolved into violence as counter-protestors were rammed by a car, leaving a woman dead. Your jaw tightens as you watch the mayhem unfold. It’s a disgrace, you must put an end to this nightmare. How will you prepare for the inevitable showdown?",
+            "description": "You knew as soon as the race was called last year that you would run for President. Today, a neo-Nazi march in Charlottesville devolved into violence as counter-protestors were rammed by a car, leaving a woman dead. Your jaw tightens as you watch the mayhem unfold. It’s a disgrace, you must put an end to this nightmare. How will you prepare for the inevitable showdown?",
             "likelihood": 1
         }
     },
@@ -17,7 +17,7 @@ campaignTrail_temp.questions_json = [
         "pk": 20000,
         "fields": {
             "priority": 1,
-            "description": "[APRIL 2019] Shortly after your entrance to the race, you get hit with criticism from the progressive wing of the party. After their close loss in 2016, 2020 was supposed to be their year. They fear your deep D.C. ties and moderate image will sink the Democrats’ chance of defeating Trump. You’ve always moved with the party. How will you handle this?",
+            "description": "Shortly after your entrance to the race, you get hit with criticism from the progressive wing of the party. After their close loss in 2016, 2020 was supposed to be their year. They fear your deep D.C. ties and moderate image will sink the Democrats’ chance of defeating Trump. You’ve always moved with the party. How will you handle this?",
             "likelihood": 1
         }
     },
@@ -242,7 +242,7 @@ campaignTrail_temp.questions_json = [
         "pk": 270000,
         "fields": {
             "priority": 0,
-            "description": "Michigan is one of the states set to hold their primary very soon, alongside Louisiana, Kansas, and Maine. Polls consistently show you with a large lead there...",
+            "description": "With Super Tuesday in the rearview mirror, you’ve established a solid delegate lead. Warren and Bloomberg will exit the race after their campaigns flopped, leaving you and Sanders as the last two major candidates left. All you need to do now is keep your foot on the gas, and this nomination will be yours.",
             "likelihood": 1
         }
     },
@@ -251,7 +251,7 @@ campaignTrail_temp.questions_json = [
         "pk": 280000,
         "fields": {
             "priority": 0,
-            "description": "After that massive polling error in Michigan, it's becoming clear that Sanders is becoming way more than a protest vote. One way you could repair relations with the more liberal wing is to define your position on LGBT rights. How will you discuss LGBT issues during your campaign?",
+            "description": "A slew of states are up next, with a total of 365 delegates up for grabs a week after Super Tuesday. Where will you zero in on next as you march toward an eventual showdown with Trump?",
             "likelihood": 1
         }
     },
@@ -1288,6 +1288,62 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 260000,
             "description": "We should swing for the heartland. We’ll start in Minnesota then head for Colorado and Utah. We can’t be afraid to look far and wide for delegates."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270001,
+        "fields": {
+            "question": 270000,
+            "description": "The voters have made it official: I ain’t dead, and I’m not gonna die. I will win this nomination, and I will take the fight to Donald Trump in November. It’s a battle for the soul of the nation, folks."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270002,
+        "fields": {
+            "question": 270000,
+            "description": "You know, it only seems like a matter of time until I’m the official nominee. We can use an early head start on potential VP and Cabinet picks. Ensure that the next administration is one that represents all of America."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270003,
+        "fields": {
+            "question": 270000,
+            "description": "People across the country are saying that Sanders is too extreme to be the nominee. There’s a reason Trump whines and spins conspiracies about the primaries being rigged against him."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270004,
+        "fields": {
+            "question": 270000,
+            "description": "I was right all along: Bernie Sanders is a paper tiger. With all due respect to Hillary, she was a very flawed candidate and he couldn’t beat her. He was supposed to be stronger this year yet he’s been anything but. He’s simply incapable of winning national elections."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 280001,
+        "fields": {
+            "question": 280000,
+            "description": "We can really run up the scoreboard in Mississippi and Missouri. I bet we can ice him out completely if we push hard enough."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 280002,
+        "fields": {
+            "question": 280000,
+            "description": "Michigan is a crucial state. If we slip up here, that’s gonna give Bernie some oxygen. Can’t have that."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 280003,
+        "fields": {
+            "question": 280000,
+            "description": "I’d love nothing more than to steal Washington from Bernie. If we can plant our flag in such a hostile state, we know we’ve got this thing locked up."
         }
     },
     {
@@ -12240,6 +12296,106 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 270009,
+        "fields": {
+            "answer": 270001,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.009
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270010,
+        "fields": {
+            "answer": 270002,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270011,
+        "fields": {
+            "answer": 270003,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "global_multiplier": -0.009
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270012,
+        "fields": {
+            "answer": 270004,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "global_multiplier": -0.015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 280007,
+        "fields": {
+            "answer": 280001,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": -0.08
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 280008,
+        "fields": {
+            "answer": 280001,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 280009,
+        "fields": {
+            "answer": 280002,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 280010,
+        "fields": {
+            "answer": 280002,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "global_multiplier": -0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 280011,
+        "fields": {
+            "answer": 280003,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": -0.002
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 280012,
+        "fields": {
+            "answer": 280003,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "global_multiplier": -0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 90109,
         "fields": {
             "answer": 90101,
@@ -14908,6 +15064,66 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 250004,
             "issue": 29,
             "issue_score": 0,
+            "issue_importance": 5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270013,
+        "fields": {
+            "answer": 270001,
+            "issue": 30,
+            "issue_score": 0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270014,
+        "fields": {
+            "answer": 270001,
+            "issue": 31,
+            "issue_score": 0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270015,
+        "fields": {
+            "answer": 270002,
+            "issue": 27,
+            "issue_score": 0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270016,
+        "fields": {
+            "answer": 270002,
+            "issue": 28,
+            "issue_score": 0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270017,
+        "fields": {
+            "answer": 270002,
+            "issue": 29,
+            "issue_score": -0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270018,
+        "fields": {
+            "answer": 270003,
+            "issue": 29,
+            "issue_score": -0.45,
             "issue_importance": 5
         }
     },
@@ -17853,6 +18069,72 @@ campaignTrail_temp.answer_score_state_json = [
     },
     {
         "model": "campaign_trail.answer_score_state",
+        "pk": 280013,
+        "fields": {
+            "answer": 280001,
+            "state": 204,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 280014,
+        "fields": {
+            "answer": 280001,
+            "state": 205,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.018
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 280015,
+        "fields": {
+            "answer": 280002,
+            "state": 202,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 280016,
+        "fields": {
+            "answer": 280002,
+            "state": 214,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.009
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 280017,
+        "fields": {
+            "answer": 280003,
+            "state": 192,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 280018,
+        "fields": {
+            "answer": 280003,
+            "state": 227,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.012
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
         "pk": 170118,
         "fields": {
             "answer": 170103,
@@ -20354,6 +20636,69 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 260004,
             "candidate": 300,
             "answer_feedback": "Klobuchar’s exit certainly helps in Minnesota, but it would take an incredible performance to win Colorado and Utah. It will eat into Bernie’s numbers though."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270005,
+        "fields": {
+            "answer": 270001,
+            "candidate": 300,
+            "answer_feedback": "You post a video on Twitter with “#Joementum”. The dynamics of the campaign have been flipped on its head since your early stumbles. Keep going strong."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270006,
+        "fields": {
+            "answer": 270002,
+            "candidate": 300,
+            "answer_feedback": "Pundits freak that you’re pivoting away from the primaries too soon, that Sanders still has an outside shot at snatching the nomination from you. Those pipsqueaks will think twice after the next set of primaries."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270007,
+        "fields": {
+            "answer": 270003,
+            "candidate": 300,
+            "answer_feedback": "Sanders argues that you lack a passionate voter base for the general election, yet his doesn’t even turn out for the primaries. He’s flailing in the wind, hoping you’ll give him an opening to keep the race going."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270008,
+        "fields": {
+            "answer": 270004,
+            "candidate": 300,
+            "answer_feedback": "The bottom has fallen out for the Sanders campaign, but he’s not throwing in the towel yet. Expect him to keep nipping at your heels for a bit."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 280004,
+        "fields": {
+            "answer": 280001,
+            "candidate": 300,
+            "answer_feedback": "It’s a risky strategy, as you’re leaving Michigan wide open for Bernie to snatch from you. After all the ups and downs of the campaign, you don’t need the doubters to resurface."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 280005,
+        "fields": {
+            "answer": 280002,
+            "candidate": 300,
+            "answer_feedback": "How Michigan swings will determine how long Sanders stays in the race. Win big, and he could be out the door by the end of the month."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 280006,
+        "fields": {
+            "answer": 280003,
+            "candidate": 300,
+            "answer_feedback": "A win, or even a close contest, in Washington would spell the beginning of the end for the Sanders campaign. Push as hard as you can."
         }
     },
     {
