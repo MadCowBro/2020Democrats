@@ -24294,6 +24294,19 @@ cyoAdventure = function(a) {
 		} else if (BidenSTWin < 6) {
 			applyDrift(300, -0.04)
 		}
+		if (WarrenSTWin > 0) {
+			applyDrift(302, 0.09)
+		} else if (WarrenSTWin == 0) {
+			applyDrift(302, -1)
+		}
+		if (BloombergSTWin > 1) {
+			applyDrift(303, 0.09)
+		} else if (BloombergSTWin <= 1) {
+			applyDrift(303, -1)
+		}
+		if (WarrenSTWin > BernieSTWin) {
+			applyDrift(301, -0.9)
+		}
 	}
 }
 
