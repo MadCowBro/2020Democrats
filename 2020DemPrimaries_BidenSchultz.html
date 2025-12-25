@@ -22536,6 +22536,14 @@ var gabbard_active = 1;
 var trump_popup = 0;
 var obama_popup = 0;
 
+// CandidateSTWin for post Super Tuesday CYOA
+var BidenSTWin = 0;
+var BernieSTWin = 0;
+var WarrenSTWin = 0;
+var BloombergSTWin = 0;
+var PeteSTWin = 0;
+var KlobucharSTWin = 0;
+
     let BloombergObject = { photo: 'https://i.postimg.cc/xjs2rzc2/IMG-2791.jpg', text: '<b>Michael Bloomberg</b><br><b>Former Mayor of NYC</b><br>What the hell does this guy think he’s doing? Apparently he thinks he can sweep away your fifty years of groundwork with a monsoon of cash. People aren’t that stupid.', button: 'Defer', id: 'BLOOMBERG_A'};
     let HarrisObject = { photo: 'https://i.imgur.com/aSEPybd.png', text: '<b>Kamala Harris</b><br><b>Senator from California</b><br>She’s enjoying a rise in the polls after you fumbled the busing debate moment with her. Her longevity in the campaign is questionable, but her potency isn’t. She’s direct competition for African-American voters.', button: 'Defer', id: 'HARRIS_A'};
     let BookerObject = { photo: 'https://i.imgur.com/UsZ1mf7.png', text: '<b>Cory Booker</b><br><b>Senator from New Jersey</b><br>In one of the most divisive times in our country’s history, he’s making unity the centerpiece of his campaign. It’s not getting him far. He lacks the gravitas and political know-how you’ve spent fifty years cultivating.', button: 'Defer', id: 'BOOKER_A'};
@@ -23971,23 +23979,321 @@ cyoAdventure = function(a) {
 			answerSwapper(260101, 260105, true);
 		}
 		e.primary_code = [
-  {
-    "breakQ": 19,
-    "states": [195] // IA
-  },
-  {
-    "breakQ": 21,
-    "states": [209] // NH
-  },
-  {
-    "breakQ": 23,
-    "states": [208, 220] // NV, SC
-  },
-  {
-    "breakQ": 25,
-    "states": [181, 7000, 184, 185, 186, 199, 201, 203, 213, 216, 222, 223, 224, 225, 226, 7005, 192, 202, 204, 205, 214, 227, 7002, 183, 189, 193, 230, 182, 231, 215, 196, 207, 217, 191, 228, 194, 200, 206, 211, 218, 219, 221, 7001, 7004, 190, 229, 197, 212, 188, 210, 198, 7003, 187] // From ST onwards
-  }
-]
+          {
+            "breakQ": 19,
+            "states": [195] // IA
+          },
+          {
+            "breakQ": 21,
+            "states": [209] // NH
+          },
+          {
+            "breakQ": 23,
+            "states": [208, 220] // NV, SC
+          },
+          {
+            "breakQ": 25,
+            "states": [181, 7000, 184, 185, 186, 199, 201, 203, 213, 216, 222, 223, 224, 225, 226, 7005, 192, 202, 204, 205, 214, 227, 7002, 183, 189, 193, 230, 182, 231, 215, 196, 207, 217, 191, 228, 194, 200, 206, 211, 218, 219, 221, 7001, 7004, 190, 229, 197, 212, 188, 210, 198, 7003, 187] // From ST onwards
+          }
+        ]
+	}
+
+	if (ans == 260001 || ans == 260002 || ans == 260003 || ans == 260004 || ans == 260201 || ans == 260202 || ans == 260203 || ans == 260204) {
+		let BidenAL = campaignTrail_temp.current_results[1][0].result.find(result => result.candidate===300).percent;
+		let BernieAL = campaignTrail_temp.current_results[1][0].result.find(result => result.candidate===301).percent;
+		let WarrenAL = campaignTrail_temp.current_results[1][0].result.find(result => result.candidate===302).percent;
+		let BloombergAL = campaignTrail_temp.current_results[1][0].result.find(result => result.candidate===303).percent;
+		let PeteAL = campaignTrail_temp.current_results[1][0].result.find(result => result.candidate===304).percent;
+		let KlobucharAL = campaignTrail_temp.current_results[1][0].result.find(result => result.candidate===310).percent;
+		let BidenAR = campaignTrail_temp.current_results[1][3].result.find(result => result.candidate===300).percent;
+		let BernieAR = campaignTrail_temp.current_results[1][3].result.find(result => result.candidate===301).percent;
+		let WarrenAR = campaignTrail_temp.current_results[1][3].result.find(result => result.candidate===302).percent;
+		let BloombergAR = campaignTrail_temp.current_results[1][3].result.find(result => result.candidate===303).percent;
+		let PeteAR = campaignTrail_temp.current_results[1][3].result.find(result => result.candidate===304).percent;
+		let KlobucharAR = campaignTrail_temp.current_results[1][3].result.find(result => result.candidate===310).percent;
+		let BidenCA = campaignTrail_temp.current_results[1][4].result.find(result => result.candidate===300).percent;
+		let BernieCA = campaignTrail_temp.current_results[1][4].result.find(result => result.candidate===301).percent;
+		let WarrenCA = campaignTrail_temp.current_results[1][4].result.find(result => result.candidate===302).percent;
+		let BloombergCA = campaignTrail_temp.current_results[1][4].result.find(result => result.candidate===303).percent;
+		let PeteCA = campaignTrail_temp.current_results[1][4].result.find(result => result.candidate===304).percent;
+		let KlobucharCA = campaignTrail_temp.current_results[1][4].result.find(result => result.candidate===310).percent;
+		let BidenCO = campaignTrail_temp.current_results[1][5].result.find(result => result.candidate===300).percent;
+		let BernieCO = campaignTrail_temp.current_results[1][5].result.find(result => result.candidate===301).percent;
+		let WarrenCO = campaignTrail_temp.current_results[1][5].result.find(result => result.candidate===302).percent;
+		let BloombergCO = campaignTrail_temp.current_results[1][5].result.find(result => result.candidate===303).percent;
+		let PeteCO = campaignTrail_temp.current_results[1][5].result.find(result => result.candidate===304).percent;
+		let KlobucharCO = campaignTrail_temp.current_results[1][5].result.find(result => result.candidate===310).percent;
+		let BidenME = campaignTrail_temp.current_results[1][18].result.find(result => result.candidate===300).percent;
+		let BernieME = campaignTrail_temp.current_results[1][18].result.find(result => result.candidate===301).percent;
+		let WarrenME = campaignTrail_temp.current_results[1][18].result.find(result => result.candidate===302).percent;
+		let BloombergME = campaignTrail_temp.current_results[1][18].result.find(result => result.candidate===303).percent;
+		let PeteME = campaignTrail_temp.current_results[1][18].result.find(result => result.candidate===304).percent;
+		let KlobucharME = campaignTrail_temp.current_results[1][18].result.find(result => result.candidate===310).percent;
+		let BidenMA = campaignTrail_temp.current_results[1][20].result.find(result => result.candidate===300).percent;
+		let BernieMA = campaignTrail_temp.current_results[1][20].result.find(result => result.candidate===301).percent;
+		let WarrenMA = campaignTrail_temp.current_results[1][20].result.find(result => result.candidate===302).percent;
+		let BloombergMA = campaignTrail_temp.current_results[1][20].result.find(result => result.candidate===303).percent;
+		let PeteMA = campaignTrail_temp.current_results[1][20].result.find(result => result.candidate===304).percent;
+		let KlobucharMA = campaignTrail_temp.current_results[1][20].result.find(result => result.candidate===310).percent;
+		let BidenMN = campaignTrail_temp.current_results[1][22].result.find(result => result.candidate===300).percent;
+		let BernieMN = campaignTrail_temp.current_results[1][22].result.find(result => result.candidate===301).percent;
+		let WarrenMN = campaignTrail_temp.current_results[1][22].result.find(result => result.candidate===302).percent;
+		let BloombergMN = campaignTrail_temp.current_results[1][22].result.find(result => result.candidate===303).percent;
+		let PeteMN = campaignTrail_temp.current_results[1][22].result.find(result => result.candidate===304).percent;
+		let KlobucharMN = campaignTrail_temp.current_results[1][22].result.find(result => result.candidate===310).percent;
+		let BidenNC = campaignTrail_temp.current_results[1][32].result.find(result => result.candidate===300).percent;
+		let BernieNC = campaignTrail_temp.current_results[1][32].result.find(result => result.candidate===301).percent;
+		let WarrenNC = campaignTrail_temp.current_results[1][32].result.find(result => result.candidate===302).percent;
+		let BloombergNC = campaignTrail_temp.current_results[1][32].result.find(result => result.candidate===303).percent;
+		let PeteNC = campaignTrail_temp.current_results[1][32].result.find(result => result.candidate===304).percent;
+		let KlobucharNC = campaignTrail_temp.current_results[1][32].result.find(result => result.candidate===310).percent;
+		let BidenOK = campaignTrail_temp.current_results[1][35].result.find(result => result.candidate===300).percent;
+		let BernieOK = campaignTrail_temp.current_results[1][35].result.find(result => result.candidate===301).percent;
+		let WarrenOK = campaignTrail_temp.current_results[1][35].result.find(result => result.candidate===302).percent;
+		let BloombergOK = campaignTrail_temp.current_results[1][35].result.find(result => result.candidate===303).percent;
+		let PeteOK = campaignTrail_temp.current_results[1][35].result.find(result => result.candidate===304).percent;
+		let KlobucharOK = campaignTrail_temp.current_results[1][35].result.find(result => result.candidate===310).percent;
+		let BidenTN = campaignTrail_temp.current_results[1][41].result.find(result => result.candidate===300).percent;
+		let BernieTN = campaignTrail_temp.current_results[1][41].result.find(result => result.candidate===301).percent;
+		let WarrenTN = campaignTrail_temp.current_results[1][41].result.find(result => result.candidate===302).percent;
+		let BloombergTN = campaignTrail_temp.current_results[1][41].result.find(result => result.candidate===303).percent;
+		let PeteTN = campaignTrail_temp.current_results[1][41].result.find(result => result.candidate===304).percent;
+		let KlobucharTN = campaignTrail_temp.current_results[1][41].result.find(result => result.candidate===310).percent;
+		let BidenTX = campaignTrail_temp.current_results[1][42].result.find(result => result.candidate===300).percent;
+		let BernieTX = campaignTrail_temp.current_results[1][42].result.find(result => result.candidate===301).percent;
+		let WarrenTX = campaignTrail_temp.current_results[1][42].result.find(result => result.candidate===302).percent;
+		let BloombergTX = campaignTrail_temp.current_results[1][42].result.find(result => result.candidate===303).percent;
+		let PeteTX = campaignTrail_temp.current_results[1][42].result.find(result => result.candidate===304).percent;
+		let KlobucharTX = campaignTrail_temp.current_results[1][42].result.find(result => result.candidate===310).percent;
+		let BidenUT = campaignTrail_temp.current_results[1][43].result.find(result => result.candidate===300).percent;
+		let BernieUT = campaignTrail_temp.current_results[1][43].result.find(result => result.candidate===301).percent;
+		let WarrenUT = campaignTrail_temp.current_results[1][43].result.find(result => result.candidate===302).percent;
+		let BloombergUT = campaignTrail_temp.current_results[1][43].result.find(result => result.candidate===303).percent;
+		let PeteUT = campaignTrail_temp.current_results[1][43].result.find(result => result.candidate===304).percent;
+		let KlobucharUT = campaignTrail_temp.current_results[1][43].result.find(result => result.candidate===310).percent;
+		let BidenVT = campaignTrail_temp.current_results[1][44].result.find(result => result.candidate===300).percent;
+		let BernieVT = campaignTrail_temp.current_results[1][44].result.find(result => result.candidate===301).percent;
+		let WarrenVT = campaignTrail_temp.current_results[1][44].result.find(result => result.candidate===302).percent;
+		let BloombergVT = campaignTrail_temp.current_results[1][44].result.find(result => result.candidate===303).percent;
+		let PeteVT = campaignTrail_temp.current_results[1][44].result.find(result => result.candidate===304).percent;
+		let KlobucharVT = campaignTrail_temp.current_results[1][44].result.find(result => result.candidate===310).percent;
+		let BidenVA = campaignTrail_temp.current_results[1][45].result.find(result => result.candidate===300).percent;
+		let BernieVA = campaignTrail_temp.current_results[1][45].result.find(result => result.candidate===301).percent;
+		let WarrenVA = campaignTrail_temp.current_results[1][45].result.find(result => result.candidate===302).percent;
+		let BloombergVA = campaignTrail_temp.current_results[1][45].result.find(result => result.candidate===303).percent;
+		let PeteVA = campaignTrail_temp.current_results[1][45].result.find(result => result.candidate===304).percent;
+		let KlobucharVA = campaignTrail_temp.current_results[1][45].result.find(result => result.candidate===310).percent;
+		let BidenAS = campaignTrail_temp.current_results[1][51].result.find(result => result.candidate===300).percent;
+		let BernieAS = campaignTrail_temp.current_results[1][51].result.find(result => result.candidate===301).percent;
+		let WarrenAS = campaignTrail_temp.current_results[1][51].result.find(result => result.candidate===302).percent;
+		let BloombergAS = campaignTrail_temp.current_results[1][51].result.find(result => result.candidate===303).percent;
+		let PeteAS = campaignTrail_temp.current_results[1][51].result.find(result => result.candidate===304).percent;
+		let KlobucharAS = campaignTrail_temp.current_results[1][51].result.find(result => result.candidate===310).percent;
+		let GabbardAS = campaignTrail_temp.current_results[1][51].result.find(result => result.candidate===311).percent;
+        if (BidenAL > BernieAL && BidenAL > WarrenAL && BidenAL > BloombergAL && BidenAL > PeteAL && BidenAL > KlobucharAL) {
+            BidenSTWin += 1;
+        } else if (BernieAL > BidenAL && BernieAL > WarrenAL && BernieAL > BloombergAL && BernieAL > PeteAL && BernieAL > KlobucharAL) {
+            BernieSTWin += 1;
+        } else if (WarrenAL > BidenAL && WarrenAL > BernieAL && WarrenAL > BloombergAL && WarrenAL > PeteAL && WarrenAL > KlobucharAL) {
+            WarrenSTWin += 1;
+        } else if (BloombergAL > BidenAL && BloombergAL > BernieAL && BloombergAL > WarrenAL && BloombergAL > PeteAL && BloombergAL > KlobucharAL) {
+            BloombergSTWin += 1;
+        } else if (PeteAL > BidenAL && PeteAL > BernieAL && PeteAL > WarrenAL && PeteAL > BloombergAL && PeteAL > KlobucharAL) {
+            PeteSTWin += 1;
+        } else if (KlobucharAL > BidenAL && KlobucharAL > BernieAL && KlobucharAL > WarrenAL && KlobucharAL > BloombergAL && KlobucharAL > PeteAL) {
+            KlobucharSTWin += 1;
+        }
+        if (BidenAR > BernieAR && BidenAR > WarrenAR && BidenAR > BloombergAR && BidenAR > PeteAR && BidenAR > KlobucharAR) {
+            BidenSTWin += 1;
+        } else if (BernieAR > BidenAR && BernieAR > WarrenAR && BernieAR > BloombergAR && BernieAR > PeteAR && BernieAR > KlobucharAR) {
+            BernieSTWin += 1;
+        } else if (WarrenAR > BidenAR && WarrenAR > BernieAR && WarrenAR > BloombergAR && WarrenAR > PeteAR && WarrenAR > KlobucharAR) {
+            WarrenSTWin += 1;
+        } else if (BloombergAR > BidenAR && BloombergAR > BernieAR && BloombergAR > WarrenAR && BloombergAR > PeteAR && BloombergAR > KlobucharAR) {
+            BloombergSTWin += 1;
+        } else if (PeteAR > BidenAR && PeteAR > BernieAR && PeteAR > WarrenAR && PeteAR > BloombergAR && PeteAR > KlobucharAR) {
+            PeteSTWin += 1;
+        } else if (KlobucharAR > BidenAR && KlobucharAR > BernieAR && KlobucharAR > WarrenAR && KlobucharAR > BloombergAR && KlobucharAR > PeteAR) {
+            KlobucharSTWin += 1;
+        }
+        if (BidenCA > BernieCA && BidenCA > WarrenCA && BidenCA > BloombergCA && BidenCA > PeteCA && BidenCA > KlobucharCA) {
+            BidenSTWin += 1;
+        } else if (BernieCA > BidenCA && BernieCA > WarrenCA && BernieCA > BloombergCA && BernieCA > PeteCA && BernieCA > KlobucharCA) {
+            BernieSTWin += 1;
+        } else if (WarrenCA > BidenCA && WarrenCA > BernieCA && WarrenCA > BloombergCA && WarrenCA > PeteCA && WarrenCA > KlobucharCA) {
+            WarrenSTWin += 1;
+        } else if (BloombergCA > BidenCA && BloombergCA > BernieCA && BloombergCA > WarrenCA && BloombergCA > PeteCA && BloombergCA > KlobucharCA) {
+            BloombergSTWin += 1;
+        } else if (PeteCA > BidenCA && PeteCA > BernieCA && PeteCA > WarrenCA && PeteCA > BloombergCA && PeteCA > KlobucharCA) {
+            PeteSTWin += 1;
+        } else if (KlobucharCA > BidenCA && KlobucharCA > BernieCA && KlobucharCA > WarrenCA && KlobucharCA > BloombergCA && KlobucharCA > PeteCA) {
+            KlobucharSTWin += 1;
+        }
+        if (BidenCO > BernieCO && BidenCO > WarrenCO && BidenCO > BloombergCO && BidenCO > PeteCO && BidenCO > KlobucharCO) {
+            BidenSTWin += 1;
+        } else if (BernieCO > BidenCO && BernieCO > WarrenCO && BernieCO > BloombergCO && BernieCO > PeteCO && BernieCO > KlobucharCO) {
+            BernieSTWin += 1;
+        } else if (WarrenCO > BidenCO && WarrenCO > BernieCO && WarrenCO > BloombergCO && WarrenCO > PeteCO && WarrenCO > KlobucharCO) {
+            WarrenSTWin += 1;
+        } else if (BloombergCO > BidenCO && BloombergCO > BernieCO && BloombergCO > WarrenCO && BloombergCO > PeteCO && BloombergCO > KlobucharCO) {
+            BloombergSTWin += 1;
+        } else if (PeteCO > BidenCO && PeteCO > BernieCO && PeteCO > WarrenCO && PeteCO > BloombergCO && PeteCO > KlobucharCO) {
+            PeteSTWin += 1;
+        } else if (KlobucharCO > BidenCO && KlobucharCO > BernieCO && KlobucharCO > WarrenCO && KlobucharCO > BloombergCO && KlobucharCO > PeteCO) {
+            KlobucharSTWin += 1;
+        }
+        if (BidenME > BernieME && BidenME > WarrenME && BidenME > BloombergME && BidenME > PeteME && BidenME > KlobucharME) {
+            BidenSTWin += 1;
+        } else if (BernieME > BidenME && BernieME > WarrenME && BernieME > BloombergME && BernieME > PeteME && BernieME > KlobucharME) {
+            BernieSTWin += 1;
+        } else if (WarrenME > BidenME && WarrenME > BernieME && WarrenME > BloombergME && WarrenME > PeteME && WarrenME > KlobucharME) {
+            WarrenSTWin += 1;
+        } else if (BloombergME > BidenME && BloombergME > BernieME && BloombergME > WarrenME && BloombergME > PeteME && BloombergME > KlobucharME) {
+            BloombergSTWin += 1;
+        } else if (PeteME > BidenME && PeteME > BernieME && PeteME > WarrenME && PeteME > BloombergME && PeteME > KlobucharME) {
+            PeteSTWin += 1;
+        } else if (KlobucharME > BidenME && KlobucharME > BernieME && KlobucharME > WarrenME && KlobucharME > BloombergME && KlobucharME > PeteME) {
+            KlobucharSTWin += 1;
+        }
+        if (BidenMA > BernieMA && BidenMA > WarrenMA && BidenMA > BloombergMA && BidenMA > PeteMA && BidenMA > KlobucharMA) {
+            BidenSTWin += 1;
+        } else if (BernieMA > BidenMA && BernieMA > WarrenMA && BernieMA > BloombergMA && BernieMA > PeteMA && BernieMA > KlobucharMA) {
+            BernieSTWin += 1;
+        } else if (WarrenMA > BidenMA && WarrenMA > BernieMA && WarrenMA > BloombergMA && WarrenMA > PeteMA && WarrenMA > KlobucharMA) {
+            WarrenSTWin += 1;
+        } else if (BloombergMA > BidenMA && BloombergMA > BernieMA && BloombergMA > WarrenMA && BloombergMA > PeteMA && BloombergMA > KlobucharMA) {
+            BloombergSTWin += 1;
+        } else if (PeteMA > BidenMA && PeteMA > BernieMA && PeteMA > WarrenMA && PeteMA > BloombergMA && PeteMA > KlobucharMA) {
+            PeteSTWin += 1;
+        } else if (KlobucharMA > BidenMA && KlobucharMA > BernieMA && KlobucharMA > WarrenMA && KlobucharMA > BloombergMA && KlobucharMA > PeteMA) {
+            KlobucharSTWin += 1;
+        }
+        if (BidenMN > BernieMN && BidenMN > WarrenMN && BidenMN > BloombergMN && BidenMN > PeteMN && BidenMN > KlobucharMN) {
+            BidenSTWin += 1;
+        } else if (BernieMN > BidenMN && BernieMN > WarrenMN && BernieMN > BloombergMN && BernieMN > PeteMN && BernieMN > KlobucharMN) {
+            BernieSTWin += 1;
+        } else if (WarrenMN > BidenMN && WarrenMN > BernieMN && WarrenMN > BloombergMN && WarrenMN > PeteMN && WarrenMN > KlobucharMN) {
+            WarrenSTWin += 1;
+        } else if (BloombergMN > BidenMN && BloombergMN > BernieMN && BloombergMN > WarrenMN && BloombergMN > PeteMN && BloombergMN > KlobucharMN) {
+            BloombergSTWin += 1;
+        } else if (PeteMN > BidenMN && PeteMN > BernieMN && PeteMN > WarrenMN && PeteMN > BloombergMN && PeteMN > KlobucharMN) {
+            PeteSTWin += 1;
+        } else if (KlobucharMN > BidenMN && KlobucharMN > BernieMN && KlobucharMN > WarrenMN && KlobucharMN > BloombergMN && KlobucharMN > PeteMN) {
+            KlobucharSTWin += 1;
+        }
+        if (BidenNC > BernieNC && BidenNC > WarrenNC && BidenNC > BloombergNC && BidenNC > PeteNC && BidenNC > KlobucharNC) {
+            BidenSTWin += 1;
+        } else if (BernieNC > BidenNC && BernieNC > WarrenNC && BernieNC > BloombergNC && BernieNC > PeteNC && BernieNC > KlobucharNC) {
+            BernieSTWin += 1;
+        } else if (WarrenNC > BidenNC && WarrenNC > BernieNC && WarrenNC > BloombergNC && WarrenNC > PeteNC && WarrenNC > KlobucharNC) {
+            WarrenSTWin += 1;
+        } else if (BloombergNC > BidenNC && BloombergNC > BernieNC && BloombergNC > WarrenNC && BloombergNC > PeteNC && BloombergNC > KlobucharNC) {
+            BloombergSTWin += 1;
+        } else if (PeteNC > BidenNC && PeteNC > BernieNC && PeteNC > WarrenNC && PeteNC > BloombergNC && PeteNC > KlobucharNC) {
+            PeteSTWin += 1;
+        } else if (KlobucharNC > BidenNC && KlobucharNC > BernieNC && KlobucharNC > WarrenNC && KlobucharNC > BloombergNC && KlobucharNC > PeteNC) {
+            KlobucharSTWin += 1;
+        }
+        if (BidenOK > BernieOK && BidenOK > WarrenOK && BidenOK > BloombergOK && BidenOK > PeteOK && BidenOK > KlobucharOK) {
+            BidenSTWin += 1;
+        } else if (BernieOK > BidenOK && BernieOK > WarrenOK && BernieOK > BloombergOK && BernieOK > PeteOK && BernieOK > KlobucharOK) {
+            BernieSTWin += 1;
+        } else if (WarrenOK > BidenOK && WarrenOK > BernieOK && WarrenOK > BloombergOK && WarrenOK > PeteOK && WarrenOK > KlobucharOK) {
+            WarrenSTWin += 1;
+        } else if (BloombergOK > BidenOK && BloombergOK > BernieOK && BloombergOK > WarrenOK && BloombergOK > PeteOK && BloombergOK > KlobucharOK) {
+            BloombergSTWin += 1;
+        } else if (PeteOK > BidenOK && PeteOK > BernieOK && PeteOK > WarrenOK && PeteOK > BloombergOK && PeteOK > KlobucharOK) {
+            PeteSTWin += 1;
+        } else if (KlobucharOK > BidenOK && KlobucharOK > BernieOK && KlobucharOK > WarrenOK && KlobucharOK > BloombergOK && KlobucharOK > PeteOK) {
+            KlobucharSTWin += 1;
+        }
+        if (BidenTN > BernieTN && BidenTN > WarrenTN && BidenTN > BloombergTN && BidenTN > PeteTN && BidenTN > KlobucharTN) {
+            BidenSTWin += 1;
+        } else if (BernieTN > BidenTN && BernieTN > WarrenTN && BernieTN > BloombergTN && BernieTN > PeteTN && BernieTN > KlobucharTN) {
+            BernieSTWin += 1;
+        } else if (WarrenTN > BidenTN && WarrenTN > BernieTN && WarrenTN > BloombergTN && WarrenTN > PeteTN && WarrenTN > KlobucharTN) {
+            WarrenSTWin += 1;
+        } else if (BloombergTN > BidenTN && BloombergTN > BernieTN && BloombergTN > WarrenTN && BloombergTN > PeteTN && BloombergTN > KlobucharTN) {
+            BloombergSTWin += 1;
+        } else if (PeteTN > BidenTN && PeteTN > BernieTN && PeteTN > WarrenTN && PeteTN > BloombergTN && PeteTN > KlobucharTN) {
+            PeteSTWin += 1;
+        } else if (KlobucharTN > BidenTN && KlobucharTN > BernieTN && KlobucharTN > WarrenTN && KlobucharTN > BloombergTN && KlobucharTN > PeteTN) {
+            KlobucharSTWin += 1;
+        }
+        if (BidenTX > BernieTX && BidenTX > WarrenTX && BidenTX > BloombergTX && BidenTX > PeteTX && BidenTX > KlobucharTX) {
+            BidenSTWin += 1;
+        } else if (BernieTX > BidenTX && BernieTX > WarrenTX && BernieTX > BloombergTX && BernieTX > PeteTX && BernieTX > KlobucharTX) {
+            BernieSTWin += 1;
+        } else if (WarrenTX > BidenTX && WarrenTX > BernieTX && WarrenTX > BloombergTX && WarrenTX > PeteTX && WarrenTX > KlobucharTX) {
+            WarrenSTWin += 1;
+        } else if (BloombergTX > BidenTX && BloombergTX > BernieTX && BloombergTX > WarrenTX && BloombergTX > PeteTX && BloombergTX > KlobucharTX) {
+            BloombergSTWin += 1;
+        } else if (PeteTX > BidenTX && PeteTX > BernieTX && PeteTX > WarrenTX && PeteTX > BloombergTX && PeteTX > KlobucharTX) {
+            PeteSTWin += 1;
+        } else if (KlobucharTX > BidenTX && KlobucharTX > BernieTX && KlobucharTX > WarrenTX && KlobucharTX > BloombergTX && KlobucharTX > PeteTX) {
+            KlobucharSTWin += 1;
+        }
+        if (BidenUT > BernieUT && BidenUT > WarrenUT && BidenUT > BloombergUT && BidenUT > PeteUT && BidenUT > KlobucharUT) {
+            BidenSTWin += 1;
+        } else if (BernieUT > BidenUT && BernieUT > WarrenUT && BernieUT > BloombergUT && BernieUT > PeteUT && BernieUT > KlobucharUT) {
+            BernieSTWin += 1;
+        } else if (WarrenUT > BidenUT && WarrenUT > BernieUT && WarrenUT > BloombergUT && WarrenUT > PeteUT && WarrenUT > KlobucharUT) {
+            WarrenSTWin += 1;
+        } else if (BloombergUT > BidenUT && BloombergUT > BernieUT && BloombergUT > WarrenUT && BloombergUT > PeteUT && BloombergUT > KlobucharUT) {
+            BloombergSTWin += 1;
+        } else if (PeteUT > BidenUT && PeteUT > BernieUT && PeteUT > WarrenUT && PeteUT > BloombergUT && PeteUT > KlobucharUT) {
+            PeteSTWin += 1;
+        } else if (KlobucharUT > BidenUT && KlobucharUT > BernieUT && KlobucharUT > WarrenUT && KlobucharUT > BloombergUT && KlobucharUT > PeteUT) {
+            KlobucharSTWin += 1;
+        }
+        if (BidenVT > BernieVT && BidenVT > WarrenVT && BidenVT > BloombergVT && BidenVT > PeteVT && BidenVT > KlobucharVT) {
+            BidenSTWin += 1;
+        } else if (BernieVT > BidenVT && BernieVT > WarrenVT && BernieVT > BloombergVT && BernieVT > PeteVT && BernieVT > KlobucharVT) {
+            BernieSTWin += 1;
+        } else if (WarrenVT > BidenVT && WarrenVT > BernieVT && WarrenVT > BloombergVT && WarrenVT > PeteVT && WarrenVT > KlobucharVT) {
+            WarrenSTWin += 1;
+        } else if (BloombergVT > BidenVT && BloombergVT > BernieVT && BloombergVT > WarrenVT && BloombergVT > PeteVT && BloombergVT > KlobucharVT) {
+            BloombergSTWin += 1;
+        } else if (PeteVT > BidenVT && PeteVT > BernieVT && PeteVT > WarrenVT && PeteVT > BloombergVT && PeteVT > KlobucharVT) {
+            PeteSTWin += 1;
+        } else if (KlobucharVT > BidenVT && KlobucharVT > BernieVT && KlobucharVT > WarrenVT && KlobucharVT > BloombergVT && KlobucharVT > PeteVT) {
+            KlobucharSTWin += 1;
+        }
+        if (BidenVA > BernieVA && BidenVA > WarrenVA && BidenVA > BloombergVA && BidenVA > PeteVA && BidenVA > KlobucharVA) {
+            BidenSTWin += 1;
+        } else if (BernieVA > BidenVA && BernieVA > WarrenVA && BernieVA > BloombergVA && BernieVA > PeteVA && BernieVA > KlobucharVA) {
+            BernieSTWin += 1;
+        } else if (WarrenVA > BidenVA && WarrenVA > BernieVA && WarrenVA > BloombergVA && WarrenVA > PeteVA && WarrenVA > KlobucharVA) {
+            WarrenSTWin += 1;
+        } else if (BloombergVA > BidenVA && BloombergVA > BernieVA && BloombergVA > WarrenVA && BloombergVA > PeteVA && BloombergVA > KlobucharVA) {
+            BloombergSTWin += 1;
+        } else if (PeteVA > BidenVA && PeteVA > BernieVA && PeteVA > WarrenVA && PeteVA > BloombergVA && PeteVA > KlobucharVA) {
+            PeteSTWin += 1;
+        } else if (KlobucharVA > BidenVA && KlobucharVA > BernieVA && KlobucharVA > WarrenVA && KlobucharVA > BloombergVA && KlobucharVA > PeteVA) {
+            KlobucharSTWin += 1;
+        }
+        if (BidenAS > BernieAS && BidenAS > WarrenAS && BidenAS > BloombergAS && BidenAS > PeteAS && BidenAS > KlobucharAS && BidenAS > GabbardAS) {
+            BidenSTWin += 1;
+        } else if (BernieAS > BidenAS && BernieAS > WarrenAS && BernieAS > BloombergAS && BernieAS > PeteAS && BernieAS > KlobucharAS && BernieAS > GabbardAS) {
+            BernieSTWin += 1;
+        } else if (WarrenAS > BidenAS && WarrenAS > BernieAS && WarrenAS > BloombergAS && WarrenAS > PeteAS && WarrenAS > KlobucharAS && WarrenAS > GabbardAS) {
+            WarrenSTWin += 1;
+        } else if (BloombergAS > BidenAS && BloombergAS > BernieAS && BloombergAS > WarrenAS && BloombergAS > PeteAS && BloombergAS > KlobucharAS && BloombergAS > GabbardAS) {
+            BloombergSTWin += 1;
+        } else if (PeteAS > BidenAS && PeteAS > BernieAS && PeteAS > WarrenAS && PeteAS > BloombergAS && PeteAS > KlobucharAS && PeteAS > GabbardAS) {
+            PeteSTWin += 1;
+        } else if (KlobucharAS > BidenAS && KlobucharAS > BernieAS && KlobucharAS > WarrenAS && KlobucharAS > BloombergAS && KlobucharAS > PeteAS && KlobucharAS > GabbardAS) {
+            KlobucharSTWin += 1;
+        }
+		if (BidenSTWin >= 14) {
+			applyDrift(300, 0.09)
+		} else if (BidenSTWin < 14 && BidenSTWin >= 10) {
+			applyDrift(300, 0.04)
+		} else if (BidenSTWin < 10 && BidenSTWin >= 6) {
+			applyDrift(300, 0.02)
+		} else if (BidenSTWin < 6) {
+			applyDrift(300, -0.04)
+		}
 	}
 }
 
