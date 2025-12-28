@@ -21500,7 +21500,7 @@ function BernieFadeshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(747);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(748);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.925;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.95;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(749);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(750);
@@ -22429,7 +22429,7 @@ function Klobmentumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201064);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201065);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.125;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201066);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.075;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201067);
@@ -22479,7 +22479,7 @@ function Klobmentumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201089);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201090);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.125;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.15;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201091);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201092);
@@ -24315,16 +24315,24 @@ cyoAdventure = function(a) {
 		}
 		if (WarrenSTWin > 0) {
 			applyDrift(302, 0.09)
-		} else if (WarrenSTWin == 0) {
-			applyDrift(302, -1)
 		}
 		if (BloombergSTWin > 1) {
 			applyDrift(303, 0.09)
-		} else if (BloombergSTWin <= 1) {
-			applyDrift(303, -1)
 		}
+	}
+
+	if (ans == 270001 || ans == 270002 || ans == 270003 || ans == 270004) {
 		if (WarrenSTWin > BernieSTWin) {
 			applyDrift(301, -0.9)
+		}
+		if (BloombergSTWin > BidenSTWin) {
+			applyDrift(300, -0.2)
+		}
+		if (WarrenSTWin == 0) {
+			applyDrift(302, -1)
+		}
+		if (BloombergSTWin <= 1) {
+			applyDrift(303, -1)
 		}
 	}
 }
