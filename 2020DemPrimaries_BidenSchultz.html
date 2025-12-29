@@ -98,7 +98,7 @@ campaignTrail_temp.questions_json = [
         "pk": 110000,
         "fields": {
             "priority": 2,
-            "description": "Elizabeth Warren is surging in the polls, in some cases eclipsing Bernie Sanders as the leading progressive in the race. Some of your advisors fear she could even come toe-to-toe with you if you don’t knock her back. What’s the strategy here?",
+            "description": "Elizabeth Warren is surging in the polls, now eclipsing Bernie Sanders as the leading progressive in the race. Some of your advisors fear she could even come toe-to-toe with you if you don’t knock her back. What’s the strategy here?",
             "likelihood": 1
         }
     },
@@ -107,7 +107,7 @@ campaignTrail_temp.questions_json = [
         "pk": 120000,
         "fields": {
             "priority": 2,
-            "description": "It’s come up time and again that the main motivator for Democratic voters is finding the candidate that can beat Donald Trump. Many see you as their best shot given your extensive experience and grandfatherly persona. How will you define yourself as the opposition to Trump?",
+            "description": "It’s come up time and again that the main motivator for Democratic voters is finding the candidate that can beat Donald Trump. Many see you as their best shot given your extensive experience and grandfatherly persona. How will you define yourself as the antidote to Trump?",
             "likelihood": 1
         }
     },
@@ -116,7 +116,7 @@ campaignTrail_temp.questions_json = [
         "pk": 130000,
         "fields": {
             "priority": 2,
-            "description": "Trump made immigration a centerpiece of his 2016 campaign, and he has enacted a host of abhorrent policies in office, in addition to consistently using racist and dehumanizing language to describe immigrants. How will you approach this issue, should you be elected president?",
+            "description": "Trump made immigration the centerpiece of his 2016 campaign, and he has enacted a host of abhorrent policies in office, in addition to consistently using racist and dehumanizing language to describe immigrants. How will you approach this issue, should you be elected president?",
             "likelihood": 1
         }
     },
@@ -125,7 +125,7 @@ campaignTrail_temp.questions_json = [
         "pk": 140000,
         "fields": {
             "priority": 3,
-            "description": "The field has narrowed since the last debate and the requirements to participate in the next one has gone up. Ten candidates have qualified, including your chief rivals Sanders, Warren and Buttigieg. What will you focus on in this debate?",
+            "description": "The field has narrowed since the last debate, and the requirements to participate in tonight’s debate have likewise been raised. Ten candidates remain, including your chief rivals Sanders, Warren and Buttigieg. What will you focus on in this debate?",
             "likelihood": 1
         }
     },
@@ -134,7 +134,7 @@ campaignTrail_temp.questions_json = [
         "pk": 150000,
         "fields": {
             "priority": 3,
-            "description": "What started out as a record-setting slate of candidates has started tapering off as requirements to attend the debates rise and fundraising dries up for many minor candidates. As the established frontrunner, you have a better shot at getting them on your side than anyone else. How aggressively do you want to pursue these kinds of endorsements?",
+            "description": "What started out as a record-setting slate of candidates has begun to dwindle as requirements to attend the debates rise and fundraising dries up for the third-raters. As the frontrunner, you have a better shot at getting them on your side than anyone else. How aggressively do you want to pursue these kinds of endorsements?",
             "likelihood": 1
         }
     },
@@ -143,7 +143,7 @@ campaignTrail_temp.questions_json = [
         "pk": 160000,
         "fields": {
             "priority": 3,
-            "description": "It’s been rumored for sometime, but now it’s official: Michael Bloomberg has made a late entrance into the race for the nomination. Whether the former mayor of New York City is running because he doubts you can win the nomination or because it’s a vanity campaign is irrelevant, you must push on. What do you have to say?",
+            "description": "The rumors are true: Mike Bloomberg is officially in the race. Whether the former Republican mayor of New York City has jumped in because he doesn’t believe in you or because he’s run out of ways to spend his fortune is irrelevant. You’re just glad someone talked Hillary out of jumping in with him. What will you say to this development?",
             "likelihood": 1
         }
     },
@@ -152,7 +152,7 @@ campaignTrail_temp.questions_json = [
         "pk": 170000,
         "fields": {
             "priority": 3,
-            "description": "It’s starting to feel like the pundits will hype up anyone but you. Pete Buttigieg is the latest media darling, as his polling has put him among the top contenders in early primary contests. In order to regain the narrative, you need to do something about this, Joe.",
+            "description": "It’s starting to feel like the pundits will hype up anyone but you. Pete Buttigieg is the latest media darling, as his polling has put him among the top contenders in early primary contests. In order to regain the narrative, you need to do something about this kid, and fast.",
             "likelihood": 1
         }
     },
@@ -161,7 +161,7 @@ campaignTrail_temp.questions_json = [
         "pk": 180000,
         "fields": {
             "priority": 3,
-            "description": "Progressives have repeatedly floated the idea of expanding the Supreme Court as a way to combat the right-wing shift at the very top of the judicial branch. Predictably, Trump and his allies have accused Democrats of wanting to “pack the Court” and upending “150 years of judicial standards”. Where do you weigh in on this?",
+            "description": "Progressives have repeatedly floated the idea of expanding the Supreme Court as a way to combat the reactionary shift in the judicial branch. Predictably, Trump and his allies have accused Democrats of wanting to “pack the Court” and upending “150 years of judicial standards”. Where do you weigh in on this?",
             "likelihood": 1
         }
     },
@@ -179,7 +179,7 @@ campaignTrail_temp.questions_json = [
         "pk": 200000,
         "fields": {
             "priority": 3,
-            "description": "The first true test of your standing in the race is about to begin. The polls aren’t especially favorable to you, but you can exceed expectations with a strong rally blitz, perhaps even win the Iowa caucuses outright. Where will you campaign?",
+            "description": "The first true test of your standing in the race is about to begin. The polls aren’t especially favorable to you, but you can exceed expectation with a strong rally blitz, perhaps even win the Iowa caucuses outright. Where will you campaign?",
             "likelihood": 1
         }
     },
@@ -11300,7 +11300,7 @@ campaignTrail_temp.answer_score_global_json = [
         "fields": {
             "answer": 170005,
             "candidate": 300,
-            "affected_candidate": 304,
+            "affected_candidate": 300,
             "global_multiplier": 0.0125
         }
     },
@@ -21500,7 +21500,7 @@ function BernieFadeshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(747);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.875;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(748);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.95;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.975;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(749);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(750);
