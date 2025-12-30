@@ -17723,7 +17723,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 220,
             "candidate": 300,
             "affected_candidate": 302,
-            "state_multiplier": -0.15
+            "state_multiplier": -0.3
         }
     },
     {
@@ -17778,7 +17778,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 220,
             "candidate": 300,
             "affected_candidate": 302,
-            "state_multiplier": 0.005
+            "state_multiplier": -0.005
         }
     },
     {
@@ -17833,7 +17833,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 220,
             "candidate": 300,
             "affected_candidate": 302,
-            "state_multiplier": 0.01
+            "state_multiplier": 0.005
         }
     },
     {
@@ -17888,7 +17888,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 220,
             "candidate": 300,
             "affected_candidate": 302,
-            "state_multiplier": 0.09
+            "state_multiplier": 0.045
         }
     },
     {
@@ -21182,11 +21182,11 @@ e.primary_code = [
   },
   {
     "breakQ": 27,
-    "states": [7005, 192, 202, 204, 205, 214, 227, 7002] // Democrats Abroad, ID, MI, MS, MO, ND, WA, MP
+    "states": [7005, 192, 202, 204, 205, 214, 227] // Democrats Abroad, ID, MI, MS, MO, ND, WA
   },
   {
     "breakQ": 29,
-    "states": [183, 189, 193] // AZ, FL, IL
+    "states": [7002, 183, 189, 193] // MP, AZ, FL, IL
   },
   {
     "breakQ": 31,
@@ -21971,7 +21971,7 @@ function Berniementumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(749);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.025;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(750);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.02;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.01;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(752);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.02;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(753);
@@ -22554,7 +22554,7 @@ document.getElementById("header").src = "https://i.postimg.cc/FK2465zt/2020-Bide
 const customStyling = document.createElement("style");
 customStyling.innerHTML = `
 #campaign_sign {
-    background-image: url("https://i.postimg.cc/1tD6rh3R/2020-DNC-Biden-Sign.png");
+    background-image: url("https://i.postimg.cc/jdFdvwbg/Biden-Sign.png");
     background-size: cover;
     border-color: #c9c9c9;    
     border-width: .01em;
