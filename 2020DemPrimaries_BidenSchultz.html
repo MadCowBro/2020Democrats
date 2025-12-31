@@ -6099,7 +6099,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 300,
             "state": 192,
-            "state_multiplier": 0.5
+            "state_multiplier": 0.65
         }
     },
     {
@@ -7017,7 +7017,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 302,
             "state": 192,
-            "state_multiplier": 0.45
+            "state_multiplier": 0.3
         }
     },
     {
@@ -20333,7 +20333,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 60003,
             "candidate": 300,
-            "answer_feedback": "Sanders fires back, accusing you of joining Republicans in a “misinformation” campaign about M4A, while his supporters take the opportunity to paint you as out of touch, a doddering puppet of corporate interests. People are listening to them."
+            "answer_feedback": "Sanders fires back, accusing you of joining Republicans in a “misinformation” campaign about M4A, while his supporters take the opportunity to paint you as out of touch, a doddering puppet of corporate interests. People are listening."
         }
     },
     {
@@ -20387,7 +20387,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 80001,
             "candidate": 300,
-            "answer_feedback": "Christ, Joe. A states’ rights argument might’ve flown in the 70’s, but now? With this audience? Kamala retorts that federal intervention was the only way that these schools would ever integrate. She gets thunderous applause, while you stand up there, head down, humiliated."
+            "answer_feedback": "A states’ rights argument might’ve flown in the 70’s, but now? With this audience? Kamala retorts that federal intervention was the only way that these schools would ever integrate. She gets thunderous applause, while you stand up there, humiliated."
         }
     },
     {
@@ -20450,7 +20450,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 100001,
             "candidate": 300,
-            "answer_feedback": "It’s a fiery statement, almost Trumpian. In any case, you get a decent fundraising boost out of it. Trump’s reaction is predictable, familiar phrases like “FAKE NEWS” and “SLEEPY JOE” fill Twitter feeds."
+            "answer_feedback": "It’s a fiery statement, almost Trumpian. In any case, you get a decent fundraising boost out of it. Trump’s reaction is predictable, familiar phrases like “WITCH HUNT” and “HOAX” fill Twitter feeds."
         }
     },
     {
@@ -24427,7 +24427,7 @@ cyoAdventure = function(a) {
 			BernieIADelegates -= 2;
 			PeteIADelegates += 2;
 		}
-		if (BidenIA > BernieIA && BidenIA > WarrenIA && BidenIA > PeteIA && BidenIA > KlobucharIA) {
+		if (BidenFebWin == 1) {
 			campaignTrail_temp.questions_json[20] = tunnel(210300);
 		} else if (BidenIA > 20.00) {
 			campaignTrail_temp.questions_json[20] = tunnel(210200);
