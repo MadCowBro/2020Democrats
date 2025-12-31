@@ -470,6 +470,42 @@ campaignTrail_temp.questions_json = [
             "description": "There won’t be another chance to accrue as many delegates in one day. While campaigning in all 14 states plus American Samoa is highly unrealistic, targeting the right states can earn you the momentum you need to fight for the nomination. With Bloomberg, Buttigieg and Klobuchar all still fighting for your base, where will you go for Super Tuesday?",
             "likelihood": 1
         }
+    },
+    {//Alternate Question 27 (Biden bombed ST)
+        "model": "campaign_trail.question",
+        "pk": 270100,
+        "fields": {
+            "priority": 0,
+            "description": "You hoped for one last gasp of air to save your campaign, but it never came. With Super Tuesday having gone bust, there’s no way forward. It’s over, Joe.",
+            "likelihood": 1
+        }
+    },
+    {//Alternate Question 27 (Bloomberg still in)
+        "model": "campaign_trail.question",
+        "pk": 270200,
+        "fields": {
+            "priority": 0,
+            "description": "You can’t get that damn monkey off your back. Super Tuesday could’ve gone so much better if Bloomberg hadn’t butt his way into the race. With Warren falling by the wayside, Sanders has a wide open path to the nomination if you can’t find a way to push him out.",
+            "likelihood": 1
+        }
+    },
+    {//Alternate Question 27 (Warren still in)
+        "model": "campaign_trail.question",
+        "pk": 270300,
+        "fields": {
+            "priority": 0,
+            "description": "With Super Tuesday in the rearview mirror, you’ve established a solid delegate lead. Bloomberg will exit the race after his campaign flopped, leaving you as the only candidate left on your side of the party while Sanders still has to contend with Warren. All you need to do now is keep your foot on the gas, and this nomination will be yours.",
+            "likelihood": 1
+        }
+    },
+    {//Alternate Question 27 (Warren & Bloomberg still in)
+        "model": "campaign_trail.question",
+        "pk": 270400,
+        "fields": {
+            "priority": 0,
+            "description": "You can’t get that damn monkey off your back. Super Tuesday could’ve gone so much better if Bloomberg hadn’t butt his way into the race. At least Warren is still bugging Sanders, but still, if you can’t find a way to push Bloomberg out soon, the convention will get messy.",
+            "likelihood": 1
+        }
     }
 ]
 
@@ -679,7 +715,7 @@ campaignTrail_temp.answers_json = [
         "pk": 80001,
         "fields": {
             "question": 80000,
-            "description": "That’s a mischaracterization of my position across the board, I did not praise racists. That is not true. I left a good law firm to become a public defender when, in fact, my city was in flames because of the assassination of Dr. King. I never–if it was a local decision made by your city council, that’s fine, what I opposed was busing ordered by the Department of Education. What I argued for was that we should not be–we should be–breaking down those lines."
+            "description": "That’s a mischaracterization of my position across the board, I did not praise racists. I never–if it was a local decision made by your city council, that’s fine, what I opposed was busing ordered by the Department of Education. What I argued for was that we should not be–we <i>should</i> be–breaking down those lines."
         }
     },
     {
@@ -687,7 +723,7 @@ campaignTrail_temp.answers_json = [
         "pk": 80002,
         "fields": {
             "question": 80000,
-            "description": "That’s a total mischaracterization, look, everything I’ve done in my career… I ran because of civil rights. I was always, always, opposed to people like Strom Thurmond or anybody else fighting against those basic rights all Americans should enjoy. That’s never changed and it never will. We need fundamental changes, by the way, not just only for African-Americans, but for the LGBT community in this country. For our Latino-Americans, too. There’s so much left to do, there’s so much, and I’ll finish the job when I’m President, I promise you."
+            "description": "That’s a total mischaracterization. I ran because of civil rights. I was always, always, opposed to people like Strom Thurmond or anybody else fighting against those basic rights all Americans should enjoy. We need fundamental changes, by the way, not just only for African-Americans, but for the LGBT community in this country. For our Latino-Americans, too. There’s so much left to do, there’s so much."
         }
     },
     {
@@ -695,7 +731,7 @@ campaignTrail_temp.answers_json = [
         "pk": 80003,
         "fields": {
             "question": 80000,
-            "description": "Look, I won’t deny that my views have changed in my fifty years of service. The country has changed a lot too. I trusted my colleagues–excuse me, my advisors–when they told me federal enforcement would do a whole lot more harm than good. But I spent years and years learning from those mistakes, fighting for civil rights, for equal rights. I never stopped fighting. I was Vice President to the first African-American President of the United States! I’m willing to admit I was wrong then, and I promise to fight for the fundamental changes we need to move forward."
+            "description": "Look, I won’t deny that my views have changed in my fifty years of service. The country has changed a lot too. I trusted my colleagues–excuse me, my advisors–when they told me federal enforcement would do a whole lot more harm than good. But I spent years and years learning from those mistakes, fighting for civil rights, for equal rights. I was Vice President to the first African-American President of the United States! I’m willing to admit I was wrong then."
         }
     },
     {
@@ -1752,6 +1788,126 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 260200,
             "description": "We should swing for the heartland. We’ll start in Minnesota, visit Oklahoma, then head for Colorado and Utah. We must look far and wide for delegates."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270101,
+        "fields": {
+            "question": 270100,
+            "description": "We fought as hard as we could. I’m proud of each and every single one of you."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270201,
+        "fields": {
+            "question": 270200,
+            "description": "We both want the same thing: for Sanders to lose. Let’s talk it out with him and see if we can reach an understanding."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270202,
+        "fields": {
+            "question": 270200,
+            "description": "The polls are clear: I whoop Trump’s ass and Bloomberg’s the one who gets whooped. If he’s serious about making Trump a one-term president, he’ll drop out."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270203,
+        "fields": {
+            "question": 270200,
+            "description": "Look, forget Bloomberg, Sanders is the one we need to keep focusing on. He wants nothing more than for us to get distracted while he keeps stacking delegates. Eyes on the prize, folks."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270204,
+        "fields": {
+            "question": 270200,
+            "description": "Man, where’s our people? Bloomberg’s got his paid influencers, Sanders has those Squad women, who’s stumping for us? Find them, and get them out there."
+        }
+    },
+    {//Alternate Answer for 270201 (Success)
+        "model": "campaign_trail.answer",
+        "pk": 270205,
+        "fields": {
+            "question": 270200,
+            "description": "We both want the same thing: for Sanders to lose. Let’s talk it out with him and see if we can reach an understanding."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270301,
+        "fields": {
+            "question": 270300,
+            "description": "The voters have made it official: I ain’t dead, and I’m not gonna die. I will win this nomination, and I will take the fight to Donald Trump in November. It’s a battle for the soul of the nation, folks."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270302,
+        "fields": {
+            "question": 270300,
+            "description": "You know, it only seems like a matter of time until I’m the official nominee. We can use an early head start on potential VP and Cabinet picks. Ensure that the next administration is one that represents all of America."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270303,
+        "fields": {
+            "question": 270300,
+            "description": "People across the country are saying that Sanders is too extreme to be the nominee. Even Warren thinks so. There’s a reason Trump whines and spins conspiracies about the primaries being rigged against him."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270304,
+        "fields": {
+            "question": 270300,
+            "description": "I was right all along: Bernie Sanders is a paper tiger. With all due respect to Liz, she’s a very flawed candidate and he can’t even beat her. He was supposed to be stronger this year yet he’s been anything but. He’s simply incapable of winning national elections."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270401,
+        "fields": {
+            "question": 270400,
+            "description": "We both want the same thing: for Sanders to lose. Let’s talk it out with him and see if we can reach an understanding."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270402,
+        "fields": {
+            "question": 270400,
+            "description": "The polls are clear: I whoop Trump’s ass and Bloomberg’s the one who gets whooped. If he’s serious about making Trump a one-term president, he’ll drop out."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270403,
+        "fields": {
+            "question": 270400,
+            "description": "People across the country are saying that Sanders is too extreme to be the nominee. There’s a reason Trump whines and spins conspiracies about the primaries being rigged against him."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 270404,
+        "fields": {
+            "question": 270400,
+            "description": "Man, where’s our people? Bloomberg’s got his paid influencers, Sanders has those Squad women, who’s stumping for us? Find them, and get them out there."
+        }
+    },
+    {//Alternate Answer for 270401 (Success)
+        "model": "campaign_trail.answer",
+        "pk": 270405,
+        "fields": {
+            "question": 270400,
+            "description": "We both want the same thing: for Sanders to lose. Let’s talk it out with him and see if we can reach an understanding."
         }
     }
 ]
@@ -13363,6 +13519,156 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 310,
             "global_multiplier": 0.3
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270103,
+        "fields": {
+            "answer": 270101,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": -0.9
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270211,
+        "fields": {
+            "answer": 270201,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": 0.009
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270212,
+        "fields": {
+            "answer": 270202,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270213,
+        "fields": {
+            "answer": 270203,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "global_multiplier": -0.009
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270214,
+        "fields": {
+            "answer": 270204,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270215,
+        "fields": {
+            "answer": 270205,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": -0.9
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270309,
+        "fields": {
+            "answer": 270301,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.009
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270310,
+        "fields": {
+            "answer": 270302,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270311,
+        "fields": {
+            "answer": 270303,
+            "candidate": 300,
+            "affected_candidate": 302,
+            "global_multiplier": -0.009
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270312,
+        "fields": {
+            "answer": 270304,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "global_multiplier": -0.015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270411,
+        "fields": {
+            "answer": 270401,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": 0.009
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270412,
+        "fields": {
+            "answer": 270402,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270413,
+        "fields": {
+            "answer": 270403,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "global_multiplier": -0.009
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270414,
+        "fields": {
+            "answer": 270404,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 270415,
+        "fields": {
+            "answer": 270405,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": -0.9
+        }
     }
 ]
 
@@ -15455,6 +15761,126 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 27,
             "issue_score": 0.2,
             "issue_importance": 4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270216,
+        "fields": {
+            "answer": 270201,
+            "issue": 29,
+            "issue_score": -0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270217,
+        "fields": {
+            "answer": 270202,
+            "issue": 29,
+            "issue_score": 0,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270218,
+        "fields": {
+            "answer": 270205,
+            "issue": 29,
+            "issue_score": -0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270313,
+        "fields": {
+            "answer": 270301,
+            "issue": 30,
+            "issue_score": 0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270314,
+        "fields": {
+            "answer": 270301,
+            "issue": 31,
+            "issue_score": 0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270315,
+        "fields": {
+            "answer": 270302,
+            "issue": 27,
+            "issue_score": 0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270316,
+        "fields": {
+            "answer": 270302,
+            "issue": 28,
+            "issue_score": 0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270317,
+        "fields": {
+            "answer": 270302,
+            "issue": 29,
+            "issue_score": -0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270318,
+        "fields": {
+            "answer": 270303,
+            "issue": 29,
+            "issue_score": -0.45,
+            "issue_importance": 5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270416,
+        "fields": {
+            "answer": 270401,
+            "issue": 29,
+            "issue_score": -0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270417,
+        "fields": {
+            "answer": 270402,
+            "issue": 29,
+            "issue_score": 0,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 270418,
+        "fields": {
+            "answer": 270405,
+            "issue": 29,
+            "issue_score": -0.3,
+            "issue_importance": 3
         }
     }
 ]
@@ -21159,6 +21585,141 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 300,
             "answer_feedback": "Frankly, this doesn’t make any sense. Klobuchar almost certainly has Minnesota on lock, and it would take an incredible performance to carve out parts of Colorado and Utah."
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270102,
+        "fields": {
+            "answer": 270101,
+            "candidate": 300,
+            "answer_feedback": "After meeting with to campaign staff, you hold back tears as you go on stage and talk to your supporters. You don’t end it right then and there, you’re not ready for that just yet. You need to process how it all went wrong…"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270206,
+        "fields": {
+            "answer": 270201,
+            "candidate": 300,
+            "answer_feedback": "Jesus Christ, this guy’s got a bigger ego than Trump. Your advisors tell you Bloomberg thinks he can deadlock the convention and twist enough arms to make him the nominee. He needs a slice of humble pie."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270207,
+        "fields": {
+            "answer": 270202,
+            "candidate": 300,
+            "answer_feedback": "Bloomberg shoots back, saying that the Super Tuesday results show voters want him in the race and believe in his ability to win. Meanwhile, Trump delights in the continued Democrat infighting."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270208,
+        "fields": {
+            "answer": 270203,
+            "candidate": 300,
+            "answer_feedback": "It’ll take a lot of work to top Sanders, given how he’s united his side of the party before you did. Perhaps with some time, Bloomberg will come to his senses and help unite the moderates."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270209,
+        "fields": {
+            "answer": 270204,
+            "candidate": 300,
+            "answer_feedback": "You hit the trail with big names like Alec Baldwin and Keegan-Michael Key. You’ve clawed your way back in the race, now you need to get back on top."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270210,
+        "fields": {
+            "answer": 270205,
+            "candidate": 300,
+            "answer_feedback": "Bloomberg acknowledges you’re in a better position, and drops out March 9, right before the next set of primaries. Now you can catch Sanders."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270305,
+        "fields": {
+            "answer": 270301,
+            "candidate": 300,
+            "answer_feedback": "You post a video on Twitter with “#Joementum”. The dynamics of the campaign have been flipped on its head since your early stumbles. Keep going strong."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270306,
+        "fields": {
+            "answer": 270302,
+            "candidate": 300,
+            "answer_feedback": "Pundits freak that you’re pivoting away from the primaries too soon, especially with Sanders reportedly meeting with Warren. Those pipsqueaks will think twice after the next set of primaries."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270307,
+        "fields": {
+            "answer": 270303,
+            "candidate": 300,
+            "answer_feedback": "Warren claps back, insisting that she respects Sanders and that he would be a strong nominee to go against Trump. If she really felt that way, would she be sabotaging Bernie’s chances?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270308,
+        "fields": {
+            "answer": 270304,
+            "candidate": 300,
+            "answer_feedback": "Sanders, sensing that he’s in trouble, begins talks with Warren about uniting the progressives. The last time they talked, things got messy, so unless they’re really threatened by you, expect the schism to continue."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270406,
+        "fields": {
+            "answer": 270401,
+            "candidate": 300,
+            "answer_feedback": "Jesus Christ, this guy’s got a bigger ego than Trump. Your advisors tell you Bloomberg thinks he can deadlock the convention and twist enough arms to make him the nominee. He needs a slice of humble pie."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270407,
+        "fields": {
+            "answer": 270402,
+            "candidate": 300,
+            "answer_feedback": "Bloomberg shoots back, saying that the Super Tuesday results show voters want him in the race and believe in his ability to win. Meanwhile, Trump delights in the continued Democrat infighting."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270408,
+        "fields": {
+            "answer": 270403,
+            "candidate": 300,
+            "answer_feedback": "Whichever of Warren or Bloomberg drops first will determine whether you will win the nomination. You really should find a way to shove Bloomberg out the door, and soon."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270409,
+        "fields": {
+            "answer": 270404,
+            "candidate": 300,
+            "answer_feedback": "You hit the trail with big names like Alec Baldwin and Keegan-Michael Key, but you fear it’s not enough. You must make a statement in the next round of primaries."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 270410,
+        "fields": {
+            "answer": 270405,
+            "candidate": 300,
+            "answer_feedback": "Bloomberg acknowledges you’re in a better position, and drops out March 9, right before the next set of primaries. Now you can watch Sanders and Warren go at it."
+        }
     }
 ]
 
@@ -21830,7 +22391,7 @@ function Bidenmentumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(686);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.02;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(687);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.02;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.025;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(688);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.02;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(689);
@@ -24318,6 +24879,21 @@ cyoAdventure = function(a) {
 		}
 		if (BloombergSTWin > 1) {
 			applyDrift(303, 0.09)
+		}
+		if (BidenSTWin == 0) {
+			campaignTrail_temp.questions_json[26] = tunnel(270100);
+		} else if (WarrenSTWin > 0 && BloombergSTWin > 1) {
+			campaignTrail_temp.questions_json[26] = tunnel(270400);
+			if (BidenPolling > BerniePolling && WarrenPolling > BloombergPolling) {
+				answerSwapper(270401, 270405, true);
+			}
+		} else if (WarrenSTWin > 0) {
+			campaignTrail_temp.questions_json[26] = tunnel(270300);
+		} else if (BloombergSTWin > 1) {
+			campaignTrail_temp.questions_json[26] = tunnel(270200);
+			if (BidenPolling > BerniePolling && BloombergPolling < 0.2) {
+				answerSwapper(270201, 270205, true);
+			}
 		}
 	}
 
