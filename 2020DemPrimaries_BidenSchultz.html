@@ -24503,9 +24503,14 @@ cyoAdventure = function(a) {
 		if (WarrenIA > BernieIA) {
 			answerSwapper(210001, 210005, true);
 			answerSwapper(210002, 210006, true);
+			answerSwapper(210101, 210005, true);
+			answerSwapper(210102, 210006, true);
 		}
 		if (KlobucharIA > PeteIA) {
 			answerSwapper(210004, 210007, true);
+			answerSwapper(210104, 210007, true);
+			answerSwapper(210204, 210007, true);
+			answerSwapper(210304, 210007, true);
 		}
         if (BidenIA < 10.00) {
             applyDrift(300, -0.075)
@@ -24548,8 +24553,8 @@ cyoAdventure = function(a) {
             applyDrift(301, 0.025, 209)
 			BernieFebWin += 1;
 		} else if (WarrenIA > BidenIA && WarrenIA > BernieIA && WarrenIA > PeteIA && WarrenIA > KlobucharIA) {
-            applyDrift(302, 0.05)
-            applyDrift(302, 0.05, 209)
+            applyDrift(302, 0.025)
+            applyDrift(302, 0.025, 209)
 			WarrenFebWin += 1;
 		} else if (PeteIA > BidenIA && PeteIA > BernieIA && PeteIA > WarrenIA && PeteIA > KlobucharIA) {
             applyDrift(304, 0.025)
@@ -24637,13 +24642,13 @@ cyoAdventure = function(a) {
 			BidenFebWin += 1;
         } else if (BernieNH > BidenNH && BernieNH > WarrenNH && BernieNH > PeteNH && BernieNH > KlobucharNH) {
             applyDrift(301, 0.02)
-            applyDrift(301, 0.05, 208)
-            applyDrift(301, 0.05, 220)
+            applyDrift(301, 0.02, 208)
+            applyDrift(301, 0.02, 220)
 			BernieFebWin += 1;
         } else if (WarrenNH > BidenNH && WarrenNH > BernieNH && WarrenNH > PeteNH && WarrenNH > KlobucharNH) {
-            applyDrift(302, 0.05)
-            applyDrift(302, 0.05, 208)
-            applyDrift(302, 0.05, 220)
+            applyDrift(302, 0.02)
+            applyDrift(302, 0.02, 208)
+            applyDrift(302, 0.02, 220)
 			WarrenFebWin += 1;
         } else if (PeteNH > BidenNH && PeteNH > BernieNH && PeteNH > WarrenNH && PeteNH > KlobucharNH) {
             applyDrift(304, 0.02)
@@ -24728,20 +24733,32 @@ cyoAdventure = function(a) {
 	}
 			
 	if (ans == 250001 || ans == 250002 || ans == 250003 || ans == 250004) {
-		buttigieg_active -= 1;
-			if (buttigieg_active == 0) {
+        let BidenSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===300).percent;
+		if (PeteFebWin <= 2 || BidenSC >= 40.00) {
+		    buttigieg_active -= 1;
+		    if (buttigieg_active == 0) {
                 applyDrift(304, -1)
 	            menuItemsA.splice(3, 1);
-			}
-		klobuchar_active -= 1;
-			if (klobuchar_active == 0) {
+		    }
+		}
+		if (KlobFebWin <= 1 || BidenSC >= 40.00) {
+		    klobuchar_active -= 1;
+		    if (klobuchar_active == 0) {
                 applyDrift(310, -1)
 	            menuItemsA.splice(4, 1);
 			}
-	} else if (ans == 250101) {
+		}
+		if (BidenSC < 40.00) {
+			campaignTrail_temp.questions_json[25] = tunnel(260200);
+		}
+	} else if ((ans == 250101) {
 		campaignTrail_temp.questions_json[25] = tunnel(260200);
 	} else if (ans == 250102) {
-		applyDrift(300, -1)
+		biden_active -= 1;
+		if (biden_active == 0) {
+            applyDrift(300, -1)
+	        menuItemsA.splice(0, 1);
+		}
         campaignTrail_temp.global_parameter_json[0]["fields"].question_count = "26";
 		campaignTrail_temp.questions_json[25] = tunnel(260100);
 		if (WarrenPolling >= 0.2) {
@@ -25067,17 +25084,42 @@ cyoAdventure = function(a) {
 	}
 
 	if (ans == 270001 || ans == 270002 || ans == 270003 || ans == 270004) {
-		if (WarrenSTWin > BernieSTWin) {
-			applyDrift(301, -0.9)
-		}
-		if (BloombergSTWin > BidenSTWin) {
-			applyDrift(300, -0.2)
-		}
 		if (WarrenSTWin == 0) {
-			applyDrift(302, -1)
+			warren_active -= 1;
+		    if (warren_active == 0) {
+                applyDrift(302, -1)
+	            menuItemsA.splice(2, 1);
+		    }
 		}
-		if (BloombergSTWin <= 1) {
-			applyDrift(303, -1)
+		if (BloombergSTWin == 0) {
+			bloomberg_active -= 1;
+		    if (bloomberg_active == 0) {
+                applyDrift(303, -1)
+		    }
+		}
+	}
+
+	if (ans == 270101) {
+		campaignTrail_temp.questions_json[27] = tunnel(280100);
+		if (WarrenSTWin > 0 || WarrenPolling > 0.2) {
+			answerSwapper(280101, 280105, true);
+		}
+	}
+
+	if (ans == 270205 || ans == 270405) {
+		bloomberg_active -= 1;
+		if (bloomberg_active == 0) {
+            applyDrift(303, -1)
+		}
+	}
+
+	if (ans == 270301 || ans == 270302 || ans == 270303 || ans == 270304 || ans == 270401 || ans == 270402 || ans == 270403 || ans == 270404 || ans == 270405) {
+		if (BerniePolling > BidenPolling && WarrenPolling < 0.2) {
+			warren_active -= 1;
+		    if (warren_active == 0) {
+                applyDrift(302, -1)
+	            menuItemsA.splice(2, 1);
+		    }
 		}
 	}
 }
