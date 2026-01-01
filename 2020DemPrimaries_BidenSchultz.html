@@ -506,6 +506,15 @@ campaignTrail_temp.questions_json = [
             "description": "You can’t get that damn monkey off your back. Super Tuesday could’ve gone so much better if Bloomberg hadn’t butt his way into the race. At least Warren is still bugging Sanders, but still, if you can’t find a way to push Bloomberg out soon, the convention will get messy.",
             "likelihood": 1
         }
+    },
+    {//Alternate Question 28 (Biden ends campaign post-ST)
+        "model": "campaign_trail.question",
+        "pk": 280100,
+        "fields": {
+            "priority": 0,
+            "description": "Fifty years of public service wasted chasing after the heart of a party that never wanted you, and now, the end has finally come. In all it’s dreadful humiliation. A Bernie nomination is starting to feel inevitable, and who knows if he can beat Donald Trump. Still, you ponder if any of the other candidates are worthy of your endorsement. How will you spend the last of your political capital?",
+            "likelihood": 1
+        }
     }
 ]
 
@@ -1908,6 +1917,46 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 999999,
             "description": "We both want the same thing: for Sanders to lose. Let’s talk it out with him and see if we can reach an understanding."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 280101,
+        "fields": {
+            "question": 280100,
+            "description": "Not now, but I will support whoever becomes the nominee. We must, God, we must beat Donald Trump. Nothing else matters."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 280102,
+        "fields": {
+            "question": 280100,
+            "description": "Michael Bloomberg, like him or not, is more than capable of winning. I give him my full support in his quest to defeat Donald Trump. I’ll see what I can do to try and help him build trust with the party."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 280103,
+        "fields": {
+            "question": 280100,
+            "description": "Pete Buttigieg is the future of the party. We must help him as much as possible—he’s practically a baby—but his optimism will shine through."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 280104,
+        "fields": {
+            "question": 280100,
+            "description": "Amy Klobuchar is the clear and sensible choice. I was going to pick a woman to be my running mate, but I guess the next best option is endorsing the first female President of the United States."
+        }
+    },
+    {//Alternate Answer for 280101 (Warren strong)
+        "model": "campaign_trail.answer",
+        "pk": 280105,
+        "fields": {
+            "question": 999999,
+            "description": "Hell, I’ve still got Liz’s number, don’t I? It’s been a while, but I think I could give her a call and arrange a few things. We have to beat the hell out of Donald Trump, and I know she’s still got it in her to do it this year."
         }
     }
 ]
@@ -13669,6 +13718,46 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 303,
             "global_multiplier": -0.9
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 280111,
+        "fields": {
+            "answer": 280102,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 280112,
+        "fields": {
+            "answer": 280103,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "global_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 280113,
+        "fields": {
+            "answer": 280104,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "global_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 280114,
+        "fields": {
+            "answer": 280105,
+            "candidate": 300,
+            "affected_candidate": 302,
+            "global_multiplier": 1
+        }
     }
 ]
 
@@ -20522,7 +20611,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 120001,
             "candidate": 300,
-            "answer_feedback": "The gulf between you and the base on free trade is ever-expanding. Sanders and Warren take advantage, criticizing you for downplaying the threat China poses to American workers. You later clarify, “There's no going back to business as usual on trade with me.”"
+            "answer_feedback": "The gulf between you and the base on free trade noticeably widens. Sanders and Warren take advantage, criticizing you for downplaying the threat China poses to American workers. You later clarify, “There’s no going back to business as usual on trade with me.”"
         }
     },
     {
@@ -20549,7 +20638,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 120004,
             "candidate": 300,
-            "answer_feedback": "It’s a safe play. Maybe not as effective as you hoped, as Democrats are already in favor of democracy."
+            "answer_feedback": "It’s a safe play. Maybe not as effective as you hoped, as Democrats are already in favor of democracy, but it doesn’t hurt to remind primary voters of the stakes here."
         }
     },
     {
@@ -20594,7 +20683,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 140001,
             "candidate": 300,
-            "answer_feedback": "You stumbled badly in response to a question on Obamacare, implying it should be scaled back. Bernie Sanders takes advantage of the gaffe and comes out on top."
+            "answer_feedback": "You stumbled badly in response to a question on Obamacare, implying it should be scaled back. Bernie Sanders takes advantage of the gaffe, and comes out on top in the end."
         }
     },
     {
@@ -20603,7 +20692,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 140002,
             "candidate": 300,
-            "answer_feedback": "While you were clearly knowledgeable on the topics, you came across as dull. Warren is projected to get the biggest boost from the night."
+            "answer_feedback": "While you were clearly knowledgeable on the topics at hand, you came across as slow and dull. Warren is projected to get the biggest boost from the night."
         }
     },
     {
@@ -20612,7 +20701,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 140003,
             "candidate": 300,
-            "answer_feedback": "Pundits praise Buttigieg’s performance in the debates, but you also had a good night. A surprisingly good night."
+            "answer_feedback": "While pundits praise Buttigieg’s performance in the debates, you also had a good night. A surprisingly good night."
         }
     },
     {
@@ -20621,7 +20710,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 140004,
             "candidate": 300,
-            "answer_feedback": "This was for the best. Your already-high polling numbers get another boost after the debate, but Amy Klobuchar gets one as well."
+            "answer_feedback": "This was for the best. Your poll numbers receive a healthy boost after the debate, but Amy Klobuchar also earns one with her surprisingly energetic performance."
         }
     },
     {
@@ -20639,7 +20728,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 150002,
             "candidate": 300,
-            "answer_feedback": "He still doesn’t bite. It’s nothing personal surely, he’s just looking at things through a political lens, but man, it hurts. He’s your friend."
+            "answer_feedback": "He just won’t bite. It’s nothing personal surely, he’s just looking out for party unity, but it still hurts. In any case, he’s still your friend, you think."
         }
     },
     {
@@ -20648,7 +20737,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 150003,
             "candidate": 300,
-            "answer_feedback": "You get a couple, Representative Tim Ryan for instance, but the rest stay neutral for now. Waiting to see how the race shakes out."
+            "answer_feedback": "You get Tim Ryan, but the rest are staying out for now. Waiting to see how the race shakes out."
         }
     },
     {
@@ -20666,7 +20755,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 160001,
             "candidate": 300,
-            "answer_feedback": "He certainly does, and they come pouring out: stop-and-frisk, the Portable Bloomberg, numerous attack on Obama, and more. The carbon copy of Donald Trump thinks he deserves to be the Democratic nominee."
+            "answer_feedback": "He certainly does, and they come pouring out: stop-and-frisk, the Portable Bloomberg, numerous attacks on Obama, and more. The drab mirror image of Donald Trump sputters and steps in it further by trying to pay Instagram accounts to post favorable memes. The incident spawns a bizarre image of a character from SpongeBob issuing a vulgar endorsement."
         }
     },
     {
@@ -20702,7 +20791,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 170002,
             "candidate": 300,
-            "answer_feedback": "Yes, the electability argument is your strongest, but it’s important to recognize when you’re losing ground. Switch things up a little."
+            "answer_feedback": "Yes, the electability argument is your strongest, but it’s important to recognize when you’re losing ground. You’d be well advised to switch things up a little."
         }
     },
     {
@@ -20720,7 +20809,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 170004,
             "candidate": 300,
-            "answer_feedback": "Super PACs supporting you push out ads digging into his time at McKinsey, questioning who his clients and if his campaign has been compromised by them. To his credit, he releases a client list shortly afterwards."
+            "answer_feedback": "Allied super PACs fire a volley of ads digging into his time at McKinsey, implying that Mayor Pete is compromised. To his credit, he releases a client list shortly afterwards."
         }
     },
     {
@@ -20747,7 +20836,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 180002,
             "candidate": 300,
-            "answer_feedback": "Your justification is more than enough to placate your base, but progressives dismiss your remarks as the opinion of an out of touch establishmentarian. In any event, it’s consistent with your reputation."
+            "answer_feedback": "Your justification is more than enough to placate your base, but progressives dismiss your remarks as the opinion of an out of touch establishmentarian. In any event, it’s consistent."
         }
     },
     {
@@ -20756,7 +20845,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 180003,
             "candidate": 300,
-            "answer_feedback": "You’re 100% correct, yet progressives demand action be taken to reverse the damage Trump has wrought on the nation, through any means necessary. Some pundits note though that you didn’t outright dismiss the idea."
+            "answer_feedback": "You’re 100% correct about Trump, yet progressives demand action be taken to reverse the damage wrought on the nation by any means necessary. Some pundits note that you didn’t outright dismiss the idea."
         }
     },
     {
@@ -20765,7 +20854,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 180004,
             "candidate": 300,
-            "answer_feedback": "Trump and his allies in the media waste no time tying to “Crazy Bernie”, “Pocahontas”, and the “Radical Left”. Your team bills the shift as an “evolution”, which has led your campaign to have newfound appeal among progressives. Just be aware there might be a cost in the general election."
+            "answer_feedback": "Trump and his allies in the media waste no time tying you to “Crazy Bernie”, “Pocahontas”, and the “Radical Left”. Your team bills the shift as an “evolution”, which will inspire newfound appeal with progressives. You’re more worried about how this will play in November."
         }
     },
     {
@@ -20783,7 +20872,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 190002,
             "candidate": 300,
-            "answer_feedback": "It’s not a message that stands out, pretty much all Democrats want to undo the Trump presidency. With your name recognition and stature though, that may be enough."
+            "answer_feedback": "It’s not a message that stands out, pretty much all Democrats want to undo the Trump presidency. With your name recognition and stature though, it may be enough."
         }
     },
     {
@@ -20792,7 +20881,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 190003,
             "candidate": 300,
-            "answer_feedback": "A dignified speech that doesn’t call out the sitting president by name. Can the reserved establishment politician win in an increasingly populist era?"
+            "answer_feedback": "A dignified message that doesn’t call out the sitting president by name. Can the reserved establishment politician win in an increasingly populist era?"
         }
     },
     {
@@ -20801,7 +20890,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 190004,
             "candidate": 300,
-            "answer_feedback": "An interesting pivot that’s got people talking, “Did he have a change of heart or is he simply reading the tea leaves and moving leftward with the party?” Either way, it keeps your campaign in the news."
+            "answer_feedback": "An interesting pivot that’s got people talking: “Did he have a change of heart or is he simply reading the tea leaves?” Either way, it keeps your campaign in the news."
         }
     },
     {
@@ -20810,7 +20899,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 200001,
             "candidate": 300,
-            "answer_feedback": "You get mocked for not campaigning in the big cities, but if anyone can reach out to these target voters, it’s you."
+            "answer_feedback": "You get mocked for not campaigning in the big cities, but if anyone can reach out to these voters, it’s you."
         }
     },
     {
@@ -20819,7 +20908,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 200002,
             "candidate": 300,
-            "answer_feedback": "The rally turnout wasn’t what you hoped it would be, but it’s not crowd size or polling that matters. It’s the votes. They’ll come out for you on Election Day."
+            "answer_feedback": "The rally turnout wasn’t what you hoped it would be, but it’s not crowd size or polling that matters. It’s the votes. You trust they'll come out for you on Election Day."
         }
     },
     {
@@ -21729,6 +21818,51 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 270405,
             "candidate": 300,
             "answer_feedback": "Bloomberg acknowledges you’re in a better position, and drops out March 9, right before the next set of primaries. Now you can watch Sanders and Warren go at it."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 280106,
+        "fields": {
+            "answer": 280101,
+            "candidate": 300,
+            "answer_feedback": "With you bowing out of the race, the race becomes Sanders’ to lose. Unless someone can come out of nowhere, he is destined for the nomination. God help us all."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 280107,
+        "fields": {
+            "answer": 280102,
+            "candidate": 300,
+            "answer_feedback": "Endorsing Bloomberg feels like the only way to stop Sanders, but he’s far from a sure thing. He’ll have to dominate the next rounds of primaries to win, to silence his naysayers. You join him at a rally in St. Louis, Missouri and lose yourself as you shake hands with the small crowd, trying not to think about whether you made a mistake with this man."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 280108,
+        "fields": {
+            "answer": 280103,
+            "candidate": 300,
+            "answer_feedback": "Even when you clasp hands with him onstage, you still harbor doubts about his ability. It’s too late now, though. You failed. The next generation must step up."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 280109,
+        "fields": {
+            "answer": 280104,
+            "candidate": 300,
+            "answer_feedback": "On paper, she’s a solid candidate, but this is no ordinary election. The future of our country is at stake and it’s being placed in the arms of someone who hasn’t been in the game nearly as long as you. Godspeed, Senator Klobuchar."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 280110,
+        "fields": {
+            "answer": 280105,
+            "candidate": 300,
+            "answer_feedback": "Your endorsement of Warren lands like a grenade. Few expected this, especially her. You hear Obama is scrambling to shore up his people, but if he doesn’t like it, too bad. He should’ve helped you when you needed it."
         }
     }
 ]
@@ -24308,10 +24442,12 @@ cyoAdventure = function(a) {
     if (e.noCounter == 18) {
 		if (buttigieg_active == 0) {
             applyDrift(304, -1)
+			applyDrift(310, 0.04)
 	        menuItemsA.splice(3, 1, YangObject);
 		}
 		if (klobuchar_active == 0) {
             applyDrift(310, -1)
+			applyDrift(304, 0.02)
 	        menuItemsA.splice(4, 1, SteyerObject);
 		}
 		refreshHeadquarter();
@@ -24361,8 +24497,9 @@ cyoAdventure = function(a) {
         let PeteIA = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===304).percent;
         let KlobucharIA = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===310).percent;
         let margin = Math.abs(BernieIA - PeteIA);
-		let BernieIADelegates = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===301).electoral_votes;
-		let PeteIADelegates = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===304).electoral_votes;
+        let BidenIADelegates = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===300).delegates;
+		let BernieIADelegates = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===301).delegates;
+		let PeteIADelegates = campaignTrail_temp.current_results[1][14].result.find(result => result.candidate===304).delegates;
 		if (WarrenIA > BernieIA) {
 			answerSwapper(210001, 210005, true);
 			answerSwapper(210002, 210006, true);
@@ -24429,14 +24566,14 @@ cyoAdventure = function(a) {
 		}
 		if (BidenFebWin == 1) {
 			campaignTrail_temp.questions_json[20] = tunnel(210300);
-		} else if (BidenIA > 20.00) {
+		} else if (BidenIADelegates >= 12) {
 			campaignTrail_temp.questions_json[20] = tunnel(210200);
 		} else if (BidenIA < 15.00) {
 			campaignTrail_temp.questions_json[20] = tunnel(210100);
 		}
 	}
 
-	if (ans == 210003) {
+	if (ans == 210003 || ans == 210103) {
 		campaignTrail_temp.questions_json[21] = tunnel(220100);
 	}
 
@@ -24914,14 +25051,14 @@ cyoAdventure = function(a) {
 		}
 		if (BidenSTWin == 0) {
 			campaignTrail_temp.questions_json[26] = tunnel(270100);
-		} else if (WarrenSTWin > 0 && BloombergSTWin > 0) {
+		} else if ((WarrenSTWin > 0 || WarrenPolling > 0.2) && (BloombergSTWin > 0 || BloombergPolling > 0.2)) {
 			campaignTrail_temp.questions_json[26] = tunnel(270400);
 			if (BidenPolling > BerniePolling && WarrenPolling > BloombergPolling) {
 				answerSwapper(270401, 270405, true);
 			}
-		} else if (WarrenSTWin > 0) {
+		} else if (WarrenSTWin > 0 || WarrenPolling > 0.2) {
 			campaignTrail_temp.questions_json[26] = tunnel(270300);
-		} else if (BloombergSTWin > 0) {
+		} else if (BloombergSTWin > 0 || BloombergPolling > 0.2) {
 			campaignTrail_temp.questions_json[26] = tunnel(270200);
 			if (BidenPolling > BerniePolling && BloombergPolling < 0.2) {
 				answerSwapper(270201, 270205, true);
