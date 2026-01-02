@@ -444,6 +444,15 @@ campaignTrail_temp.questions_json = [
             "likelihood": 1
         }
     },
+    {//Alternate Question 24 (Biden won previous primary)
+        "model": "campaign_trail.question",
+        "pk": 240100,
+        "fields": {
+            "priority": -2,
+            "description": "South Carolina was always the strongest of the early states for you, and it’s been made even stronger with Representative Jim Clyburn’s endorsement. With another win all but locked up, will you campaign in South Carolina again before Saturday’s contest or will you look forward to Super Tuesday?",
+            "likelihood": 1
+        }
+    },
     {//Alternate Question 25 (Biden bombs SC)
         "model": "campaign_trail.question",
         "pk": 250100,
@@ -1709,6 +1718,22 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 230300,
             "description": "We’ve got to remind people why I’m in this race. I’ve always fought for the little guy and I always will. I know what it's like to be knocked down. But I know we have to get back up. We have to provide some safety and security for the American people."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 240101,
+        "fields": {
+            "question": 240100,
+            "description": "Of course I’m going to South Carolina. My polling may be good, but that doesn’t mean we should leave room for surprises. We can use some funds for a national ad blitz while I camp in the Palmetto State."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 240102,
+        "fields": {
+            "question": 240100,
+            "description": "South Carolina’s in great shape, we should focus on other areas. If we play our cards right, Super Tuesday can be the endgame."
         }
     },
     {
@@ -13311,6 +13336,26 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 240105,
+        "fields": {
+            "answer": 240101,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": -0.026
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 240106,
+        "fields": {
+            "answer": 240102,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": -0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 250105,
         "fields": {
             "answer": 250101,
@@ -15860,6 +15905,46 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 27,
             "issue_score": 0.2,
             "issue_importance": 4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 240107,
+        "fields": {
+            "answer": 240101,
+            "issue": 27,
+            "issue_score": 0.5,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 240108,
+        "fields": {
+            "answer": 240101,
+            "issue": 278,
+            "issue_score": 0.5,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 240109,
+        "fields": {
+            "answer": 240102,
+            "issue": 27,
+            "issue_score": 0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 240110,
+        "fields": {
+            "answer": 240102,
+            "issue": 28,
+            "issue_score": 0.3,
+            "issue_importance": 3
         }
     },
     {
@@ -20090,6 +20175,116 @@ campaignTrail_temp.answer_score_state_json = [
     },
     {
         "model": "campaign_trail.answer_score_state",
+        "pk": 240111,
+        "fields": {
+            "answer": 240101,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.36
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 240112,
+        "fields": {
+            "answer": 240101,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "state_multiplier": -0.225
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 240113,
+        "fields": {
+            "answer": 240101,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 302,
+            "state_multiplier": -0.3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 240114,
+        "fields": {
+            "answer": 240101,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "state_multiplier": -0.085
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 240115,
+        "fields": {
+            "answer": 240101,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "state_multiplier": -0.025
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 240116,
+        "fields": {
+            "answer": 240102,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.27
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 240117,
+        "fields": {
+            "answer": 240102,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "state_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 240118,
+        "fields": {
+            "answer": 240102,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 302,
+            "state_multiplier": -0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 240119,
+        "fields": {
+            "answer": 240102,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 304,
+            "state_multiplier": -0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 240120,
+        "fields": {
+            "answer": 240102,
+            "state": 220,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "state_multiplier": -0.015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
         "pk": 260229,
         "fields": {
             "answer": 260201,
@@ -21588,6 +21783,24 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
+        "pk": 240103,
+        "fields": {
+            "answer": 240101,
+            "candidate": 300,
+            "answer_feedback": "There’s rapturous applause when Clyburn introduces you on stage. For having a record number of candidates, this feels like a coronation rather than the battle royale most expected the primaries to be."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 240104,
+        "fields": {
+            "answer": 240102,
+            "candidate": 300,
+            "answer_feedback": "Clyburn is a tad miffed you didn’t visit one last time, but that doesn’t deter from his belief that you are the strongest candidate. He’ll hold down the fort and make sure no one can pull off a surprise."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
         "pk": 250103,
         "fields": {
             "answer": 250101,
@@ -23017,13 +23230,13 @@ function Petementumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201000);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201001);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.075;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201002);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201003);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201004);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.125;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201005);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201006);
@@ -24664,7 +24877,9 @@ cyoAdventure = function(a) {
 		if (WarrenNH < 0.05) {
 			campaignTrail_temp.questions_json[22] = tunnel(230200);
 		}
-		if (BidenFebWin == 1) {
+		if (BidenFebWin == 2) {
+			campaignTrail_temp.questions_json[22] = tunnel(230300);
+		} else if (BidenFebWin == 1) {
 			campaignTrail_temp.questions_json[22] = tunnel(230100);
 		}
 	}
@@ -24676,6 +24891,10 @@ cyoAdventure = function(a) {
 			menuItemsA.splice(2, 1);
 		}
 		refreshHeadquarter();
+	}
+
+	if (ans == 230301 || ans == 230302 || ans == 230303 || ans == 230304) {
+		campaignTrail_temp.questions_json[23] = tunnel(240100);
 	}
 
 	if (ans == 240001 || ans == 240002 || ans == 240003 || ans == 240004) {
@@ -24707,8 +24926,7 @@ cyoAdventure = function(a) {
 			BernieFebWin += 1;
 			applyDrift(300, -0.1)
             applyDrift(301, 0.04)
-			applyDrift(303, 0.05)
-			if (PeteFebWin == 2) {
+			if (PeteFebWin >= 2) {
 			    applyDrift(304, 0.05)
 			} else if (KlobucharFebWin >= 1) {
 			    applyDrift(310, 0.05)
@@ -25105,6 +25323,19 @@ cyoAdventure = function(a) {
 		if (biden_active == 0) {
             applyDrift(300, -1)
 	        menuItemsA.splice(0, 1);
+		}
+		if (WarrenPolling < 0.15) {
+			warren_active -= 1;
+		    if (warren_active == 0) {
+                applyDrift(302, -1)
+	            menuItemsA.splice(2, 1);
+		    }
+		}
+		if (KlobucharSTWin == 0 && klobuchar_active == 1) {
+			klobuchar_active -= 1;
+		    if (klobuchar_active == 0) {
+                applyDrift(310, -1)
+		    }
 		}
         campaignTrail_temp.global_parameter_json[0]["fields"].question_count = "28";
 		campaignTrail_temp.questions_json[27] = tunnel(280100);
