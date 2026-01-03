@@ -260,7 +260,7 @@ campaignTrail_temp.questions_json = [
         "pk": 290000,
         "fields": {
             "priority": 0,
-            "description": "Today, five primaries in key states take place - especially Ohio, Missouri, and Illinois. Which of these would you like to campaign in ahead of the primaries?",
+            "description": "In a flash, the world has changed. The World Health Organization has formally declared the COVID-19 outbreak a pandemic. It’s been in the US since January, with Trump gaslighting Americans about just how serious this is. The country needs a leader who can rise to the occasion and guide us through these uncertain times. How will you meet the moment?",
             "likelihood": 1
         }
     },
@@ -269,7 +269,7 @@ campaignTrail_temp.questions_json = [
         "pk": 300000,
         "fields": {
             "priority": 0,
-            "description": "On certain issues, you seem to have used a strategy of portraying Sanders as more <i>conservative</i> than yourself. One of these topics is immigration, where voters are still curious as to where you stand. How will you discuss immigration during your campaign?",
+            "description": "COVID is already impacting the primary calendar, with Ohio postponing their primary to June 2. Three other states—Arizona, Florida and Illinois—are still holding their contests, allowing you the chance to continue padding your delegate lead. In-person campaigning is off the table for now, but which state do you want to target with a last-minute ad blitz and tele-rally?",
             "likelihood": 1
         }
     },
@@ -1398,6 +1398,62 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 280000,
             "description": "I’d love nothing more than to steal Washington from Bernie. If we can plant our flag in such a hostile state, we know we’ve got this thing locked up."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 290001,
+        "fields": {
+            "question": 290000,
+            "description": "Whether or not you're infected or know someone who is infected or have been in contact with an infected person, this is going to require a national response. Not just from our elected leaders or our public health officials, but from all of us. We must, all of us follow the guidelines of health officials and take appropriate protections to protect ourselves and critically to protect others, especially those who are most at risk for this disease."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 290002,
+        "fields": {
+            "question": 290000,
+            "description": "Man, we can’t be campaigning like we’ve been doing, with the rallies and such. We’d be putting people’s lives in danger. All my staff’s gonna work from home and we will only hold virtual events going forward."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 290003,
+        "fields": {
+            "question": 290000,
+            "description": "We have to coordinate, Bernie and I. We may be rivals in this campaign, but beyond that, we have a responsibility to protect people, especially from the incompetency of Donald Trump."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 290004,
+        "fields": {
+            "question": 290000,
+            "description": "We need a plan. It’s clear Donald Trump has no clue what’s he doing, cutting Obama’s pandemic response team like a stupid bastard. It needs to address people’s physical and economic health. Things are about to get real tough for countless Americans."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 300001,
+        "fields": {
+            "question": 300000,
+            "description": "Arizona. COVID will of course be the main focus of the tele-rally, but we’ll also touch on climate change and how we can fight it."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 300002,
+        "fields": {
+            "question": 300000,
+            "description": "Florida. It’s going to be competitive in November and we can get an early start on winning over the swing voters."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 300003,
+        "fields": {
+            "question": 300000,
+            "description": "Illinois. I’ll be sure to thank the hard-working frontline workers in Chicago during my speech."
         }
     },
     {
@@ -12626,6 +12682,66 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 300007,
+        "fields": {
+            "answer": 300001,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": -0.07
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 300008,
+        "fields": {
+            "answer": 300001,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "global_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 300009,
+        "fields": {
+            "answer": 300002,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": -0.08
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 300010,
+        "fields": {
+            "answer": 300002,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "global_multiplier": 0.16
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 300011,
+        "fields": {
+            "answer": 300003,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": -0.08
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 300012,
+        "fields": {
+            "answer": 300003,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "global_multiplier": 0.008
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 90109,
         "fields": {
             "answer": 90101,
@@ -15575,6 +15691,106 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 29,
             "issue_score": -0.45,
             "issue_importance": 5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 290009,
+        "fields": {
+            "answer": 290001,
+            "issue": 31,
+            "issue_score": 0.1,
+            "issue_importance": 5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 290010,
+        "fields": {
+            "answer": 290002,
+            "issue": 31,
+            "issue_score": 0.5,
+            "issue_importance": 5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 290011,
+        "fields": {
+            "answer": 290003,
+            "issue": 29,
+            "issue_score": 0,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 290012,
+        "fields": {
+            "answer": 290003,
+            "issue": 31,
+            "issue_score": 0.2,
+            "issue_importance": 4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 290013,
+        "fields": {
+            "answer": 290004,
+            "issue": 27,
+            "issue_score": 0.2,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 290014,
+        "fields": {
+            "answer": 290004,
+            "issue": 30,
+            "issue_score": 0.2,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 290015,
+        "fields": {
+            "answer": 290004,
+            "issue": 31,
+            "issue_score": 0.2,
+            "issue_importance": 4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 300013,
+        "fields": {
+            "answer": 300001,
+            "issue": 30,
+            "issue_score": 0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 300014,
+        "fields": {
+            "answer": 300001,
+            "issue": 31,
+            "issue_score": 0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 300015,
+        "fields": {
+            "answer": 300003,
+            "issue": 31,
+            "issue_score": 0.15,
+            "issue_importance": 4
         }
     },
     {
@@ -18745,6 +18961,39 @@ campaignTrail_temp.answer_score_state_json = [
     },
     {
         "model": "campaign_trail.answer_score_state",
+        "pk": 300016,
+        "fields": {
+            "answer": 300001,
+            "state": 183,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 300017,
+        "fields": {
+            "answer": 300002,
+            "state": 189,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 300018,
+        "fields": {
+            "answer": 300003,
+            "state": 193,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
         "pk": 170118,
         "fields": {
             "answer": 170103,
@@ -21423,6 +21672,69 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
+        "pk": 290005,
+        "fields": {
+            "answer": 290001,
+            "candidate": 300,
+            "answer_feedback": "You impress upon everyone listening to follow public health guidance, including wearing masks and social distancing. Under this administration, good luck with that."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 290006,
+        "fields": {
+            "answer": 290002,
+            "candidate": 300,
+            "answer_feedback": "You quickly get a TV studio set up in the basement of your Wilmington home, ready to deliver speeches and continue campaigning while keeping yourself and everyone else safe. Welcome to the new reality."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 290007,
+        "fields": {
+            "answer": 290003,
+            "candidate": 300,
+            "answer_feedback": "Your campaign establishes a backchannel with Sanders’ to discuss COVID policy and evolving campaign strategies. Together, you push back hard on Trump’s lies and grandstanding."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 290008,
+        "fields": {
+            "answer": 290004,
+            "candidate": 300,
+            "answer_feedback": "You release a detailed plan calling for everything from free testing, combating misinformation and paid sick leave. It stands in sharp contrast to Trump telling folks to inject themselves with sunlight and horse tranquilizer."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 300004,
+        "fields": {
+            "answer": 300001,
+            "candidate": 300,
+            "answer_feedback": "The shift to the general election already feels like it’s taking place, despite Sanders still vying for the nomination. A big enough landslide should finally lock this thing up."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 300005,
+        "fields": {
+            "answer": 300002,
+            "candidate": 300,
+            "answer_feedback": "General election polls show you expanding your lead over Trump, including in critical states like Florida. A strong performance today will continue the positive trends."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 300006,
+        "fields": {
+            "answer": 300003,
+            "candidate": 300,
+            "answer_feedback": "It’s a tough adjustment for everyone, to not be in the same physical space. It’s worse for Sanders though, since drawing huge crowds is a big part of his schtick."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
         "pk": 90105,
         "fields": {
             "answer": 90101,
@@ -22104,23 +22416,23 @@ e.primary_code = [
   },
   {
     "breakQ": 29,
-    "states": [7002, 183, 189, 193] // MP, AZ, FL, IL
+    "states": [7002, 183, 189, 193, 215] // MP, AZ, FL, IL, OH
   },
   {
     "breakQ": 31,
-    "states": [230, 182, 231, 215] // WI, AK, WY, OH
+    "states": [190, 7003, 230, 182, 191, 198, 231] // GA, PR, WI, AK, HI, LA, WY
   },
   {
     "breakQ": 33,
-    "states": [196, 207, 217, 191] // KS, NE, OR, HI
+    "states": [187, 188, 200, 212, 218, 219] // CT, DE, MD, NY, PA, RI
   },
   {
     "breakQ": 35,
-    "states": [228, 194, 200, 206, 211, 218, 219, 221] // DC, IN, MD, MT, NM, PA, RI, SD
+    "states": [194, 196, 197, 207, 217, 229, 7001] // IN, KS, KY, NE, OR, WV, GU
   },
   {
     "breakQ": 37,
-    "states": [7001, 7004, 190, 229, 197, 212, 188, 210, 198, 7003, 187] // GU, VI, GA, WV, KY, NY, DE, NJ, LA, PR, CT
+    "states": [228, 206, 210, 211, 221, 7004] // DC, MT, NJ, NM, SD, VI
   }
 ]
 
@@ -22724,7 +23036,7 @@ function PeteFadeshift() {
 }
 
 // Momentumshift simulates, well, momentum triggered by reaching a certain PV%
-function Bidenmentumshift() {
+function Joementumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(676);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.02;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(677);
@@ -23351,7 +23663,7 @@ function Klobmentumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201066);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.075;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201067);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.075;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201068);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.15;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201069);
@@ -24509,6 +24821,14 @@ function applyDrift(candidateId, driftAmount, stateId) {
 	    }
 	});
 }
+
+function updateIssueStances(issues, issueName, newStances) {
+    let issue = issues.find(i => i.fields.name === issueName);
+    if (issue) {
+        Object.assign(issue.fields, newStances);
+    }
+    return issue;
+}
 			
 cyoAdventure = function(a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
@@ -24524,7 +24844,7 @@ cyoAdventure = function(a) {
 
     if (e.noCounter < 20) {
 		if (BidenPolling >= 0.4 && biden_boost == 0) {
-	        Bidenmentumshift();
+	        Joementumshift();
 		    biden_boost += 1;
 		}
 		if (BerniePolling >= 0.3 && sanders_boost == 0) {
@@ -25381,6 +25701,139 @@ cyoAdventure = function(a) {
 	            menuItemsA.splice(2, 1);
 		    }
 		}
+	}
+
+	if (ans == 280001 || ans == 280002 || ans == 280003) {
+	campaignTrail_temp.issues_json[4].fields.name = "COVID";
+    updateIssueStances(campaignTrail_temp.issues_json, "COVID", { // Put the name of the issue here
+        stance_1: "No Big Deal",
+        stance_2: "Overhyped",
+        stance_3: "Thoughts and Prayers",
+        stance_4: "Mask Up and Social Distance",
+        stance_5: "Mask Up and Social Distance",
+        stance_6: "Stay Home, Stay Alive",
+        stance_7: "Indefinite Lockdown"
+    });
+	e.primary_code = [
+          {
+            "breakQ": 19,
+            "states": [195] // IA
+          },
+          {
+            "breakQ": 21,
+            "states": [209] // NH
+          },
+          {
+            "breakQ": 23,
+            "states": [208, 220] // NV, SC
+          },
+		  {
+            "breakQ": 25,
+            "states": [181, 7000, 184, 185, 186, 199, 201, 203, 213, 216, 222, 223, 224, 225, 226] // AL, AS, AR, CA, CO, ME, MA, MN, NC, OK, TN, TX, UT, VT, VA
+          },
+          {
+            "breakQ": 27,
+            "states": [7005, 192, 202, 204, 205, 214, 227] // Democrats Abroad, ID, MI, MS, MO, ND, WA
+          },
+          {
+            "breakQ": 29,
+            "states": [7002, 183, 189, 193] // MP, AZ, FL, IL
+          },
+          {
+            "breakQ": 31,
+            "states": [230, 182, 231, 215] // WI, AK, WY, OH
+          },
+          {
+            "breakQ": 33,
+            "states": [196, 207, 217, 191] // KS, NE, OR, HI
+          },
+          {
+            "breakQ": 35,
+            "states": [228, 194, 200, 206, 211, 218, 219, 221] // DC, IN, MD, MT, NM, PA, RI, SD
+          },
+          {
+            "breakQ": 37,
+            "states": [7001, 7004, 190, 229, 197, 212, 188, 210, 198, 7003, 187] // GU, VI, GA, WV, KY, NY, DE, NJ, LA, PR, CT
+          }
+        ]
+			let BidenID = campaignTrail_temp.current_results[1][11].result.find(result => result.candidate===300).percent;
+		let BernieID = campaignTrail_temp.current_results[1][11].result.find(result => result.candidate===301).percent;
+		let WarrenID = campaignTrail_temp.current_results[1][11].result.find(result => result.candidate===302).percent;
+		let BloombergID = campaignTrail_temp.current_results[1][11].result.find(result => result.candidate===303).percent;
+		let BidenMI = campaignTrail_temp.current_results[1][21].result.find(result => result.candidate===300).percent;
+		let BernieMI = campaignTrail_temp.current_results[1][21].result.find(result => result.candidate===301).percent;
+		let WarrenMI = campaignTrail_temp.current_results[1][21].result.find(result => result.candidate===302).percent;
+		let BloombergMI = campaignTrail_temp.current_results[1][21].result.find(result => result.candidate===303).percent;
+		let BidenMS = campaignTrail_temp.current_results[1][23].result.find(result => result.candidate===300).percent;
+		let BernieMS = campaignTrail_temp.current_results[1][23].result.find(result => result.candidate===301).percent;
+		let WarrenMS = campaignTrail_temp.current_results[1][23].result.find(result => result.candidate===302).percent;
+		let BloombergMS = campaignTrail_temp.current_results[1][23].result.find(result => result.candidate===303).percent;
+		let BidenMO = campaignTrail_temp.current_results[1][24].result.find(result => result.candidate===300).percent;
+		let BernieMO = campaignTrail_temp.current_results[1][24].result.find(result => result.candidate===301).percent;
+		let WarrenMO = campaignTrail_temp.current_results[1][24].result.find(result => result.candidate===302).percent;
+		let BloombergMO = campaignTrail_temp.current_results[1][24].result.find(result => result.candidate===303).percent;
+		let BidenND = campaignTrail_temp.current_results[1][33].result.find(result => result.candidate===300).percent;
+		let BernieND = campaignTrail_temp.current_results[1][33].result.find(result => result.candidate===301).percent;
+		let WarrenND = campaignTrail_temp.current_results[1][33].result.find(result => result.candidate===302).percent;
+		let BloombergND = campaignTrail_temp.current_results[1][33].result.find(result => result.candidate===303).percent;
+		let BidenWA = campaignTrail_temp.current_results[1][46].result.find(result => result.candidate===300).percent;
+		let BernieWA = campaignTrail_temp.current_results[1][46].result.find(result => result.candidate===301).percent;
+		let WarrenWA = campaignTrail_temp.current_results[1][46].result.find(result => result.candidate===302).percent;
+		let BloombergWA = campaignTrail_temp.current_results[1][46].result.find(result => result.candidate===303).percent;
+        if (BidenID > BernieID && BidenID > WarrenID && BidenID > BloombergID) {
+            BidenMTenWin += 1;
+        } else if (BernieID > BidenID && BernieID > WarrenID && BernieID > BloombergID) {
+            BernieMTenWin += 1;
+        } else if (WarrenID > BidenID && WarrenID > BernieID && WarrenID > BloombergID) {
+            WarrenMTenWin += 1;
+        } else if (BloombergID > BidenID && BloombergID > BernieID && BloombergID > WarrenID) {
+            BloombergMTenWin += 1;
+        }
+        if (BidenMI > BernieMI && BidenMI > WarrenMI && BidenMI > BloombergMI) {
+            BidenMTenWin += 1;
+        } else if (BernieMI > BidenMI && BernieMI > WarrenMI && BernieMI > BloombergMI) {
+            BernieMTenWin += 1;
+        } else if (WarrenMI > BidenMI && WarrenMI > BernieMI && WarrenMI > BloombergMI) {
+            WarrenMTenWin += 1;
+        } else if (BloombergMI > BidenMI && BloombergMI > BernieMI && BloombergMI > WarrenMI) {
+            BloombergMTenWin += 1;
+        }
+        if (BidenMS > BernieMS && BidenMS > WarrenMS && BidenMS > BloombergMS) {
+            BidenMTenWin += 1;
+        } else if (BernieMS > BidenMS && BernieMS > WarrenMS && BernieMS > BloombergMS) {
+            BernieMTenWin += 1;
+        } else if (WarrenMS > BidenMS && WarrenMS > BernieMS && WarrenMS > BloombergMS) {
+            WarrenMTenWin += 1;
+        } else if (BloombergMS > BidenMS && BloombergMS > BernieMS && BloombergMS > WarrenMS) {
+            BloombergMTenWin += 1;
+        }
+        if (BidenMO > BernieMO && BidenMO > WarrenMO && BidenMO > BloombergMO) {
+            BidenMTenWin += 1;
+        } else if (BernieMO > BidenMO && BernieMO > WarrenMO && BernieMO > BloombergMO) {
+            BernieMTenWin += 1;
+        } else if (WarrenMO > BidenMO && WarrenMO > BernieMO && WarrenMO > BloombergMO) {
+            WarrenMTenWin += 1;
+        } else if (BloombergMO > BidenMO && BloombergMO > BernieMO && BloombergMO > WarrenMO) {
+            BloombergMTenWin += 1;
+        }
+        if (BidenND > BernieND && BidenND > WarrenND && BidenND > BloombergND) {
+            BidenMTenWin += 1;
+        } else if (BernieND > BidenND && BernieND > WarrenND && BernieND > BloombergND) {
+            BernieMTenWin += 1;
+        } else if (WarrenND > BidenND && WarrenND > BernieND && WarrenND > BloombergND) {
+            WarrenMTenWin += 1;
+        } else if (BloombergND > BidenND && BloombergND > BernieND && BloombergND > WarrenND) {
+            BloombergMTenWin += 1;
+        }
+        if (BidenWA > BernieWA && BidenWA > WarrenWA && BidenWA > BloombergWA) {
+            BidenMTenWin += 1;
+        } else if (BernieWA > BidenWA && BernieWA > WarrenWA && BernieWA > BloombergWA) {
+            BernieMTenWin += 1;
+        } else if (WarrenWA > BidenWA && WarrenWA > BernieWA && WarrenWA > BloombergWA) {
+            WarrenMTenWin += 1;
+        } else if (BloombergWA > BidenWA && BloombergWA > BernieWA && BloombergWA > WarrenWA) {
+            BloombergMTenWin += 1;
+        }
 	}
 }
 
