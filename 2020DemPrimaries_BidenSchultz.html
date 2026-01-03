@@ -8398,7 +8398,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 304,
             "state": 205,
-            "state_multiplier": 0.225
+            "state_multiplier": 0.2
         }
     },
     {
@@ -8911,7 +8911,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 310,
             "state": 205,
-            "state_multiplier": 0.05
+            "state_multiplier": 0.075
         }
     },
     {
@@ -23663,7 +23663,7 @@ function Klobmentumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201066);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.075;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201067);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.075;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201068);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.15;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201069);
@@ -23779,13 +23779,13 @@ var PeteSTWin = 0;
 var KlobucharSTWin = 0;
 
     let BloombergObject = { photo: 'https://i.postimg.cc/xjs2rzc2/IMG-2791.jpg', text: '<b>Michael Bloomberg</b><br><b>Former Mayor of NYC</b><br>What the hell does this guy think he’s doing? Apparently he thinks he can sweep away your fifty years of groundwork with a monsoon of cash. People aren’t that stupid.', button: 'Defer', id: 'BLOOMBERG_A'};
-    let HarrisObject = { photo: 'https://i.imgur.com/aSEPybd.png', text: '<b><i>Kamala Harris</i></b><br><b>Senator from California</b><br>She’s riding the wave she made off of humiliating you in the debate. However, the cracks are already starting to form. She’s not built for this.', button: 'Defer', id: 'HARRIS_A'};
-    let BookerObject = { photo: 'https://i.imgur.com/UsZ1mf7.png', text: '<b><i>Cory Booker</i></b><br><b>Senator from New Jersey</b><br>In one of the most divisive times in our country’s history, he’s making unity the centerpiece of his campaign. It’s not getting him far. He lacks the gravitas and political know-how you’ve spent fifty years cultivating.', button: 'Defer', id: 'BOOKER_A'};
-    let YangObject = { photo: 'https://i.imgur.com/CdItldv.png', text: '<b><i>Andrew Yang</i></b><br><b>Entrepreneur from New York</b><br>One of the sideshow candidates. A wonky guy whose main selling point is that UBI thing. You remember how that worked out for McGovern. He’ll wash out.', button: 'Defer', id: 'YANG_A'};
-    let SteyerObject = { photo: 'https://i.imgur.com/yqAyOa7.png', text: '<b><i>Tom Steyer</i></b><br><b>Hedge fund manager from California</b><br>Just like you, he sees South Carolina as his make-or-break point. He’s making inroads, reaching third and even second place in state polls. For you to succeed, he needs to fail.', button: 'Defer', id: 'STEYER_A'};
-    let GabbardObject = { photo: 'https://i.imgur.com/HTDaLih.png', text: '<b>Tulsi Gabbard</b><br><b>Representative from Hawaii</b><br>As the minor candidates continue to drop out, Gabbard is one of the few who remain. She seems to be centering her campaign on her isolationist foreign policy, and that won’t get her anywhere. Ignore her.', button: 'Defer', id: 'GABBARD_A'};
+    let HarrisObject = { photo: 'https://i.postimg.cc/52PYtNXZ/IMG-3287.webp', text: '<b><i>Kamala Harris</i></b><br><b>Senator from California</b><br>She’s riding the wave she made off of humiliating you in the first debate. However, the cracks are already starting to form. She’s not built for this.', button: 'Defer', id: 'HARRIS_A'};
+    let BookerObject = { photo: 'https://i.postimg.cc/13Wnz5gZ/IMG-3288.webp', text: '<b><i>Cory Booker</i></b><br><b>Senator from New Jersey</b><br>In one of the most divisive times in our country’s history, he’s making unity the centerpiece of his campaign. It’s not getting him far. He lacks the gravitas you’ve spent fifty years cultivating.', button: 'Defer', id: 'BOOKER_A'};
+    let YangObject = { photo: 'https://i.postimg.cc/XY2Gv7ZS/IMG-3289.webp', text: '<b><i>Andrew Yang</i></b><br><b>Entrepreneur from New York</b><br>Possibly the strangest of the sideshow candidates. A wonky guy whose main selling point is that UBI thing. You remember how that worked out for McGovern. He’ll wash out.', button: 'Defer', id: 'YANG_A'};
+    let SteyerObject = { photo: 'https://i.postimg.cc/sgnQ2DB3/IMG-3290.webp', text: '<b><i>Tom Steyer</i></b><br><b>Hedge fund manager from California</b><br>Just like you, he sees South Carolina as his make-or-break point. He’s making inroads, reaching third and even second place in state polls. For you to succeed, he needs to fail.', button: 'Defer', id: 'STEYER_A'};
+    let GabbardObject = { photo: 'https://i.postimg.cc/SQZh0MJS/IMG-2869.webp', text: '<b>Tulsi Gabbard</b><br><b>Representative from Hawaii</b><br>As the minor candidates continue to drop out, Gabbard remains. She seems to be centering her campaign on her isolationist foreign policy, and that won’t get her anywhere. Ignore her.', button: 'Defer', id: 'GABBARD_A'};
     let TrumpObject = { photo: 'https://i.postimg.cc/CMvgyqz0/IMG-2795.jpg', text: '<b><u>Donald Trump</u></b><br><b>The Current Guy</b><br>The monster feasting on the corpse of Lady Liberty. If you can’t stop him, there’ll be nothing left; you have to beat the hell out of him if there’s any hope for survival. You know you’re the only one who can banish this demon forever.', button: 'Defer', id: 'TRUMP_A'};
-    let ObamaObject = { photo: 'https://i.imgur.com/j5jGIWt.png', text: '<b><u>Barack Obama</u></b><br><b>Former Friend & POTUS</b><br>Barack could unite the party behind you in an instant, yet he insists on watching you struggle. He never believed in you, he thinks you’d be long gone without him. You’ll prove him wrong.', button: 'Defer', id: 'OBAMA_A'};
+    let ObamaObject = { photo: 'https://i.postimg.cc/YCXGSq4H/IMG-3291.webp', text: '<b><u>Barack Obama</u></b><br><b>Former Friend & POTUS</b><br>Barack could unite the party behind you in an instant, yet he insists on watching you struggle. He never believed in you, he thinks you’d be long gone without him. You’ll prove him wrong.', button: 'Defer', id: 'OBAMA_A'};
 
 document.getElementById("header").src = "https://i.postimg.cc/FK2465zt/2020-Biden-Banner.jpg";
 
@@ -24308,10 +24308,10 @@ const menuItemsA = [
     { photo: 'https://i.postimg.cc/T1HMnZZ1/IMG-2783.jpg', text: '<b>Joe Biden</b><br><b>Former Vice President</b><br>It’s finally your turn. All you have to do is get these clowns to put up or shut up; only you can beat Donald Trump.', button: 'Defer', id: 'BIDEN_A'},
     { photo: 'https://i.postimg.cc/6q1JCDDc/IMG-2786.jpg', text: '<b>Bernie Sanders</b><br><b>Senator from Vermont</b><br>Your chief rival for the nomination, as he was for Hillary before you. Great guy, but he’ll never win. He doesn’t know how the world works.', button: 'Defer', id: 'SANDERS_A'},
     { photo: 'https://i.postimg.cc/pr1bKggk/IMG-2788.jpg', text: '<b>Elizabeth Warren</b><br><b>Senator from Massachusetts</b><br>Somewhere between you and Bernie. You don’t know why she’s putting so much effort into her campaign planks, no battle plan survives contact with the enemy.', button: 'Defer', id: 'WARREN_A'},
-    { photo: 'https://i.postimg.cc/T1HMnZZN/IMG-2789.jpg', text: '<b>Pete Buttigieg</b><br><b>Mayor of South Bend, Indiana</b><br>Seriously? This two-bit small-town mayor has nothing to offer but a cheap Obama impersonation, yet seems to think he deserves to inherit the kingdom. Get in line, man.', button: 'Defer', id: 'BUTTIGIEG_A'},
+    { photo: 'https://i.postimg.cc/T1HMnZZN/IMG-2789.jpg', text: '<b>Pete Buttigieg</b><br><b>Mayor of South Bend, Indiana</b><br>Seriously? This two-bit mayor has nothing to offer but a cheap Obama impersonation, yet seems to think he deserves to inherit the kingdom. Get in line, man.', button: 'Defer', id: 'BUTTIGIEG_A'},
     { photo: 'https://i.postimg.cc/J7TLwkGm/IMG-2868.webp', text: '<b>Amy Klobuchar</b><br><b>Senator from Minnesota</b><br>She’s smart, she knows the ins and outs for Washington, but she’s got no path. She’s falling behind you and Buttigieg. She’ll have to get in line soon enough.', button: 'Defer', id: 'KLOBUCHAR_A'},
-	{ photo: 'https://i.postimg.cc/XqC7hz4G/IMG-3260.webp', text: '<b><i>Beto O’Rourke</i></b><br><b>Representative from Texas</b><br>In a field of candidates desperate to prove they can slay the beast, here’s the weirdo that lost to Ted Cruz. He’s got some spark going for the moment, but he’ll lose traction once people realize he never grew up. The best he can hope for is a Cabinet position.', button: 'Defer', id: 'OROURKE_A'},
-    { photo: 'https://i.postimg.cc/m2ny7c6j/IMG-3259.jpg', text: '<b>All the Rest</b><br><b>Various Positions</b><br>No one else has a realistic shot at the nomination. Some will hang around for a while, others will drop right away. It’s better to focus on the real contenders.', button: 'Defer', id: 'OTHERS_A'},
+	{ photo: 'https://i.postimg.cc/XqC7hz4G/IMG-3260.webp', text: '<b><i>Beto O’Rourke</i></b><br><b>Representative from Texas</b><br>In a field of candidates desperate to prove they can slay the beast, here’s the weirdo that lost to Ted Cruz. He’s got some spark, but he’ll lose traction once people realize he never grew up. The best he can hope for is a Cabinet position.', button: 'Defer', id: 'OROURKE_A'},
+    { photo: 'https://i.postimg.cc/m2ny7c6j/IMG-3259.jpg', text: '<b>All the Rest</b><br><b>Various Positions</b><br>No one else has a realistic shot at the nomination. Some will hang around for a while, others will drop as the pressure ramps up. It’s better to focus on the real contenders.', button: 'Defer', id: 'OTHERS_A'},
 ]
 
 function openHeadquarter() {      
