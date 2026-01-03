@@ -23170,8 +23170,6 @@ function Berniementumshift() {
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.02;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(734);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.02;
-    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(735);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.01;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(736);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.02;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(737);
@@ -23283,8 +23281,6 @@ function Warrenmentumshift() {
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(785);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
-    var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(786);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.025;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(787);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(788);
@@ -23399,7 +23395,7 @@ function Bloommentumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(836);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(837);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.15;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.175;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(838);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(839);
@@ -25736,6 +25732,7 @@ cyoAdventure = function(a) {
         stance_6: "Stay Home, Stay Alive",
         stance_7: "Indefinite Lockdown"
     });
+	e.election_json[0].fields.has_visits = 0;
 	e.primary_code = [
           {
             "breakQ": 19,
