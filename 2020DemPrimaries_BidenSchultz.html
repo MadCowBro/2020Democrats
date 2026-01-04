@@ -462,6 +462,15 @@ campaignTrail_temp.questions_json = [
             "likelihood": 1
         }
     },
+    {//Alternate Question 25 (Biden dominating)
+        "model": "campaign_trail.question",
+        "pk": 250200,
+        "fields": {
+            "priority": -1,
+            "description": "A dominant win in South Carolina continues the steamroll you’ve been on since Iowa. No one, not even your most loyal advisors, expected such a strong string of performances. What will you say to your supporters as the focus shifts to Super Tuesday?",
+            "likelihood": 1
+        }
+    },
     {//Alternate Question 26 (Biden ends campaign pre-ST)
         "model": "campaign_trail.question",
         "pk": 260100,
@@ -1806,6 +1815,38 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 250100,
             "description": "Well, this is it, isn’t it? I only ever wanted–I’m sorry–all I ever wanted was what you had, you know? The opportunity you had to lead, to make your mark. I guess sometimes things just don’t work out the way you’d like them to, huh?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 250201,
+        "fields": {
+            "question": 250200,
+            "description": "Michael jumped into the race because I was doing poorly or something, right? I bet he’s regretting that decision right about now. How much money has he spent so far?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 250202,
+        "fields": {
+            "question": 250200,
+            "description": "Folks, this is a wake-up call. It’s time to come together and unite the party. I clearly have the most diverse coalition of any candidate."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 250203,
+        "fields": {
+            "question": 250200,
+            "description": "The decisions Democrats make all across America in the next few days will determine what this party stands for, what we believe and what we will get done. We have the option of winning big or losing big."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 250204,
+        "fields": {
+            "question": 250200,
+            "description": "I am very thankful to you, the people of South Carolina, for putting your trust in me. Now I ask of you America, help me win the nomination, and I’ll get rid of Donald Trump."
         }
     },
     {
@@ -13492,6 +13533,66 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 250209,
+        "fields": {
+            "answer": 250201,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 250210,
+        "fields": {
+            "answer": 250201,
+            "candidate": 300,
+            "affected_candidate": 303,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 250211,
+        "fields": {
+            "answer": 250202,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.012
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 250212,
+        "fields": {
+            "answer": 250203,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 250213,
+        "fields": {
+            "answer": 250203,
+            "candidate": 300,
+            "affected_candidate": 301,
+            "global_multiplier": -0.0275
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 250214,
+        "fields": {
+            "answer": 250204,
+            "candidate": 300,
+            "affected_candidate": 300,
+            "global_multiplier": 0.0125
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 260111,
         "fields": {
             "answer": 260102,
@@ -16161,6 +16262,47 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 28,
             "issue_score": 0.3,
             "issue_importance": 3
+        }
+    },
+
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 250215,
+        "fields": {
+            "answer": 250202,
+            "issue": 28,
+            "issue_score": 0.6,
+            "issue_importance": 4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 250216,
+        "fields": {
+            "answer": 250202,
+            "issue": 29,
+            "issue_score": -0.1,
+            "issue_importance": 6
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 250217,
+        "fields": {
+            "answer": 250203,
+            "issue": 29,
+            "issue_score": -0.3,
+            "issue_importance": 8
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 250218,
+        "fields": {
+            "answer": 250204,
+            "issue": 29,
+            "issue_score": 0,
+            "issue_importance": 5
         }
     },
     {
@@ -22131,6 +22273,42 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
+        "pk": 250205,
+        "fields": {
+            "answer": 250201,
+            "candidate": 300,
+            "answer_feedback": "Turning your sights onto Michael Bloomberg as he makes his debut is a smart move. You must ensure his campaign is DOA."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 250206,
+        "fields": {
+            "answer": 250202,
+            "candidate": 300,
+            "answer_feedback": "Other than Bloomberg, the moderate field is fully consolidated. There’s no reason to believe your momentum will stall now."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 250207,
+        "fields": {
+            "answer": 250203,
+            "candidate": 300,
+            "answer_feedback": "Your comments are widely interpreted as a shot at Bernie Sanders, especially your closing remarks, “If the Democrats want a nominee who is a Democrat, a lifelong Democrat, a proud Democrat, an Obama-Biden Democrat, then join us.”"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 250208,
+        "fields": {
+            "answer": 250204,
+            "candidate": 300,
+            "answer_feedback": "You can tell he’s squirming, from the whole Burisma nonsense to telling Republicans to vote for the “weakest candidate” in the primaries. Keep up the momentum, and you’ll get your chance to pummel him."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
         "pk": 260106,
         "fields": {
             "answer": 260101,
@@ -22472,7 +22650,7 @@ function BloombergInshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(836);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(837);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.2;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.225;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(838);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.2;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(839);
@@ -22704,7 +22882,7 @@ function BernieFadeshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(734);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(735);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.875;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(736);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(737);
@@ -22821,7 +22999,7 @@ function WarrenFadeshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(785);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.8;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(786);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.8;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.775;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(787);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.8;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(788);
@@ -25255,7 +25433,9 @@ cyoAdventure = function(a) {
 			    applyDrift(310, 0.05)
 			}
 		}
-		if (BidenFebWin == 0) {
+		if (BidenFebWin >= 2) {
+			campaignTrail_temp.questions_json[24] = tunnel(250200);
+		} else if (BidenFebWin == 0) {
 			campaignTrail_temp.questions_json[24] = tunnel(250100);
 		}
 	}
