@@ -22872,7 +22872,7 @@ function BernieFadeshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(728);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(729);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.925;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(730);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(731);
@@ -23559,7 +23559,7 @@ function Bloommentumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(830);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(831);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.075;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(832);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.175;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(833);
@@ -25886,6 +25886,16 @@ cyoAdventure = function(a) {
             "states": [7005, 192, 202, 204, 205, 214, 227, 7002, 183, 189, 193, 230, 182, 231, 215, 196, 207, 217, 191, 228, 194, 200, 206, 211, 218, 219, 221, 7001, 7004, 190, 229, 197, 212, 188, 210, 198, 7003, 187] // From March 10 onwards
           }
         ]
+	}
+
+    if (ans == 270201 || ans == 270202 || ans == 270203 || ans == 270204) {
+		if (WarrenSTWin == 0) {
+			warren_active -= 1;
+		    if (warren_active == 0) {
+                applyDrift(302, -1)
+	            menuItemsA.splice(2, 1);
+		    }
+		}
 	}
 
 	if (ans == 270205 || ans == 270405) {
