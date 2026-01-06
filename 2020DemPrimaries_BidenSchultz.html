@@ -13987,13 +13987,23 @@ campaignTrail_temp.answer_score_global_json = [
         "fields": {
             "answer": 280102,
             "candidate": 300,
-            "affected_candidate": 303,
-            "global_multiplier": 1
+            "affected_candidate": 304,
+            "global_multiplier": -1
         }
     },
     {
         "model": "campaign_trail.answer_score_global",
         "pk": 280112,
+        "fields": {
+            "answer": 280102,
+            "candidate": 300,
+            "affected_candidate": 310,
+            "global_multiplier": -1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 280113,
         "fields": {
             "answer": 280103,
             "candidate": 300,
@@ -14003,7 +14013,7 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 280113,
+        "pk": 280114,
         "fields": {
             "answer": 280104,
             "candidate": 300,
@@ -14013,7 +14023,7 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 280114,
+        "pk": 280115,
         "fields": {
             "answer": 280105,
             "candidate": 300,
@@ -23676,7 +23686,7 @@ function Petementumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(200981);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(200982);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.075;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(200983);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.125;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(200984);
@@ -25477,9 +25487,9 @@ cyoAdventure = function(a) {
             applyDrift(310, -1)
 	        menuItemsA.splice(5, 1);
 		}
-	} else if (ans == 250101) {
-		campaignTrail_temp.questions_json[25] = tunnel(260200);
-	} else if (ans == 250102) {
+	}
+ 
+	if (ans == 250102) {
 		biden_active -= 1;
 		if (biden_active == 0) {
             applyDrift(300, -1)
