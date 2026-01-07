@@ -26072,6 +26072,128 @@ cyoAdventure = function(a) {
 	}
 }
 
+// constructs endings based on header and pages
+  construct = (a = 1) => {
+      
+      e.page = e.page + a < e.pages.length ? e.page + a : 0
+      let html = e.header;
+      html += e.pages[e.page] + "<br>";
+      if (e.page > 0) {
+      
+      html += `<button onclick='endingConstructor(a = -1)'>Back</button>`
+      }
+      if (e.page < e.pages.length - 1) {
+      
+      html += `<button onclick='endingConstructor(a = 1)'>Next</button>`
+      }
+      
+      for (i in e.executable) {
+      if (e.executable[i][0] == e.page) {
+          e.executable[i][1]();
+        
+      }
+      }
+      
+      if (e.image == true)
+      setTimeout(()=>{
+        candImg = $(".person_image")[0]
+        if (candImg) {
+          candImg.remove()
+        console.log("TRYING");
+          $("#final_results_description")[0].style = `
+            text-align:left;
+            width: 72%;
+          height:71%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          overflow: auto;
+          `
+         console.log("RESULTS UPDATED");
+        }
+      }, 10)
+      else if (e.image)
+      setTimeout(()=>{
+        candImg = $(".person_image")[0];
+        if (candImg) {
+          candImg.src = e.image;
+        console.log("TRYING");
+          $("#final_results_description")[0].style = `
+            text-align:left;
+            width: 72%;
+          height:71%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          overflow: auto;
+          `
+         console.log("RESULTS UPDATED");
+        }		
+      }, 10)
+      
+      return html;
+      }
+      
+      endingConstructor = (a = 1) => {
+      $("#final_results_description")[0].innerHTML = construct(a);
+      }
+      
+      // ENDINGS -- this is slightly more reliable than the ending code method
+      
+      e.multiple_endings = true;
+      
+      e.header = "<h1>error</h1>";
+      e.pages = ["<p>This is an error handler</p>"];
+      e.page = 0;
+      
+      endingPicker = (out, totv, aa, quickstats) => {
+      //out = "win", "loss", or "tie" for your candidate
+      //totv = total votes in entire election
+      //aa = all final overall results data
+      //quickstat = relevant data on candidate performance (format: your candidate's electoral vote count, your candidate's popular vote share, your candidate's raw vote total)
+      
+      /*
+      e.header = "<h2></h2>"
+      e.pages = ["<p></p>",
+              "<p></p>"]
+      */
+      
+      e.pages = []
+      e.header = "";
+      e.executable = []
+      
+//Slide 1
+if (quickstats[0] >= 270) {
+    e.pages.push(`<p><h3 style="text-align: center;">A Good Man Went to War...<br/>And Won</h3></p><p>It was a stressful night. Bernie Sanders was pacing back and forth, eyes glued to the TV screen. He gave it his all out there on the campaign trail, especially that final day, but was it enough? Were his people, the American people, motivated enough to get to the polls and vote out the corporatocracy?</p><p>The usual suspects fell first: Vermont to Bernie, Indiana and Kentucky to President Romney, and so on. But in our corrupt electoral allocation system, that’s not what matters. It’s all about the swing states. And they swung, one by one. Some swung away from Bernie, but others swung right towards him.</p><p>And then the call was made, “We can now project that Senator Bernie Sanders has won 270 electoral votes, and the presidency.”</p><p>Incredible. The people have spoken, and Mitt Romney needs to pack his bags.</p><p>Jane rushes in to hug him, “You did sweetie. I’m so proud of you.“</p><p>Bernie should be elated. He did what he set out to do, he won. But instead, all he could think about was the long road ahead.</p><p>As he walked out to greet the roaring crowd, he knew this was just the opening salvo in the war against the ruling class…</p>`)
+    //e.image = ""
+    e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/gQONxdb.png'})])
+	ctsAchievement("A Political Revolution         ");
+}
+else if (quickstats[0] <= 268) {
+    e.pages.push(`<p><h3 style="text-align: center;">A Good Man Went to War...<br/>And Lost</h3></p><p>It was a stressful night. Bernie Sanders was pacing back and forth, eyes glued to the TV screen. He gave it his all out there on the campaign trail, especially that final day, but was it enough? Were his people, the American people, motivated enough to get to the polls and vote out the corporatocracy?</p><p>The usual suspects fell first: Vermont to Bernie, Indiana and Kentucky to President Romney, and so on. But in our corrupt electoral allocation system, that’s not what matters. It’s all about the swing states. And they swung, one by one. Some swung away from Bernie, but others swung right towards him.</p><p>And then the call was made, “We can now project that President Mitt Romney has won 270 electoral votes, and four more years.”</p><p>Incredible. The people have spoken, and Bernie Sanders was rejected.</p><p>Jane rushes in to hug him, “I’m so sorry sweetie. I really thought you had it.”</p><p>Bernie should be disappointed. He didn’t do what he needed to, he lost. But instead, all he could think about was the long road ahead.</p><p>As he walked out to greet the disappointed crowd, he knew this was just the opening salvo in the war against the ruling class…</p>`)
+    //e.image = ""
+    e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/c8wFvmP.png'})])
+}
+else if (quickstats[0] = 269) {
+    e.pages.push(`<p><h3 style="text-align: center;">A Good Man Went to War...<br/>And Was Cheated</h3></p><p>It was a stressful night. Bernie Sanders was pacing back and forth, eyes glued to the TV screen. He gave it his all out there on the campaign trail, especially that final day, but was it enough? Were his people, the American people, motivated enough to get to the polls and vote out the corporatocracy?</p><p>The usual suspects fell first: Vermont to Bernie, Indiana and Kentucky to President Romney, and so on. But in our corrupt electoral allocation system, that’s not what matters. It’s all about the swing states. And they swung, one by one. Some swung away from Bernie, but others swung right towards him.</p><p>And then the call was made, or rather, “This is completely unprecedented. No candidate has reached 270 electoral votes. We have a deadlock.”</p><p>Incredible. The people have spoken, but the electoral college has smothered their voice.</p><p>Jane rushes in to hug him, “I’m so sorry sweetie. I really thought you had it.”</p><p>Bernie sat, emotionless. He didn’t do what he needed to, but the fight’s not over yet. There’s a long road ahead, but he still has a shot, however slim.</p><p>As he walked out to greet the confused crowd, he knew this was just the opening salvo in the war against the ruling class…</p>`)
+    //e.image = ""
+    e.executable.push([0, (() => {e.image = e.image = '../static/images/2012-no-majority.jpg'})])
+}
+
+//Slide 2
+if (quickstats[0] != 269) {
+    e.pages.push(`<h3>Slide 2 here</h3><p>Wiki summary</p>`)
+    //e.image = ""
+    e.executable.push([1, (() => {e.image = e.image = 'https://i.postimg.cc/pd5w6g5N/IMG-3296.jpg'})])
+}
+
+//Slide 3
+if (quickstats[0] != 269) {
+    e.pages.push(`<h3>Slide 3 here</h3><p>Romney</p>`)
+    //e.image = ""
+    e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/VEnxaqt.png'})])
+}
+
 campaignTrail_temp.jet_data = [{
     "nicknames": {
         "300": "Biden",
