@@ -23371,7 +23371,7 @@ function BernieFadeshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(775);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(776);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.95;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.975;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(777);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(20025);
@@ -24058,7 +24058,7 @@ function Bloommentumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(877);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(878);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.125;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.15;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(879);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(20041);
@@ -24175,7 +24175,7 @@ function Petementumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201028);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201029);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.075;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201030);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201031);
@@ -24355,11 +24355,20 @@ var BloombergSTWin = 0;
 var PeteSTWin = 0;
 var KlobucharSTWin = 0;
 
-// March 10 
+// March 10
 var BidenMTenWin = 0;
 var BernieMTenWin = 0;
 var WarrenMTenWin = 0;
 var BloombergMTenWin = 0;
+
+// March 17
+var BidenMSeventeenWin = 0;
+var BernieMSeventeenWin = 0;
+var WarrenMSeventeenWin = 0;
+var BloombergMSeventeenWin = 0;
+
+// Ending variables
+var gameEnd = 0;
 
     let BloombergObject = { photo: 'https://i.postimg.cc/xjs2rzc2/IMG-2791.jpg', text: '<b>Michael Bloomberg</b><br><b>Former Mayor of NYC</b><br>What the hell does this guy think he’s doing? Apparently he thinks he can sweep away your fifty years of groundwork with a monsoon of cash. People aren’t that stupid.', button: 'Defer', id: 'BLOOMBERG_A'};
     let HarrisObject = { photo: 'https://i.postimg.cc/52PYtNXZ/IMG-3287.webp', text: '<b><i>Kamala Harris</i></b><br><b>Senator from California</b><br>She’s riding the wave she made off of humiliating you in the first debate. However, the cracks are already starting to form. She’s not built for this.', button: 'Defer', id: 'HARRIS_A'};
@@ -25767,6 +25776,7 @@ cyoAdventure = function(a) {
 		}
 		refreshHeadquarter();
         campaignTrail_temp.global_parameter_json[0]["fields"].question_count = "26";
+		gameEnd = 26;
 		campaignTrail_temp.questions_json[25] = tunnel(260100);
 		if (WarrenPolling >= 0.2) {
 			answerSwapper(260101, 260105, true);
@@ -26140,6 +26150,7 @@ cyoAdventure = function(a) {
 		}
 		refreshHeadquarter();
         campaignTrail_temp.global_parameter_json[0]["fields"].question_count = "28";
+		gameEnd = 28;
 		campaignTrail_temp.questions_json[27] = tunnel(280100);
 		if (WarrenSTWin > 0 || WarrenPolling > 0.2) {
 			answerSwapper(280101, 280105, true);
@@ -26437,6 +26448,8 @@ cyoAdventure = function(a) {
 	if (campaignTrail_temp.question_number == 31) {
 		if (ans == 310002 && BidenMSeventeenWin < 3) {
 			campaignTrail_temp.questions_json[31] = tunnel(320100);
+		} else {
+			gameEnd = 32;
 		}
 	}
 }
@@ -26520,7 +26533,23 @@ cyoAdventure = function(a) {
       //totv = total votes in entire election
       //aa = all final overall results data
       //quickstat = relevant data on candidate performance (format: your candidate's electoral vote count, your candidate's popular vote share, your candidate's raw vote total)
-      
+// Ending variables
+orderID = [aa[0].candidate, aa[1].candidate, aa[2].candidate, aa[3].candidate, aa[4].candidate, aa[5].candidate];
+var BidenMajority = false;
+var BernieMajority = false;
+var WarrenMajority = false;
+var BloombergMajority = false;
+var PeteMajority = false;
+var KlobucharMajority = false;
+var NoMajority = false;
+var BidenPlurality = false;
+var BerniePlurality = false;
+var WarrenPlurality = false;
+var BloombergPlurality = false;
+var PetePlurality = false;
+var KlobucharPlurality = false;
+var Fucked = false;
+
       /*
       e.header = "<h2></h2>"
       e.pages = ["<p></p>",
@@ -26530,24 +26559,133 @@ cyoAdventure = function(a) {
       e.pages = []
       e.header = "";
       e.executable = []
-      
+
+if (aa[0].electoral_votes >= 1990) {
+    BidenMajority = true;
+} else if (aa[1].electoral_votes >= 1990) {
+    BernieMajority = true;
+} else if (aa[2].electoral_votes >= 1990) {
+    WarrenMajority = true;
+} else if (aa[3].electoral_votes >= 1990) {
+    BloombergMajority = true;
+} else if (aa[4].electoral_votes >= 1990) {
+    PeteMajority = true;
+} else if (aa[5].electoral_votes >= 1990) {
+    KlobucharMajority = true;
+} else {
+    NoMajority = true;
+}
+
+if (NoMajority == true) {
+    if (orderID[0] == 300) {
+        BidenPlurality = true;
+    } else if (orderID[0] == 301) {
+        BerniePlurality = true;
+    } else if (orderID[0] == 302) {
+        WarrenPlurality = true;
+    } else if (orderID[0] == 303) {
+        BloombergPlurality = true;
+    } else if (orderID[0] == 304) {
+        PetePlurality = true;
+    } else if (orderID[0] == 310) {
+        KlobucharPlurality = true;
+    }
+    if (aa[1].electoral_votes + aa[2].electoral_votes >= 1990) {
+	    if (aa[1].electoral_votes >= aa[2].electoral_votes) {
+            BernieMajority = true;
+        } else {
+		    WarrenMajority = true;
+		}
+    } else if (aa[0].electoral_votes + aa[3].electoral_votes + aa[4].electoral_votes + aa[5].electoral_votes >= 1990) {
+        if (aa[0].electoral_votes >= aa[3].electoral_votes && aa[0].electoral_votes >= aa[4].electoral_votes && aa[0].electoral_votes >= aa[5].electoral_votes) {
+            BidenMajority = true;
+        } else if (aa[3].electoral_votes >= aa[0].electoral_votes && aa[3].electoral_votes >= aa[4].electoral_votes && aa[3].electoral_votes >= aa[5].electoral_votes) {
+            BloombergMajority = true;
+        } else if (aa[4].electoral_votes >= aa[0].electoral_votes && aa[4].electoral_votes >= aa[3].electoral_votes && aa[4].electoral_votes >= aa[5].electoral_votes) {
+            PeteMajority = true;
+        } else {
+            KlobucharMajority = true;
+        }
+    } else {
+        Fucked = true;
+    }
+}
 //Slide 1
-if (quickstats[0] >= 270) {
-    e.pages.push(`<p><h3 style="text-align: center;">A Good Man Went to War...<br/>And Won</h3></p><p>It was a stressful night. Bernie Sanders was pacing back and forth, eyes glued to the TV screen. He gave it his all out there on the campaign trail, especially that final day, but was it enough? Were his people, the American people, motivated enough to get to the polls and vote out the corporatocracy?</p><p>The usual suspects fell first: Vermont to Bernie, Indiana and Kentucky to President Romney, and so on. But in our corrupt electoral allocation system, that’s not what matters. It’s all about the swing states. And they swung, one by one. Some swung away from Bernie, but others swung right towards him.</p><p>And then the call was made, “We can now project that Senator Bernie Sanders has won 270 electoral votes, and the presidency.”</p><p>Incredible. The people have spoken, and Mitt Romney needs to pack his bags.</p><p>Jane rushes in to hug him, “You did sweetie. I’m so proud of you.“</p><p>Bernie should be elated. He did what he set out to do, he won. But instead, all he could think about was the long road ahead.</p><p>As he walked out to greet the roaring crowd, he knew this was just the opening salvo in the war against the ruling class…</p>`)
+if (NoMajority == false) {
+if (BidenMajority == true) {
+    e.pages.push(`<h3 style="text-align: center;">Biden Win w/ Majority of Delegates</h3>`)
     //e.image = ""
     e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/gQONxdb.png'})])
 }
-else if (quickstats[0] <= 268) {
-    e.pages.push(`<p><h3 style="text-align: center;">A Good Man Went to War...<br/>And Lost</h3></p><p>It was a stressful night. Bernie Sanders was pacing back and forth, eyes glued to the TV screen. He gave it his all out there on the campaign trail, especially that final day, but was it enough? Were his people, the American people, motivated enough to get to the polls and vote out the corporatocracy?</p><p>The usual suspects fell first: Vermont to Bernie, Indiana and Kentucky to President Romney, and so on. But in our corrupt electoral allocation system, that’s not what matters. It’s all about the swing states. And they swung, one by one. Some swung away from Bernie, but others swung right towards him.</p><p>And then the call was made, “We can now project that President Mitt Romney has won 270 electoral votes, and four more years.”</p><p>Incredible. The people have spoken, and Bernie Sanders was rejected.</p><p>Jane rushes in to hug him, “I’m so sorry sweetie. I really thought you had it.”</p><p>Bernie should be disappointed. He didn’t do what he needed to, he lost. But instead, all he could think about was the long road ahead.</p><p>As he walked out to greet the disappointed crowd, he knew this was just the opening salvo in the war against the ruling class…</p>`)
+else if (BernieMajority == true) {
+    e.pages.push(`<h3 style="text-align: center;">Bernie Win w/ Majority of Delegates</h3>`)
     //e.image = ""
     e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/c8wFvmP.png'})])
 }
-else if (quickstats[0] = 269) {
-    e.pages.push(`<p><h3 style="text-align: center;">A Good Man Went to War...<br/>And Was Cheated</h3></p><p>It was a stressful night. Bernie Sanders was pacing back and forth, eyes glued to the TV screen. He gave it his all out there on the campaign trail, especially that final day, but was it enough? Were his people, the American people, motivated enough to get to the polls and vote out the corporatocracy?</p><p>The usual suspects fell first: Vermont to Bernie, Indiana and Kentucky to President Romney, and so on. But in our corrupt electoral allocation system, that’s not what matters. It’s all about the swing states. And they swung, one by one. Some swung away from Bernie, but others swung right towards him.</p><p>And then the call was made, or rather, “This is completely unprecedented. No candidate has reached 270 electoral votes. We have a deadlock.”</p><p>Incredible. The people have spoken, but the electoral college has smothered their voice.</p><p>Jane rushes in to hug him, “I’m so sorry sweetie. I really thought you had it.”</p><p>Bernie sat, emotionless. He didn’t do what he needed to, but the fight’s not over yet. There’s a long road ahead, but he still has a shot, however slim.</p><p>As he walked out to greet the confused crowd, he knew this was just the opening salvo in the war against the ruling class…</p>`)
+else if (WarrenMajority == true) {
+    e.pages.push(`<h3 style="text-align: center;">Warren Win w/ Majority of Delegates</h3>`)
     //e.image = ""
     e.executable.push([0, (() => {e.image = e.image = '../static/images/2012-no-majority.jpg'})])
 }
-
+else if (BloombergMajority == true) {
+    e.pages.push(`<h3 style="text-align: center;">Bloomberg Win w/ Majority of Delegates</h3>`)
+    //e.image = ""
+    e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/gQONxdb.png'})])
+}
+else if (PeteMajority == true) {
+    e.pages.push(`<h3 style="text-align: center;">Pete Win w/ Majority of Delegates</h3>`)
+    //e.image = ""
+    e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/c8wFvmP.png'})])
+}
+else if (KlobucharMajority == true) {
+    e.pages.push(`<h3 style="text-align: center;">Klobuchar Win w/ Majority of Delegates</h3>`)
+    //e.image = ""
+    e.executable.push([0, (() => {e.image = e.image = '../static/images/2012-no-majority.jpg'})])
+}
+}
+else if (NoMajority == true) {
+if (BidenMajority == true) {
+    e.pages.push(`<h3 style="text-align: center;">Biden Win @ the Convention</h3>`)
+    //e.image = ""
+    e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/gQONxdb.png'})])
+}
+else if (BernieMajority == true) {
+    e.pages.push(`<h3 style="text-align: center;">Bernie Win @ the Convention</h3>`)
+    //e.image = ""
+    e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/c8wFvmP.png'})])
+}
+else if (WarrenMajority == true) {
+    e.pages.push(`<h3 style="text-align: center;">Warren Win @ the Convention</h3>`)
+    //e.image = ""
+    e.executable.push([0, (() => {e.image = e.image = '../static/images/2012-no-majority.jpg'})])
+}
+else if (BloombergMajority == true) {
+    e.pages.push(`<h3 style="text-align: center;">Bloomberg Win @ the Convention</h3>`)
+    //e.image = ""
+    e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/gQONxdb.png'})])
+}
+else if (PeteMajority == true) {
+    e.pages.push(`<h3 style="text-align: center;">Pete Win @ the Convention</h3>`)
+    //e.image = ""
+    e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/c8wFvmP.png'})])
+}
+else if (KlobucharMajority == true) {
+    e.pages.push(`<h3 style="text-align: center;">Klobuchar Win @ the Convention</h3>`)
+    //e.image = ""
+    e.executable.push([0, (() => {e.image = e.image = '../static/images/2012-no-majority.jpg'})])
+}
+else if (Fucked == true) {
+    e.pages.push(`<h3 style="text-align: center;">Contested Convention</h3><p>Not sure if this is even possible. If you encounter this slide, then I guess it is.</p>`)
+    //e.image = ""
+    e.executable.push([0, (() => {e.image = e.image = '../static/images/2012-no-majority.jpg'})])
+}
+}
+else {
+    e.pages.push(`<h3 style="text-align: center;">Error</h3><p>If you’re seeing this, something went wrong. Contact the devs.</p>`)
+    //e.image = ""
+    e.executable.push([0, (() => {e.image = e.image = '../static/images/2012-no-majority.jpg'})])
+}
+		  
 //Slide 2
 if (quickstats[0] != 269) {
     e.pages.push(`<h3>Slide 2 here</h3><p>Wiki summary</p>`)
