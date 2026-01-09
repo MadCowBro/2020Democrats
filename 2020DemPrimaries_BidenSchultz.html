@@ -23137,7 +23137,7 @@ function BloombergInshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(877);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.15;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(878);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.125;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.15;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(879);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(20041);
@@ -24175,7 +24175,7 @@ function Petementumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201028);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201029);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.125;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201030);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(201031);
@@ -25487,7 +25487,7 @@ cyoAdventure = function(a) {
 	}
 
 	// Have to stop using e.noCounter here because I’m pretty sure the primaries mess with it
-	if (ans == 200001 || ans == 200002 || ans == 200003 || ans == 200004) {
+	if (campaignTrail_temp.question_number == 20) {
 		if (KlobucharPolling > 0.03 && klobuchar_boost == 0) {
 		    Klobmentumshift();
 		    klobuchar_boost += 1;
@@ -25562,7 +25562,9 @@ cyoAdventure = function(a) {
 			campaignTrail_temp.questions_json[20] = tunnel(210300);
 		} else if (BidenIADelegates >= 12) {
 			campaignTrail_temp.questions_json[20] = tunnel(210200);
-		} else if (BidenIA < 15.00) {
+		} else if (BidenIADelegates < 12 && BidenIADelegates > 0) {
+			campaignTrail_temp.questions_json[20] = tunnel(210000);
+		} else if (BidenIADelegates == 0) {
 			campaignTrail_temp.questions_json[20] = tunnel(210100);
 		}
 		if (WarrenIA > BernieIA) {
