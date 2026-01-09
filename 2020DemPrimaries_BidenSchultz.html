@@ -24058,7 +24058,7 @@ function Bloommentumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(877);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(878);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.15;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.175;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(879);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(20041);
@@ -26617,10 +26617,15 @@ if (BidenMajority == true) {
     //e.image = ""
     e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/gQONxdb.png'})])
 }
-else if (BernieMajority == true) {
-    e.pages.push(`<h3 style="text-align: center;">Bernie Win w/ Majority of Delegates</h3>`)
+else if (BernieMajority == true && orderID[1] == 300) {
+    e.pages.push(`<h3 style="text-align: center;">Bernie Win Against Biden w/ Majority of Delegates</h3>`)
     //e.image = ""
     e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/c8wFvmP.png'})])
+}
+else if (BernieMajority == true && orderID[1] == 303) {
+    e.pages.push(`<h3 style="text-align: center;"><u>Rage Against the Machine</u></h3><p>He couldn’t handle it. As Bernie Sanders walked to the podium, he threw his glass against the wall and stormed out.</p><p>“GODDAMNIT!”</p><p>Hunter felt like he was suffocating. He walked outside to get a breath of fresh air.</p><p>He stood under the moonlight, staring out at what could’ve been: his father, rallying the people of America together to return to common sense, to throw that motherfucker out of the White House.</p><p>This is Mike Bloomberg’s fault, he thought.</p><p>That two-faced midget fucked everything up. He told people Joe Biden couldn’t win, that he was too weak to lead the party. Where the fuck did that get him? He couldn’t even beat Bernie!</p><p>He gripped the balcony hard, trying to ground himself, trying to contain the rage.</p><p>A hand grabbed his shoulder. Hunter spun around and was pulled into his father’s hug.</p><p>“It’s OK, son.”</p><p>Hunter looked into his father’s eyes, unable to hold back tears, “No, it’s not! You should be up there right now, you should—“</p><p>“—I know, but the party—“</p><p>“—Fuck the party!” He got into his dad’s face, “FUCK THE PARTY!”</p><p>Hunter faced the balcony and briefly thought about making a run for it before continuing, “They’re fucking stupid. Obama and them, they cast you aside for Hillary in 2016, remember that? That got us President Donald motherfucking Trump, who’s spent the last four years pissing all over everyone. I mean, ‘Both sides’, the Burisma bullshit, hydroxychloroquine, it never ends with him!”</p><p>Hunter paused, trying to stop his hands from shaking, “And this time they chose Michael Bloomberg over you. He couldn’t even win the primaries! Do we really think Good Guy Bernie can beat Trump? We’re fucked, Dad. WE’RE FUCKED!!!!”</p><p>“No, we’re not, son. There’s always a way…”</p><p>He couldn’t take it anymore. It was too much.</p><p>He ran.</p><p>He felt his father, then his mother and sister, chasing him, but he needed to get away.</p><p>He needed something to hold onto: the breast of a woman, the hit of a pipe, anything.</p><p>America’s falling apart, why can’t he?</p>`)
+    //e.image = ""
+    e.executable.push([0, (() => {e.image = e.image = 'https://i.postimg.cc/nhTFtY9x/Hunter.png'})])
 }
 else if (WarrenMajority == true) {
     e.pages.push(`<h3 style="text-align: center;">Warren Win w/ Majority of Delegates</h3>`)
