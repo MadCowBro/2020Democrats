@@ -25585,11 +25585,13 @@ cyoAdventure = function(a) {
 		}
 	}
 
-	if (ans == 210003 || ans == 210103) {
-		campaignTrail_temp.questions_json[21] = tunnel(220100);
+	if (campaignTrail_temp.question_number == 21) {
+	    if (ans == 210003 || ans == 210103) {
+		    campaignTrail_temp.questions_json[21] = tunnel(220100);
+	    }
 	}
 
-	if (ans == 220001 || ans == 220002 || ans == 220003 || ans == 220101 || ans == 220102 || ans == 220103) {
+	if (campaignTrail_temp.question_number == 22) {
 		yang_active -= 1;
 		if (yang_active == 0 && buttigieg_active == 0) {
 			menuItemsA.splice(4, 1);
@@ -25670,20 +25672,18 @@ cyoAdventure = function(a) {
         }
 		if (WarrenNH < 0.05) {
 			campaignTrail_temp.questions_json[22] = tunnel(230200);
+			warren_active -= 1;
 		}
 		if (BidenFebWin == 2) {
 			campaignTrail_temp.questions_json[22] = tunnel(230300);
+			campaignTrail_temp.questions_json[23] = tunnel(240100);
+			campaignTrail_temp.questions_json[24] = tunnel(250200);
 		} else if (BidenFebWin == 1) {
 			campaignTrail_temp.questions_json[22] = tunnel(230100);
 		}
 	}
 
-	if (ans == 230301 || ans == 230302 || ans == 230303 || ans == 230304) {
-		campaignTrail_temp.questions_json[23] = tunnel(240100);
-	}
-
-	if (ans == 230201 || ans == 230202 || ans == 230203 || ans == 230204) {
-		warren_active -= 1;
+	if (campaignTrail_temp.question_number == 23) {
 		if (warren_active == 0) {
 		    applyDrift(302, -1)
 			menuItemsA.splice(2, 1);
@@ -25691,7 +25691,7 @@ cyoAdventure = function(a) {
 		refreshHeadquarter();
 	}
 
-	if (ans == 240001 || ans == 240002 || ans == 240003 || ans == 240004 || ans == 240101 || ans == 240102) {
+	if (campaignTrail_temp.question_number == 24) {
         let BidenNV = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===300).percent;
 		let BernieNV = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===301).percent;
         let BidenSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===300).percent;
@@ -25731,11 +25731,7 @@ cyoAdventure = function(a) {
 		}
 	}
 
-	if (ans == 240101 || ans == 240102) {
-		campaignTrail_temp.questions_json[24] = tunnel(250200);
-	}
-
-	if (ans == 250001 || ans == 250002 || ans == 250003 || ans == 250004 || ans == 250101 || ans == 250102 || ans == 250201 || ans == 250202 || ans == 250203 || ans == 250204) {
+	if (campaignTrail_temp.question_number == 25) {
 	    Gabbardshift();
         campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.first_name = "Tulsi"
         campaignTrail_temp.candidate_json.find(candidate => candidate.pk == 311).fields.last_name = "Gabbard"
@@ -25746,11 +25742,8 @@ cyoAdventure = function(a) {
 			menuItemsA.splice(5, 1);
 		}
 		refreshHeadquarter();
-	}
-			
-	if (ans == 250001 || ans == 250002 || ans == 250003 || ans == 250004 || ans == 250201 || ans == 250202 || ans == 250203 || ans == 250204) {
         let BidenSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===300).percent;
-		if (BidenSC >= 37.50) {
+		if (BidenSC >= 35.00) {
 			buttigieg_active = 0;
 		    klobuchar_active = 0;
 		} else if (PeteFebWin <= 1 && KlobucharFebWin > 0) {
@@ -25768,42 +25761,40 @@ cyoAdventure = function(a) {
             applyDrift(310, -1)
 	        menuItemsA.splice(5, 1);
 		}
-	}
- 
-	if (ans == 250102) {
-		biden_active -= 1;
-		if (biden_active == 0) {
-            applyDrift(300, -1)
-	        menuItemsA.splice(0, 1);
-		}
-		refreshHeadquarter();
-        campaignTrail_temp.global_parameter_json[0]["fields"].question_count = "26";
-		gameEnd = 26;
-		campaignTrail_temp.questions_json[25] = tunnel(260100);
-		if (WarrenPolling >= 0.2) {
-			answerSwapper(260101, 260105, true);
-		}
-		e.primary_code = [
-          {
-            "breakQ": 19,
-            "states": [195] // IA
-          },
-          {
-            "breakQ": 21,
-            "states": [209] // NH
-          },
-          {
-            "breakQ": 23,
-            "states": [208, 220] // NV, SC
-          },
-          {
-            "breakQ": 25,
-            "states": [181, 7000, 184, 185, 186, 199, 201, 203, 213, 216, 222, 223, 224, 225, 226, 7005, 192, 202, 204, 205, 214, 227, 7002, 183, 189, 193, 230, 182, 231, 215, 196, 207, 217, 191, 228, 194, 200, 206, 211, 218, 219, 221, 7001, 7004, 190, 229, 197, 212, 188, 210, 198, 7003, 187] // From ST onwards
-          }
-        ]
+		if (ans == 250102) {
+		    biden_active -= 1;
+		    if (biden_active == 0) {
+                applyDrift(300, -1)
+	            menuItemsA.splice(0, 1);
+		    }
+            campaignTrail_temp.global_parameter_json[0]["fields"].question_count = "26";
+		    gameEnd = 26;
+		    campaignTrail_temp.questions_json[25] = tunnel(260100);
+		    if (WarrenPolling >= 0.2) {
+			    answerSwapper(260101, 260105, true);
+		    }
+		    e.primary_code = [
+              {
+                "breakQ": 19,
+                "states": [195] // IA
+              },
+              {
+                "breakQ": 21,
+                "states": [209] // NH
+              },
+              {
+                "breakQ": 23,
+                "states": [208, 220] // NV, SC
+              },
+              {
+                "breakQ": 25,
+                "states": [181, 7000, 184, 185, 186, 199, 201, 203, 213, 216, 222, 223, 224, 225, 226, 7005, 192, 202, 204, 205, 214, 227, 7002, 183, 189, 193, 230, 182, 231, 215, 196, 207, 217, 191, 228, 194, 200, 206, 211, 218, 219, 221, 7001, 7004, 190, 229, 197, 212, 188, 210, 198, 7003, 187] // From ST onwards
+              }
+            ]
+	    }
 	}
 
-	if (ans == 260001 || ans == 260002 || ans == 260003 || ans == 260004 || ans == 260201 || ans == 260202 || ans == 260203 || ans == 260204) {
+	if (campaignTrail_temp.question_number == 26) {
 		let BidenAL = campaignTrail_temp.current_results[1][0].result.find(result => result.candidate===300).percent;
 		let BernieAL = campaignTrail_temp.current_results[1][0].result.find(result => result.candidate===301).percent;
 		let WarrenAL = campaignTrail_temp.current_results[1][0].result.find(result => result.candidate===302).percent;
@@ -26102,7 +26093,7 @@ cyoAdventure = function(a) {
 		}
 	}
 
-	if (ans == 270001 || ans == 270002 || ans == 270003 || ans == 270004 || ans == 270201 || ans == 270202 || ans == 270203 || ans == 270204 || ans == 270205 || ans == 270301 || ans == 270302 || ans == 270303 || ans == 270304 || ans == 270401 || ans == 270402 || ans == 270403 || ans == 270404 || ans == 270405) {
+	if (campaignTrail_temp.question_number == 27) {
 		if (PeteSTWin == 0 && buttigieg_active == 1) {
 			buttigieg_active -= 1;
 			if (buttigieg_active == 0) {
@@ -26117,10 +26108,7 @@ cyoAdventure = function(a) {
 			    menuItemsA.splice(5, 1);
 		    }
 		}
-	}
-
-	if (ans == 270001 || ans == 270002 || ans == 270003 || ans == 270004) {
-		if (WarrenSTWin == 0) {
+		if (WarrenSTWin == 0 || WarrenPolling < 0.15) {
 			warren_active -= 1;
 		    if (warren_active == 0) {
                 applyDrift(302, -1)
@@ -26135,83 +26123,60 @@ cyoAdventure = function(a) {
 		    }
 		}
 		refreshHeadquarter();
-	}
-
-	if (ans == 270101) {
-		biden_active -= 1;
-		if (biden_active == 0) {
-            applyDrift(300, -1)
-	        menuItemsA.splice(0, 1);
-		}
-		if (WarrenPolling < 0.15) {
-			warren_active -= 1;
-		    if (warren_active == 0) {
-                applyDrift(302, -1)
-	            menuItemsA.splice(2, 1);
+		if (ans == 270101) {
+		    biden_active -= 1;
+		    if (biden_active == 0) {
+                applyDrift(300, -1)
+	            menuItemsA.splice(0, 1);
 		    }
-		}
-		refreshHeadquarter();
-        campaignTrail_temp.global_parameter_json[0]["fields"].question_count = "28";
-		gameEnd = 28;
-		campaignTrail_temp.questions_json[27] = tunnel(280100);
-		if (WarrenSTWin > 0 || WarrenPolling > 0.2) {
-			answerSwapper(280101, 280105, true);
-		}
-		e.primary_code = [
-          {
-            "breakQ": 19,
-            "states": [195] // IA
-          },
-          {
-            "breakQ": 21,
-            "states": [209] // NH
-          },
-          {
-            "breakQ": 23,
-            "states": [208, 220] // NV, SC
-          },
-		  {
-            "breakQ": 25,
-            "states": [181, 7000, 184, 185, 186, 199, 201, 203, 213, 216, 222, 223, 224, 225, 226] // AL, AS, AR, CA, CO, ME, MA, MN, NC, OK, TN, TX, UT, VT, VA
-          },
-          {
-            "breakQ": 27,
-            "states": [7005, 192, 202, 204, 205, 214, 227, 7002, 183, 189, 193, 230, 182, 231, 215, 196, 207, 217, 191, 228, 194, 200, 206, 211, 218, 219, 221, 7001, 7004, 190, 229, 197, 212, 188, 210, 198, 7003, 187] // From March 10 onwards
-          }
-        ]
-	}
-
-    if (ans == 270201 || ans == 270202 || ans == 270203 || ans == 270204) {
-		if (WarrenSTWin == 0) {
-			warren_active -= 1;
-		    if (warren_active == 0) {
-                applyDrift(302, -1)
-	            menuItemsA.splice(2, 1);
+            campaignTrail_temp.global_parameter_json[0]["fields"].question_count = "28";
+		    gameEnd = 28;
+		    campaignTrail_temp.questions_json[27] = tunnel(280100);
+		    if (WarrenSTWin > 0 || WarrenPolling > 0.2) {
+			    answerSwapper(280101, 280105, true);
 		    }
-		}
-	}
-
-	if (ans == 270205 || ans == 270405) {
-		bloomberg_active -= 1;
-		if (bloomberg_active == 0) {
-            applyDrift(303, -1)
-			menuItemsA.splice(3, 1);
-		}
-		refreshHeadquarter();
-	}
-
-	if (ans == 270301 || ans == 270302 || ans == 270303 || ans == 270304 || ans == 270401 || ans == 270402 || ans == 270403 || ans == 270404 || ans == 270405) {
-		if (BerniePolling > BidenPolling && WarrenPolling < 0.2) {
-			warren_active -= 1;
-		    if (warren_active == 0) {
-                applyDrift(302, -1)
-	            menuItemsA.splice(2, 1);
+		    e.primary_code = [
+              {
+                "breakQ": 19,
+                "states": [195] // IA
+              },
+              {
+                "breakQ": 21,
+                "states": [209] // NH
+              },
+              {
+                "breakQ": 23,
+                "states": [208, 220] // NV, SC
+              },
+	    	  {
+                "breakQ": 25,
+                "states": [181, 7000, 184, 185, 186, 199, 201, 203, 213, 216, 222, 223, 224, 225, 226] // AL, AS, AR, CA, CO, ME, MA, MN, NC, OK, TN, TX, UT, VT, VA
+              },
+              {
+                "breakQ": 27,
+                "states": [7005, 192, 202, 204, 205, 214, 227, 7002, 183, 189, 193, 230, 182, 231, 215, 196, 207, 217, 191, 228, 194, 200, 206, 211, 218, 219, 221, 7001, 7004, 190, 229, 197, 212, 188, 210, 198, 7003, 187] // From March 10 onwards
+              }
+            ]
+    	}
+		if (ans == 270205 || ans == 270405) {
+		    bloomberg_active -= 1;
+		    if (bloomberg_active == 0) {
+                applyDrift(303, -1)
+			    menuItemsA.splice(3, 1);
 		    }
-		}
-		refreshHeadquarter();
+	    }
+		if (ans == 270301 || ans == 270302 || ans == 270303 || ans == 270304 || ans == 270401 || ans == 270402 || ans == 270403 || ans == 270404 || ans == 270405) {
+		    if (BerniePolling > BidenPolling && WarrenPolling < 0.2) {
+			    warren_active -= 1;
+		        if (warren_active == 0) {
+                    applyDrift(302, -1)
+	                menuItemsA.splice(2, 1);
+		        }
+	    	}
+	    }
 	}
 
-	if (ans == 280001 || ans == 280002 || ans == 280003) {
+	if (campaignTrail_temp.question_number == 28) {
 	campaignTrail_temp.issues_json[4].fields.name = "COVID";
     updateIssueStances(campaignTrail_temp.issues_json, "COVID", { // Put the name of the issue here
         stance_1: "No Big Deal",
@@ -26452,6 +26417,36 @@ cyoAdventure = function(a) {
 			campaignTrail_temp.questions_json[31] = tunnel(320100);
 		} else {
 			gameEnd = 32;
+			e.primary_code = [
+          {
+            "breakQ": 19,
+            "states": [195] // IA
+          },
+          {
+            "breakQ": 21,
+            "states": [209] // NH
+          },
+          {
+            "breakQ": 23,
+            "states": [208, 220] // NV, SC
+          },
+		  {
+            "breakQ": 25,
+            "states": [181, 7000, 184, 185, 186, 199, 201, 203, 213, 216, 222, 223, 224, 225, 226] // AL, AS, AR, CA, CO, ME, MA, MN, NC, OK, TN, TX, UT, VT, VA
+          },
+          {
+            "breakQ": 27,
+            "states": [7005, 192, 202, 204, 205, 214, 227] // Democrats Abroad, ID, MI, MS, MO, ND, WA
+          },
+          {
+            "breakQ": 29,
+            "states": [7002, 183, 189, 193] // MP, AZ, FL, IL
+          },
+          {
+            "breakQ": 31,
+            "states": [230, 182, 231, 215, 196, 207, 217, 191, 228, 194, 200, 206, 211, 218, 219, 221, 7001, 7004, 190, 229, 197, 212, 188, 210, 198, 7003, 187] // All the rest
+          }
+        ]
 		}
 	}
 }
