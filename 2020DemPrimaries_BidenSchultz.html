@@ -25743,7 +25743,7 @@ cyoAdventure = function(a) {
 		}
 		refreshHeadquarter();
         let BidenSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===300).percent;
-		if (BidenSC >= 33.33) {
+		if (BidenSC >= 30.00) {
 			buttigieg_active = 0;
 		    klobuchar_active = 0;
 		} else if (PeteFebWin <= 1 && KlobucharFebWin > 0) {
@@ -26101,7 +26101,7 @@ cyoAdventure = function(a) {
 			    menuItemsA.splice(4, 1);
 			}
 		}
-		if (KlobucharSTWin < 2 && klobuchar_active == 1) {
+		if (KlobucharPolling < 0.15 && klobuchar_active == 1) {
 			klobuchar_active -= 1;
 		    if (klobuchar_active == 0) {
                 applyDrift(310, -1)
@@ -26416,6 +26416,7 @@ cyoAdventure = function(a) {
 		if (ans == 310002 && BidenMSeventeenWin < 3) {
 			campaignTrail_temp.questions_json[31] = tunnel(320100);
 		} else {
+			campaignTrail_temp.global_parameter_json[0]["fields"].question_count = "32";
 			gameEnd = 32;
 			e.primary_code = [
           {
