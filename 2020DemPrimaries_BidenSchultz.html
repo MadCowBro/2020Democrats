@@ -26415,7 +26415,7 @@ cyoAdventure = function(a) {
 	if (campaignTrail_temp.question_number == 31) {
 		if (ans == 310002) {
 			campaignTrail_temp.questions_json[31] = tunnel(320100);
-		} else {
+		} else if (ans == 310001) {
 			sanders_active -= 1;
 		    if (sanders_active == 0) {
                 applyDrift(301, -0.75)
