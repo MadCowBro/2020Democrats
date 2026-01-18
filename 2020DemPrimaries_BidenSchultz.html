@@ -23460,7 +23460,7 @@ function WarrenFadeshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(813);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.8;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(814);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.925;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(815);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 0.9;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(816);
@@ -23915,7 +23915,7 @@ function Warrenmentumshift() {
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(813);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(814);
-    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.075;
+    campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.1;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(815);
     campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier *= 1.05;
     var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(816);
@@ -25692,8 +25692,8 @@ cyoAdventure = function(a) {
 	}
 
 	if (campaignTrail_temp.question_number == 24) {
-        let BidenNV = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===300).percent;
-		let BernieNV = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===301).percent;
+        let BidenNV = campaignTrail_temp.current_results[1][27].result.find(result => result.candidate===300).percent;
+		let BernieNV = campaignTrail_temp.current_results[1][27].result.find(result => result.candidate===301).percent;
         let BidenSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===300).percent;
 		let BernieSC = campaignTrail_temp.current_results[1][39].result.find(result => result.candidate===301).percent;
         if (BidenSC < 15.00) {
